@@ -35,3 +35,32 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 })
 
 statNums.forEach(el => observer.observe(el))
+
+// ── 3D tilt on hero photo ──────────────────────────────────────
+const photoCol = document.querySelector('.hero-photo-col')
+const photoFrame = document.querySelector('.photo-frame')
+const floatCards = document.querySelectorAll('.float-card')
+
+if (photoCol && photoFrame) {
+  photoFrame.style.transition = 'transform 0.12s ease, box-shadow 0.12s ease'
+  floatCards.forEach(c => { c.style.transition = 'transform 0.18s ease' })
+
+  photoCol.addEventListener('mousemove', (e) => {
+    const rect = photoCol.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5   // -0.5 → 0.5
+    const y = (e.clientY - rect.top)  / rect.height - 0.5
+
+    photoFrame.style.transform =
+      `perspective(700px) rotateX(${y * -14}deg) rotateY(${x * 14}deg) scale(1.04)`
+
+    floatCards.forEach((card, i) => {
+      const dir = i === 0 ? 1 : -1
+      card.style.transform = `translate(${x * 18 * dir}px, ${y * 14 * dir}px)`
+    })
+  })
+
+  photoCol.addEventListener('mouseleave', () => {
+    photoFrame.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)'
+    floatCards.forEach(c => { c.style.transform = '' })
+  })
+}

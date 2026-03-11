@@ -9,10 +9,17 @@
   <meta property="og:title" content="Teslim Adeyanju — ACA | Financial Data Analyst" />
   <meta property="og:description" content="ACA Chartered Accountant building audit-ready analytics pipelines with Python, SQL, and Power BI." />
   <meta property="og:url" content="https://adeyanjuteslim.co.uk" />
+  <meta property="og:image" content="https://adeyanjuteslim.co.uk/photo.JPG" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:type" content="profile" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://adeyanjuteslim.co.uk/photo.JPG" />
+  <meta name="twitter:title" content="Teslim Adeyanju — ACA | Financial Data Analyst" />
   <link rel="canonical" href="https://adeyanjuteslim.co.uk" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nunito:wght@800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script data-goatcounter="https://adeyanjuteslim.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
@@ -115,43 +122,55 @@
     <div class="container">
       <p class="eyebrow">Track Record</p>
       <h2 class="s-title">Impact Highlights</h2>
-      <p class="s-sub">Quantified outcomes across finance, analytics, and governance</p>
-      <div class="impact-grid">
+      <p class="s-sub">Six moments where data, finance, and code changed what was possible</p>
+      <div class="impact-rows">
 
-        <div class="impact-card">
-          <span class="impact-cat">Reporting Automation</span>
-          <div class="impact-num">Days → Hours</div>
-          <p class="impact-text">Replaced manual month-end Excel workflows with Python automation pipelines, cutting the reporting close cycle from days to hours — with built-in validation, consistency checks, and a full audit trail on every run.</p>
+        <div class="impact-row">
+          <div class="ir-metric">Days → Hours</div>
+          <div class="ir-content">
+            <span class="ir-cat">Reporting Automation</span>
+            <p class="ir-text">Finance teams were losing days every month to manual Excel workflows — copying, pasting, reconciling. I rebuilt the process with Python automation pipelines: data loads, validates, transforms, and formats itself. Close time dropped from days to hours, errors dropped to near-zero, and every run leaves a full audit trail.</p>
+          </div>
         </div>
 
-        <div class="impact-card">
-          <span class="impact-cat">Power BI Analytics</span>
-          <div class="impact-num">15+ Dashboards</div>
-          <p class="impact-text">Designed and deployed 15+ Power BI dashboards for executive and operational teams — covering budget vs actuals, cash flow, headcount, and departmental P&amp;L — connecting raw data to boardroom decisions.</p>
+        <div class="impact-row">
+          <div class="ir-metric">15+ Dashboards</div>
+          <div class="ir-content">
+            <span class="ir-cat">Power BI Analytics</span>
+            <p class="ir-text">Leadership needed visibility, not spreadsheets. I designed and deployed 15+ Power BI dashboards covering budget vs actuals, cash flow, headcount, and departmental P&amp;L — connecting raw source data directly to boardroom decisions. Executives now see the story, not just the numbers.</p>
+          </div>
         </div>
 
-        <div class="impact-card">
-          <span class="impact-cat">Performance Engineering</span>
-          <div class="impact-num">60%+ Faster</div>
-          <p class="impact-text">Rebuilt Power BI reports through DAX query optimisation, star schema data modelling, and cardinality reduction — cutting average refresh times by 60% and delivering a significantly improved end-user experience.</p>
+        <div class="impact-row">
+          <div class="ir-metric">60%+ Faster</div>
+          <div class="ir-content">
+            <span class="ir-cat">Performance Engineering</span>
+            <p class="ir-text">Reports that took minutes to refresh were frustrating users and slowing decisions. I rebuilt the underlying data models — star schema restructuring, DAX query rewriting, relationship cardinality reduction — cutting refresh times by over 60% without changing a single visual on screen.</p>
+          </div>
         </div>
 
-        <div class="impact-card">
-          <span class="impact-cat">Data Engineering</span>
-          <div class="impact-num">99%+ Accuracy</div>
-          <p class="impact-text">Engineered end-to-end SQL pipelines to extract, transform, and load high-volume financial transactions — normalised schemas, referential integrity, and audit trails ensure data is production-grade and regulator-ready.</p>
+        <div class="impact-row">
+          <div class="ir-metric">99%+ Accuracy</div>
+          <div class="ir-content">
+            <span class="ir-cat">Data Engineering</span>
+            <p class="ir-text">Financial data pipelines that drift or fail silently are worse than no pipeline at all. I engineered end-to-end SQL ETL processes with normalised schemas, referential integrity checks, and row-level audit trails — so every figure is traceable, every anomaly is flagged, and every output is regulator-ready.</p>
+          </div>
         </div>
 
-        <div class="impact-card">
-          <span class="impact-cat">Financial Forecasting</span>
-          <div class="impact-num">3 Months Earlier</div>
-          <p class="impact-text">Developed predictive cash flow models that flagged liquidity risk 3 months before it materialised — giving the board actionable early-warning intelligence rather than reactive reporting after the fact.</p>
+        <div class="impact-row">
+          <div class="ir-metric">3 Months Earlier</div>
+          <div class="ir-content">
+            <span class="ir-cat">Financial Forecasting</span>
+            <p class="ir-text">A board that only sees risk when it arrives cannot act in time. I built predictive cash flow models that surfaced liquidity pressure 3 months before it materialised — translating pattern detection in Python into plain-language board intelligence. The organisation acted early, not reactively.</p>
+          </div>
         </div>
 
-        <div class="impact-card">
-          <span class="impact-cat">NHS Finance Analytics</span>
-          <div class="impact-num">206 NHS Trusts</div>
-          <p class="impact-text">Built a complete Python ETL pipeline ingesting NHS England public finance data for 206 Trusts across 3 financial years — loaded into a MySQL star schema with analytical views and exported to Power BI for sector-wide benchmarking.</p>
+        <div class="impact-row">
+          <div class="ir-metric">206 NHS Trusts</div>
+          <div class="ir-content">
+            <span class="ir-cat">NHS Finance Analytics</span>
+            <p class="ir-text">NHS England releases financial data annually for every Trust in England — but it arrives as hundreds of disconnected Excel files. I built a Python ETL pipeline that ingests, cleans, and loads all 206 Trusts across 3 financial years into a MySQL star schema, then surfaces the analysis through Power BI — turning public sector data into a sector-wide benchmarking tool.</p>
+          </div>
         </div>
 
       </div>
@@ -393,7 +412,7 @@
 
         <a href="https://github.com/TeslimAdeyanju/studybook-python-for-finance-and-data-science" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
-            <span class="si-wrap" style="--bg:#EBF5FB"><img src="https://cdn.simpleicons.org/python/3776AB" width="18" height="18" alt="Python"></span>
+            <div class="sc8-icon" style="background:#EBF5FB">🐍</div>
             <span class="sc8-arr">↗</span>
           </div>
           <div class="sc8-title">Python for Finance</div>
@@ -403,7 +422,7 @@
 
         <a href="https://github.com/TeslimAdeyanju/studybook-sql-for-finance-and-data-science" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
-            <span class="si-wrap" style="--bg:#EBF5FB"><img src="https://cdn.simpleicons.org/mysql/4479A1" width="18" height="18" alt="MySQL"></span>
+            <div class="sc8-icon" style="background:#EBF5FB">🗄️</div>
             <span class="sc8-arr">↗</span>
           </div>
           <div class="sc8-title">MySQL for Finance</div>
@@ -413,7 +432,7 @@
 
         <a href="https://github.com/TeslimAdeyanju/studybook-r-for-finance-and-data-science" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
-            <span class="si-wrap" style="--bg:#EEF2FF"><img src="https://cdn.simpleicons.org/r/276DC3" width="18" height="18" alt="R"></span>
+            <div class="sc8-icon" style="background:#EEF2FF">📊</div>
             <span class="sc8-arr">↗</span>
           </div>
           <div class="sc8-title">R for Finance</div>
@@ -423,7 +442,7 @@
 
         <a href="https://github.com/TeslimAdeyanju/studybook-llm-for-finance-and-data-science" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
-            <span class="si-wrap si-text" style="--bg:#EEF2FF;--tc:#4338CA">LLM</span>
+            <div class="sc8-icon" style="background:#F5F3FF">🤖</div>
             <span class="sc8-arr">↗</span>
           </div>
           <div class="sc8-title">LLMs for Finance</div>
@@ -433,7 +452,7 @@
 
         <a href="https://github.com/TeslimAdeyanju/portfolio-07-ml-financial-analysis" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
-            <span class="si-wrap" style="--bg:#FFF7ED"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" width="18" height="18" alt="ML"></span>
+            <div class="sc8-icon" style="background:#FFF7ED">🧠</div>
             <span class="sc8-arr">↗</span>
           </div>
           <div class="sc8-title">Machine Learning for Finance</div>
@@ -443,7 +462,7 @@
 
         <a href="https://github.com/TeslimAdeyanju/studybook-excel-for-finance-and-data-science" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
-            <span class="si-wrap" style="--bg:#F0FDF4"><img src="https://cdn.simpleicons.org/microsoftexcel/217346" width="18" height="18" alt="Excel"></span>
+            <div class="sc8-icon" style="background:#F0FDF4">📈</div>
             <span class="sc8-arr">↗</span>
           </div>
           <div class="sc8-title">Advanced Excel for Finance</div>
@@ -453,7 +472,7 @@
 
         <a href="https://github.com/TeslimAdeyanju/studybook-powerbi-for-finance-and-data-science" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
-            <span class="si-wrap" style="--bg:#FEF9C3"><img src="https://cdn.simpleicons.org/powerbi/D9980B" width="18" height="18" alt="Power BI"></span>
+            <div class="sc8-icon" style="background:#FEF9C3">📉</div>
             <span class="sc8-arr">↗</span>
           </div>
           <div class="sc8-title">Power BI &amp; DAX for Finance</div>
@@ -463,7 +482,7 @@
 
         <a href="https://github.com/TeslimAdeyanju/daily-learning-journey" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
-            <span class="si-wrap si-text" style="--bg:#F0FDF4;--tc:#15803D">TS</span>
+            <div class="sc8-icon" style="background:#F0FDF4">📐</div>
             <span class="sc8-arr">↗</span>
           </div>
           <div class="sc8-title">Statistics &amp; Time-Series</div>
@@ -493,15 +512,14 @@
         <div class="profile-creds">
           <p class="eyebrow eyebrow-light">Quick Facts</p>
           <h2 class="s-title s-title-light">Open to UK Opportunities</h2>
-          <div class="creds-list">
-            <div class="cred"><span class="cred-icon">🎓</span><div><span class="cred-lbl">Qualification</span><span class="cred-val">ACA — ICAEW Chartered Accountant</span></div></div>
-            <div class="cred"><span class="cred-icon">📚</span><div><span class="cred-lbl">Education</span><span class="cred-val">MSc Finance &amp; Investment — Distinction · UK University</span></div></div>
-            <div class="cred"><span class="cred-icon">📍</span><div><span class="cred-lbl">Location</span><span class="cred-val">United Kingdom — Based &amp; Available</span></div></div>
-            <div class="cred"><span class="cred-icon">🎯</span><div><span class="cred-lbl">Target Roles</span><span class="cred-val">Finance Analyst · Management Accountant · Information Analyst</span></div></div>
-            <div class="cred"><span class="cred-icon">🏢</span><div><span class="cred-lbl">Sectors</span><span class="cred-val">NHS · Local Government · Civil Service · Finance</span></div></div>
-            <div class="cred"><span class="cred-icon">🏛️</span><div><span class="cred-lbl">Governance</span><span class="cred-val">Treasurer · Asylos — Registered UK Charity, Board-Level Financial Governance</span></div></div>
-            <div class="cred"><span class="cred-icon">✅</span><div><span class="cred-lbl">Availability</span><span class="cred-val cred-green">Immediately Available</span></div></div>
-          </div>
+          <ul class="profile-bullets">
+            <li>🎓 <strong>ACA — ICAEW Chartered Accountant</strong></li>
+            <li>📚 MSc Finance &amp; Investment — Distinction · UK University</li>
+            <li>📍 Based in the United Kingdom — available immediately</li>
+            <li>🎯 Finance Analyst · Management Accountant · Information Analyst</li>
+            <li>🏛️ Treasurer · Asylos — Registered UK Charity, board-level governance</li>
+            <li>✅ <span class="cred-green">Open to sponsored roles · Skilled Worker Visa required</span></li>
+          </ul>
           <p class="visa-note">Skilled Worker Visa Sponsorship required · PSW (Graduate) visa currently held</p>
         </div>
 

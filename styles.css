@@ -226,45 +226,53 @@ img { max-width: 100%; display: block; }
 }
 .hero-cta .btn-outline:hover { border-color: #fff; }
 
-/* ── Stats ── */
+/* ── Stats grid ── */
 .hero-stats {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 
-.stat { text-align: left; }
+.stat-card {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 18px 16px;
+  text-align: center;
+  cursor: default;
+  transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
+}
+
+.stat-card:hover {
+  background: rgba(255,255,255,.13);
+  border-color: rgba(147,197,253,.5);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.3);
+}
 
 .stat-num {
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 700;
   color: #fff;
-  line-height: 1.2;
-  transition: transform .15s;
+  line-height: 1.1;
+  margin-bottom: 6px;
 }
 
-/* animated count glow on completion */
 @keyframes statPop {
   0%   { transform: scale(1); }
-  50%  { transform: scale(1.18); color: #93C5FD; }
+  50%  { transform: scale(1.2); color: #93C5FD; }
   100% { transform: scale(1); }
 }
-.stat-pop { animation: statPop .4s ease; }
+.stat-pop { animation: statPop .45s ease; }
 
 .stat-label {
   display: block;
-  font-size: .7rem;
+  font-size: .65rem;
   color: #94A3B8;
   text-transform: uppercase;
-  letter-spacing: .07em;
-  margin-top: 2px;
-}
-
-.stat-divider {
-  width: 1px; height: 44px;
-  background: rgba(255,255,255,.15);
+  letter-spacing: .08em;
+  line-height: 1.4;
 }
 
 /* ── Profile photo ── */
@@ -705,8 +713,7 @@ details[open] .all-projects-toggle::before { transform: rotate(90deg); }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hero { padding: 90px 0 60px; min-height: 100svh; }
-  .hero-stats { gap: 16px; }
-  .stat-divider { display: none; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .journal-grid { grid-template-columns: 1fr; }
   .section { padding: 56px 0; }

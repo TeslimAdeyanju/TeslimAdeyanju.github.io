@@ -505,10 +505,13 @@ a:hover { text-decoration: underline; }
 .skill-list li {
   font-size: .875rem;
   color: var(--dark);
-  padding: 9px 0 9px 18px;
+  padding: 9px 12px 9px 18px;
   border-bottom: 1px solid var(--gray-100);
   position: relative;
   line-height: 1.5;
+  border-radius: 6px;
+  transition: background .15s, transform .15s;
+  cursor: default;
 }
 .skill-list li:last-child { border-bottom: none; }
 .skill-list li::before {
@@ -518,6 +521,14 @@ a:hover { text-decoration: underline; }
   color: var(--blue);
   font-size: .75rem;
   top: 10px;
+  transition: transform .15s;
+}
+.skill-list li:hover {
+  background: rgba(59,130,246,.06);
+  transform: translateX(6px);
+}
+.skill-list li:hover::before {
+  transform: translateX(2px);
 }
 
 /* ── Projects ────────────────────────────────────────────────── */

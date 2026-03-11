@@ -497,14 +497,66 @@ a:hover { text-decoration: underline; }
 .lv-a { background: #F0FDF4; color: #15803D; }
 .lv-m { background: #FFF7ED; color: #C2410C; }
 
+/* ── Skill list (text-based, no icons) ───────────────────────── */
+.skill-list {
+  list-style: none;
+  padding: 6px 20px 10px;
+}
+.skill-list li {
+  font-size: .875rem;
+  color: var(--dark);
+  padding: 9px 0 9px 18px;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+  line-height: 1.5;
+}
+.skill-list li:last-child { border-bottom: none; }
+.skill-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-size: .75rem;
+  top: 10px;
+}
+
 /* ── Projects ────────────────────────────────────────────────── */
 .projects-hd {
+  margin-bottom: 28px;
+}
+.proj-title-row {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 40px;
   flex-wrap: wrap;
   gap: 16px;
+  margin-bottom: 0;
+}
+.btn-gh-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  background: #24292F;
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 700;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  transition: all .2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+.btn-gh-cta:hover { background: #1c2127; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,.25); color: #fff; text-decoration: none; }
+.gh-badge {
+  background: var(--blue);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 800;
+  padding: 2px 9px;
+  border-radius: 100px;
+  margin-left: 2px;
 }
 .btn-viewall {
   display: inline-flex;
@@ -845,20 +897,31 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   padding: 28px 24px;
   border-top: 3px solid var(--blue);
   transition: all .2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .impact-card:hover { box-shadow: var(--sh); transform: translateY(-3px); }
-.impact-num {
-  font-size: 1.7rem;
-  font-weight: 800;
+.impact-cat {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
   color: var(--blue);
-  letter-spacing: -1px;
-  line-height: 1.1;
-  margin-bottom: 10px;
+}
+.impact-num {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
 }
 .impact-text {
-  font-size: .855rem;
+  font-size: .875rem;
   color: var(--gray-500);
-  line-height: 1.65;
+  line-height: 1.7;
+  flex: 1;
 }
 
 /* ── PyPI badge ──────────────────────────────────────────────── */
@@ -956,7 +1019,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 80px 0 48px; min-height: 100svh; }
   .hero-name { letter-spacing: -2px; }
-  .projects-hd { flex-direction: column; align-items: flex-start; }
+  .proj-title-row { flex-direction: column; align-items: flex-start; }
   .impact-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {

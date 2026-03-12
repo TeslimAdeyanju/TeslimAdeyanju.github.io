@@ -149,8 +149,8 @@ a:hover { text-decoration: underline; }
   background: var(--dark);
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding: 60px 0 48px;
+  align-items: flex-start;
+  padding: 112px 0 64px;
   position: relative;
   overflow: hidden;
 }
@@ -210,18 +210,19 @@ a:hover { text-decoration: underline; }
 }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
 
-/* Hero name — Avenir with Nunito web fallback */
+/* Hero name — Space Grotesk display */
 .hero-name {
-  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 900;
-  line-height: 1.0;
-  letter-spacing: -3px;
-  margin-bottom: 10px;
-  background: linear-gradient(135deg, #FFFFFF 0%, #BAE6FD 45%, #93C5FD 100%);
+  font-family: 'Space Grotesk', Avenir, 'Avenir Next', sans-serif;
+  font-size: clamp(4rem, 9.5vw, 8rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -5px;
+  margin-bottom: 18px;
+  background: linear-gradient(160deg, #FFFFFF 0%, #BAE6FD 38%, #60A5FA 68%, #3B82F6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 4px 32px rgba(96,165,250,0.28));
 }
 .hero-role {
   font-size: clamp(.95rem, 2vw, 1.15rem);
@@ -1036,8 +1037,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .section { padding: 48px 0; }
   .proj-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
-  .hero { padding: 56px 0 36px; min-height: 100svh; }
-  .hero-name { letter-spacing: -2px; }
+  .hero { padding: 88px 0 44px; min-height: 100svh; }
+  .hero-name { font-size: clamp(3.2rem, 14vw, 5rem); letter-spacing: -3px; }
   .proj-title-row { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 480px) {

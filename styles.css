@@ -946,6 +946,96 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 
+/* ── What Makes Me Different ────────────────────────────────── */
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.diff-card {
+  display: flex;
+  gap: 16px;
+  padding: 22px 20px;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r);
+  transition: border-color .2s, transform .18s;
+}
+.diff-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+.diff-icon { font-size: 1.45rem; flex-shrink: 0; line-height: 1; margin-top: 1px; }
+.diff-title {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.diff-desc {
+  font-size: .8rem;
+  color: var(--gray-500);
+  line-height: 1.65;
+}
+
+/* ── Education ───────────────────────────────────────────────── */
+.edu-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--r);
+  padding: 28px 32px;
+}
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.edu-degree {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.4;
+}
+.edu-sub { font-weight: 400; color: var(--gray-500); }
+.edu-grade {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: .75rem;
+  font-weight: 700;
+  color: #16A34A;
+  background: rgba(22,163,74,.1);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.edu-years {
+  font-size: .8rem;
+  color: var(--gray-500);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+.edu-school {
+  font-size: .875rem;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.edu-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.edu-badge {
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  padding: 5px 12px;
+  border-radius: var(--r-sm);
+}
+
 /* ── PyPI badge ──────────────────────────────────────────────── */
 .pypi-badge {
   display: inline-flex;
@@ -1040,6 +1130,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 88px 0 44px; min-height: 100svh; }
   .hero-name { font-size: clamp(3.2rem, 14vw, 5rem); letter-spacing: -3px; }
+  .diff-grid { grid-template-columns: 1fr; }
   .proj-title-row { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 480px) {
@@ -1151,3 +1242,11 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .lv-e { background: rgba(59,130,246,.2);  color: #93C5FD; }
 [data-theme="dark"] .lv-a { background: rgba(74,222,128,.15); color: #86EFAC; }
 [data-theme="dark"] .lv-m { background: rgba(251,191,36,.15); color: #FCD34D; }
+[data-theme="dark"] .diff-card { background: #1E293B; border-color: #334155; }
+[data-theme="dark"] .diff-card:hover { border-color: var(--blue); }
+[data-theme="dark"] .diff-title { color: #E2E8F0; }
+[data-theme="dark"] .diff-desc { color: #64748B; }
+[data-theme="dark"] .edu-card { background: #1E293B; border-color: #334155; border-left-color: var(--blue); }
+[data-theme="dark"] .edu-degree { color: #E2E8F0; }
+[data-theme="dark"] .edu-sub { color: #64748B; }
+[data-theme="dark"] .edu-badge { background: #0F172A; border-color: #334155; color: #94A3B8; }

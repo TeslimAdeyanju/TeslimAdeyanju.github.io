@@ -225,16 +225,17 @@ a:hover { text-decoration: underline; }
   filter: drop-shadow(0 4px 32px rgba(96,165,250,0.28));
 }
 .hero-role {
-  font-size: clamp(.95rem, 2vw, 1.15rem);
+  font-size: clamp(.8rem, 1.6vw, 1rem);
   color: var(--blue-l);
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
+  letter-spacing: .01em;
 }
-.role-sep { color: var(--dark3); }
+.role-sep { color: rgba(148,163,184,.4); }
 .hero-bio {
   font-size: .975rem;
   color: #94A3B8;

@@ -44,7 +44,7 @@ a:hover { text-decoration: underline; }
 
 /* ── Layout ─────────────────────────────────────────────────── */
 .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-.section { padding: 64px 0; }
+.section { padding: 44px 0; }
 .section-alt { background: var(--gray-50); }
 
 /* ── Typography helpers ──────────────────────────────────────── */
@@ -65,11 +65,11 @@ a:hover { text-decoration: underline; }
   margin-bottom: 12px;
 }
 .s-sub {
-  font-size: .95rem;
+  font-size: .9rem;
   color: var(--gray-500);
   max-width: 560px;
-  line-height: 1.65;
-  margin-bottom: 24px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 /* ── Nav ─────────────────────────────────────────────────────── */
@@ -954,85 +954,75 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 .diff-card {
   display: flex;
-  gap: 16px;
-  padding: 22px 20px;
-  background: #fff;
-  border: 1px solid var(--gray-200);
+  gap: 14px;
+  padding: 16px;
+  background: #1E293B;
+  border: 1px solid #334155;
   border-radius: var(--r);
   transition: border-color .2s, transform .18s;
 }
 .diff-card:hover { border-color: var(--blue); transform: translateY(-2px); }
-.diff-icon { font-size: 1.45rem; flex-shrink: 0; line-height: 1; margin-top: 1px; }
+.diff-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; margin-top: 1px; }
 .diff-title {
-  font-size: .9rem;
+  font-size: .875rem;
   font-weight: 700;
-  color: var(--dark);
-  margin-bottom: 6px;
+  color: #E2E8F0;
+  margin-bottom: 5px;
 }
 .diff-desc {
-  font-size: .8rem;
-  color: var(--gray-500);
-  line-height: 1.65;
+  font-size: .78rem;
+  color: #64748B;
+  line-height: 1.55;
 }
 
-/* ── Education ───────────────────────────────────────────────── */
-.edu-card {
-  background: #fff;
-  border: 1px solid var(--gray-200);
-  border-left: 4px solid var(--blue);
+/* ── Education strip ─────────────────────────────────────────── */
+.edu-strip {
+  background: #1E293B;
+  border: 1px solid #334155;
+  border-left: 3px solid var(--blue);
   border-radius: var(--r);
-  padding: 28px 32px;
+  padding: 16px 20px;
 }
-.edu-header {
+.edu-strip-main {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
-.edu-degree {
-  font-size: 1.05rem;
+.edu-deg {
+  font-size: .925rem;
   font-weight: 700;
-  color: var(--dark);
-  line-height: 1.4;
+  color: #E2E8F0;
 }
-.edu-sub { font-weight: 400; color: var(--gray-500); }
+.edu-deg em { font-style: normal; font-weight: 400; color: #64748B; }
 .edu-grade {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: .75rem;
+  font-size: .7rem;
   font-weight: 700;
-  color: #16A34A;
-  background: rgba(22,163,74,.1);
-  padding: 3px 10px;
+  color: #4ADE80;
+  background: rgba(74,222,128,.12);
+  padding: 2px 9px;
   border-radius: 100px;
-}
-.edu-years {
-  font-size: .8rem;
-  color: var(--gray-500);
-  white-space: nowrap;
   flex-shrink: 0;
-  padding-top: 4px;
 }
-.edu-school {
-  font-size: .875rem;
-  color: var(--blue);
-  font-weight: 600;
-  margin-bottom: 16px;
+.edu-inst {
+  font-size: .78rem;
+  color: #60A5FA;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 .edu-badges {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 .edu-badge {
-  font-size: .78rem;
+  font-size: .72rem;
   font-weight: 500;
-  color: var(--gray-600);
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
-  padding: 5px 12px;
+  color: #94A3B8;
+  background: #0F172A;
+  border: 1px solid #334155;
+  padding: 3px 10px;
   border-radius: var(--r-sm);
 }
 
@@ -1125,7 +1115,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .section { padding: 48px 0; }
+  .section { padding: 36px 0; }
   .proj-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 88px 0 44px; min-height: 100svh; }

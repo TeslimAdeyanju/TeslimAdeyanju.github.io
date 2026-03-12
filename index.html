@@ -29,7 +29,7 @@
   <!-- ══ NAV ══ -->
   <header class="nav" id="site-header">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">TA</a>
+      <a href="#hero" class="nav-logo">Teslim Adeyanju</a>
       <nav class="nav-links">
         <a href="#impact">About</a>
         <a href="#skills">Skills</a>
@@ -37,6 +37,7 @@
         <a href="#study">Study</a>
         <a href="#connect">Contact</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">🌙</button>
       <a href="mailto:adeyanjuteslim@gmail.com" class="btn-hire">Hire Me</a>
     </div>
   </header>
@@ -70,7 +71,7 @@
 
         <div class="hero-actions reveal" style="--d:.4s">
           <a href="#projects" class="btn btn-primary">View Portfolio</a>
-          <a href="./TeslimAdeyanju_CV.pdf" target="_blank" rel="noopener" class="btn-cv">↓ Download CV</a>
+          <a href="https://drive.google.com/file/d/1Zf78qjrCa-CHapa8rYQpyDDJTcDSkmin/view?usp=sharing" target="_blank" rel="noopener" class="btn-cv">↓ Download CV</a>
           <a href="mailto:adeyanjuteslim@gmail.com" class="btn-ghost">Get In Touch</a>
           <a href="https://www.linkedin.com/in/adeyanjuteslimuthman" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
         </div>
@@ -123,54 +124,42 @@
       <p class="eyebrow">Track Record</p>
       <h2 class="s-title">Impact Highlights</h2>
       <p class="s-sub">Six moments where data, finance, and code changed what was possible</p>
-      <div class="impact-rows">
+      <div class="impact-grid">
 
-        <div class="impact-row">
-          <div class="ir-metric">Days → Hours</div>
-          <div class="ir-content">
-            <span class="ir-cat">Reporting Automation</span>
-            <p class="ir-text">Finance teams were losing days every month to manual Excel workflows — copying, pasting, reconciling. I rebuilt the process with Python automation pipelines: data loads, validates, transforms, and formats itself. Close time dropped from days to hours, errors dropped to near-zero, and every run leaves a full audit trail.</p>
-          </div>
+        <div class="impact-card">
+          <div class="ic-metric">Days → Hours</div>
+          <span class="ic-cat">Reporting Automation</span>
+          <p class="ic-text">Finance teams were losing days every month to manual Excel workflows — copying, pasting, reconciling. I rebuilt the process with Python automation pipelines: data loads, validates, transforms, and formats itself. Close time dropped from days to hours, errors dropped to near-zero, and every run leaves a full audit trail.</p>
         </div>
 
-        <div class="impact-row">
-          <div class="ir-metric">15+ Dashboards</div>
-          <div class="ir-content">
-            <span class="ir-cat">Power BI Analytics</span>
-            <p class="ir-text">Leadership needed visibility, not spreadsheets. I designed and deployed 15+ Power BI dashboards covering budget vs actuals, cash flow, headcount, and departmental P&amp;L — connecting raw source data directly to boardroom decisions. Executives now see the story, not just the numbers.</p>
-          </div>
+        <div class="impact-card">
+          <div class="ic-metric">15+ Dashboards</div>
+          <span class="ic-cat">Power BI Analytics</span>
+          <p class="ic-text">Leadership needed visibility, not spreadsheets. I designed and deployed 15+ Power BI dashboards covering budget vs actuals, cash flow, headcount, and departmental P&amp;L — connecting raw source data directly to boardroom decisions. Executives now see the story, not just the numbers.</p>
         </div>
 
-        <div class="impact-row">
-          <div class="ir-metric">60%+ Faster</div>
-          <div class="ir-content">
-            <span class="ir-cat">Performance Engineering</span>
-            <p class="ir-text">Reports that took minutes to refresh were frustrating users and slowing decisions. I rebuilt the underlying data models — star schema restructuring, DAX query rewriting, relationship cardinality reduction — cutting refresh times by over 60% without changing a single visual on screen.</p>
-          </div>
+        <div class="impact-card">
+          <div class="ic-metric">60%+ Faster</div>
+          <span class="ic-cat">Performance Engineering</span>
+          <p class="ic-text">Reports that took minutes to refresh were frustrating users and slowing decisions. I rebuilt the underlying data models — star schema restructuring, DAX query rewriting, relationship cardinality reduction — cutting refresh times by over 60% without changing a single visual on screen.</p>
         </div>
 
-        <div class="impact-row">
-          <div class="ir-metric">99%+ Accuracy</div>
-          <div class="ir-content">
-            <span class="ir-cat">Data Engineering</span>
-            <p class="ir-text">Financial data pipelines that drift or fail silently are worse than no pipeline at all. I engineered end-to-end SQL ETL processes with normalised schemas, referential integrity checks, and row-level audit trails — so every figure is traceable, every anomaly is flagged, and every output is regulator-ready.</p>
-          </div>
+        <div class="impact-card">
+          <div class="ic-metric">99%+ Accuracy</div>
+          <span class="ic-cat">Data Engineering</span>
+          <p class="ic-text">Financial data pipelines that drift or fail silently are worse than no pipeline at all. I engineered end-to-end SQL ETL processes with normalised schemas, referential integrity checks, and row-level audit trails — so every figure is traceable, every anomaly is flagged, and every output is regulator-ready.</p>
         </div>
 
-        <div class="impact-row">
-          <div class="ir-metric">3 Months Earlier</div>
-          <div class="ir-content">
-            <span class="ir-cat">Financial Forecasting</span>
-            <p class="ir-text">A board that only sees risk when it arrives cannot act in time. I built predictive cash flow models that surfaced liquidity pressure 3 months before it materialised — translating pattern detection in Python into plain-language board intelligence. The organisation acted early, not reactively.</p>
-          </div>
+        <div class="impact-card">
+          <div class="ic-metric">3 Months Earlier</div>
+          <span class="ic-cat">Financial Forecasting</span>
+          <p class="ic-text">A board that only sees risk when it arrives cannot act in time. I built predictive cash flow models that surfaced liquidity pressure 3 months before it materialised — translating pattern detection in Python into plain-language board intelligence. The organisation acted early, not reactively.</p>
         </div>
 
-        <div class="impact-row">
-          <div class="ir-metric">206 NHS Trusts</div>
-          <div class="ir-content">
-            <span class="ir-cat">NHS Finance Analytics</span>
-            <p class="ir-text">NHS England releases financial data annually for every Trust in England — but it arrives as hundreds of disconnected Excel files. I built a Python ETL pipeline that ingests, cleans, and loads all 206 Trusts across 3 financial years into a MySQL star schema, then surfaces the analysis through Power BI — turning public sector data into a sector-wide benchmarking tool.</p>
-          </div>
+        <div class="impact-card">
+          <div class="ic-metric">206 NHS Trusts</div>
+          <span class="ic-cat">NHS Finance Analytics</span>
+          <p class="ic-text">NHS England releases financial data annually for every Trust in England — but it arrives as hundreds of disconnected Excel files. I built a Python ETL pipeline that ingests, cleans, and loads all 206 Trusts across 3 financial years into a MySQL star schema, then surfaces the analysis through Power BI — turning public sector data into a sector-wide benchmarking tool.</p>
         </div>
 
       </div>
@@ -258,7 +247,7 @@
               <span class="proj-num">★ FDA</span>
               <span class="pypi-badge">PyPI Package</span>
             </div>
-            <a href="https://github.com/TeslimAdeyanju/fda-toolkit" target="_blank" rel="noopener" class="proj-gh">
+            <a href="https://github.com/TeslimAdeyanju" target="_blank" rel="noopener" class="proj-gh">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
               GitHub
             </a>
@@ -274,7 +263,7 @@
           </div>
           <div class="proj-links">
             <a href="https://pypi.org/project/fda-toolkit/" target="_blank" rel="noopener">PyPI ↗</a>
-            <a href="https://github.com/TeslimAdeyanju/fda-toolkit" target="_blank" rel="noopener">Source ↗</a>
+            <a href="https://github.com/TeslimAdeyanju" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </div>
 
@@ -460,7 +449,7 @@
           <div class="sc8-tags"><span>Scikit-learn</span><span>Forecasting</span><span>Risk</span></div>
         </a>
 
-        <a href="https://github.com/TeslimAdeyanju/studybook-excel-for-finance-and-data-science" target="_blank" rel="noopener" class="sc8">
+        <a href="https://github.com/TeslimAdeyanju" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
             <div class="sc8-icon" style="background:#F0FDF4">📈</div>
             <span class="sc8-arr">↗</span>
@@ -470,7 +459,7 @@
           <div class="sc8-tags"><span>Excel</span><span>VBA</span><span>Modelling</span></div>
         </a>
 
-        <a href="https://github.com/TeslimAdeyanju/studybook-powerbi-for-finance-and-data-science" target="_blank" rel="noopener" class="sc8">
+        <a href="https://github.com/TeslimAdeyanju" target="_blank" rel="noopener" class="sc8">
           <div class="sc8-top">
             <div class="sc8-icon" style="background:#FEF9C3">📉</div>
             <span class="sc8-arr">↗</span>
@@ -564,7 +553,7 @@
           <div class="sc-name">GitHub</div>
           <div class="sc-handle">TeslimAdeyanju</div>
         </a>
-        <a href="./TeslimAdeyanju_CV.pdf" target="_blank" rel="noopener" class="social-card">
+        <a href="https://drive.google.com/file/d/1Zf78qjrCa-CHapa8rYQpyDDJTcDSkmin/view?usp=sharing" target="_blank" rel="noopener" class="social-card">
           <div class="sc-icon sc-cv-card">CV</div>
           <div class="sc-name">CV / Résumé</div>
           <div class="sc-handle">Download PDF</div>

@@ -225,7 +225,7 @@ a:hover { text-decoration: underline; }
   filter: drop-shadow(0 4px 32px rgba(96,165,250,0.28));
 }
 .hero-role {
-  font-size: clamp(.8rem, 1.6vw, 1rem);
+  font-size: clamp(.9rem, 1.8vw, 1.05rem);
   color: var(--blue-l);
   font-weight: 500;
   margin-bottom: 16px;
@@ -964,15 +964,15 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 .diff-card:hover { border-color: var(--blue); transform: translateY(-2px); }
 .diff-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; margin-top: 1px; }
 .diff-title {
-  font-size: .875rem;
+  font-size: .95rem;
   font-weight: 700;
   color: #E2E8F0;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 .diff-desc {
-  font-size: .78rem;
-  color: #64748B;
-  line-height: 1.55;
+  font-size: .85rem;
+  color: #94A3B8;
+  line-height: 1.65;
 }
 
 /* ── Education strip ─────────────────────────────────────────── */
@@ -1124,7 +1124,16 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .proj-title-row { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 480px) {
-  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn,
+  .hero-actions .btn-cv,
+  .hero-actions .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
   .hs { padding: 14px 16px; }
   .hs-num { font-size: 1.5rem; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }

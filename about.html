@@ -46,7 +46,8 @@
   <header class="nav" id="site-header">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Teslim Adeyanju</a>
-      <nav class="nav-links">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav class="nav-links" id="nav-links">
         <a href="about.html">About</a>
         <a href="index.html#skills">Capabilities</a>
         <a href="index.html#education">Education</a>
@@ -291,6 +292,23 @@
     document.querySelectorAll('.fade-in-up, .fade-in').forEach(el => {
       observer.observe(el);
     });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+      
+      // Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+        });
+      });
+    }
 
     // Navbar scroll effect
     document.addEventListener('DOMContentLoaded', function() {

@@ -461,6 +461,11 @@ a:hover { text-decoration: underline; }
 .education-grid {
   grid-template-columns: 1fr 1fr;
 }
+.education-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
 .skill-cat-secondary {
   display: grid;
   grid-template-columns: 1fr;
@@ -566,29 +571,29 @@ a:hover { text-decoration: underline; }
 
 /* ── Skill Detail (Expanded Content) ────────────────────────── */
 .skill-detail {
-  padding: 24px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 .skill-detail-title {
   font-size: 1rem;
   font-weight: 600;
   color: #FFFFFF;
-  margin-bottom: 4px;
-  line-height: 1.4;
+  margin-bottom: 3px;
+  line-height: 1.3;
 }
 .skill-detail-meta {
   font-size: .875rem;
   color: #B0B9D4;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-weight: 500;
 }
 .skill-detail-highlight {
   font-size: .8rem;
   color: #60A5FA;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   letter-spacing: .03em;
 }
 .skill-detail-desc {
@@ -596,7 +601,6 @@ a:hover { text-decoration: underline; }
   color: #C7CEE0;
   line-height: 1.6;
   margin-bottom: 0;
-  flex-grow: 1;
 }
 .skill-detail-subhead {
   font-size: .8rem;

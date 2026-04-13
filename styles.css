@@ -563,6 +563,71 @@ a:hover { text-decoration: underline; }
   transform: translateX(2px);
 }
 
+/* ── Skill Detail (Expanded Content) ────────────────────────── */
+.skill-detail {
+  padding: 20px;
+}
+.skill-detail-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+.skill-detail-meta {
+  font-size: .875rem;
+  color: var(--gray-500);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.skill-detail-highlight {
+  font-size: .8rem;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: .03em;
+}
+.skill-detail-desc {
+  font-size: .875rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.skill-detail-subhead {
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--dark);
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+.skill-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skill-detail-list li {
+  font-size: .8rem;
+  color: var(--gray-600);
+  padding: 6px 0 6px 16px;
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 3px;
+}
+.skill-detail-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-size: .65rem;
+  font-weight: 700;
+}
+.skill-detail-list li strong {
+  color: var(--dark);
+  font-weight: 600;
+}
+
 /* ── Projects ────────────────────────────────────────────────── */
 .projects-hd {
   margin-bottom: 28px;

@@ -59,7 +59,7 @@ a:hover { text-decoration: underline; }
 .s-title {
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 400;
-  font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: Garamond, 'EB Garamond', 'Crimson Text', Georgia, serif;
   color: var(--dark);
   line-height: 1.1;
   letter-spacing: -.5px;
@@ -966,7 +966,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 .diff-title {
   font-size: .95rem;
   font-weight: 400;
-  font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: Garamond, 'EB Garamond', 'Crimson Text', Georgia, serif;
   color: #E2E8F0;
   margin-bottom: 6px;
 }

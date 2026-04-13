@@ -216,7 +216,7 @@ a:hover { text-decoration: underline; }
   font-family: Garamond, 'EB Garamond', 'Crimson Text', Georgia, serif;
   font-size: clamp(4rem, 9.5vw, 8rem);
   font-weight: 800;
-  line-height: 0.95;
+  line-height: 1.05;
   letter-spacing: -5px;
   margin-bottom: 18px;
   background: linear-gradient(160deg, #FFFFFF 0%, #BAE6FD 38%, #60A5FA 68%, #3B82F6 100%);

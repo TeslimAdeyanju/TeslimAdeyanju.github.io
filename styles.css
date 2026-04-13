@@ -105,12 +105,30 @@ a:hover { text-decoration: underline; }
 .nav-logo:hover { color: var(--blue); text-decoration: none; }
 .nav-links { display: flex; gap: 28px; flex: 1; }
 .nav-links a {
+  position: relative;
   font-size: .875rem;
   font-weight: 500;
   color: var(--gray-500);
   transition: color .15s;
+  padding-bottom: 4px;
 }
-.nav-links a:hover { color: var(--dark); text-decoration: none; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--blue);
+  transition: width .3s ease;
+}
+.nav-links a:hover {
+  color: var(--dark);
+  text-decoration: none;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
 .btn-hire {
   display: inline-flex;
   align-items: center;

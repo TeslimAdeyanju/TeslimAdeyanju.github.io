@@ -1489,6 +1489,32 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   color: var(--dark);
 }
 
+.about-list {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.about-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--dark3);
+  margin-bottom: 16px;
+  padding-left: 0;
+}
+
+.about-list li strong {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.intro-text {
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+  color: var(--dark3);
+  margin-bottom: 20px;
+}
+
 /* Features Grid */
 .features-grid {
   display: grid;
@@ -1960,6 +1986,14 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 
 [data-theme="dark"] .cta-block > p {
   color: #94A3B8;
+}
+
+[data-theme="dark"] .about-list li {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .about-list li strong {
+  color: #E2E8F0;
 }
 
 /* Responsive */

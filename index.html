@@ -21,8 +21,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nunito:wght@800;900&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <script data-goatcounter="https://adeyanjuteslim.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+  <!-- Plausible Analytics -->
+  <script defer data-domain="adeyanjuteslim.co.uk" src="https://plausible.io/js/script.js"></script>
+  <!-- GDPR Cookie Banner -->
+  <style>
+    .gdpr-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30,30,30,0.95); color: #fff; padding: 20px; text-align: center; z-index: 9999; font-size: 14px; }
+    .gdpr-banner a { color: #60A5FA; text-decoration: none; margin: 0 5px; }
+    .gdpr-banner button { background: #3B82F6; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-left: 15px; font-size: 14px; }
+    .gdpr-banner button:hover { background: #2563EB; }
+  </style>
+  <script>
+    if (!localStorage.getItem('gdpr-consent')) {
+      document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.createElement('div');
+        banner.className = 'gdpr-banner';
+        banner.innerHTML = `We use analytics to understand your experience. By continuing, you accept our <a href="#">privacy policy</a>. <button onclick="document.querySelector('.gdpr-banner').remove(); localStorage.setItem('gdpr-consent', 'true');">Got it</button>`;
+        document.body.appendChild(banner);
+      });
+    }
+  </script>
 </head>
 <body>
 

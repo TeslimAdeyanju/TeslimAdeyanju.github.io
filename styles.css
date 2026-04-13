@@ -898,21 +898,21 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 /* ── Connect ─────────────────────────────────────────────────── */
 .connect-hd {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
-.connect-hd .s-title { margin: 0 auto 10px; }
-.connect-hd .s-sub   { margin: 0 auto 28px; }
+.connect-hd .s-title { margin: 0 auto 8px; }
+.connect-hd .s-sub   { margin: 0 auto 20px; }
 .social-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 12px;
 }
 .social-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 28px 16px;
+  gap: 6px;
+  padding: 16px 12px;
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--r);
@@ -922,17 +922,17 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 .social-card:hover { border-color: var(--blue); box-shadow: var(--sh); transform: translateY(-3px); text-decoration: none; }
 .sc-icon {
-  width: 48px; height: 48px;
-  border-radius: 12px;
+  width: 32px; height: 32px;
+  border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1rem; font-weight: 900;
+  font-size: 0.85rem; font-weight: 900;
 }
 .sc-linkedin { background: #0A66C2; color: #fff; font-size: 1.1rem; font-style: italic; font-weight: 800; }
 .sc-github   { background: #24292F; color: #fff; }
 .sc-cv-card  { background: #16A34A; color: #fff; font-size: .8rem; font-weight: 900; letter-spacing: .03em; }
 .sc-email    { background: #EA4335; color: #fff; font-size: 1.1rem; }
-.sc-name     { font-size: .9rem; font-weight: 600; color: var(--dark); }
-.sc-handle   { font-size: .73rem; color: var(--gray-500); }
+.sc-name     { font-size: .8rem; font-weight: 600; color: var(--dark); }
+.sc-handle   { font-size: .65rem; color: var(--gray-500); }
 
 /* ── Footer ──────────────────────────────────────────────────── */
 .footer { background: var(--dark); padding: 24px 0; }

@@ -59,7 +59,7 @@ a:hover { text-decoration: underline; }
 .s-title {
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 400;
-  font-family: Garamond, 'EB Garamond', 'Crimson Text', Georgia, serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   color: var(--dark);
   line-height: 1.1;
   letter-spacing: -.5px;
@@ -232,9 +232,9 @@ a:hover { text-decoration: underline; }
 }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
 
-/* Hero name — Garamond display */
+/* Hero name — Avenir display */
 .hero-name {
-  font-family: Garamond, 'EB Garamond', 'Crimson Text', Georgia, serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   font-size: clamp(4rem, 9.5vw, 8rem);
   font-weight: 400;
   line-height: 1.05;
@@ -1114,7 +1114,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 .diff-title {
   font-size: .95rem;
   font-weight: 400;
-  font-family: Garamond, 'EB Garamond', 'Crimson Text', Georgia, serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   color: #E2E8F0;
   margin-bottom: 6px;
 }
@@ -1483,7 +1483,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .hero-title {
-  font-family: Garamond, 'Times New Roman', Georgia, serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   font-size: 4rem;
   font-weight: 400;
   line-height: 1.1;
@@ -1525,7 +1525,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .content-block h2 {
-  font-family: Garamond, 'Times New Roman', Georgia, serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 12px;
@@ -1678,7 +1678,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   position: absolute;
   left: 0;
   top: 0;
-  font-family: Space Grotesk, sans-serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
   color: rgba(59,130,246,.1);
@@ -1822,7 +1822,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 
 .expect-number {
   display: inline-block;
-  font-family: Space Grotesk, sans-serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
   color: var(--blue);
@@ -1853,7 +1853,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .cta-block h2 {
-  font-family: Garamond, 'Times New Roman', Georgia, serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 20px;
@@ -2133,7 +2133,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .about-content h1 {
-  font-family: Garamond, 'Times New Roman', Georgia, serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   margin: 24px 0 16px;
@@ -2142,7 +2142,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .about-content h2 {
-  font-family: Garamond, 'Times New Roman', Georgia, serif;
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
   font-size: 1.75rem;
   font-weight: 400;
   margin: 32px 0 16px;

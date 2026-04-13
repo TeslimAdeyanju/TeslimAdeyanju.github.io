@@ -466,6 +466,10 @@ a:hover { text-decoration: underline; }
   grid-template-columns: 1fr;
   gap: 24px;
 }
+.prof-quals {
+  grid-template-columns: 1fr;
+  margin-top: 12px;
+}
 .skill-cat {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -494,6 +498,7 @@ a:hover { text-decoration: underline; }
 .dot-cyan   { background: #22D3EE; }
 .dot-green  { background: #4ADE80; }
 .dot-purple { background: #A78BFA; }
+.dot-orange { background: #FB923C; }
 .skill-tbl { width: 100%; border-collapse: collapse; }
 .skill-tbl tr { border-bottom: 1px solid var(--gray-100); transition: background .15s; }
 .skill-tbl tr:last-child { border-bottom: none; }

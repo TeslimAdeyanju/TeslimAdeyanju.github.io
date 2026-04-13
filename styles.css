@@ -89,7 +89,7 @@ a:hover { text-decoration: underline; }
 .edu-item {
   margin-bottom: 16px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid #E8EDF5;
 }
 .edu-item:last-child { border-bottom: none; padding-bottom: 0; }
 .edu-degree {
@@ -124,9 +124,9 @@ a:hover { text-decoration: underline; }
   margin: 4px 0 0 0;
 }
 .edu-cert {
-  font-size: 0.85rem;
-  color: var(--dark);
-  line-height: 1.55;
+  font-size: 0.9rem;
+  color: #1E293B;
+  line-height: 1.6;
   margin: 0;
   font-weight: 500;
 }

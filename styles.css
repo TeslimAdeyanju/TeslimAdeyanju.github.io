@@ -1399,3 +1399,93 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .edu-degree { color: #E2E8F0; }
 [data-theme="dark"] .edu-sub { color: #64748B; }
 [data-theme="dark"] .edu-badge { background: #0F172A; border-color: #334155; color: #94A3B8; }
+
+/* ── About Page ──────────────────────────────────────────────── */
+.about-content {
+  max-width: 800px;
+  line-height: 1.8;
+  color: var(--dark);
+}
+
+.about-content h1 {
+  font-family: Garamond, 'Times New Roman', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 24px 0 16px;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.about-content h2 {
+  font-family: Garamond, 'Times New Roman', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 32px 0 16px;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+.about-content h3 {
+  font-family: Avenir, 'Avenir Next', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 20px 0 12px;
+  color: var(--dark);
+}
+
+.about-content p {
+  margin-bottom: 16px;
+  font-family: Avenir, 'Avenir Next', sans-serif;
+  font-size: 1rem;
+  color: var(--dark3);
+}
+
+.about-content ul {
+  margin: 16px 0 24px 24px;
+  list-style: disc;
+}
+
+.about-content li {
+  margin-bottom: 8px;
+  font-family: Avenir, 'Avenir Next', sans-serif;
+  font-size: 1rem;
+  color: var(--dark3);
+  line-height: 1.6;
+}
+
+.about-content a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.about-content a:hover {
+  color: var(--blue-d);
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .about-content {
+  color: #E2E8F0;
+}
+
+[data-theme="dark"] .about-content h1,
+[data-theme="dark"] .about-content h2 {
+  color: #F1F5F9;
+}
+
+[data-theme="dark"] .about-content h3 {
+  color: #E2E8F0;
+}
+
+[data-theme="dark"] .about-content p,
+[data-theme="dark"] .about-content li {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .about-content a {
+  color: #60A5FA;
+}
+
+[data-theme="dark"] .about-content a:hover {
+  color: #93C5FD;
+}

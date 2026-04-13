@@ -1316,6 +1316,18 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .hero-name { font-size: clamp(3.2rem, 14vw, 5rem); letter-spacing: -3px; }
   .diff-grid { grid-template-columns: 1fr; }
   .proj-title-row { flex-direction: column; align-items: flex-start; }
+  
+  /* Mobile profile section fixes */
+  .profile-creds { max-width: 100%; }
+  .s-title-light { font-size: clamp(1.8rem, 6vw, 2.2rem); margin: 12px 0 20px; }
+  .eyebrow-light { font-size: .75rem; }
+  .profile-bullets { gap: 12px; margin: 16px 0; }
+  .profile-bullets li { font-size: .9rem; line-height: 1.5; }
+  .visa-note { font-size: .75rem; padding: 12px 14px; }
+  .profile-journal { max-width: 100%; }
+  .jcard { padding: 20px 24px; }
+  .jcard h3 { font-size: .95rem; }
+  .jcard p { font-size: .85rem; }
 }
 @media (max-width: 480px) {
   .hero-actions {

@@ -211,9 +211,9 @@ a:hover { text-decoration: underline; }
 }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
 
-/* Hero name — Space Grotesk display */
+/* Hero name — Garamond display */
 .hero-name {
-  font-family: 'Space Grotesk', Avenir, 'Avenir Next', sans-serif;
+  font-family: Garamond, 'EB Garamond', 'Crimson Text', Georgia, serif;
   font-size: clamp(4rem, 9.5vw, 8rem);
   font-weight: 800;
   line-height: 0.95;

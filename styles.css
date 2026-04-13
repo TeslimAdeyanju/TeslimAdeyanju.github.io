@@ -1577,11 +1577,14 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   transition: all 0.3s ease;
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
+  cursor: pointer;
 }
 
 .impact-card:hover {
   border-color: var(--blue);
   background: linear-gradient(135deg, white 0%, rgba(59,130,246,.02) 100%);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(59,130,246,.15);
 }
 
 .impact-metric {
@@ -1949,9 +1952,12 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .feature-card:hover,
 [data-theme="dark"] .expertise-card:hover,
 [data-theme="dark"] .expect-card:hover,
+[data-theme="dark"] .impact-card:hover,
 [data-theme="dark"] .contact-link:hover {
   border-color: #60A5FA;
   background: #1E293B;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(96,165,250,.2);
 }
 
 [data-theme="dark"] .feature-card h3,

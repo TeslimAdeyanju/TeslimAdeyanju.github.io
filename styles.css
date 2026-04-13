@@ -1563,8 +1563,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 /* Impact Grid */
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
   margin-top: 40px;
 }
 
@@ -2021,7 +2021,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .features-grid,
   .diff-cards,
   .expertise-grid,
-  .expectations-grid {
+  .expectations-grid,
+  .impact-grid {
     grid-template-columns: 1fr;
   }
 

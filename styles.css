@@ -962,10 +962,10 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   transition: border-color .2s, transform .18s;
 }
 .diff-card:hover { border-color: var(--blue); transform: translateY(-2px); }
-.diff-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; margin-top: 1px; }
 .diff-title {
   font-size: .95rem;
-  font-weight: 700;
+  font-weight: 400;
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: #E2E8F0;
   margin-bottom: 6px;
 }

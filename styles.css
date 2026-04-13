@@ -1881,11 +1881,11 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -1896,7 +1896,14 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 
 .fade-in-up {
   opacity: 0;
-  animation: fadeInUp 0.8s ease calc(0.1s + var(--delay, 0s)) forwards;
+  animation: fadeInUp 0.8s ease-out calc(0.1s + var(--delay, 0s)) forwards;
+}
+
+.fade-in-up.visible,
+.fade-in.visible {
+  animation: none;
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* Dark Theme */

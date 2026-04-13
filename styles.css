@@ -466,10 +466,6 @@ a:hover { text-decoration: underline; }
   grid-template-columns: 1fr;
   gap: 24px;
 }
-.prof-quals {
-  grid-template-columns: 1fr;
-  margin-top: 12px;
-}
 .skill-cat {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -498,7 +494,6 @@ a:hover { text-decoration: underline; }
 .dot-cyan   { background: #22D3EE; }
 .dot-green  { background: #4ADE80; }
 .dot-purple { background: #A78BFA; }
-.dot-orange { background: #FB923C; }
 .skill-tbl { width: 100%; border-collapse: collapse; }
 .skill-tbl tr { border-bottom: 1px solid var(--gray-100); transition: background .15s; }
 .skill-tbl tr:last-child { border-bottom: none; }
@@ -634,6 +629,42 @@ a:hover { text-decoration: underline; }
 }
 .skill-detail-list li strong {
   color: var(--dark);
+  font-weight: 600;
+}
+
+/* ── Compact List (for Professional Qualifications in detail box) ── */
+.skill-detail-subhead-small {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #B0B9D4;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.skill-detail-list-compact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skill-detail-list-compact li {
+  font-size: .8rem;
+  color: #C7CEE0;
+  padding: 4px 0 4px 14px;
+  position: relative;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+.skill-detail-list-compact li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #FB923C;
+  font-size: .65rem;
+  font-weight: 700;
+}
+.skill-detail-list-compact li strong {
+  color: #FFFFFF;
   font-weight: 600;
 }
 

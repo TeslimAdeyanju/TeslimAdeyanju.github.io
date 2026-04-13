@@ -1472,7 +1472,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   font-family: Garamond, 'Times New Roman', Georgia, serif;
   font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   color: var(--dark);
   line-height: 1.2;
 }

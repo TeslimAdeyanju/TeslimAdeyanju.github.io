@@ -458,6 +458,14 @@ a:hover { text-decoration: underline; }
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+.education-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.skill-cat-secondary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
 .skill-cat {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -1113,6 +1121,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 @media (max-width: 960px) {
   .skills-cats { grid-template-columns: 1fr; }
+  .education-grid { grid-template-columns: 1fr; }
+  .skill-cat-secondary { grid-template-columns: 1fr; }
   .pillars { grid-template-columns: 1fr; }
   .profile-layout { grid-template-columns: 1fr; gap: 32px; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }

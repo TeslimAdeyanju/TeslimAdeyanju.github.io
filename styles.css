@@ -469,7 +469,7 @@ a:hover { text-decoration: underline; }
 .skill-cat-secondary {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 32px;
 }
 .skill-cat {
   background: var(--white);

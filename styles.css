@@ -73,67 +73,6 @@ a:hover { text-decoration: underline; }
   margin-bottom: 16px;
 }
 
-/* Education & Certifications Cards */
-.edu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 24px;
-}
-.edu-card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 18px 16px;
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--r);
-  text-decoration: none;
-  transition: all .2s;
-}
-.edu-card:hover {
-  border-color: var(--blue);
-  box-shadow: var(--sh);
-  transform: translateY(-3px);
-}
-.edu-card-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--dark);
-  margin: 0 0 4px 0;
-  line-height: 1.3;
-}
-.edu-card-badge {
-  display: inline-block;
-  padding: 2px 8px;
-  background: #FEF08A;
-  color: #713F12;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: fit-content;
-}
-.edu-card-org {
-  font-size: 0.8rem;
-  color: var(--blue);
-  font-weight: 500;
-  margin: 4px 0 0 0;
-}
-.edu-card-text {
-  font-size: 0.8rem;
-  color: var(--gray-600);
-  line-height: 1.5;
-  margin: 0;
-}
-.edu-card-cert {
-  font-size: 0.9rem;
-  color: var(--dark);
-  line-height: 1.6;
-  margin: 0;
-  font-weight: 500;
-}
-
 /* ── Nav ─────────────────────────────────────────────────────── */
 .nav {
   position: sticky;
@@ -1190,7 +1129,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .section { padding: 36px 0; }
   .proj-grid { grid-template-columns: 1fr; }
   .proj-featured { grid-column: span 1; flex-direction: column; }
-  .edu-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 20px 0 32px; min-height: 100svh; }
   .hero-name { font-size: clamp(3.2rem, 14vw, 5rem); letter-spacing: -3px; }

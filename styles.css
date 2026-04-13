@@ -678,6 +678,15 @@ a:hover { text-decoration: underline; }
   line-height: 1.65;
   flex: 1;
 }
+/* Featured project — FDA Toolkit */
+.proj-featured {
+  grid-column: span 2;
+  flex-direction: row;
+  gap: 24px;
+}
+.proj-featured-content { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.proj-featured-image { flex: 1; background: var(--gray-100); border-radius: var(--r); overflow: hidden; }
+.proj-featured-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .ptags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
 .ptag {
   display: inline-block;
@@ -1099,6 +1108,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 /* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .proj-grid { grid-template-columns: repeat(2, 1fr); }
+  .proj-featured { grid-column: span 2; }
   .study-grid-8 { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 960px) {
@@ -1118,6 +1128,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .nav-links { display: none; }
   .section { padding: 36px 0; }
   .proj-grid { grid-template-columns: 1fr; }
+  .proj-featured { grid-column: span 1; flex-direction: column; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 20px 0 32px; min-height: 100svh; }
   .hero-name { font-size: clamp(3.2rem, 14vw, 5rem); letter-spacing: -3px; }

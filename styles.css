@@ -570,28 +570,28 @@ a:hover { text-decoration: underline; }
 .skill-detail-title {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--dark);
+  color: #E8EDF5;
   margin-bottom: 4px;
   line-height: 1.4;
 }
 .skill-detail-meta {
   font-size: .875rem;
-  color: var(--gray-500);
+  color: #B0B9D4;
   margin-bottom: 8px;
   font-weight: 500;
 }
 .skill-detail-highlight {
   font-size: .8rem;
-  color: var(--blue);
+  color: #60A5FA;
   font-weight: 600;
   margin-bottom: 12px;
   letter-spacing: .03em;
 }
 .skill-detail-desc {
   font-size: .875rem;
-  color: var(--gray-600);
+  color: #C7CEE0;
   line-height: 1.6;
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 .skill-detail-subhead {
   font-size: .8rem;

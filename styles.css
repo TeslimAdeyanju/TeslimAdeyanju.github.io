@@ -234,18 +234,18 @@ a:hover { text-decoration: underline; }
 
 /* Hero name — Avenir display */
 .hero-name {
-  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', Nunito, sans-serif;
-  font-size: clamp(4rem, 9.5vw, 8rem);
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -5px;
-  padding-bottom: 0.12em;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(4rem, 9.5vw, 7.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  padding-bottom: 0.15em;
   margin-bottom: 6px;
-  background: linear-gradient(160deg, #FFFFFF 0%, #BAE6FD 38%, #60A5FA 68%, #3B82F6 100%);
+  background: linear-gradient(150deg, #FFFFFF 0%, #E0F2FE 25%, #BAE6FD 45%, #60A5FA 70%, #3B82F6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 4px 32px rgba(96,165,250,0.28));
+  filter: drop-shadow(0 6px 40px rgba(96,165,250,0.35));
 }
 .hero-role {
   font-size: clamp(.9rem, 1.8vw, 1.05rem);
@@ -259,12 +259,58 @@ a:hover { text-decoration: underline; }
   letter-spacing: .01em;
 }
 .role-sep { color: rgba(148,163,184,.4); }
+.hero-role-qual {
+  font-size: clamp(.78rem, 1.4vw, .88rem);
+  color: #60A5FA;
+  font-weight: 400;
+  opacity: .9;
+  letter-spacing: .01em;
+}
 .hero-bio {
   font-size: .975rem;
   color: #94A3B8;
   line-height: 1.8;
   max-width: 580px;
   margin-bottom: 20px;
+}
+
+/* ── Hero impact list ────────────────────────────────────────── */
+.hero-impact {
+  max-width: 580px;
+  margin-bottom: 20px;
+}
+.hero-impact-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #60A5FA;
+  margin-bottom: 10px;
+}
+.hero-impact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hero-impact-list li {
+  font-size: .9rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+.hero-impact-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #3B82F6;
+  font-size: .72rem;
+  top: 4px;
+}
+.hero-impact-list li strong {
+  color: #E2E8F0;
+  font-weight: 600;
 }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
 .btn-ghost {
@@ -310,6 +356,8 @@ a:hover { text-decoration: underline; }
   border-radius: var(--r);
   width: fit-content;
   overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 24px;
 }
 .hs {
   display: flex;
@@ -1341,7 +1389,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .proj-featured { grid-column: span 1; flex-direction: column; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 20px 0 32px; min-height: 100svh; }
-  .hero-name { font-size: clamp(3.2rem, 14vw, 5rem); letter-spacing: -3px; }
+  .hero-name { font-size: clamp(3rem, 13vw, 5rem); letter-spacing: -0.5px; }
   .diff-grid { grid-template-columns: 1fr; }
   .proj-title-row { flex-direction: column; align-items: flex-start; }
   

@@ -248,9 +248,10 @@ a:hover { text-decoration: underline; }
   filter: drop-shadow(0 6px 40px rgba(96,165,250,0.35));
 }
 .hero-role {
-  font-size: clamp(.9rem, 1.8vw, 1.05rem);
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', sans-serif;
+  font-size: clamp(1rem, 1.9vw, 1.15rem);
   color: var(--blue-l);
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -260,18 +261,19 @@ a:hover { text-decoration: underline; }
 }
 .role-sep { color: rgba(148,163,184,.4); }
 .hero-role-qual {
-  font-size: clamp(.78rem, 1.4vw, .88rem);
+  font-family: Avenir, 'Avenir Next', 'Avenir Next LT Pro', sans-serif;
+  font-size: clamp(.9rem, 1.5vw, 1rem);
   color: #60A5FA;
-  font-weight: 400;
-  opacity: .9;
+  font-weight: 600;
+  opacity: .95;
   letter-spacing: .01em;
 }
 .hero-bio {
-  font-size: .975rem;
-  color: #94A3B8;
-  line-height: 1.8;
-  max-width: 580px;
-  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  line-height: 1.85;
+  max-width: 600px;
+  margin-bottom: 18px;
 }
 
 /* ── Hero impact list ────────────────────────────────────────── */
@@ -294,9 +296,9 @@ a:hover { text-decoration: underline; }
   gap: 8px;
 }
 .hero-impact-list li {
-  font-size: .9rem;
-  color: #94A3B8;
-  line-height: 1.5;
+  font-size: 1rem;
+  color: #CBD5E1;
+  line-height: 1.6;
   padding-left: 20px;
   position: relative;
 }

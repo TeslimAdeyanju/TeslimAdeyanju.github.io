@@ -1410,8 +1410,10 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
+  /* Tablet: single column, photo row (photo + impact side by side) */
   .hero-container { grid-template-columns: 1fr; gap: 32px; }
-  .hero-photo-col { order: -1; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .hero-photo-col { order: 2; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .hero-text { order: 1; }
   .hero-photo-wrap { flex-shrink: 0; }
   .photo-frame { width: 180px; height: 180px; }
   .float-card { display: none; }
@@ -1465,8 +1467,16 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .proj-grid { grid-template-columns: 1fr; }
   .proj-featured { grid-column: span 1; flex-direction: column; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
-  .hero { padding: 20px 0 32px; min-height: 100svh; }
+  .hero { padding: 20px 0 40px; min-height: unset; }
   .hero-name { font-size: clamp(3rem, 13vw, 5rem); letter-spacing: -0.5px; }
+  /* Mobile: text first, then compact centered photo, hide impact list */
+  .hero-photo-col { order: 2; flex-direction: column; align-items: center; gap: 0; }
+  .hero-text { order: 1; }
+  .hero-photo-wrap { width: 140px; height: 140px; margin: 0 auto 8px; }
+  .photo-frame { width: 140px; height: 140px; }
+  .hero-impact { display: none; }
+  .hero-tools { gap: 6px; }
+  .tool-badge { font-size: 0.65rem; padding: 2px 7px; }
   .diff-grid { grid-template-columns: 1fr; }
   .proj-title-row { flex-direction: column; align-items: flex-start; }
   

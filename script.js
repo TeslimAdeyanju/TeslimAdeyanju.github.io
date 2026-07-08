@@ -4,6 +4,38 @@ window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 10)
 })
 
+// ── Mobile hamburger menu toggle ─────────────────────────────────
+const menuToggle = document.getElementById('menu-toggle')
+const navLinks = document.getElementById('nav-links')
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active')
+  })
+  // Close menu when any nav link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('active'))
+  })
+}
+
+// ── Theme toggle ─────────────────────────────────────────────────
+const themeToggle = document.getElementById('theme-toggle')
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme)
+  if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙'
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+    localStorage.setItem('theme', next)
+    applyTheme(next)
+  })
+  // Sync icon to current theme on load
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'dark')
+}
+
 // ── Animated count-up for hero stat numbers ──────────────────────
 function countUp(el, target, suffix = '', duration = 1800) {
   const start = performance.now()

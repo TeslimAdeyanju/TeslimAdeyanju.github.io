@@ -16,6 +16,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="photo.JPG" />
   <link rel="apple-touch-icon" href="photo.JPG" />
+  <!-- Anti-flash theme script -->
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&display=swap" rel="stylesheet" />
@@ -34,13 +36,14 @@
       document.addEventListener('DOMContentLoaded', function() {
         const banner = document.createElement('div');
         banner.className = 'gdpr-banner';
-        banner.innerHTML = `We use analytics to understand your experience. By continuing, you accept our <a href="#">privacy policy</a>. <button onclick="document.querySelector('.gdpr-banner').remove(); localStorage.setItem('gdpr-consent', 'true');">Got it</button>`;
+        banner.innerHTML = `We use analytics to understand your experience. By continuing, you accept our privacy policy. <button onclick="document.querySelector('.gdpr-banner').remove(); localStorage.setItem('gdpr-consent', 'true');">Got it</button>`;
         document.body.appendChild(banner);
       });
     }
   </script>
 </head>
 <body>
+  <a href="#" class="skip-link">Skip to main content</a>
 
   <!-- ══ NAV ══ -->
   <header class="nav" id="site-header">
@@ -55,6 +58,7 @@
         <a href="https://adeyanjuteslim.notion.site/261807ec796380898cf1d03946fd8c6a?utm_source=portfolio&utm_medium=link&utm_campaign=finance_analytics_notebook" target="_blank" rel="noopener">Finance & Data Insights</a>
         <a href="index.html#connect">Contact</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle colour theme">☀️</button>
       <a href="mailto:info@adeyanjuteslim.co.uk" class="btn-hire">Work With Me</a>
     </div>
   </header>
@@ -313,7 +317,7 @@
     // Navbar scroll effect
     document.addEventListener('DOMContentLoaded', function() {
       const header = document.getElementById('site-header');
-      
+
       window.addEventListener('scroll', function() {
         if (window.scrollY > 0) {
           header.classList.add('scrolled');
@@ -322,6 +326,21 @@
         }
       });
     });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function() {
+        const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
+      });
+      applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+    }
   </script>
 
 </body>

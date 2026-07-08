@@ -274,7 +274,6 @@ a:hover { text-decoration: underline; }
   line-height: 1.75;
   max-width: 600px;
   margin-bottom: 14px;
-  text-align: justify;
 }
 
 /* ── Hero delivers list ──────────────────────────────────────── */
@@ -1478,8 +1477,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .hero-impact { display: none; }
   .hero-tools { gap: 6px; }
   .tool-badge { font-size: 0.65rem; padding: 2px 7px; }
-  .hero-role { font-size: clamp(0.78rem, 3.8vw, 0.95rem); }
-  .hero-role-qual { font-size: clamp(0.72rem, 3.2vw, 0.88rem); }
   .diff-grid { grid-template-columns: 1fr; }
   .proj-title-row { flex-direction: column; align-items: flex-start; }
   

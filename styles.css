@@ -172,7 +172,7 @@ a:hover { text-decoration: underline; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 24px 0 32px;
+  padding: 16px 0 24px;
   position: relative;
   overflow: hidden;
 }
@@ -201,9 +201,9 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -269,19 +269,19 @@ a:hover { text-decoration: underline; }
   letter-spacing: .01em;
 }
 .hero-bio {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #CBD5E1;
-  line-height: 1.85;
+  line-height: 1.75;
   max-width: 600px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
-/* ── Hero impact list ────────────────────────────────────────── */
-.hero-impact {
-  max-width: 580px;
+/* ── Hero delivers list ──────────────────────────────────────── */
+.hero-delivers {
+  max-width: 600px;
   margin-bottom: 20px;
 }
-.hero-impact-label {
+.hero-delivers-label {
   font-size: .72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -289,16 +289,51 @@ a:hover { text-decoration: underline; }
   color: #60A5FA;
   margin-bottom: 10px;
 }
-.hero-impact-list {
+.hero-delivers-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 9px;
+}
+.hero-delivers-list li {
+  font-size: .95rem;
+  color: #94A3B8;
+  line-height: 1.55;
+  padding-left: 20px;
+  position: relative;
+}
+.hero-delivers-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #3B82F6;
+  font-size: .72rem;
+  top: 4px;
+}
+.delivers-title {
+  font-weight: 700;
+  color: #E2E8F0;
+}
+
+/* ── Hero impact list ────────────────────────────────────────── */
+.hero-impact {
+  width: 100%;
+}
+.hero-impact-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #60A5FA;
+  margin-bottom: 12px;
+}
+.hero-impact-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 .hero-impact-list li {
-  font-size: 1rem;
-  color: #CBD5E1;
-  line-height: 1.6;
   padding-left: 20px;
   position: relative;
 }
@@ -308,11 +343,21 @@ a:hover { text-decoration: underline; }
   left: 0;
   color: #3B82F6;
   font-size: .72rem;
-  top: 4px;
+  top: 3px;
 }
-.hero-impact-list li strong {
+.impact-title {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
   color: #E2E8F0;
-  font-weight: 600;
+  margin-bottom: 3px;
+  line-height: 1.35;
+}
+.impact-desc {
+  display: block;
+  font-size: .82rem;
+  color: #94A3B8;
+  line-height: 1.55;
 }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
 .btn-ghost {
@@ -358,14 +403,14 @@ a:hover { text-decoration: underline; }
   border-radius: var(--r);
   width: fit-content;
   overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 24px;
+  margin-top: 14px;
+  margin-bottom: 16px;
 }
 .hs {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 18px 24px;
+  gap: 10px;
+  padding: 14px 18px;
 }
 .hs-sep {
   width: 1px;
@@ -390,15 +435,19 @@ a:hover { text-decoration: underline; }
 
 /* Hero photo */
 .hero-photo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-photo-wrap {
   position: relative;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .photo-frame {
-  width: 280px;
-  height: 280px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   padding: 4px;
   background: linear-gradient(135deg, #3B82F6, #22D3EE, #4ADE80);
@@ -1337,11 +1386,13 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
-  .hero-container { grid-template-columns: 1fr; gap: 36px; }
-  .hero-photo-col { order: -1; }
-  .photo-frame { width: 200px; height: 200px; }
+  .hero-container { grid-template-columns: 1fr; gap: 32px; }
+  .hero-photo-col { order: -1; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .hero-photo-wrap { flex-shrink: 0; }
+  .photo-frame { width: 180px; height: 180px; }
   .float-card { display: none; }
   .hero-stats { flex-wrap: wrap; width: 100%; }
+  .hero-impact { flex: 1; min-width: 240px; }
 }
 @media (max-width: 768px) {
   .nav-links {

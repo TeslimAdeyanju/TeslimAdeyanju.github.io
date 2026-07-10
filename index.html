@@ -68,7 +68,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <!-- GDPR Cookie Banner -->
   <style>
@@ -94,7 +94,7 @@
   <!-- ══ NAV ══ -->
   <header class="nav" id="site-header">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Teslim Adeyanju</a>
+      <a href="#hero" class="nav-logo">Home</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
       <nav class="nav-links" id="nav-links">
         <a href="about.html">About</a>
@@ -116,10 +116,20 @@
       <div class="hero-text">
         <h1 class="hero-name reveal" style="--d:.1s">Teslim<br>Adeyanju</h1>
 
-        <p class="hero-role reveal" style="--d:.2s">
-          Financial Data Analyst <span class="role-sep">|</span> FP&amp;A <span class="role-sep">|</span> Power BI <span class="role-sep">|</span> SQL <span class="role-sep">|</span> Python<br>
-          <span class="hero-role-qual">ACA Chartered Accountant <span class="role-sep">·</span> PL-300 Certified <span class="role-sep">·</span> MSc Finance, Distinction</span>
-        </p>
+        <div class="hero-role reveal" style="--d:.2s">
+          <div class="role-badges">
+            <span class="role-badge">Financial Data Analyst</span>
+            <span class="role-badge">FP&amp;A</span>
+            <span class="role-badge">Power BI</span>
+            <span class="role-badge">SQL</span>
+            <span class="role-badge">Python</span>
+          </div>
+          <div class="role-badges role-badges-qual">
+            <span class="role-badge role-badge-qual">ACA Chartered Accountant</span>
+            <span class="role-badge role-badge-qual">PL-300 Certified</span>
+            <span class="role-badge role-badge-qual">MSc Finance, Distinction</span>
+          </div>
+        </div>
 
         <div class="hero-stats reveal" style="--d:.25s">
           <div class="hs">
@@ -290,60 +300,53 @@
       <h2 class="s-title">Education &amp; Certifications</h2>
       <p class="s-sub">Academic excellence paired with current industry certifications across finance, analytics, and cloud platforms.</p>
 
-      <div class="skills-cats education-grid">
+      <div class="edu-profile">
 
-        <!-- Education & Professional Qualifications (Left Column) -->
-        <div class="education-left">
-          <!-- Academic Background -->
-          <div class="skill-cat skill-cat-featured">
-            <div class="skill-cat-hd"><span class="cat-dot dot-blue"></span>Academic Background</div>
-            <div class="skill-detail">
-              <p class="skill-detail-title"><strong>MSc Finance and Investment Banking</strong> — Distinction</p>
-              <p class="skill-detail-meta">University of Hertfordshire, UK (2022–2024)</p>
-              <p class="skill-detail-highlight">Top 5% of cohort | HBS Excellence Award 2024 | Student Representative</p>
-              
-              <p class="skill-detail-desc">Grounded in CFA Levels 1 & 2 curriculum, the programme combined quantitative finance, investment analysis, and applied data analytics.</p>
-            </div>
-          </div>
-
-          <!-- Professional Qualifications -->
-          <div class="skill-cat">
-            <div class="skill-cat-hd"><span class="cat-dot dot-orange"></span>Professional Qualifications</div>
-            <ul class="skill-list">
-              <li><strong>Associate Chartered Accountant (ACA)</strong> — ICAN | 048671 | Nov 2019</li>
-              <li><strong>Associate Accounting Technician (AAT)</strong> — ICAN | 010472 | Dec 2005</li>
-            </ul>
+        <div class="edu-photo-col">
+          <div class="edu-photo-frame">
+            <img src="assets/img/photo.JPG" alt="Teslim Adeyanju" class="edu-photo" width="220" height="220" loading="lazy" />
           </div>
         </div>
 
-        <!-- Certifications (Right Column) -->
-        <div class="skill-cat-secondary">
-          <!-- Data Analytics -->
-          <div class="skill-cat">
-            <div class="skill-cat-hd"><span class="cat-dot dot-cyan"></span>Data Analytics &amp; Visualization</div>
-            <ul class="skill-list">
-              <li><strong>Microsoft Certified</strong> — Power BI Data Analyst Associate (PL‑300) | 2026</li>
-              <li><strong>Microsoft Certified</strong> — Azure Data Fundamentals | In Development</li>
-            </ul>
-          </div>
+        <div class="edu-content-col">
+          <h3 class="edu-headline">MSc Finance and Investment Banking <span class="edu-headline-sub">— Distinction</span></h3>
+          <p class="edu-tagline">University of Hertfordshire, UK &middot; 2022–2024</p>
+          <p class="edu-highlight">Top 5% of cohort &middot; HBS Excellence Award 2024 &middot; Student Representative</p>
+          <p class="edu-desc">Grounded in CFA Levels 1 &amp; 2 curriculum, the programme combined quantitative finance, investment analysis, and applied data analytics.</p>
 
-          <!-- Cloud & Data Platforms -->
-          <div class="skill-cat">
-            <div class="skill-cat-hd"><span class="cat-dot dot-green"></span>Cloud &amp; Data Platforms</div>
-            <ul class="skill-list">
-              <li><strong>Databricks Accredited</strong> — Lakehouse Platform Fundamentals | 2026</li>
-              <li><strong>HackerRank Certified</strong> — SQL (Advanced) | 2026</li>
-              <li><strong>SuperDataScience</strong> — Python for Data Analysis | 2025</li>
-            </ul>
-          </div>
+          <div class="edu-cats">
+            <div class="edu-cat">
+              <div class="edu-cat-hd"><span class="cat-dot dot-orange"></span>Professional Qualifications</div>
+              <ul class="edu-plain-list">
+                <li>Associate Chartered Accountant (ACA)</li>
+                <li>Associate Accounting Technician (AAT)</li>
+              </ul>
+            </div>
 
-          <!-- Professional Certifications -->
-          <div class="skill-cat">
-            <div class="skill-cat-hd"><span class="cat-dot dot-purple"></span>Accounting &amp; Finance</div>
-            <ul class="skill-list">
-              <li><strong>Financial Statement Analysis</strong> — Corporate Finance Institute (CFI) | Aug 2021</li>
-              <li><strong>Xero Certified Advisor</strong> — Cloud Accounting Platform | 2025</li>
-            </ul>
+            <div class="edu-cat">
+              <div class="edu-cat-hd"><span class="cat-dot dot-cyan"></span>Data Analytics &amp; Visualization</div>
+              <ul class="edu-plain-list">
+                <li><strong>Microsoft Certified</strong> — Power BI Data Analyst Associate (PL‑300), 2026</li>
+                <li><strong>Microsoft Certified</strong> — Azure Data Fundamentals, In Development</li>
+              </ul>
+            </div>
+
+            <div class="edu-cat">
+              <div class="edu-cat-hd"><span class="cat-dot dot-green"></span>Cloud &amp; Data Platforms</div>
+              <ul class="edu-plain-list">
+                <li><strong>Databricks Accredited</strong> — Lakehouse Platform Fundamentals, 2026</li>
+                <li><strong>HackerRank Certified</strong> — SQL (Advanced), 2026</li>
+                <li><strong>SuperDataScience</strong> — Python for Data Analysis, 2025</li>
+              </ul>
+            </div>
+
+            <div class="edu-cat">
+              <div class="edu-cat-hd"><span class="cat-dot dot-purple"></span>Accounting &amp; Finance</div>
+              <ul class="edu-plain-list">
+                <li><strong>Financial Statement Analysis</strong> — Corporate Finance Institute (CFI), Aug 2021</li>
+                <li><strong>Xero Certified Advisor</strong> — Cloud Accounting Platform, 2025</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -364,9 +367,18 @@
         <div class="skill-cat">
           <div class="skill-cat-hd"><span class="cat-dot dot-cyan"></span>Business Intelligence &amp; Visualisation</div>
           <ul class="skill-list">
-            <li><strong>Power BI</strong> — DAX, Power Query, semantic modelling, performance optimisation</li>
-            <li><strong>Advanced Excel</strong> — Power Query, PivotTables, dynamic arrays, financial functions</li>
-            <li><strong>KPI Tracking</strong> — interactive dashboards, executive reporting</li>
+            <li>
+              <span class="skill-icon-tile tile-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+              <span><strong>Power BI</strong> — DAX, Power Query, semantic modelling, performance optimisation</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+              <span><strong>Advanced Excel</strong> — Power Query, PivotTables, dynamic arrays, financial functions</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
+              <span><strong>KPI Tracking</strong> — interactive dashboards, executive reporting</span>
+            </li>
           </ul>
         </div>
 
@@ -374,10 +386,22 @@
         <div class="skill-cat">
           <div class="skill-cat-hd"><span class="cat-dot dot-blue"></span>Programming &amp; Data Science</div>
           <ul class="skill-list">
-            <li><strong>Python</strong> — Pandas, NumPy, Scikit-learn, Streamlit</li>
-            <li><strong>SQL</strong> — MySQL, PostgreSQL, stored procedures, query optimisation</li>
-            <li><strong>R</strong> — data analysis, statistical modelling</li>
-            <li><strong>Git &amp; GitHub</strong> — Jupyter Notebooks, VS Code, Docker</li>
+            <li>
+              <span class="skill-icon-tile tile-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+              <span><strong>Python</strong> — Pandas, NumPy, Scikit-learn, Streamlit</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
+              <span><strong>SQL</strong> — MySQL, PostgreSQL, stored procedures, query optimisation</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+              <span><strong>R</strong> — data analysis, statistical modelling</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span>
+              <span><strong>Git &amp; GitHub</strong> — Jupyter Notebooks, VS Code, Docker</span>
+            </li>
           </ul>
         </div>
 
@@ -385,11 +409,26 @@
         <div class="skill-cat">
           <div class="skill-cat-hd"><span class="cat-dot dot-green"></span>Financial &amp; ERP Systems</div>
           <ul class="skill-list">
-            <li><strong>IFRS / UK GAAP</strong> — statutory financial reporting, disclosure requirements, consolidation</li>
-            <li><strong>Management Accounts</strong> — P&amp;L, budgeting, forecasting, variance analysis</li>
-            <li><strong>NHS Finance</strong> — public sector reporting, mandatory returns, CIP tracking</li>
-            <li><strong>Xero</strong> — Advisor Certified</li>
-            <li><strong>Sage 50 / Business Central / QuickBooks</strong> — ERP and accounting systems</li>
+            <li>
+              <span class="skill-icon-tile tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+              <span><strong>IFRS / UK GAAP</strong> — statutory financial reporting, disclosure requirements, consolidation</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+              <span><strong>Management Accounts</strong> — P&amp;L, budgeting, forecasting, variance analysis</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+              <span><strong>NHS Finance</strong> — public sector reporting, mandatory returns, CIP tracking</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>
+              <span><strong>Xero</strong> — Advisor Certified</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+              <span><strong>Sage 50 / Business Central / QuickBooks</strong> — ERP and accounting systems</span>
+            </li>
           </ul>
         </div>
 
@@ -397,10 +436,22 @@
         <div class="skill-cat">
           <div class="skill-cat-hd"><span class="cat-dot dot-purple"></span>Data Engineering &amp; Automation</div>
           <ul class="skill-list">
-            <li><strong>ETL Pipelines</strong> — end-to-end pipeline development and data integration</li>
-            <li><strong>SQL Extraction</strong> — data extraction, normalisation and audit trails</li>
-            <li><strong>Power Query</strong> — transformations, data cleansing and M language</li>
-            <li><strong>Scheduled Refresh</strong> — automated reporting workflows and deployment</li>
+            <li>
+              <span class="skill-icon-tile tile-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+              <span><strong>ETL Pipelines</strong> — end-to-end pipeline development and data integration</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
+              <span><strong>SQL Extraction</strong> — data extraction, normalisation and audit trails</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></span>
+              <span><strong>Power Query</strong> — transformations, data cleansing and M language</span>
+            </li>
+            <li>
+              <span class="skill-icon-tile tile-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+              <span><strong>Scheduled Refresh</strong> — automated reporting workflows and deployment</span>
+            </li>
           </ul>
         </div>
 
@@ -750,10 +801,10 @@
   <section id="connect" class="section">
     <div class="container">
       <div class="connect-hd">
-        <p class=\"eyebrow\">Get In Touch</p>
-        <h2 class=\"s-title\">Let's Build Better Analytics Together</h2>
-        <p class=\"s-sub\">Interested in discussing Finance Analytics, Data Engineering, Power BI implementation, or Python-based financial solutions? I'm based in the UK and available for immediate engagement.</p>
-        <a href=\"mailto:info@adeyanjuteslim.co.uk\" class=\"btn btn-primary btn-lg\">Start a Conversation</a>
+        <p class="eyebrow">Get In Touch</p>
+        <h2 class="s-title">Let's Build Better Analytics Together</h2>
+        <p class="s-sub">Interested in discussing Finance Analytics, Data Engineering, Power BI implementation, or Python-based financial solutions? I'm based in the UK and available for immediate engagement.</p>
+        <a href="mailto:info@adeyanjuteslim.co.uk" class="btn btn-primary btn-lg">Start a Conversation</a>
       </div>
       <div class="social-grid">
         <a href="https://www.linkedin.com/in/adeyanjuteslimuthman" target="_blank" rel="noopener" class="social-card">

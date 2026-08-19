@@ -208,6 +208,7 @@ a:hover { text-decoration: underline; }
   position: relative;
   z-index: 1;
 }
+.hero-text { min-width: 0; }
 
 /* Available badge */
 .available-badge {
@@ -246,6 +247,7 @@ a:hover { text-decoration: underline; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
   filter: drop-shadow(0 6px 40px rgba(96,165,250,0.35));
+  overflow-wrap: break-word;
 }
 .hero-role {
   display: flex;
@@ -1484,6 +1486,9 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .hero-impact { flex: 1; min-width: 240px; }
 }
 @media (max-width: 768px) {
+  .nav-inner { gap: 10px; }
+  .nav-logo { order: 1; }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -1494,22 +1499,22 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
     padding: 16px;
     gap: 0;
     z-index: 999;
-    order: 3;
+    order: 5;
   }
-  
+
   .nav-links.active {
     display: flex;
   }
-  
+
   .nav-links a {
     padding: 12px 0;
     border-bottom: 1px solid var(--gray-100);
   }
-  
+
   .nav-links a::after {
     display: none;
   }
-  
+
   .menu-toggle {
     display: flex;
     align-items: center;
@@ -1524,7 +1529,13 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
     font-size: 1.5rem;
     order: 2;
   }
-  
+  .theme-toggle { order: 3; }
+  .btn-hire {
+    order: 4;
+    padding: 7px 14px;
+    font-size: .78rem;
+  }
+
   .nav { position: relative; }
   .section { padding: 36px 0; }
   .proj-grid { grid-template-columns: 1fr; }

@@ -21,7 +21,7 @@
   --gray-300:  #CBD5E1;
   --gray-500:  #64748B;
   --gray-700:  #374151;
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font: 'EB Garamond', Garamond, Georgia, serif;
   --max: 1140px;
   --r: 12px;
   --r-sm: 8px;
@@ -59,7 +59,7 @@ a:hover { text-decoration: underline; }
 .s-title {
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   color: var(--dark);
   line-height: 1.1;
   letter-spacing: -.5px;
@@ -94,7 +94,7 @@ a:hover { text-decoration: underline; }
   gap: 40px;
 }
 .nav-logo {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: .95rem;
   font-weight: 900;
   color: var(--dark);
@@ -235,7 +235,7 @@ a:hover { text-decoration: underline; }
 
 /* Hero name — Playfair Display serif, kept distinct from the site font */
 .hero-name {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: clamp(4rem, 9.5vw, 7.5rem);
   font-weight: 700;
   line-height: 1.08;
@@ -262,7 +262,7 @@ a:hover { text-decoration: underline; }
   gap: 8px;
 }
 .role-badge {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1229,14 +1229,14 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 .profile-bullets li {
   font-size: .95rem;
-  color: #CBD5E1;
+  color: var(--gray-700);
   line-height: 1.55;
 }
 
-/* ── Profile dark section ────────────────────────────────────── */
-.profile-dark { background: var(--dark); }
-.eyebrow-light { color: #60A5FA; }
-.s-title-light { color: #fff; }
+/* ── Profile section (light) ─────────────────────────────────── */
+.profile-dark { background: var(--white); }
+.eyebrow-light { color: var(--blue-d); }
+.s-title-light { color: var(--dark); }
 .profile-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1255,35 +1255,35 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   color: #475569;
   margin-bottom: 2px;
 }
-.cred-val { font-size: .9rem; color: #CBD5E1; font-weight: 500; }
-.cred-green { color: #4ADE80 !important; font-weight: 600; }
+.cred-val { font-size: .9rem; color: var(--dark3); font-weight: 500; }
+.cred-green { color: var(--green-d) !important; font-weight: 600; }
 .visa-note {
   font-size: .78rem;
   color: #475569;
-  border: 1px solid rgba(255,255,255,.07);
+  border: 1px solid var(--gray-200);
   border-radius: var(--r-sm);
   padding: 12px 16px;
-  background: rgba(255,255,255,.03);
+  background: var(--gray-50);
   line-height: 1.6;
 }
 
-/* Journal cards (inside dark section) */
+/* Journal cards */
 .profile-journal { display: flex; flex-direction: column; gap: 16px; }
 .jcard {
   display: block;
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid var(--gray-200);
   border-radius: var(--r);
   padding: 26px 28px;
   text-decoration: none;
   transition: all .2s;
 }
-.jcard-primary { background: linear-gradient(135deg, rgba(37,99,235,.28), rgba(59,130,246,.14)); border-color: rgba(59,130,246,.3); }
-.jcard:hover { background: rgba(255,255,255,.06); text-decoration: none; transform: translateY(-2px); }
-.jcard-plat { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #60A5FA; display: block; margin-bottom: 10px; }
-.jcard-plat-gh { color: #94A3B8; }
-.jcard h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
-.jcard p { font-size: .855rem; color: #94A3B8; line-height: 1.65; margin-bottom: 14px; }
-.jcard-link { font-size: .85rem; font-weight: 600; color: #60A5FA; }
+.jcard-primary { background: linear-gradient(135deg, rgba(37,99,235,.1), rgba(59,130,246,.05)); border-color: rgba(59,130,246,.3); }
+.jcard:hover { background: var(--gray-50); border-color: var(--blue); text-decoration: none; transform: translateY(-2px); }
+.jcard-plat { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--blue-d); display: block; margin-bottom: 10px; }
+.jcard-plat-gh { color: var(--gray-500); }
+.jcard h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+.jcard p { font-size: .855rem; color: var(--gray-500); line-height: 1.65; margin-bottom: 14px; }
+.jcard-link { font-size: .85rem; font-weight: 600; color: var(--blue-d); }
 
 /* ── Connect ─────────────────────────────────────────────────── */
 .connect-hd {
@@ -1325,7 +1325,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 .sc-handle   { font-size: .65rem; color: var(--gray-500); }
 
 /* ── Footer ──────────────────────────────────────────────────── */
-.footer { background: var(--dark); padding: 24px 0; }
+.footer { background: var(--white); padding: 24px 0; border-top: 1px solid var(--gray-200); }
 .footer-inner {
   max-width: var(--max); margin: 0 auto; padding: 0 24px;
   display: flex; justify-content: space-between; align-items: center;
@@ -1356,8 +1356,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   display: flex;
   gap: 14px;
   padding: 16px;
-  background: #1E293B;
-  border: 1px solid #334155;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
   border-radius: var(--r);
   transition: border-color .2s, transform .18s;
 }
@@ -1365,13 +1365,13 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 .diff-title {
   font-size: .95rem;
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
-  color: #E2E8F0;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
+  color: var(--dark);
   margin-bottom: 6px;
 }
 .diff-desc {
   font-size: .85rem;
-  color: #94A3B8;
+  color: var(--gray-500);
   line-height: 1.65;
 }
 
@@ -1765,7 +1765,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .hero-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 4rem;
   font-weight: 400;
   line-height: 1.1;
@@ -1807,7 +1807,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .content-block h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 12px;
@@ -1926,7 +1926,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .impact-metric {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 2rem;
   font-weight: 800;
   color: var(--blue);
@@ -1960,7 +1960,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   position: absolute;
   left: 0;
   top: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 2.5rem;
   font-weight: 800;
   color: rgba(59,130,246,.1);
@@ -2104,7 +2104,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 
 .expect-number {
   display: inline-block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 1.8rem;
   font-weight: 800;
   color: var(--blue);
@@ -2135,7 +2135,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .cta-block h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 20px;
@@ -2415,7 +2415,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .about-content h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 2.5rem;
   font-weight: 400;
   margin: 24px 0 16px;
@@ -2424,7 +2424,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .about-content h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 1.75rem;
   font-weight: 400;
   margin: 32px 0 16px;
@@ -2433,7 +2433,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 .about-content h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 1.1rem;
   font-weight: 600;
   margin: 20px 0 12px;
@@ -2442,7 +2442,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 
 .about-content p {
   margin-bottom: 16px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 1rem;
   color: var(--dark3);
 }
@@ -2454,7 +2454,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 
 .about-content li {
   margin-bottom: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
   font-size: 1rem;
   color: var(--dark3);
   line-height: 1.6;

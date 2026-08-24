@@ -256,22 +256,25 @@ a:hover { text-decoration: underline; }
   margin-bottom: 16px;
 }
 .role-badges {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
 .role-badge {
   font-family: 'Inter', sans-serif;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  padding: 6px 14px;
+  justify-content: center;
+  text-align: center;
+  padding: 6px 10px;
   border-radius: 6px;
   background: rgba(59,130,246,.12);
   border: 1px solid rgba(59,130,246,.3);
   color: #BFDBFE;
-  font-size: clamp(.85rem, 1.6vw, .95rem);
+  font-size: clamp(.78rem, 1.6vw, .95rem);
   font-weight: 700;
   letter-spacing: .01em;
+  line-height: 1.25;
   opacity: 0;
   transform: translateY(10px);
   animation: roleBadgeIn .5s ease forwards;
@@ -1552,9 +1555,9 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .hero-tools { gap: 6px; }
   .tool-badge { font-size: 0.65rem; padding: 2px 7px; }
   .hero-role { gap: 8px; }
-  .role-badges { gap: 6px; }
-  .role-badge { padding: 5px 10px; font-size: .78rem; }
-  .role-badge-qual { padding: 4px 9px; font-size: .7rem; }
+  .role-badges { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .role-badge { padding: 6px 8px; font-size: .76rem; }
+  .role-badge-qual { padding: 5px 8px; font-size: .7rem; }
   .hero-stats { gap: 0; }
   .hs { padding: 10px 14px; }
   .diff-grid { grid-template-columns: 1fr; }

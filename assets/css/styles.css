@@ -1352,7 +1352,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-.diff-card {
+.diff-grid .diff-card {
   display: flex;
   gap: 14px;
   padding: 16px;
@@ -1361,15 +1361,15 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   border-radius: var(--r);
   transition: border-color .2s, transform .18s;
 }
-.diff-card:hover { border-color: var(--blue); transform: translateY(-2px); }
-.diff-title {
+.diff-grid .diff-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+.diff-grid .diff-title {
   font-size: .95rem;
   font-weight: 400;
   font-family: 'EB Garamond', Garamond, Georgia, serif;
   color: var(--dark);
   margin-bottom: 6px;
 }
-.diff-desc {
+.diff-grid .diff-desc {
   font-size: .85rem;
   color: var(--gray-500);
   line-height: 1.65;
@@ -1729,10 +1729,10 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .lv-e { background: rgba(59,130,246,.2);  color: #93C5FD; }
 [data-theme="dark"] .lv-a { background: rgba(74,222,128,.15); color: #86EFAC; }
 [data-theme="dark"] .lv-m { background: rgba(251,191,36,.15); color: #FCD34D; }
-[data-theme="dark"] .diff-card { background: #1E293B; border-color: #334155; }
-[data-theme="dark"] .diff-card:hover { border-color: var(--blue); }
-[data-theme="dark"] .diff-title { color: #E2E8F0; }
-[data-theme="dark"] .diff-desc { color: #64748B; }
+[data-theme="dark"] .diff-grid .diff-card { background: #1E293B; border-color: #334155; }
+[data-theme="dark"] .diff-grid .diff-card:hover { border-color: var(--blue); }
+[data-theme="dark"] .diff-grid .diff-title { color: #E2E8F0; }
+[data-theme="dark"] .diff-grid .diff-desc { color: #64748B; }
 [data-theme="dark"] .edu-card { background: #1E293B; border-color: #334155; border-left-color: var(--blue); }
 [data-theme="dark"] .edu-degree { color: #E2E8F0; }
 [data-theme="dark"] .edu-sub { color: #64748B; }
@@ -1949,7 +1949,10 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   margin-top: 48px;
 }
 
-.diff-card {
+.diff-cards .diff-card {
+  display: block;
+  background: none;
+  border: none;
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
   position: relative;
@@ -2394,7 +2397,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
     grid-template-columns: 1fr;
   }
 
-  .diff-card {
+  .diff-grid .diff-card {
     padding-left: 40px;
   }
 

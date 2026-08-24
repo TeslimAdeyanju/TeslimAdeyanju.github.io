@@ -240,6 +240,7 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -1px;
+  text-align: center;
   padding-bottom: 0.15em;
   margin-bottom: 6px;
   background: linear-gradient(150deg, #FFFFFF 0%, #E0F2FE 25%, #BAE6FD 45%, #60A5FA 70%, #3B82F6 100%);

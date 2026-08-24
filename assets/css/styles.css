@@ -265,7 +265,7 @@ a:hover { text-decoration: underline; }
   display: inline-flex;
   align-items: center;
   padding: 6px 14px;
-  border-radius: 100px;
+  border-radius: 6px;
   background: rgba(59,130,246,.12);
   border: 1px solid rgba(59,130,246,.3);
   color: #BFDBFE;
@@ -1551,6 +1551,12 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .hero-impact { display: none; }
   .hero-tools { gap: 6px; }
   .tool-badge { font-size: 0.65rem; padding: 2px 7px; }
+  .hero-role { gap: 8px; }
+  .role-badges { gap: 6px; }
+  .role-badge { padding: 5px 10px; font-size: .78rem; }
+  .role-badge-qual { padding: 4px 9px; font-size: .7rem; }
+  .hero-stats { gap: 0; }
+  .hs { padding: 10px 14px; }
   .diff-grid { grid-template-columns: 1fr; }
   .proj-title-row { flex-direction: column; align-items: flex-start; }
   
@@ -1577,8 +1583,11 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
     width: 100%;
     justify-content: center;
   }
-  .hs { padding: 14px 16px; }
-  .hs-num { font-size: 1.5rem; }
+  .hs { padding: 10px 12px; gap: 6px; }
+  .hs-num { font-size: 1.4rem; }
+  .hs-lbl { font-size: .6rem; }
+  .role-badge { padding: 4px 9px; font-size: .74rem; }
+  .role-badge-qual { padding: 3px 8px; font-size: .68rem; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
   .pillars { grid-template-columns: 1fr; }
   .study-grid-8 { grid-template-columns: 1fr; }

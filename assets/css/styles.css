@@ -552,6 +552,38 @@ a:hover { text-decoration: underline; }
 @keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 @keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
 
+/* ── Hero (light theme) ──────────────────────────────────────── */
+[data-theme="light"] .hero { background: var(--white); }
+[data-theme="light"] .hero::after { background-image: radial-gradient(rgba(15,23,42,.05) 1px, transparent 1px); }
+[data-theme="light"] .hero-name {
+  background: linear-gradient(150deg, #0F172A 0%, #1E3A8A 35%, #1D4ED8 70%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 6px 30px rgba(59,130,246,.15));
+}
+[data-theme="light"] .hero-bio { color: var(--gray-700); }
+[data-theme="light"] .hero-impact-label { color: var(--blue-d); }
+[data-theme="light"] .impact-title { color: var(--dark); }
+[data-theme="light"] .impact-desc { color: var(--gray-500); }
+[data-theme="light"] .btn-ghost {
+  color: var(--dark);
+  border-color: var(--gray-300);
+}
+[data-theme="light"] .btn-ghost:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-500);
+  color: var(--dark);
+}
+[data-theme="light"] .btn-cv {
+  color: var(--green-d);
+  border-color: rgba(22,163,74,.4);
+}
+[data-theme="light"] .btn-cv:hover {
+  background: rgba(22,163,74,.08);
+  border-color: rgba(22,163,74,.65);
+  color: var(--green-d);
+}
+
 /* ── Reveal animation ────────────────────────────────────────── */
 .reveal {
   opacity: 0;

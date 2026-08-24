@@ -50,7 +50,7 @@ a:hover { text-decoration: underline; }
 /* ── Typography helpers ──────────────────────────────────────── */
 .eyebrow {
   font-size: .92rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--blue);

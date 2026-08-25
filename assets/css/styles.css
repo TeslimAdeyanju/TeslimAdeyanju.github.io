@@ -30,13 +30,13 @@
   --sh-blue: 0 8px 32px rgba(59,130,246,.25);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 112.5%; }
 body {
   font-family: var(--font);
   background: var(--white);
   color: var(--dark);
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
 }
 a { color: var(--blue); text-decoration: none; }

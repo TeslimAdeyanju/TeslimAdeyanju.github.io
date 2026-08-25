@@ -72,6 +72,7 @@ a:hover { text-decoration: underline; }
   line-height: 1.6;
   margin-bottom: 16px;
 }
+#education .s-sub { max-width: 820px; }
 
 /* ── Nav ─────────────────────────────────────────────────────── */
 .nav {

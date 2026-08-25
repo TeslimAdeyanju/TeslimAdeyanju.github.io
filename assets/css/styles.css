@@ -308,7 +308,8 @@ a:hover { text-decoration: underline; }
   font-size: clamp(1.35rem, 2.4vw, 1.8rem);
   line-height: 1.25;
   max-width: 620px;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
+  text-align: center;
 }
 .hero-proof {
   display: grid;

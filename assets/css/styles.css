@@ -376,6 +376,7 @@ a:hover { text-decoration: underline; }
   font-size: 1.4rem;
   margin-bottom: 12px;
 }
+.help-card-icon svg { width: 22px; height: 22px; }
 .help-card h3 {
   color: var(--dark);
   font-size: 1.1rem;

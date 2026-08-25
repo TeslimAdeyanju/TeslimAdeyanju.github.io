@@ -311,31 +311,6 @@ a:hover { text-decoration: underline; }
   margin: 0 auto 12px;
   text-align: center;
 }
-/* ── Hero "how I help" list ───────────────────────────────────── */
-.help-card-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-.help-card-icon svg { width: 20px; height: 20px; }
-.hero-help { margin-top: 22px; }
-.hero-help-label {
-  font-size: .72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: #60A5FA;
-  margin-bottom: 16px;
-}
-.hero-help-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-.hero-help-list li { display: flex; align-items: flex-start; gap: 12px; }
-.hero-help-list strong { display: block; color: #F8FAFC; font-size: .92rem; font-weight: 700; margin-bottom: 2px; }
-.hero-help-list span { display: block; color: #94A3B8; font-size: .8rem; line-height: 1.45; }
-
 /* ── Experience timeline ─────────────────────────────────────── */
 .timeline { position: relative; margin-top: 40px; }
 .timeline::before {
@@ -677,9 +652,6 @@ a:hover { text-decoration: underline; }
 }
 [data-theme="light"] .hero-bio { color: var(--gray-700); }
 [data-theme="light"] .hero-value { color: var(--dark); }
-[data-theme="light"] .hero-help-label { color: var(--blue-d); }
-[data-theme="light"] .hero-help-list strong { color: var(--dark); }
-[data-theme="light"] .hero-help-list span { color: var(--gray-500); }
 [data-theme="light"] .hero-impact-label { color: var(--blue-d); }
 [data-theme="light"] .impact-title { color: var(--dark); }
 [data-theme="light"] .impact-desc { color: var(--gray-500); }

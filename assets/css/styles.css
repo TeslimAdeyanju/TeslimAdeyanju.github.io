@@ -311,53 +311,30 @@ a:hover { text-decoration: underline; }
   margin: 0 auto 12px;
   text-align: center;
 }
-/* ── Finance capability summary ─────────────────────────────── */
-.help-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 28px;
-}
-.help-card {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--r);
-  padding: 22px;
-  transition: all .2s;
-}
-.help-card:hover {
-  border-color: var(--blue);
-  box-shadow: var(--sh);
-  transform: translateY(-3px);
-}
+/* ── Hero "how I help" list ───────────────────────────────────── */
 .help-card-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--gray-100);
-  font-size: 1.4rem;
-  margin-bottom: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
 }
-.help-card-icon svg { width: 22px; height: 22px; }
-.help-card h3 {
-  color: var(--dark);
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+.help-card-icon svg { width: 20px; height: 20px; }
+.hero-help { margin-top: 22px; }
+.hero-help-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #60A5FA;
+  margin-bottom: 16px;
 }
-.help-card p { color: var(--gray-500); font-size: .92rem; line-height: 1.6; }
-.help-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
-.help-card-tags span {
-  font-size: .68rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 100px;
-  background: var(--gray-100);
-  color: var(--gray-500);
-}
+.hero-help-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.hero-help-list li { display: flex; align-items: flex-start; gap: 12px; }
+.hero-help-list strong { display: block; color: #F8FAFC; font-size: .92rem; font-weight: 700; margin-bottom: 2px; }
+.hero-help-list span { display: block; color: #94A3B8; font-size: .8rem; line-height: 1.45; }
 
 /* ── Experience timeline ─────────────────────────────────────── */
 .timeline { position: relative; margin-top: 40px; }
@@ -700,6 +677,9 @@ a:hover { text-decoration: underline; }
 }
 [data-theme="light"] .hero-bio { color: var(--gray-700); }
 [data-theme="light"] .hero-value { color: var(--dark); }
+[data-theme="light"] .hero-help-label { color: var(--blue-d); }
+[data-theme="light"] .hero-help-list strong { color: var(--dark); }
+[data-theme="light"] .hero-help-list span { color: var(--gray-500); }
 [data-theme="light"] .hero-impact-label { color: var(--blue-d); }
 [data-theme="light"] .impact-title { color: var(--dark); }
 [data-theme="light"] .impact-desc { color: var(--gray-500); }
@@ -1664,7 +1644,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 20px 0 40px; min-height: unset; }
   .hero-name { font-size: clamp(3rem, 13vw, 5rem); letter-spacing: -0.5px; }
-  .help-grid { grid-template-columns: 1fr; }
   /* Mobile: photo first (so it's visible without scrolling), then text; hide impact list */
   .hero-photo-col { order: -1; flex-direction: column; align-items: center; gap: 0; margin-bottom: 20px; }
   .hero-text { order: 1; }
@@ -1746,7 +1725,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .skill-cat,
 [data-theme="dark"] .sc8,
 [data-theme="dark"] .social-card,
-[data-theme="dark"] .help-card,
 [data-theme="dark"] .impact-card {
   background: #1E293B;
   border-color: #334155;
@@ -1754,7 +1732,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .impact-card { border-top-color: var(--blue); }
 [data-theme="dark"] .proj-card:hover,
 [data-theme="dark"] .sc8:hover,
-[data-theme="dark"] .help-card:hover,
 [data-theme="dark"] .social-card:hover { border-color: #475569; }
 [data-theme="dark"] .proj-title,
 [data-theme="dark"] .timeline-role { color: #F1F5F9; }

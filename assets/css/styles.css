@@ -237,6 +237,11 @@ a:hover { text-decoration: underline; }
   filter: drop-shadow(0 6px 40px rgba(96,165,250,0.35));
   overflow-wrap: break-word;
 }
+.hero-name-suffix {
+  font-size: .32em;
+  letter-spacing: 0;
+  vertical-align: 0.5em;
+}
 .hero-role {
   display: flex;
   flex-direction: column;

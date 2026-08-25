@@ -373,22 +373,6 @@ a:hover { text-decoration: underline; }
   white-space: nowrap;
 }
 .timeline-desc { font-size: .92rem; color: var(--gray-700); line-height: 1.65; margin-bottom: 12px; }
-.timeline-list { list-style: none; display: grid; gap: 8px; }
-.timeline-list li {
-  position: relative;
-  padding-left: 18px;
-  font-size: .88rem;
-  color: var(--gray-500);
-  line-height: 1.55;
-}
-.timeline-list li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 8px;
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: var(--blue);
-}
 
 /* ── Hero delivers list ──────────────────────────────────────── */
 .hero-delivers {
@@ -1711,7 +1695,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .sc8-desc,
 [data-theme="dark"] .timeline-meta,
 [data-theme="dark"] .timeline-desc,
-[data-theme="dark"] .timeline-list li,
 [data-theme="dark"] .ic-text  { color: #94A3B8; }
 [data-theme="dark"] .timeline::before { background: #334155; }
 [data-theme="dark"] .timeline-item:not(:last-child) { border-color: #334155; }

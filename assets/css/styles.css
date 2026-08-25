@@ -315,14 +315,14 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
-  max-width: 650px;
+  max-width: 100%;
   margin-top: 22px;
 }
 .hero-proof div {
   background: rgba(59,130,246,.08);
   border: 1px solid rgba(59,130,246,.18);
   border-radius: 10px;
-  padding: 14px 10px;
+  padding: 16px 12px;
   text-align: center;
   transition: all .2s;
 }
@@ -345,6 +345,13 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
+}
+.hero-proof-note {
+  color: #94A3B8;
+  font-size: .7rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 6px 0 0;
 }
 
 /* ── Finance capability summary ─────────────────────────────── */
@@ -742,6 +749,7 @@ a:hover { text-decoration: underline; }
 }
 [data-theme="light"] .hero-proof dt { color: var(--gray-500); }
 [data-theme="light"] .hero-proof dd { color: var(--dark); }
+[data-theme="light"] .hero-proof-note { color: var(--gray-500); }
 [data-theme="light"] .hero-impact-label { color: var(--blue-d); }
 [data-theme="light"] .impact-title { color: var(--dark); }
 [data-theme="light"] .impact-desc { color: var(--gray-500); }

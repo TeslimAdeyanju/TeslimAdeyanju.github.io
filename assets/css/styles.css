@@ -344,9 +344,25 @@ a:hover { text-decoration: underline; }
 .help-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
-  border-top: 3px solid var(--blue);
   border-radius: var(--r);
   padding: 22px;
+  transition: all .2s;
+}
+.help-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--sh);
+  transform: translateY(-3px);
+}
+.help-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gray-100);
+  font-size: 1.4rem;
+  margin-bottom: 12px;
 }
 .help-card h3 {
   color: var(--dark);
@@ -355,6 +371,15 @@ a:hover { text-decoration: underline; }
   margin-bottom: 8px;
 }
 .help-card p { color: var(--gray-500); font-size: .92rem; line-height: 1.6; }
+.help-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
+.help-card-tags span {
+  font-size: .68rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 100px;
+  background: var(--gray-100);
+  color: var(--gray-500);
+}
 
 /* ── Hero delivers list ──────────────────────────────────────── */
 .hero-delivers {
@@ -1732,6 +1757,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .impact-card { border-top-color: var(--blue); }
 [data-theme="dark"] .proj-card:hover,
 [data-theme="dark"] .sc8:hover,
+[data-theme="dark"] .help-card:hover,
 [data-theme="dark"] .social-card:hover { border-color: #475569; }
 [data-theme="dark"] .proj-title { color: #F1F5F9; }
 [data-theme="dark"] .proj-desc,

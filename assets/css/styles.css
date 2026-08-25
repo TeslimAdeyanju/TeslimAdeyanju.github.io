@@ -1493,6 +1493,9 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
     gap: 0;
     z-index: 999;
     order: 5;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--sh-lg);
   }
 
   .nav-links.active {
@@ -2293,21 +2296,21 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   color: #E2E8F0;
 }
 
-[data-theme="dark"] .nav-links {
-  background: transparent;
-  border-top-color: #334155;
-}
-
-[data-theme="dark"] .nav-links a {
-  border-bottom-color: #334155;
-}
-
 [data-theme="dark"] .menu-toggle {
   color: #E2E8F0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  [data-theme="dark"] .nav-links {
+    background: #0F172A;
+    border-bottom-color: #334155;
+  }
+
+  [data-theme="dark"] .nav-links a {
+    border-bottom-color: #334155;
+  }
+
   .about-hero {
     padding: 60px 0 40px;
   }

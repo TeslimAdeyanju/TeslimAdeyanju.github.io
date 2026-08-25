@@ -1133,6 +1133,8 @@ a:hover { text-decoration: underline; }
   color: var(--dark);
   line-height: 1.3;
 }
+.proj-title a { color: inherit; text-decoration: none; }
+.proj-title a:hover { text-decoration: underline; }
 .proj-impact {
   font-size: .82rem;
   font-weight: 600;

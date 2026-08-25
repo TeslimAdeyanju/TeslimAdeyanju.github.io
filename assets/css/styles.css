@@ -111,6 +111,7 @@ a:hover { text-decoration: underline; }
   color: var(--gray-500);
   transition: color .15s;
   padding-bottom: 4px;
+  white-space: nowrap;
 }
 .nav-links a::after {
   content: '';
@@ -788,11 +789,11 @@ a:hover { text-decoration: underline; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: .72rem;
-  font-weight: 700;
+  font-size: .9rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: .08em;
-  color: #94A3B8;
+  letter-spacing: .05em;
+  color: #F1F5F9;
   margin-bottom: 12px;
 }
 .edu-plain-list {

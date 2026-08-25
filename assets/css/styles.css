@@ -238,9 +238,9 @@ a:hover { text-decoration: underline; }
   overflow-wrap: break-word;
 }
 .hero-name-suffix {
-  font-size: .32em;
+  font-size: .2em;
   letter-spacing: 0;
-  vertical-align: 0.5em;
+  vertical-align: baseline;
 }
 .hero-role {
   display: flex;

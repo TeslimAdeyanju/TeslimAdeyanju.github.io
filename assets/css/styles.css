@@ -849,7 +849,6 @@ a:hover { text-decoration: underline; }
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--r);
-  overflow: hidden;
 }
 .skill-cat-hd {
   display: flex;
@@ -858,6 +857,7 @@ a:hover { text-decoration: underline; }
   padding: 12px 16px;
   background: var(--gray-50);
   border-bottom: 1px solid var(--gray-200);
+  border-radius: var(--r) var(--r) 0 0;
   font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -909,48 +909,32 @@ a:hover { text-decoration: underline; }
 .lv-a { background: #F0FDF4; color: #15803D; }
 .lv-m { background: #FFF7ED; color: #C2410C; }
 
-/* ── Skill list (uniform icon tile + name) ────────────────────── */
-.skill-list {
-  list-style: none;
-  padding: 6px 20px 10px;
-}
-.skill-list li {
+/* ── Skill pills (compact tags) ─────────────────────────────── */
+.skill-pills {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: .875rem;
-  color: var(--dark);
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--gray-100);
-  line-height: 1.5;
-  border-radius: 6px;
-  transition: background .15s, transform .15s;
-  cursor: default;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 20px 18px;
 }
-.skill-list li:last-child { border-bottom: none; }
-.skill-list li:hover {
+.skill-pill {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--dark);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 6px 14px;
+  line-height: 1.4;
+  cursor: default;
+  transition: background .15s, transform .15s, box-shadow .15s, border-color .15s;
+}
+.skill-pill:hover {
+  border-color: var(--ac, var(--blue));
   background: color-mix(in srgb, var(--ac, var(--blue)) 10%, transparent);
-  transform: translateY(-2px) scale(1.015);
+  transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 20px color-mix(in srgb, var(--ac, var(--blue)) 22%, transparent);
 }
-.skill-icon-tile {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-.skill-icon-tile svg { width: 16px; height: 16px; }
-.tile-cyan   { background: rgba(34,211,238,.14);  color: #0E7490; }
-.tile-blue   { background: rgba(59,130,246,.12);  color: var(--blue-d); }
-.tile-green  { background: rgba(74,222,128,.15);  color: #15803D; }
-.tile-purple { background: rgba(167,139,250,.15); color: #6D28D9; }
-[data-theme="dark"] .tile-cyan   { color: #22D3EE; }
-[data-theme="dark"] .tile-blue   { color: #60A5FA; }
-[data-theme="dark"] .tile-green  { color: #4ADE80; }
-[data-theme="dark"] .tile-purple { color: #A78BFA; }
 
 /* ── Skill Detail (Expanded Content) ────────────────────────── */
 .skill-detail-subhead {
@@ -1715,11 +1699,13 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   border-bottom-color: #334155;
   color: #F1F5F9;
 }
-[data-theme="dark"] .skill-list li {
+[data-theme="dark"] .skill-pill {
   color: #CBD5E1;
-  border-bottom-color: #334155;
+  background: #0F172A;
+  border-color: #334155;
 }
-[data-theme="dark"] .skill-list li:hover {
+[data-theme="dark"] .skill-pill:hover {
+  border-color: var(--ac, #60A5FA);
   background: color-mix(in srgb, var(--ac, #60A5FA) 16%, transparent);
   box-shadow: 0 8px 20px color-mix(in srgb, var(--ac, #60A5FA) 30%, transparent);
 }

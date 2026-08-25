@@ -1445,15 +1445,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 .cred-val { font-size: .9rem; color: var(--dark3); font-weight: 500; }
 .cred-green { color: var(--green-d) !important; font-weight: 600; }
-.visa-note {
-  font-size: .78rem;
-  color: #475569;
-  border: 1px solid var(--gray-200);
-  border-radius: var(--r-sm);
-  padding: 12px 16px;
-  background: var(--gray-50);
-  line-height: 1.6;
-}
 
 /* Journal cards */
 .profile-journal { display: flex; flex-direction: column; gap: 16px; }
@@ -1792,7 +1783,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .eyebrow-light { font-size: .75rem; }
   .profile-bullets { gap: 12px; margin: 16px 0; }
   .profile-bullets li { font-size: .9rem; line-height: 1.5; }
-  .visa-note { font-size: .75rem; padding: 12px 14px; }
   .profile-journal { max-width: 100%; }
   .jcard { padding: 20px 24px; }
   .jcard h3 { font-size: .95rem; }

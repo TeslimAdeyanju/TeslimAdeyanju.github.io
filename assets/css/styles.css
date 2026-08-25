@@ -454,6 +454,17 @@ a:hover { text-decoration: underline; }
   flex-wrap: wrap;
   margin-bottom: 4px;
 }
+.timeline-title-group { display: flex; align-items: center; gap: 12px; }
+.timeline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.timeline-icon svg { width: 20px; height: 20px; }
 .timeline-role { font-size: 1.1rem; font-weight: 700; color: var(--dark); }
 .timeline-meta { font-size: .85rem; color: var(--gray-500); margin-bottom: 12px; }
 .timeline-badge {
@@ -845,96 +856,6 @@ a:hover { text-decoration: underline; }
 .leg-advanced { color: #15803D; }
 .leg-mid      { color: #C2410C; }
 
-/* ── Education & Certifications (photo + bio card, two columns) ── */
-.edu-profile {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 40px;
-  margin-top: 8px;
-  background: #1E293B;
-  border: 1px solid #334155;
-  border-radius: 16px;
-  padding: 36px;
-}
-[data-theme="dark"] .edu-profile { background: #0F172A; }
-
-.edu-photo-frame {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid #334155;
-}
-.edu-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-.edu-headline {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.25;
-  margin-bottom: 6px;
-}
-.edu-headline-sub { font-weight: 500; color: #94A3B8; }
-.edu-tagline { font-size: .875rem; color: #94A3B8; margin-bottom: 8px; }
-.edu-highlight {
-  display: inline-block;
-  font-size: .8rem;
-  font-weight: 600;
-  color: #60A5FA;
-  letter-spacing: .02em;
-  margin-bottom: 14px;
-}
-.edu-desc {
-  font-size: .9rem;
-  color: #C7CEE0;
-  line-height: 1.65;
-  max-width: 640px;
-  margin-bottom: 28px;
-}
-
-.edu-cats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px 40px;
-  padding-top: 24px;
-  border-top: 1px solid #334155;
-}
-.edu-cat-hd {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: .72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: #94A3B8;
-  margin-bottom: 12px;
-}
-.edu-plain-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-.edu-plain-list li {
-  font-size: .875rem;
-  color: #E2E8F0;
-  line-height: 1.5;
-  padding-left: 18px;
-  position: relative;
-}
-.edu-plain-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  top: 2px;
-  color: #60A5FA;
-  font-size: .72rem;
-}
-.edu-plain-list li strong { font-weight: 700; color: #FFFFFF; }
-
 /* ── Skip to content (accessibility) ────────────────────────── */
 .skip-link {
   position: absolute;
@@ -1059,10 +980,12 @@ a:hover { text-decoration: underline; }
 .tile-blue   { background: rgba(59,130,246,.12);  color: var(--blue-d); }
 .tile-green  { background: rgba(74,222,128,.15);  color: #15803D; }
 .tile-purple { background: rgba(167,139,250,.15); color: #6D28D9; }
+.tile-orange { background: rgba(251,146,60,.15);  color: #C2410C; }
 [data-theme="dark"] .tile-cyan   { color: #22D3EE; }
 [data-theme="dark"] .tile-blue   { color: #60A5FA; }
 [data-theme="dark"] .tile-green  { color: #4ADE80; }
 [data-theme="dark"] .tile-purple { color: #A78BFA; }
+[data-theme="dark"] .tile-orange { color: #FB923C; }
 
 /* ── Skill Detail (Expanded Content) ────────────────────────── */
 .skill-detail-subhead {
@@ -1694,9 +1617,6 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .pillars { grid-template-columns: 1fr; }
   .profile-layout { grid-template-columns: 1fr; gap: 32px; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
-  .edu-profile { grid-template-columns: 1fr; padding: 28px; }
-  .edu-photo-frame { width: 140px; margin: 0 auto; }
-  .edu-cats { grid-template-columns: 1fr; }
 }
 @media (max-width: 900px) {
   /* Tablet: single column, photo row (photo + impact side by side) */

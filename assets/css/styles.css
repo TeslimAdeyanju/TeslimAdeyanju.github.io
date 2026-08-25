@@ -107,8 +107,8 @@ a:hover { text-decoration: underline; }
 .nav-links a {
   position: relative;
   font-size: .875rem;
-  font-weight: 500;
-  color: var(--gray-500);
+  font-weight: 600;
+  color: var(--dark);
   transition: color .15s;
   padding-bottom: 4px;
   white-space: nowrap;
@@ -124,7 +124,7 @@ a:hover { text-decoration: underline; }
   transition: width .3s ease;
 }
 .nav-links a:hover {
-  color: var(--dark);
+  color: var(--blue-d);
   text-decoration: none;
 }
 .nav-links a:hover::after {

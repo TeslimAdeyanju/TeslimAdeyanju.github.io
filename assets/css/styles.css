@@ -1094,14 +1094,6 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
   transition: all .25s;
 }
-/* Colored top accent bar */
-.proj-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--ac, var(--blue));
-}
 .proj-card:hover {
   border-color: var(--ac, var(--blue));
   background: linear-gradient(135deg, var(--white) 0%, color-mix(in srgb, var(--ac, var(--blue)) 6%, transparent) 100%);

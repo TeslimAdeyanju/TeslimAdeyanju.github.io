@@ -615,6 +615,7 @@ a:hover { text-decoration: underline; }
   filter: drop-shadow(0 6px 30px rgba(59,130,246,.15));
 }
 [data-theme="light"] .hero-bio { color: var(--gray-700); }
+[data-theme="light"] .hero-value { color: var(--dark); }
 [data-theme="light"] .hero-impact-label { color: var(--blue-d); }
 [data-theme="light"] .impact-title { color: var(--dark); }
 [data-theme="light"] .impact-desc { color: var(--gray-500); }

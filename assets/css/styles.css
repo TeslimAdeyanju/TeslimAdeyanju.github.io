@@ -288,7 +288,8 @@ a:hover { text-decoration: underline; }
   color: #CBD5E1;
   line-height: 1.75;
   max-width: 600px;
-  margin-bottom: 14px;
+  margin: 0 auto 14px;
+  text-align: center;
 }
 .hero-value {
   color: #E2E8F0;

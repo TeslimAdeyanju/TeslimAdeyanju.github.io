@@ -929,8 +929,9 @@ a:hover { text-decoration: underline; }
 }
 .skill-list li:last-child { border-bottom: none; }
 .skill-list li:hover {
-  background: rgba(59,130,246,.06);
-  transform: translateX(6px);
+  background: color-mix(in srgb, var(--ac, var(--blue)) 10%, transparent);
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--ac, var(--blue)) 22%, transparent);
 }
 .skill-icon-tile {
   display: inline-flex;
@@ -1718,7 +1719,10 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   color: #CBD5E1;
   border-bottom-color: #334155;
 }
-[data-theme="dark"] .skill-list li:hover { background: rgba(59,130,246,.1); }
+[data-theme="dark"] .skill-list li:hover {
+  background: color-mix(in srgb, var(--ac, #60A5FA) 16%, transparent);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--ac, #60A5FA) 30%, transparent);
+}
 [data-theme="dark"] .all-proj-wrap { border-color: #334155; }
 [data-theme="dark"] .all-proj-table th {
   background: #1E293B;

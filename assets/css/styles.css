@@ -1678,8 +1678,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .hero-name { font-size: clamp(3rem, 13vw, 5rem); letter-spacing: -0.5px; }
   .hero-proof { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .help-grid { grid-template-columns: 1fr; }
-  /* Mobile: text first, then compact centered photo, hide impact list */
-  .hero-photo-col { order: 2; flex-direction: column; align-items: center; gap: 0; }
+  /* Mobile: photo first (so it's visible without scrolling), then text; hide impact list */
+  .hero-photo-col { order: -1; flex-direction: column; align-items: center; gap: 0; margin-bottom: 20px; }
   .hero-text { order: 1; }
   .hero-photo-wrap { width: 140px; height: 140px; margin: 0 auto 8px; }
   .photo-frame { width: 140px; height: 140px; }
@@ -1708,15 +1708,18 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .jcard p { font-size: .85rem; }
 }
 @media (max-width: 480px) {
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .hero-actions .btn,
-  .hero-actions .btn-cv,
-  .hero-actions .btn-ghost {
+  .hero-actions { gap: 8px; margin-bottom: 24px; }
+  .hero-actions .btn-primary {
     width: 100%;
     justify-content: center;
+  }
+  .hero-actions .btn-cv,
+  .hero-actions .btn-ghost {
+    flex: 1 1 auto;
+    justify-content: center;
+    text-align: center;
+    font-size: .8rem;
+    padding: 10px 12px;
   }
   .hs { padding: 10px 12px; gap: 6px; }
   .hs-num { font-size: 1.4rem; }

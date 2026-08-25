@@ -1193,6 +1193,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 .all-proj-table td:first-child { font-weight: 800; color: var(--blue); width: 40px; }
 .all-proj-table td:nth-child(2) { font-weight: 500; color: var(--dark); white-space: nowrap; }
 .all-proj-table a { color: var(--blue); font-weight: 700; }
+.all-proj-note { margin-top: 12px; font-size: .8rem; color: var(--gray-500); }
+.all-proj-note a { color: var(--blue-d); font-weight: 600; }
 
 /* ── Study grid 8 ────────────────────────────────────────────── */
 .study-grid-8 {

@@ -862,56 +862,61 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 /* ── Blog list ──────────────────────────────────────────────── */
+.blog-section { padding: 32px 0; }
+.blog-intro.content-block { margin-bottom: 20px; }
+.blog-intro p { margin-bottom: 0; }
 .blog-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 8px;
+  gap: 10px;
+  margin-top: 4px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .blog-entry {
   display: block;
-  padding: 28px 32px;
+  padding: 16px 20px;
   background: var(--white);
   border: 1px solid var(--gray-200);
-  border-radius: var(--r);
+  border-radius: var(--r-sm);
   text-decoration: none;
   transition: all .2s;
 }
 .blog-entry:hover {
   border-color: var(--ac, var(--blue));
   background: linear-gradient(135deg, var(--white) 0%, color-mix(in srgb, var(--ac, var(--blue)) 6%, transparent) 100%);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px color-mix(in srgb, var(--ac, var(--blue)) 18%, transparent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--ac, var(--blue)) 16%, transparent);
   text-decoration: none;
 }
-.blog-entry-tags { display: flex; gap: 6px; margin-bottom: 12px; }
+.blog-entry-tags { display: flex; gap: 6px; margin-bottom: 6px; }
 .blog-tag {
-  font-size: .68rem;
+  font-size: .64rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .04em;
-  padding: 3px 10px;
+  padding: 2px 8px;
   border-radius: 100px;
   background: color-mix(in srgb, var(--ac, var(--blue)) 12%, transparent);
   color: var(--ac, var(--blue-d));
 }
 .blog-entry-title {
   font-family: 'EB Garamond', Garamond, Georgia, serif;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--dark);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   line-height: 1.3;
 }
 .blog-entry-desc {
-  font-size: .92rem;
+  font-size: .85rem;
   color: var(--gray-500);
-  line-height: 1.6;
-  margin-bottom: 16px;
-  max-width: 640px;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 .blog-entry-arrow {
-  font-size: .85rem;
+  font-size: .78rem;
   font-weight: 600;
   color: var(--ac, var(--blue-d));
 }
@@ -1710,8 +1715,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
     border-bottom-color: #334155;
   }
 
-  .blog-entry { padding: 20px 22px; }
-  .blog-entry-title { font-size: 1.15rem; }
+  .blog-entry { padding: 14px 16px; }
 
   .about-hero {
     padding: 60px 0 40px;

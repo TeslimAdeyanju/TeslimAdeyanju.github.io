@@ -96,3 +96,16 @@ if (photoCol && photoFrame) {
     floatCards.forEach(c => { c.style.transform = '' })
   })
 }
+
+// ── Scroll-triggered reveal for below-the-fold sections ─────────
+const scrollRevealEls = document.querySelectorAll('.scroll-reveal')
+const scrollRevealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view')
+      scrollRevealObserver.unobserve(entry.target)
+    }
+  })
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' })
+
+scrollRevealEls.forEach(el => { scrollRevealObserver.observe(el) })

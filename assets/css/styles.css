@@ -528,6 +528,14 @@ a:hover { text-decoration: underline; }
 }
 @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
 
+/* ── Scroll-triggered reveal (fires once in view, see script.js) ── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.scroll-reveal.in-view { opacity: 1; transform: translateY(0); }
+
 /* ── Skills (tag fallbacks, kept for reference) ──────────────── */
 .leg { font-weight: 600; }
 
@@ -580,8 +588,8 @@ a:hover { text-decoration: underline; }
 
 .cert-groups {
   display: grid;
-  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-  gap: 28px 48px;
+  grid-template-columns: minmax(220px, .9fr) minmax(0, 1.4fr);
+  gap: 28px 56px;
   padding-top: 24px;
   border-top: 1px solid #334155;
 }
@@ -596,15 +604,14 @@ a:hover { text-decoration: underline; }
 .cert-list { list-style: none; padding: 0; margin: 0; }
 .cert-row {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 9px 0;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 0;
   border-bottom: 1px solid #263043;
 }
 .cert-row:last-child { border-bottom: none; }
-.cert-name { font-size: .875rem; font-weight: 600; color: #F1F5F9; }
-.cert-meta { font-size: .78rem; color: #8A96AC; white-space: nowrap; flex-shrink: 0; }
+.cert-name { font-size: .875rem; font-weight: 600; color: #F1F5F9; line-height: 1.4; }
+.cert-meta { font-size: .78rem; color: #8A96AC; }
 
 /* ── Skip to content (accessibility) ────────────────────────── */
 .skip-link {

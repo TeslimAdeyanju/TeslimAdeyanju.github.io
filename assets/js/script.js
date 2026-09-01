@@ -33,7 +33,7 @@ if (themeToggle) {
     applyTheme(next)
   })
   // Sync icon to current theme on load
-  applyTheme(document.documentElement.getAttribute('data-theme') || 'light')
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'dark')
 }
 
 // ── Animated count-up for hero stat numbers ──────────────────────

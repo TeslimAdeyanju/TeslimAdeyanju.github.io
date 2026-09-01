@@ -531,35 +531,80 @@ a:hover { text-decoration: underline; }
 /* ── Skills (tag fallbacks, kept for reference) ──────────────── */
 .leg { font-weight: 600; }
 
-/* ── Education & Certifications (flat list, fixed light card) ── */
-.cert-card {
+/* ── Education & Certifications (photo + bio card, two columns) ── */
+.edu-profile {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
   margin-top: 8px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: #1E293B;
+  border: 1px solid #334155;
   border-radius: 16px;
-  padding: 36px 40px;
+  padding: 36px;
 }
-.cert-card-title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #0F172A;
-  margin: 0 0 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #E2E8F0;
+[data-theme="dark"] .edu-profile { background: #0F172A; }
+
+.edu-photo-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #334155;
 }
-.cert-flat-list {
-  list-style: disc;
-  margin: 0;
-  padding-left: 22px;
+.edu-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.edu-headline {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+.edu-headline-sub { font-weight: 500; color: #94A3B8; }
+.edu-tagline { font-size: .875rem; color: #94A3B8; margin-bottom: 8px; }
+.edu-highlight {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #60A5FA;
+  letter-spacing: .02em;
+  margin-bottom: 14px;
+}
+.edu-desc {
+  font-size: .9rem;
+  color: #C7CEE0;
+  line-height: 1.65;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+.cert-groups {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: 28px 48px;
+  padding-top: 24px;
+  border-top: 1px solid #334155;
+}
+.cert-group-title {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #64748B;
+  margin: 0 0 10px;
+}
+.cert-list { list-style: none; padding: 0; margin: 0; }
+.cert-row {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid #263043;
 }
-.cert-flat-list li {
-  font-size: 1rem;
-  color: #1E293B;
-  line-height: 1.5;
-}
+.cert-row:last-child { border-bottom: none; }
+.cert-name { font-size: .875rem; font-weight: 600; color: #F1F5F9; }
+.cert-meta { font-size: .78rem; color: #8A96AC; white-space: nowrap; flex-shrink: 0; }
 
 /* ── Skip to content (accessibility) ────────────────────────── */
 .skip-link {
@@ -976,7 +1021,9 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 @media (max-width: 960px) {
   .social-grid { grid-template-columns: repeat(2, 1fr); }
-  .cert-card { padding: 28px; }
+  .edu-profile { grid-template-columns: 1fr; padding: 28px; }
+  .edu-photo-frame { width: 140px; margin: 0 auto; }
+  .cert-groups { grid-template-columns: 1fr; }
   .expertise-grid,
   .contact-links { grid-template-columns: repeat(2, 1fr); }
 }

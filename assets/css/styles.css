@@ -231,9 +231,9 @@ a:hover { text-decoration: underline; }
 }
 .hero-value {
   color: #E2E8F0;
-  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
-  line-height: 1.25;
-  max-width: 620px;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  line-height: 1.5;
+  max-width: 780px;
   margin: 0 auto 12px;
   text-align: center;
 }

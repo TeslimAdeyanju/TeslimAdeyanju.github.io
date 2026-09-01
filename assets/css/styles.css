@@ -1359,6 +1359,20 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   font-weight: 600;
 }
 
+.approach-callout {
+  margin-top: 24px;
+  padding: 18px 22px;
+  background: var(--gray-50);
+  border-left: 3px solid var(--blue);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.approach-callout p {
+  margin-bottom: 0;
+  font-style: italic;
+  color: var(--dark3);
+}
+[data-theme="dark"] .approach-callout { background: rgba(59,130,246,.08); }
+
 .intro-text {
   font-size: 1.1rem !important;
   line-height: 1.8 !important;

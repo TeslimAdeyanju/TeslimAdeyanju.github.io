@@ -628,15 +628,20 @@ a:hover { text-decoration: underline; }
   letter-spacing: .02em;
   color: #fff;
 }
-.badge-ms { background: #FFFFFF; width: 38px; padding: 7px; }
-.badge-ms svg { width: 100%; height: 100%; display: block; }
-.badge-databricks { background: #FF3621; }
-.badge-hackerrank { background: #15A800; }
-.badge-sds        { background: #7C3AED; font-size: .56rem; }
-.badge-xero       { background: #13B5EA; font-size: .56rem; }
-.badge-cfi        { background: #1E3A8A; font-size: .58rem; }
-.badge-ican       { background: #0F766E; font-size: .48rem; letter-spacing: 0; }
-.badge-aat        { background: #475569; font-size: .6rem; }
+.badge-ms, .badge-databricks, .badge-hackerrank, .badge-xero {
+  background: #FFFFFF;
+  width: 38px;
+  padding: 8px;
+}
+.badge-ms svg, .badge-databricks svg, .badge-hackerrank svg, .badge-xero svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.badge-sds  { background: #7C3AED; font-size: .56rem; }
+.badge-cfi  { background: #1E3A8A; font-size: .58rem; }
+.badge-aca  { background: #0F766E; font-size: .6rem; }
+.badge-aat  { background: #475569; font-size: .6rem; }
 
 /* ── Skip to content (accessibility) ────────────────────────── */
 .skip-link {

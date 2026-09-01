@@ -634,14 +634,21 @@ a:hover { text-decoration: underline; }
   border-top: 1px solid #334155;
 }
 .cert-group-title {
-  font-size: .72rem;
-  font-weight: 700;
+  font-size: .85rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: .07em;
-  color: #64748B;
-  margin: 0 0 10px;
+  letter-spacing: .08em;
+  color: #93C5FD;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(147,197,253,.3);
 }
 .cert-list { list-style: none; padding: 0; margin: 0; }
+.cert-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0 28px;
+}
 .cert-row {
   display: flex;
   align-items: center;

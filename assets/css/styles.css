@@ -604,14 +604,39 @@ a:hover { text-decoration: underline; }
 .cert-list { list-style: none; padding: 0; margin: 0; }
 .cert-row {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 10px 0;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
   border-bottom: 1px solid #263043;
 }
 .cert-row:last-child { border-bottom: none; }
+.cert-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .cert-name { font-size: .875rem; font-weight: 600; color: #F1F5F9; line-height: 1.4; }
 .cert-meta { font-size: .78rem; color: #8A96AC; }
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 6px;
+  border-radius: 9px;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  color: #fff;
+}
+.badge-ms { background: #FFFFFF; width: 38px; padding: 7px; }
+.badge-ms svg { width: 100%; height: 100%; display: block; }
+.badge-databricks { background: #FF3621; }
+.badge-hackerrank { background: #15A800; }
+.badge-sds        { background: #7C3AED; font-size: .56rem; }
+.badge-xero       { background: #13B5EA; font-size: .56rem; }
+.badge-cfi        { background: #1E3A8A; font-size: .58rem; }
+.badge-ican       { background: #0F766E; font-size: .48rem; letter-spacing: 0; }
+.badge-aat        { background: #475569; font-size: .6rem; }
 
 /* ── Skip to content (accessibility) ────────────────────────── */
 .skip-link {

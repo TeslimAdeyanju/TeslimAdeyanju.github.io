@@ -327,6 +327,18 @@ a:hover { text-decoration: underline; }
 }
 .timeline-desc { font-size: .92rem; color: var(--gray-700); line-height: 1.65; margin-bottom: 12px; }
 
+.timeline-subhead {
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--gray-500);
+  margin: 4px 0 12px 56px;
+}
+.timeline-item-compact { padding-bottom: 24px; }
+.timeline-item-compact .timeline-role { display: block; font-size: 1rem; margin-bottom: 4px; }
+.timeline-item-compact .timeline-desc { font-size: .88rem; margin-bottom: 0; }
+
 /* ── Hero impact list ────────────────────────────────────────── */
 .hero-impact {
   width: 100%;
@@ -1248,6 +1260,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .proj-desc,
 [data-theme="dark"] .sc8-desc,
 [data-theme="dark"] .timeline-meta,
+[data-theme="dark"] .timeline-subhead,
 [data-theme="dark"] .timeline-desc { color: #94A3B8; }
 [data-theme="dark"] .timeline::before { background: #334155; }
 [data-theme="dark"] .timeline-item:not(:last-child) { border-color: #334155; }

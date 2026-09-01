@@ -189,13 +189,16 @@ a:hover { text-decoration: underline; }
   padding: 0 24px;
   display: grid;
   grid-template-columns: 1fr 340px;
+  grid-template-areas: "text photo" "text impact";
   gap: 48px;
   align-items: start;
   width: 100%;
   position: relative;
   z-index: 1;
 }
-.hero-text { min-width: 0; }
+.hero-text { grid-area: text; min-width: 0; }
+.hero-photo-col { grid-area: photo; }
+.hero-impact { grid-area: impact; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
 
 /* Hero name */
@@ -377,13 +380,17 @@ a:hover { text-decoration: underline; }
   top: 13px;
   transition: transform .2s ease;
 }
-.impact-item.scroll-reveal:hover {
-  transform: translateX(4px);
-  background: color-mix(in srgb, var(--ac, #3B82F6) 10%, transparent);
-  border-color: color-mix(in srgb, var(--ac, #3B82F6) 35%, transparent);
-  box-shadow: 0 6px 18px color-mix(in srgb, var(--ac, #3B82F6) 18%, transparent);
+/* Scope hover to real pointer devices only — on touch, :hover can get
+   "stuck" on the last-tapped item since there's no true hover state */
+@media (hover: hover) and (pointer: fine) {
+  .impact-item.scroll-reveal:hover {
+    transform: translateX(4px);
+    background: color-mix(in srgb, var(--ac, #3B82F6) 10%, transparent);
+    border-color: color-mix(in srgb, var(--ac, #3B82F6) 35%, transparent);
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--ac, #3B82F6) 18%, transparent);
+  }
+  .impact-item:hover::before { transform: translateX(2px); }
 }
-.impact-item:hover::before { transform: translateX(2px); }
 .impact-title {
   display: block;
   font-size: .95rem;
@@ -1141,14 +1148,18 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .contact-links { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
-  /* Tablet: single column, photo row (photo + impact side by side) */
-  .hero-container { grid-template-columns: 1fr; gap: 32px; }
-  .hero-photo-col { order: 2; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
-  .hero-text { order: 1; }
+  /* Tablet: single column stack — name/bio, then photo, then impact list */
+  .hero-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "photo"
+      "impact";
+    gap: 32px;
+  }
   .hero-photo-wrap { flex-shrink: 0; }
   .photo-frame { width: 180px; height: 180px; }
   .float-card { display: none; }
-  .hero-impact { flex: 1; min-width: 240px; }
 }
 @media (max-width: 768px) {
   .nav-inner { gap: 10px; }
@@ -1205,12 +1216,16 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 20px 0 40px; min-height: unset; }
   .hero-name { font-size: clamp(3rem, 13vw, 5rem); letter-spacing: -0.5px; }
-  /* Mobile: photo first (so it's visible without scrolling), then the impact list (nested in the same column), then name/bio */
-  .hero-photo-col { order: -1; flex-direction: column; align-items: center; gap: 0; margin-bottom: 20px; }
-  .hero-text { order: 1; }
+  /* Mobile: photo first (so it's visible without scrolling), then name/bio, then the impact list */
+  .hero-container {
+    grid-template-areas:
+      "photo"
+      "text"
+      "impact";
+  }
+  .hero-photo-col { align-items: center; gap: 0; margin-bottom: 20px; }
   .hero-photo-wrap { width: 140px; height: 140px; margin: 0 auto 8px; }
   .photo-frame { width: 140px; height: 140px; }
-  .hero-impact { margin-top: 28px; }
   .hero-tools { gap: 6px; }
   .tool-badge { font-size: 0.65rem; padding: 2px 7px; }
   .hs { padding: 10px 14px; }

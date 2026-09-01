@@ -1216,7 +1216,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 20px 0 40px; min-height: unset; }
   .hero-name { font-size: clamp(3rem, 13vw, 5rem); letter-spacing: -0.5px; }
-  /* Mobile: photo first (so it's visible without scrolling), then name/bio, then the impact list */
+  /* Mobile: photo first (so it's visible without scrolling), then name/bio; hide impact list */
   .hero-container {
     grid-template-areas:
       "photo"
@@ -1226,6 +1226,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .hero-photo-col { align-items: center; gap: 0; margin-bottom: 20px; }
   .hero-photo-wrap { width: 140px; height: 140px; margin: 0 auto 8px; }
   .photo-frame { width: 140px; height: 140px; }
+  .hero-impact { display: none; }
   .hero-tools { gap: 6px; }
   .tool-badge { font-size: 0.65rem; padding: 2px 7px; }
   .hs { padding: 10px 14px; }

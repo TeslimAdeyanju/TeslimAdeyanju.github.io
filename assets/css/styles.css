@@ -362,7 +362,11 @@ a:hover { text-decoration: underline; }
   border-radius: 8px;
   border: 1px solid transparent;
   position: relative;
-  transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+/* Higher specificity than .scroll-reveal(.in-view) so the entrance
+   animation and the hover transform/transition never fight each other */
+.impact-item.scroll-reveal {
+  transition: opacity .7s ease, transform .7s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 .impact-item::before {
   content: '→';
@@ -373,7 +377,7 @@ a:hover { text-decoration: underline; }
   top: 13px;
   transition: transform .2s ease;
 }
-.impact-item:hover {
+.impact-item.scroll-reveal:hover {
   transform: translateX(4px);
   background: color-mix(in srgb, var(--ac, #3B82F6) 10%, transparent);
   border-color: color-mix(in srgb, var(--ac, #3B82F6) 35%, transparent);
@@ -1201,12 +1205,12 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 20px 0 40px; min-height: unset; }
   .hero-name { font-size: clamp(3rem, 13vw, 5rem); letter-spacing: -0.5px; }
-  /* Mobile: photo first (so it's visible without scrolling), then text; hide impact list */
+  /* Mobile: photo first (so it's visible without scrolling), then the impact list (nested in the same column), then name/bio */
   .hero-photo-col { order: -1; flex-direction: column; align-items: center; gap: 0; margin-bottom: 20px; }
   .hero-text { order: 1; }
   .hero-photo-wrap { width: 140px; height: 140px; margin: 0 auto 8px; }
   .photo-frame { width: 140px; height: 140px; }
-  .hero-impact { display: none; }
+  .hero-impact { margin-top: 28px; }
   .hero-tools { gap: 6px; }
   .tool-badge { font-size: 0.65rem; padding: 2px 7px; }
   .hs { padding: 10px 14px; }

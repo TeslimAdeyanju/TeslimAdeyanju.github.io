@@ -237,6 +237,33 @@ a:hover { text-decoration: underline; }
   margin: 0 auto 12px;
   text-align: center;
 }
+.hero-typed {
+  text-align: center;
+  min-height: 1.5em;
+  margin-bottom: 10px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: #60A5FA;
+}
+.typed-cursor {
+  display: inline-block;
+  margin-left: 1px;
+  color: #60A5FA;
+  animation: typedBlink 1s step-end infinite;
+}
+@keyframes typedBlink { 50% { opacity: 0; } }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 /* ── Experience timeline ─────────────────────────────────────── */
 .timeline { position: relative; margin-top: 40px; }
 .timeline::before {

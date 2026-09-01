@@ -109,3 +109,43 @@ const scrollRevealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' })
 
 scrollRevealEls.forEach(el => { scrollRevealObserver.observe(el) })
+
+// ── Typed hero tagline loop ──────────────────────────────────────
+const typedEl = document.getElementById('typed-text')
+if (typedEl) {
+  const typedPhrases = ["Hi, I'm Teslim Adeyanju", 'Financial Data Analyst | ACA', 'Power BI, Finance & Data Automation']
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  if (reduceMotion) {
+    typedEl.textContent = typedPhrases[0]
+  } else {
+    let phraseIndex = 0
+    let charIndex = 0
+    let deleting = false
+
+    const typeLoop = () => {
+      const current = typedPhrases[phraseIndex]
+      if (!deleting) {
+        charIndex++
+        typedEl.textContent = current.slice(0, charIndex)
+        if (charIndex === current.length) {
+          deleting = true
+          setTimeout(typeLoop, 1400)
+          return
+        }
+        setTimeout(typeLoop, 55)
+      } else {
+        charIndex--
+        typedEl.textContent = current.slice(0, charIndex)
+        if (charIndex === 0) {
+          deleting = false
+          phraseIndex = (phraseIndex + 1) % typedPhrases.length
+          setTimeout(typeLoop, 300)
+          return
+        }
+        setTimeout(typeLoop, 30)
+      }
+    }
+    typeLoop()
+  }
+}

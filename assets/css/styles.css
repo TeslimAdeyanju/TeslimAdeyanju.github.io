@@ -578,48 +578,33 @@ a:hover { text-decoration: underline; }
   margin-bottom: 28px;
 }
 
-.edu-cats {
+.cert-groups {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px 40px;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: 28px 48px;
   padding-top: 24px;
   border-top: 1px solid #334155;
 }
-.edu-cat-hd {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: .9rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: #F1F5F9;
-  margin-bottom: 12px;
-}
-.edu-plain-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-.edu-plain-list li {
-  font-size: .875rem;
-  color: #E2E8F0;
-  line-height: 1.5;
-  padding-left: 18px;
-  position: relative;
-}
-.edu-plain-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  top: 2px;
-  color: #60A5FA;
+.cert-group-title {
   font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #64748B;
+  margin: 0 0 10px;
 }
-.edu-plain-list li strong { font-weight: 700; color: #FFFFFF; }
+.cert-list { list-style: none; padding: 0; margin: 0; }
+.cert-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid #263043;
+}
+.cert-row:last-child { border-bottom: none; }
+.cert-name { font-size: .875rem; font-weight: 600; color: #F1F5F9; }
+.cert-meta { font-size: .78rem; color: #8A96AC; white-space: nowrap; flex-shrink: 0; }
 
 /* ── Skip to content (accessibility) ────────────────────────── */
 .skip-link {
@@ -639,15 +624,6 @@ a:hover { text-decoration: underline; }
 .skip-link:focus { top: 0; text-decoration: none; }
 
 /* ── Skills table ────────────────────────────────────────────── */
-.cat-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.dot-cyan   { background: #22D3EE; }
-.dot-green  { background: #4ADE80; }
-.dot-purple { background: #A78BFA; }
-.dot-orange { background: #FB923C; }
 .lv {
   display: inline-block;
   padding: 2px 10px;
@@ -1047,7 +1023,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
   .edu-profile { grid-template-columns: 1fr; padding: 28px; }
   .edu-photo-frame { width: 140px; margin: 0 auto; }
-  .edu-cats { grid-template-columns: 1fr; }
+  .cert-groups { grid-template-columns: 1fr; }
   .expertise-grid,
   .contact-links { grid-template-columns: repeat(2, 1fr); }
 }

@@ -639,6 +639,7 @@ a:hover { text-decoration: underline; }
   display: block;
 }
 .badge-cfi { background: #1E3A8A; font-size: .58rem; }
+.badge-aca, .badge-aat { width: 38px; }
 .badge-aca { background: #0F766E; }
 .badge-aat { background: #475569; }
 .badge-aca svg, .badge-aat svg { width: 58%; height: 58%; display: block; }

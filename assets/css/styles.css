@@ -1205,7 +1205,9 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   transition: all .2s;
   flex-shrink: 0;
   line-height: 1;
+  color: var(--blue);
 }
+.theme-toggle svg { width: 18px; height: 18px; }
 .theme-toggle:hover { background: var(--gray-100); border-color: var(--gray-300); }
 
 /* ── Dark theme overrides ────────────────────────────────────── */
@@ -1220,7 +1222,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 [data-theme="dark"] .nav-logo { color: #F1F5F9; }
 [data-theme="dark"] .nav-links a { color: #94A3B8; }
 [data-theme="dark"] .nav-links a:hover { color: #F1F5F9; }
-[data-theme="dark"] .theme-toggle { border-color: #334155; color: #94A3B8; }
+[data-theme="dark"] .theme-toggle { border-color: #334155; color: #fff; }
 [data-theme="dark"] .theme-toggle:hover { background: #1E293B; }
 [data-theme="dark"] .section-alt { background: #111827; }
 [data-theme="dark"] .s-title { color: #F1F5F9; }

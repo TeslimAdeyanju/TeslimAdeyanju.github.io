@@ -576,6 +576,19 @@ a:hover { text-decoration: underline; }
 }
 .scroll-reveal.in-view { opacity: 1; transform: translateY(0); }
 
+/* Timeline items get a more pronounced rise-in plus a marker pop */
+.timeline-item.scroll-reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity .8s cubic-bezier(.16,.84,.44,1), transform .8s cubic-bezier(.16,.84,.44,1);
+}
+.timeline-item.scroll-reveal.in-view { opacity: 1; transform: translateY(0); }
+.timeline-item .timeline-marker {
+  transform: scale(0);
+  transition: transform .5s cubic-bezier(.34,1.56,.64,1) .2s;
+}
+.timeline-item.in-view .timeline-marker { transform: scale(1); }
+
 /* ── Skills (tag fallbacks, kept for reference) ──────────────── */
 .leg { font-weight: 600; }
 

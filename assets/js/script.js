@@ -98,7 +98,7 @@ if (photoCol && photoFrame) {
 }
 
 // ── Scroll-triggered reveal for below-the-fold sections ─────────
-const scrollRevealEls = document.querySelectorAll('.scroll-reveal')
+const scrollRevealEls = document.querySelectorAll('.scroll-reveal:not(.timeline-item)')
 const scrollRevealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -109,6 +109,21 @@ const scrollRevealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' })
 
 scrollRevealEls.forEach(el => { scrollRevealObserver.observe(el) })
+
+// Timeline items: trigger later (closer to viewport centre) so each
+// card visibly rises into place one at a time as you scroll to it,
+// rather than several firing at once near page load.
+const timelineItems = document.querySelectorAll('.timeline-item.scroll-reveal')
+const timelineObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view')
+      timelineObserver.unobserve(entry.target)
+    }
+  })
+}, { threshold: 0.2, rootMargin: '0px 0px -140px 0px' })
+
+timelineItems.forEach(el => { timelineObserver.observe(el) })
 
 // ── Typed hero tagline loop ──────────────────────────────────────
 const typedEl = document.getElementById('typed-text')

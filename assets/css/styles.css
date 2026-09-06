@@ -776,6 +776,11 @@ a:hover { text-decoration: underline; }
 .skills-col {
   border-top: 1px solid var(--gray-200);
   padding-top: 18px;
+  transition: border-color .25s, transform .25s;
+}
+.skills-col:hover {
+  border-color: var(--blue);
+  transform: translateY(-4px);
 }
 .skills-cat {
   font-size: .78rem;

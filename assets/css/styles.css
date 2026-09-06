@@ -417,9 +417,8 @@ a:hover { text-decoration: underline; }
 .tool-badge {
   font-family: var(--font);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   text-align: center;
   color: #93C5FD;
   background: rgba(59, 130, 246, 0.1);

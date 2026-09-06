@@ -33,6 +33,7 @@
 html { scroll-behavior: smooth; font-size: 112.5%; }
 body {
   font-family: var(--font);
+  font-weight: 500;
   background: var(--white);
   color: var(--dark);
   line-height: 1.6;

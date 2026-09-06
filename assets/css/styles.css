@@ -680,13 +680,15 @@ a:hover { text-decoration: underline; }
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(147,197,253,.3);
 }
-.cert-group-note {
-  font-size: .78rem;
-  font-style: italic;
-  color: #8A96AC;
-  line-height: 1.5;
-  margin: -6px 0 16px;
+.cert-subgroup-title {
+  font-size: .74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #7DA6E0;
+  margin: 18px 0 10px;
 }
+.cert-subgroup-title:first-of-type { margin-top: 0; }
 .cert-list { list-style: none; padding: 0; margin: 0; }
 .cert-list-grid {
   display: grid;
@@ -704,6 +706,8 @@ a:hover { text-decoration: underline; }
 .cert-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .cert-name { font-size: .875rem; font-weight: 600; color: #F1F5F9; line-height: 1.4; }
 .cert-meta { font-size: .78rem; color: #8A96AC; }
+.cert-row.is-inprogress .cert-badge { opacity: .55; }
+.cert-row.is-inprogress .cert-meta { color: #60A5FA; font-style: italic; }
 
 .cert-badge {
   display: flex;

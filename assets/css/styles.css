@@ -704,6 +704,10 @@ a:hover { text-decoration: underline; }
 .cert-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .cert-name { font-size: .875rem; font-weight: 600; color: #F1F5F9; line-height: 1.4; }
 .cert-meta { font-size: .78rem; color: #8A96AC; }
+.cert-row.is-inprogress .cert-badge { opacity: .55; }
+.cert-row.is-inprogress .cert-meta { color: #60A5FA; font-style: italic; }
+.cert-more { margin-top: 20px; }
+.cert-more .all-proj-toggle { color: #60A5FA; }
 
 .cert-badge {
   display: flex;

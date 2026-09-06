@@ -75,7 +75,7 @@
   <!-- ══ HERO SECTION ══ -->
   <section class="about-hero">
     <div class="container">
-      <div class="hero-content fade-in">
+      <div class="hero-content hero-content-center fade-in">
         <h1 class="hero-title">Study Notes</h1>
         <p class="hero-subtitle">8 open learning journals — continuously updated on GitHub</p>
       </div>
@@ -166,11 +166,38 @@
   <!-- ══ KNOWLEDGE MANAGEMENT ══ -->
   <section class="about-section about-section-alt">
     <div class="container">
-      <div class="content-block fade-in-up">
-        <p class="km-line">
-          <strong>Learning System:</strong> Every valuable insight from 100+ podcast episodes—across AI, career strategy, finance, and data science—gets clipped, tagged, and connected in Notion. No passive consumption. Pure applied learning that compounds over time.&nbsp;
-          <a href="https://adeyanjuteslim.notion.site/1ba807ec7963811c8419d72774689105?v=1ba807ec796381f7bb81000c5eda893e&utm_source=portfolio&utm_medium=link&utm_campaign=learning_system" target="_blank" rel="noopener" class="km-link">Explore the clips →</a>
-        </p>
+      <div class="content-block fade-in-up" style="text-align: center;">
+        <p class="eyebrow">Continuous Learning</p>
+        <h2 class="s-title">Learning System</h2>
+        <p class="s-sub">Every valuable insight from 100+ podcast episodes — across AI, career strategy, finance, and data science — gets clipped, tagged, and connected in Notion. No passive consumption. Pure applied learning that compounds over time.</p>
+      </div>
+
+      <div class="ls-flow">
+        <div class="ls-step fade-in-up" style="--delay: .1s">
+          <span class="ls-step-num">1</span>
+          <h3 class="ls-step-title">Listen</h3>
+          <p class="ls-step-desc">100+ episodes across AI, career strategy, finance, and data science</p>
+        </div>
+        <span class="ls-arrow fade-in-up" style="--delay: .15s" aria-hidden="true">&rarr;</span>
+        <div class="ls-step fade-in-up" style="--delay: .2s">
+          <span class="ls-step-num">2</span>
+          <h3 class="ls-step-title">Clip &amp; Tag</h3>
+          <p class="ls-step-desc">Every valuable insight captured and organised by topic, the moment it lands</p>
+        </div>
+        <span class="ls-arrow fade-in-up" style="--delay: .25s" aria-hidden="true">&rarr;</span>
+        <div class="ls-step fade-in-up" style="--delay: .3s">
+          <span class="ls-step-num">3</span>
+          <h3 class="ls-step-title">Connect in Notion</h3>
+          <p class="ls-step-desc">Linked into a searchable, compounding knowledge base &mdash; not a graveyard of bookmarks</p>
+        </div>
+      </div>
+
+      <div class="ls-cta fade-in-up" style="--delay: .35s">
+        <div class="ls-stat">
+          <span class="ls-stat-number" data-count="100" data-suffix="+">0</span>
+          <span class="ls-stat-label">Podcast Episodes Captured</span>
+        </div>
+        <a href="https://adeyanjuteslim.notion.site/1ba807ec7963811c8419d72774689105?v=1ba807ec796381f7bb81000c5eda893e&utm_source=portfolio&utm_medium=link&utm_campaign=learning_system" target="_blank" rel="noopener" class="btn-back">Explore the clips &rarr;</a>
       </div>
     </div>
   </section>
@@ -208,6 +235,35 @@
     document.querySelectorAll('.fade-in-up, .fade-in').forEach(el => {
       observer.observe(el);
     });
+
+    // Animated count-up for the Learning System stat
+    function countUp(el, target, suffix, duration) {
+      suffix = suffix || '';
+      duration = duration || 1400;
+      const start = performance.now();
+      function update(time) {
+        const progress = Math.min((time - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target) + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+      requestAnimationFrame(update);
+    }
+    const lsStatNums = document.querySelectorAll('.ls-stat-number[data-count]');
+    const lsStatObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          countUp(el, parseInt(el.dataset.count, 10), el.dataset.suffix || '');
+          lsStatObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    lsStatNums.forEach(function(el) { lsStatObserver.observe(el); });
 
     // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');

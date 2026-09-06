@@ -626,6 +626,12 @@ a:hover { text-decoration: underline; }
   border: 1px solid #334155;
   border-radius: 16px;
   padding: 36px;
+  transition: border-color .3s, box-shadow .3s, transform .3s;
+}
+.edu-profile:hover {
+  border-color: var(--blue);
+  box-shadow: 0 16px 40px rgba(59,130,246,.18);
+  transform: translateY(-4px);
 }
 [data-theme="dark"] .edu-profile { background: #0F172A; }
 
@@ -699,10 +705,15 @@ a:hover { text-decoration: underline; }
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 12px 0;
+  padding: 12px 10px;
+  margin: 0 -10px;
+  border-radius: 8px;
   border-bottom: 1px solid #263043;
+  transition: background .2s, transform .2s;
 }
 .cert-row:last-child { border-bottom: none; }
+.cert-row:hover { background: rgba(59,130,246,.08); transform: translateX(4px); }
+.cert-row:hover .cert-badge { transform: scale(1.08); }
 .cert-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .cert-name { font-size: .875rem; font-weight: 600; color: #F1F5F9; line-height: 1.4; }
 .cert-meta { font-size: .78rem; color: #8A96AC; }
@@ -722,6 +733,7 @@ a:hover { text-decoration: underline; }
   font-weight: 800;
   letter-spacing: .02em;
   color: #fff;
+  transition: transform .2s;
 }
 .badge-ms, .badge-databricks, .badge-hackerrank, .badge-xero, .badge-python {
   background: #FFFFFF;

@@ -1491,6 +1491,13 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   color: var(--dark);
   line-height: 1.2;
 }
+/* Project pages: smaller, weightier section headings (matches the
+   README's own h2 style) instead of the large 2.5rem default. */
+.content-block h2.section-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
 .content-block p {
   font-size: 1rem;

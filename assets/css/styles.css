@@ -1663,7 +1663,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 }
 
 /* ── Live README (fetched from GitHub) ─────────────────────── */
-.readme-box { max-width: 860px; margin: 0 auto; text-align: center; }
+.readme-box { max-width: 100%; margin: 0 auto; text-align: center; }
 .readme-toggle { cursor: pointer; }
 .readme-content {
   display: block;

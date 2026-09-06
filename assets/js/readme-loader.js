@@ -49,24 +49,7 @@
     })
   }
 
-  function loadReadme(toggleBtn) {
-    var repo = toggleBtn.getAttribute('data-readme-repo')
-    var branch = toggleBtn.getAttribute('data-readme-branch') || 'main'
-    var content = toggleBtn.nextElementSibling
-    if (!repo || !content) return
-
-    var isHidden = content.hasAttribute('hidden')
-    if (!isHidden) {
-      content.setAttribute('hidden', '')
-      toggleBtn.textContent = 'Show Full README'
-      return
-    }
-
-    content.removeAttribute('hidden')
-    toggleBtn.textContent = 'Hide Full README'
-
-    if (content.getAttribute('data-loaded') === 'true') return
-
+  function fetchAndRender(content, repo, branch) {
     content.innerHTML = '<p class="readme-loading">Loading README from GitHub…</p>'
 
     fetch('https://raw.githubusercontent.com/' + repo + '/' + branch + '/README.md')
@@ -93,9 +76,37 @@
       })
   }
 
+  function loadReadme(toggleBtn) {
+    var repo = toggleBtn.getAttribute('data-readme-repo')
+    var branch = toggleBtn.getAttribute('data-readme-branch') || 'main'
+    var content = toggleBtn.nextElementSibling
+    if (!repo || !content) return
+
+    var isHidden = content.hasAttribute('hidden')
+    if (!isHidden) {
+      content.setAttribute('hidden', '')
+      toggleBtn.textContent = 'Show Full README'
+      return
+    }
+
+    content.removeAttribute('hidden')
+    toggleBtn.textContent = 'Hide Full README'
+
+    if (content.getAttribute('data-loaded') === 'true') return
+
+    fetchAndRender(content, repo, branch)
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.readme-toggle').forEach(function (btn) {
       btn.addEventListener('click', function () { loadReadme(btn) })
+
+      if (btn.hasAttribute('data-readme-autoload')) {
+        var content = btn.nextElementSibling
+        var repo = btn.getAttribute('data-readme-repo')
+        var branch = btn.getAttribute('data-readme-branch') || 'main'
+        if (repo && content) fetchAndRender(content, repo, branch)
+      }
     })
   })
 })()

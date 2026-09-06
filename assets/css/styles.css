@@ -1444,6 +1444,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   opacity: 0;
   animation: fadeInUp 0.8s ease 0.2s forwards;
 }
+.hero-content-center { margin: 0 auto; text-align: center; }
 
 .hero-title {
   font-family: 'EB Garamond', Garamond, Georgia, serif;

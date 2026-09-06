@@ -100,13 +100,14 @@
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.readme-toggle').forEach(function (btn) {
       btn.addEventListener('click', function () { loadReadme(btn) })
+    })
 
-      if (btn.hasAttribute('data-readme-autoload')) {
-        var content = btn.nextElementSibling
-        var repo = btn.getAttribute('data-readme-repo')
-        var branch = btn.getAttribute('data-readme-branch') || 'main'
-        if (repo && content) fetchAndRender(content, repo, branch)
-      }
+    // Standalone auto-loading README blocks (no toggle button) —
+    // used where the README should just be shown, not click-to-expand.
+    document.querySelectorAll('.readme-content[data-readme-autoload]').forEach(function (content) {
+      var repo = content.getAttribute('data-readme-repo')
+      var branch = content.getAttribute('data-readme-branch') || 'main'
+      if (repo) fetchAndRender(content, repo, branch)
     })
   })
 })()

@@ -76,34 +76,7 @@
       })
   }
 
-  function loadReadme(toggleBtn) {
-    var repo = toggleBtn.getAttribute('data-readme-repo')
-    var branch = toggleBtn.getAttribute('data-readme-branch') || 'main'
-    var content = toggleBtn.nextElementSibling
-    if (!repo || !content) return
-
-    var isHidden = content.hasAttribute('hidden')
-    if (!isHidden) {
-      content.setAttribute('hidden', '')
-      toggleBtn.textContent = 'Show Full README'
-      return
-    }
-
-    content.removeAttribute('hidden')
-    toggleBtn.textContent = 'Hide Full README'
-
-    if (content.getAttribute('data-loaded') === 'true') return
-
-    fetchAndRender(content, repo, branch)
-  }
-
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.readme-toggle').forEach(function (btn) {
-      btn.addEventListener('click', function () { loadReadme(btn) })
-    })
-
-    // Standalone auto-loading README blocks (no toggle button) —
-    // used where the README should just be shown, not click-to-expand.
     document.querySelectorAll('.readme-content[data-readme-autoload]').forEach(function (content) {
       var repo = content.getAttribute('data-readme-repo')
       var branch = content.getAttribute('data-readme-branch') || 'main'

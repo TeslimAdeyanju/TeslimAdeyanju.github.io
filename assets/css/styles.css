@@ -235,11 +235,19 @@ a:hover { text-decoration: underline; }
 }
 .hero-value {
   color: #E2E8F0;
+  font-weight: 600;
   font-size: clamp(1.35rem, 2.4vw, 1.8rem);
   line-height: 1.25;
   max-width: 620px;
   margin: 0 auto 12px;
   text-align: center;
+}
+.hero-value-accent {
+  font-style: italic;
+  background: linear-gradient(150deg, #93C5FD 0%, #60A5FA 60%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero-typed {
   text-align: center;

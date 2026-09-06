@@ -437,6 +437,7 @@ a:hover { text-decoration: underline; }
 .btn-ghost {
   display: inline-flex;
   align-items: center;
+  gap: 7px;
   padding: 11px 22px;
   background: transparent;
   color: rgba(255,255,255,.8);
@@ -1187,6 +1188,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 .proj-links a {
   display: inline-flex;
   align-items: center;
+  gap: 6px;
   padding: 5px 14px;
   border: 1px solid var(--gray-200);
   border-radius: 6px;
@@ -1985,7 +1987,9 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 
 /* Back Button */
 .btn-back {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 12px 28px;
   background: var(--blue);
   color: white;

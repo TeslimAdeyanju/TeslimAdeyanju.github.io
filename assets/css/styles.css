@@ -706,8 +706,6 @@ a:hover { text-decoration: underline; }
 .cert-meta { font-size: .78rem; color: #8A96AC; }
 .cert-row.is-inprogress .cert-badge { opacity: .55; }
 .cert-row.is-inprogress .cert-meta { color: #60A5FA; font-style: italic; }
-.cert-more { margin-top: 20px; }
-.cert-more .all-proj-toggle { color: #60A5FA; }
 
 .cert-badge {
   display: flex;

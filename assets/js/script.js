@@ -128,7 +128,7 @@ timelineItems.forEach(el => { timelineObserver.observe(el) })
 // ── Typed hero tagline loop ──────────────────────────────────────
 const typedEl = document.getElementById('typed-text')
 if (typedEl) {
-  const typedPhrases = ["Hi, I'm Teslim Adeyanju", 'Financial Data Analyst | ACA', 'Power BI, Finance & Data Automation']
+  const typedPhrases = ["Hi, I'm Teslim Adeyanju", 'ACA Chartered Accountant | Financial Data Analyst', 'I speak both CFO and GitHub fluently.', 'Power BI · SQL · Python · FP&A']
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   if (reduceMotion) {

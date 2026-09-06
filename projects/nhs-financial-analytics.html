@@ -109,7 +109,7 @@
   <!-- ══ KEY RESULTS ══ -->
   <section class="about-section about-section-alt">
     <div class="container">
-      <div class="content-block fade-in-up">
+      <div class="content-block fade-in-up" style="text-align: center;">
         <h2>Key Results</h2>
       </div>
       <div class="impact-grid">
@@ -139,36 +139,22 @@
       <div class="content-block fade-in-up">
         <h2>Tech Stack &amp; Skills Demonstrated</h2>
       </div>
-      <div class="expertise-grid">
-        <div class="expertise-card fade-in-up" style="--delay: 0.1s">
-          <h3>Data Engineering</h3>
-          <ul>
-            <li>Python pipeline ingesting 6 Excel files (~170MB)</li>
-            <li>Medallion architecture: bronze → silver → gold in MySQL</li>
-            <li>10-query data-quality validation suite</li>
-          </ul>
+      <div class="tech-grid">
+        <div class="tech-col">
+          <h3 class="tech-cat">Data Engineering</h3>
+          <p>Python pipeline ingesting 6 Excel files (~170MB), medallion architecture (bronze → silver → gold in MySQL), 10-query data-quality validation suite</p>
         </div>
-        <div class="expertise-card fade-in-up" style="--delay: 0.2s">
-          <h3>Dimensional Modelling &amp; SQL</h3>
-          <ul>
-            <li>Star schema: dim_trust, dim_financial_year, dim_subcode → fct_tac</li>
-            <li>Curated analytical views (I&amp;E, P&amp;L, balance sheet, KPIs)</li>
-          </ul>
+        <div class="tech-col">
+          <h3 class="tech-cat">Dimensional Modelling &amp; SQL</h3>
+          <p>Star schema (dim_trust, dim_financial_year, dim_subcode → fct_tac), curated analytical views (I&amp;E, P&amp;L, balance sheet, KPIs)</p>
         </div>
-        <div class="expertise-card fade-in-up" style="--delay: 0.3s">
-          <h3>NHS Domain Knowledge</h3>
-          <ul>
-            <li>NHS Financial Reporting Manual (FReM) conventions</li>
-            <li>TAC subcode taxonomy, ODS organisation codes</li>
-            <li>EBITDA margin RAG thresholds (NHS England standard)</li>
-          </ul>
+        <div class="tech-col">
+          <h3 class="tech-cat">NHS Domain Knowledge</h3>
+          <p>NHS Financial Reporting Manual (FReM) conventions, TAC subcode taxonomy, ODS organisation codes, EBITDA margin RAG thresholds</p>
         </div>
-        <div class="expertise-card fade-in-up" style="--delay: 0.4s">
-          <h3>Power BI</h3>
-          <ul>
-            <li>11-CSV export pipeline, no live DB connection required</li>
-            <li>51 DAX measures, 5-page interactive dashboard</li>
-          </ul>
+        <div class="tech-col">
+          <h3 class="tech-cat">Power BI</h3>
+          <p>11-CSV export pipeline (no live DB connection required), 51 DAX measures across a 5-page interactive dashboard</p>
         </div>
       </div>
     </div>

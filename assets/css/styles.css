@@ -791,6 +791,37 @@ a:hover { text-decoration: underline; }
   .skills-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 
+/* ── Tech stack grid (project pages) — same look, flexible column count ── */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px 40px;
+  margin-top: 32px;
+}
+.tech-col {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 18px;
+}
+.tech-cat {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin: 0 0 10px;
+}
+.tech-col p {
+  font-size: .95rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .tech-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+[data-theme="dark"] .tech-col { border-top-color: #334155; }
+[data-theme="dark"] .tech-col p { color: #94A3B8; }
+
 /* ── Projects ────────────────────────────────────────────────── */
 .projects-hd {
   margin-bottom: 28px;
@@ -877,6 +908,8 @@ a:hover { text-decoration: underline; }
   border-radius: 6px;
   transition: all .15s;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
 }
 .proj-gh:hover { color: var(--dark); border-color: var(--gray-400); text-decoration: none; }
 .proj-title {
@@ -887,6 +920,14 @@ a:hover { text-decoration: underline; }
 }
 .proj-title a { color: inherit; text-decoration: none; }
 .proj-title a:hover { text-decoration: underline; }
+/* Stretched link: makes the whole card clickable via the title's <a>,
+   while .proj-gh / .proj-links stay independently clickable above it. */
+.proj-title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
 .proj-impact {
   font-size: .82rem;
   font-weight: 600;
@@ -1119,6 +1160,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   gap: 8px;
   flex-wrap: wrap;
   margin-top: 4px;
+  position: relative;
+  z-index: 2;
 }
 .proj-links a {
   display: inline-flex;
@@ -1503,15 +1546,15 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 /* Impact Grid */
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
 }
 
 .impact-card {
   background: white;
-  padding: 28px;
-  border-radius: 12px;
+  padding: 18px;
+  border-radius: 10px;
   border: 1px solid var(--gray-200);
   text-align: center;
   transition: all 0.3s ease;
@@ -1529,11 +1572,16 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
 
 .impact-metric {
   font-family: 'EB Garamond', Garamond, Georgia, serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--blue);
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   line-height: 1.2;
+}
+
+.impact-card .impact-desc {
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .impact-desc {

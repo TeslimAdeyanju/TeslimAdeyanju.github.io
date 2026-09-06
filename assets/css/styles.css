@@ -1420,6 +1420,8 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   letter-spacing: 0.5px;
 }
 
+.hero-content .btn-back { margin-top: 4px; }
+
 /* Content Blocks */
 .about-section {
   padding: 60px 0;

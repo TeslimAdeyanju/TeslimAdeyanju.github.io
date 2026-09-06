@@ -683,6 +683,10 @@ a:hover { text-decoration: underline; }
   text-transform: uppercase;
   letter-spacing: .08em;
   color: #93C5FD;
+  line-height: 1.4;
+  min-height: 2.8em;
+  display: flex;
+  align-items: flex-end;
   margin: 0 0 14px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(147,197,253,.3);

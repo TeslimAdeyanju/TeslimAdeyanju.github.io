@@ -242,13 +242,6 @@ a:hover { text-decoration: underline; }
   margin: 0 auto 12px;
   text-align: center;
 }
-.hero-value-accent {
-  font-style: italic;
-  background: linear-gradient(150deg, #93C5FD 0%, #60A5FA 60%, #3B82F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 .hero-typed {
   text-align: center;
   min-height: 1.5em;
@@ -687,6 +680,13 @@ a:hover { text-decoration: underline; }
   margin: 0 0 14px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(147,197,253,.3);
+}
+.cert-group-note {
+  font-size: .78rem;
+  font-style: italic;
+  color: #8A96AC;
+  line-height: 1.5;
+  margin: -6px 0 16px;
 }
 .cert-list { list-style: none; padding: 0; margin: 0; }
 .cert-list-grid {

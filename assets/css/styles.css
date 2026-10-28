@@ -740,12 +740,12 @@ a:hover { text-decoration: underline; }
   color: #fff;
   transition: transform .2s;
 }
-.badge-ms, .badge-databricks, .badge-hackerrank, .badge-xero, .badge-python {
+.badge-ms, .badge-databricks, .badge-hackerrank, .badge-xero, .badge-python, .badge-datacamp {
   background: #FFFFFF;
   width: 38px;
   padding: 8px;
 }
-.badge-ms svg, .badge-databricks svg, .badge-hackerrank svg, .badge-xero svg, .badge-python svg {
+.badge-ms svg, .badge-databricks svg, .badge-hackerrank svg, .badge-xero svg, .badge-python svg, .badge-datacamp svg {
   width: 100%;
   height: 100%;
   display: block;

@@ -62,7 +62,7 @@
   </script>
 </head>
 <body>
-  <a href="#" class="skip-link">Skip to main content</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- ══ NAV ══ -->
   <header class="nav" id="site-header">
@@ -96,8 +96,21 @@
     </div>
   </section>
 
+  <!-- ══ AT A GLANCE ══ -->
+  <section class="pp-glance" id="main">
+    <div class="container">
+      <div class="pp-glance-inner">
+        <span class="pp-glance-label">Built with</span>
+        <div class="pp-glance-chips"><span class="pp-chip">Python</span><span class="pp-chip">Multi-Agent AI</span><span class="pp-chip">Power BI</span></div>
+        <span class="pp-glance-sep" aria-hidden="true"></span>
+        <a class="pp-glance-link" href="#write-up">Jump to the full write-up ↓</a>
+        <span class="pp-readtime" data-read-time hidden></span>
+      </div>
+    </div>
+  </section>
+
   <!-- ══ OVERVIEW ══ -->
-  <section class="about-section">
+  <section class="about-section" id="write-up">
     <div class="container">
       <div class="content-block fade-in-up" style="text-align: center;">
         <h2 class="section-heading">Overview</h2>
@@ -191,6 +204,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
   <script src="../assets/js/readme-loader.js"></script>
+  <script src="../assets/js/project-page.js"></script>
   <script>
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
     const observer = new IntersectionObserver(function(entries) {

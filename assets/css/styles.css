@@ -43,7 +43,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 a { color: var(--blue); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: none; }
+/* Underline on hover only for links inside running text */
+.readme-content a:hover, .content-block p a:hover { text-decoration: underline; }
 
 /* ── Layout ─────────────────────────────────────────────────── */
 .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
@@ -882,7 +884,7 @@ a:hover { text-decoration: underline; }
 .ab-text a { color: var(--sx-accent); }
 .ab-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; align-items: center; margin-top: 8px; }
 .ab-more { font-weight: 700; text-decoration: none; }
-.ab-more:hover { text-decoration: underline; }
+.ab-more:hover { text-decoration: none; }
 .ab-mail { color: var(--sx-muted) !important; text-decoration: none; }
 .ab-mail:hover { color: var(--sx-accent) !important; }
 /* Highlight strip: four figures in a row, separated by hairlines, no boxes */
@@ -1096,7 +1098,7 @@ a:hover { text-decoration: underline; }
   color: var(--sx-accent);
   text-decoration: none;
 }
-.cr-link:hover { text-decoration: underline; }
+.cr-link:hover { text-decoration: none; }
 /* Lines under the cards: small label on top, items centred below (items never split) */
 .cr-extra { max-width: 820px; margin: 26px auto 0; text-align: center; }
 .cr-extra + .cr-extra { margin-top: 18px; }
@@ -1492,7 +1494,7 @@ a:hover { text-decoration: underline; }
   line-height: 1.3;
 }
 .proj-title a { color: inherit; text-decoration: none; }
-.proj-title a:hover { text-decoration: underline; }
+.proj-title a:hover { text-decoration: none; }
 /* Stretched link: makes the whole card clickable via the title's <a>,
    while .proj-gh / .proj-links stay independently clickable above it. */
 .proj-title a::after {
@@ -1659,7 +1661,7 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
   color: var(--ac, var(--blue-d));
 }
-.blog-entry:hover .blog-entry-arrow { text-decoration: underline; }
+.blog-entry:hover .blog-entry-arrow { text-decoration: none; }
 .lt {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -1788,7 +1790,7 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
   white-space: nowrap;
 }
-.km-link:hover { text-decoration: underline; }
+.km-link:hover { text-decoration: none; }
 
 /* ── Podcast learning library (featured band on Study Notes) ── */
 .pod-band { padding: 8px 0 48px; }
@@ -2758,7 +2760,7 @@ a:hover { text-decoration: underline; }
 .pp-glance-link {
   font-size: .88rem; font-weight: 700; color: var(--blue); text-decoration: none;
 }
-.pp-glance-link:hover { text-decoration: underline; }
+.pp-glance-link:hover { text-decoration: none; }
 .pp-readtime { font-size: .82rem; font-weight: 600; color: #64748B; }
 
 /* Layout: contents menu beside the write-up on wide screens */

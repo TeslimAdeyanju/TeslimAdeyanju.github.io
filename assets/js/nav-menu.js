@@ -34,4 +34,14 @@
   window.addEventListener('resize', function () {
     if (window.innerWidth > 920 && isOpen()) close();
   });
+
+  // Back to top button on every page except the homepage
+  if (!document.getElementById('hero')) {
+    var up = document.createElement('button');
+    up.type = 'button'; up.className = 'to-top'; up.setAttribute('aria-label', 'Back to top'); up.textContent = '\u2191';
+    document.body.appendChild(up);
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    up.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
+    window.addEventListener('scroll', function () { up.classList.toggle('is-shown', window.scrollY > 700); }, { passive: true });
+  }
 })();

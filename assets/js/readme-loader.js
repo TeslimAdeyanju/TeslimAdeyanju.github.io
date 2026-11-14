@@ -124,14 +124,14 @@
         fetchText(snap)
           .then(function (md) {
             render(content, md, repo, branch,
-              'Showing a saved copy because GitHub could not be reached. <a href="' + repoLink + '" target="_blank" rel="noopener">Open the live version ↗</a>')
+              'Showing a saved copy because GitHub could not be reached. <a href="' + repoLink + '" target="_blank" rel="noopener">Open the live version</a>')
           })
           .catch(function () { showError(content, repoLink) })
       })
   }
 
   function showError(content, repoLink) {
-    content.innerHTML = '<p class="readme-error">Couldn\'t load the write-up automatically. <a href="' + repoLink + '" target="_blank" rel="noopener">View it on GitHub ↗</a></p>'
+    content.innerHTML = '<p class="readme-error">Couldn\'t load the write-up automatically. <a href="' + repoLink + '" target="_blank" rel="noopener">View it on GitHub</a></p>'
   }
 
   document.addEventListener('DOMContentLoaded', function () {

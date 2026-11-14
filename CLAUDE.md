@@ -35,6 +35,8 @@ python3 -m http.server 8000
 
 Only `index.html` loads `assets/js/script.js`. It covers the sticky header shadow, mobile hamburger menu, theme toggle, count-up stats via `IntersectionObserver`, and the typed role line. **Every other site page (about, blog, study-notes, all `projects/*.html`) has its own inline `<script>` at the bottom.** That script duplicates the header-scroll, mobile-menu and theme-toggle logic, including the inline sun/moon SVGs. The count-up and typing effects belong to the index page only and exist only in `script.js`. To change shared behavior, update `script.js` **and** the inline script in each page.
 
+One piece of shared behaviour lives in its own file: `assets/js/nav-menu.js`, loaded by all 13 pages after `network-bg.js`. It watches the `.active` class that each page's own script toggles on `#nav-links`, then keeps `aria-expanded` and the ☰/✕ icon in step, and closes the mobile menu on an outside tap, Escape, scrolling more than 40px, or widening past 920px. The menu is 8 links. The hamburger shows at 920px and below (the full menu tightens between 921 and 1100px).
+
 The `<head>` is duplicated in the same way. Every site page inlines:
 
 - GA4 tracking (`G-4DHPYHV2EH`)
@@ -61,7 +63,7 @@ When a project repo is renamed or moved to another owner, update `data-readme-re
 
 ## Navigation
 
-All 13 site pages share the same menu, in the homepage section order (Education is intentionally not in the menu; Certifications points to it). Non-index pages link to `index.html#…`, with a `../` prefix inside `projects/`, and mark their own entry with `aria-current="page"`.
+All 13 site pages share the same menu, in the homepage section order (8 links. Education is intentionally not in the menu, Certifications points to it; Insights is not in the menu either, it is the last card on the Blog page). Non-index pages link to `index.html#…`, with a `../` prefix inside `projects/`, and mark their own entry with `aria-current="page"`.
 - The logo is the name (`.nav-logo` with `.nl-name`), shown in one uniform sky-to-indigo gradient.
 - Links fade in one after another on load and grow a gradient underline on hover.
 - On `index.html`, the "Nav scrollspy" in `script.js` adds `.is-active` to the link for the section in view.

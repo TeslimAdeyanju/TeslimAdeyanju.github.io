@@ -3086,6 +3086,23 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   [data-theme="dark"] .nav-links a { border-bottom-color: #334155; }
 }
 
+/* ── Mobile menu panel ───────────────────────────────────────── */
+/* Compact two column panel under the header, with the theme and menu buttons together on the right.
+   nav-menu.js closes it on outside tap, Escape or scroll, so it never sits over the page you are reading. */
+@media (max-width: 920px) {
+  .nav-inner { gap: 8px; }
+  .theme-toggle { order: 2; margin-left: auto; }
+  .menu-toggle { order: 3; width: 44px; height: 44px; font-size: 1.4rem; line-height: 1; border-radius: 10px; }
+  .menu-toggle[aria-expanded="true"] { background: rgba(59,130,246,.1); }
+  .nav-links {
+    padding: 6px 16px 12px; box-shadow: 0 14px 28px rgba(15,23,42,.14);
+    max-height: calc(100vh - 70px); max-height: calc(100dvh - 70px); overflow-y: auto; overscroll-behavior: contain;
+  }
+  .nav-links.active { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; align-items: stretch; }
+  .nav-links a { min-height: 46px; padding: 0; font-size: 1rem; display: flex; align-items: center; }
+  .nav-links a[aria-current="page"], .nav-links a.is-active { color: #0284C7; }
+}
+
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */
 @media (max-width: 600px) {

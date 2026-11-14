@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261114o" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261114p" />
   <!-- GDPR Cookie Banner -->
   <style>
     .gdpr-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30,30,30,0.95); color: #fff; padding: 20px; text-align: center; z-index: 9999; font-size: 14px; }
@@ -252,67 +252,36 @@
     </div>
   </section>
 
-  <!-- ══ EXPERTISE ══ -->
-  <section class="about-section">
+  <!-- ══ TOOLS & TECHNOLOGIES ══ -->
+  <section id="tools" class="about-section about-section-alt">
     <div class="container">
-      <div class="content-block fade-in-up">
-        <h2>Tools & Expertise</h2>
-      </div>
-
-      <div class="expertise-grid">
-        <div class="expertise-card fade-in-up" style="--delay: 0.1s">
-          <h3>Finance</h3>
-          <ul>
-            <li>Financial reporting</li>
-            <li>FP&A & budgeting</li>
-            <li>Variance analysis</li>
-            <li>Forecasting</li>
-            <li>IFRS & UK GAAP</li>
-          </ul>
+      <p class="eyebrow">Technical Stack</p>
+      <h2 class="s-title">Tools &amp; Technologies</h2>
+      <p class="s-sub">The tools I use to turn financial data into insight, and insight into decisions.</p>
+      <div class="tl-grid">
+        <div class="tl-col tk-bi">
+          <h3 class="tl-cat">BI &amp; Reporting</h3>
+          <ul class="tl-list"><li>Power BI</li><li>DAX</li><li>Power Query</li><li>Semantic Models</li><li>Star Schema</li><li>Excel</li></ul>
         </div>
-
-        <div class="expertise-card fade-in-up" style="--delay: 0.2s">
-          <h3>Data & Analytics</h3>
-          <ul>
-            <li>Power BI</li>
-            <li>SQL</li>
-            <li>Python</li>
-            <li>Excel</li>
-            <li>ETL & data modelling</li>
-            <li>Databricks & Azure</li>
-          </ul>
+        <div class="tl-col tk-sql">
+          <h3 class="tl-cat">SQL &amp; Databases</h3>
+          <ul class="tl-list"><li>SQL</li><li>T-SQL</li><li>MySQL</li><li>PostgreSQL</li><li>Stored Procedures</li><li>Data Modelling</li></ul>
         </div>
-
-        <div class="expertise-card fade-in-up" style="--delay: 0.3s">
-          <h3>Systems & Platforms</h3>
-          <ul>
-            <li>Xero</li>
-            <li>Sage</li>
-            <li>QuickBooks</li>
-            <li>ERP environments</li>
-            <li>Cloud platforms</li>
-          </ul>
+        <div class="tl-col tk-py">
+          <h3 class="tl-cat">Python &amp; Automation</h3>
+          <ul class="tl-list"><li>Python</li><li>Pandas</li><li>NumPy</li><li>SQLAlchemy</li><li>ETL Pipelines</li><li>PyPI Packaging</li></ul>
         </div>
-
-        <div class="expertise-card fade-in-up" style="--delay: 0.4s">
-          <h3>Strengths</h3>
-          <ul>
-            <li>Data integrity</li>
-            <li>Reporting automation</li>
-            <li>Stakeholder communication</li>
-            <li>Business partnering</li>
-            <li>Problem solving</li>
-          </ul>
+        <div class="tl-col tk-fin">
+          <h3 class="tl-cat">Finance &amp; Accounting Systems</h3>
+          <ul class="tl-list"><li>Sage 50</li><li>Xero</li><li>QuickBooks</li><li>IFRS Reporting</li><li>ERP Integrations</li><li>Month-End Close</li></ul>
         </div>
-
-        <div class="expertise-card fade-in-up" style="--delay: 0.5s">
-          <h3>AI &amp; LLM</h3>
-          <ul>
-            <li>Retrieval-augmented generation</li>
-            <li>Prompt engineering</li>
-            <li>Claude API & OpenAI SDK</li>
-            <li>Agentic pipeline design</li>
-          </ul>
+        <div class="tl-col tk-cloud">
+          <h3 class="tl-cat">Cloud &amp; Data Platforms</h3>
+          <ul class="tl-list"><li>Microsoft Fabric</li><li>Azure SQL</li><li>Azure Databricks</li><li>Databricks SQL</li><li>Git</li><li>Delta Lake</li></ul>
+        </div>
+        <div class="tl-col tk-ai">
+          <h3 class="tl-cat">AI &amp; Analytics</h3>
+          <ul class="tl-list"><li>Databricks AI/BI</li><li>Azure OpenAI</li><li>RAG</li><li>Claude API</li><li>Genie Spaces</li><li>Multi-Agent AI</li></ul>
         </div>
       </div>
     </div>
@@ -450,7 +419,18 @@
     }
   </script>
 
-  <script src="assets/js/network-bg.js?v=20261114o"></script>
-  <script src="assets/js/nav-menu.js?v=20261114o"></script>
+  <script src="assets/js/network-bg.js?v=20261114p"></script>
+  <script src="assets/js/nav-menu.js?v=20261114p"></script>
+  <script>
+    // Tools & Technologies: play the staggered entrance when the grid scrolls into view
+    (function () {
+      var cols = document.querySelectorAll('.tl-col');
+      if (!('IntersectionObserver' in window)) { cols.forEach(function (c) { c.classList.add('in-view'); }); return; }
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      cols.forEach(function (c) { io.observe(c); });
+    })();
+  </script>
 </body>
 </html>

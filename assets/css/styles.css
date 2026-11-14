@@ -2196,7 +2196,7 @@ a:hover { text-decoration: none; }
 .impact-grid {
   display: grid;
   /* as many equal columns as fit, so 3 or 4 cards always fill one row edge to edge */
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* nine cards: a clean 3 x 3 block */
   gap: 20px;
   max-width: none;
   margin: 32px auto 0;
@@ -3308,6 +3308,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
   /* Proven Impact: 2 per row instead of 9 stacked cards */
   .impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px; margin-top: 20px; }
+  .impact-grid > .impact-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .impact-card { padding: 14px 10px; }
   .impact-card:hover { transform: none; }
   .impact-metric { font-size: 1.2rem; margin-bottom: 4px; }

@@ -685,10 +685,10 @@ a:hover { text-decoration: underline; }
   font-family: var(--hn-font);
   font-size: clamp(.9rem, 1.25vw, 1.05rem);
   font-weight: 500;
-  color: var(--hn-text);
+  color: var(--hn-body);
   line-height: 1.6;
   max-width: 54rem;
-  margin: 2px auto 16px;
+  margin: 4px auto 22px;
 }
 .hn-hl { white-space: nowrap; }
 .hn-hl-sep { color: var(--hn-muted); margin: 0 .7em; }
@@ -719,9 +719,10 @@ a:hover { text-decoration: underline; }
   font-family: var(--hn-font);
 }
 .hn-tagline {
-  font-size: 1rem;
-  color: var(--hn-body);
-  max-width: 40rem;
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 500;
+  color: var(--hn-text);
+  max-width: 48rem;
   text-wrap: balance;
   margin: 0 auto 18px;
   font-weight: 400;
@@ -2764,7 +2765,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   .hero.hero-net { min-height: 0; padding: 56px 0 60px; }
   .hn-name { font-size: clamp(2.1rem, 10vw, 2.6rem); margin-bottom: 8px; }
   .hn-role { font-size: 1.08rem; margin-bottom: 16px; }
-  .hn-tagline { font-size: .95rem; margin-bottom: 12px; }
+  .hn-tagline { font-size: 1.02rem; margin-bottom: 12px; }
   .hn-badges { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px 16px; margin: 18px auto 26px; font-size: .82rem; }
   .hn-actions { gap: 10px; margin-bottom: 24px; }
   .hn-btn { padding: 12px 20px; }

@@ -3214,6 +3214,22 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .connect-end { border-top: 1px solid var(--gray-200); }
 [data-theme="dark"] .connect-end { border-top-color: #334155; }
 
+/* Project pages: compact links row and case study pager */
+.about-section:has(.cb-row) { padding: 28px 0; }
+.cta-block:has(.cb-row) h2 { font-size: 1.5rem; margin-bottom: 4px; }
+.cta-block:has(.cb-row) > p { font-size: .95rem; line-height: 1.5; margin-bottom: 0; }
+.cta-block .cb-row { max-width: 680px; margin-top: 14px; }
+.cb-cell { padding: 9px 10px; gap: 2px; }
+.cb-k { font-size: .64rem; }
+.cb-v { font-size: .88rem; }
+.cb-ico { width: 14px; height: 14px; }
+.pp-pager-wrap { padding: 20px 0 8px; }
+.pp-pager-wrap .pp-pager { max-width: 760px; gap: 10px; }
+.pp-pager-wrap .pp-pager-link { padding: 10px 16px; gap: 2px; }
+.pp-pager-wrap .pp-pager-dir { font-size: .66rem; }
+.pp-pager-wrap .pp-pager-title { font-size: .95rem; }
+@media (max-width: 640px) { .cb-cell { min-height: 42px; padding: 8px 12px; flex-direction: row; justify-content: space-between; } }
+
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */
 @media (max-width: 600px) {

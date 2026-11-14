@@ -3233,7 +3233,7 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 
 /* Featured card: one line of key facts divided by bars */
 .proj-facts { margin: 0; font-size: .86rem; font-weight: 600; color: #0B1F44; }
-.proj-facts i { font-style: normal; margin: 0 .5em; opacity: .45; font-weight: 400; }
+.proj-facts i { font-style: normal; margin: 0 .6em; opacity: .45; font-weight: 400; }
 [data-theme="dark"] .proj-facts { color: #E2E8F0; }
 
 /* ── Wider project README ── */
@@ -3397,4 +3397,15 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .container:has(> .readme-box) { padding: 0 12px; max-width: 100%; }
   .readme-content { padding: 22px 18px; font-size: .98rem; }
   .readme-content h2 { font-size: 1.3rem; }
+}
+
+/* ── Homepage project cards: tidy alignment on phones ── */
+@media (max-width: 640px) {
+  .proj-featured .proj-top { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .proj-featured .proj-top-links { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .proj-featured .proj-top-links .gh-pill { justify-content: center; width: 100%; }
+  .proj-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; }
+  .proj-facts i { display: none; }
+  .proj-title, .proj-impact, .pm-title { text-wrap: balance; }
+  .proj-desc, .proj-more .proj-desc { text-wrap: pretty; }
 }

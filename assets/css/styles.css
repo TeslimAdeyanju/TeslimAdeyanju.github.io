@@ -975,9 +975,9 @@ a:hover { text-decoration: underline; }
   .xp-li + .xp-li::before { content: none; }
 }
 
-/* Tools & Technologies: six category cards, each with its own accent colour
-   (--tk); tags sit in an even two-column grid so rows line up across cards. */
-.tk-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+/* Tools & Technologies: open 3 × 2 grid (no boxes). Each column has a hairline,
+   a category title in its accent colour (--tk) and tools as a two-column list. */
+.tl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 40px; margin-top: 28px; }
 .tk-bi    { --tk: #D97706; }
 .tk-sql   { --tk: #2563EB; }
 .tk-py    { --tk: #7C3AED; }
@@ -990,42 +990,27 @@ a:hover { text-decoration: underline; }
 [data-theme="dark"] .tk-fin   { --tk: #34D399; }
 [data-theme="dark"] .tk-cloud { --tk: #22D3EE; }
 [data-theme="dark"] .tk-ai    { --tk: #F472B6; }
-.tk-card {
-  background: var(--sx-card);
-  border: 1px solid var(--sx-border);
-  border-top: 3px solid var(--tk);
-  border-radius: 12px;
-  padding: 20px;
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+.tl-col { border-top: 1px solid var(--sx-border); padding-top: 18px; }
+.tl-cat {
+  font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--tk); margin-bottom: 12px;
 }
-.tk-card:hover { transform: translateY(-4px); box-shadow: var(--sx-shadow); border-color: var(--tk); }
-.tk-hd { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-.tk-icon {
-  width: 34px; height: 34px; flex-shrink: 0;
-  border-radius: 9px;
-  display: flex; align-items: center; justify-content: center;
-  background: color-mix(in srgb, var(--tk) 12%, transparent);
-  color: var(--tk);
+.tl-list {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px;
 }
-.tk-icon svg { width: 18px; height: 18px; }
-.tk-title { font-size: 1rem; font-weight: 700; color: var(--sx-text); line-height: 1.3; }
-.tk-tags { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.tk-tag {
-  font-family: 'Avenir Next', Avenir, 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: .8rem; font-weight: 600; line-height: 1.2;
-  padding: 8px 10px; border-radius: 8px;
-  text-align: center;
-  color: var(--tk);
-  background: color-mix(in srgb, var(--tk) 8%, transparent);
-  border: 1px solid color-mix(in srgb, var(--tk) 25%, transparent);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+.tl-list li {
+  position: relative; padding-left: 14px;
+  font-size: .95rem; line-height: 1.4; color: var(--sx-body);
 }
-@media (max-width: 1024px) { .tk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tl-list li::before {
+  content: ''; position: absolute; left: 0; top: .55em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--tk);
+}
+@media (max-width: 1024px) { .tl-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) {
-  .tk-grid { grid-template-columns: 1fr; gap: 12px; }
-  .tk-card { padding: 16px; }
-  .tk-card:hover { transform: none; }
-  .tk-tag { white-space: normal; overflow: visible; display: flex; align-items: center; justify-content: center; }
+  .tl-grid { grid-template-columns: 1fr; gap: 24px; }
+  .tl-list li { font-size: .92rem; }
 }
 
 /* Certifications: a few large badge cards (reference: nikitakumari2.github.io) */

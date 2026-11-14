@@ -2293,6 +2293,7 @@ a:hover { text-decoration: underline; }
 }
 
 .expertise-card {
+  min-width: 0; overflow-wrap: anywhere;
   background: white;
   padding: 28px;
   border-radius: 12px;
@@ -2942,10 +2943,6 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .ap-card-title a::after { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: var(--r); }
 .ap-card-title a:focus-visible::after { outline: 3px solid var(--blue); outline-offset: 2px; }
 .ap-card-desc { margin: 0; flex: 1; font-size: .9rem; line-height: 1.6; color: var(--gray-500); }
-.ap-status {
-  align-self: flex-start; justify-self: start; padding: 2px 9px; font-size: .72rem; font-weight: 700; letter-spacing: .03em;
-  color: #0369A1; background: rgba(14, 165, 233, .1); border-radius: 999px;
-}
 .ap-facts { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
 .ap-facts li {
   position: relative; padding-left: 16px; font-size: .84rem; line-height: 1.5; color: var(--gray-600, #475569);
@@ -2954,6 +2951,9 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   content: ''; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%;
   background: linear-gradient(90deg, #0EA5E9, #6366F1);
 }
+.ap-card-hd { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.ap-card-hd .ap-card-title { flex: 1; min-width: 0; padding-top: 4px; }
+.ap-card-hd .ap-card-foot { flex: none; }
 .ap-card-foot { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
 .ap-acct {
   padding: 1px 8px; font-size: .7rem; font-weight: 700; letter-spacing: .02em;
@@ -2961,9 +2961,6 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 }
 
 /* Portfolio: colour by tool family (same palette as the homepage Tools section) and a quiet reveal */
-.ap-card { border-top: 2px solid color-mix(in srgb, var(--tk, #2563EB) 55%, transparent); }
-.ap-card:hover { border-color: var(--tk, var(--blue)); box-shadow: none; }
-.ap-status { color: var(--tk); background: color-mix(in srgb, var(--tk) 11%, transparent); }
 .ap-facts li::before { background: var(--tk); }
 .ap-chip[class*="tk-"]::before {
   content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tk); flex: none;
@@ -2996,9 +2993,8 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   @media (min-width: 641px) {
     .ap-grid { row-gap: 0; margin-bottom: -18px; }
     .ap-grid > .ap-card {
-      display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 12px; margin-bottom: 18px; align-content: start;
+      display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 12px; margin-bottom: 18px; align-content: start;
     }
-    .ap-grid > .ap-card > .ap-card-foot { align-self: end; justify-self: start; }
     .ap-grid > .ap-card > .ptags { align-self: start; }
   }
 }
@@ -3060,6 +3056,35 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 [data-theme="dark"] .ap-card:hover { border-color: #3B82F6; }
 [data-theme="dark"] .btn-back.ap-btn-ghost { color: #93C5FD; }
 [data-theme="dark"] .btn-back.ap-btn-ghost:hover { background: var(--blue); color: #fff; }
+
+/* ── Nav at tablet widths ────────────────────────────────────── */
+/* The full menu needs about 1070px at its normal spacing, so it tightens up to 1100px
+   and folds into the hamburger below 920px (it used to overflow between 769 and 1000px). */
+@media (min-width: 921px) and (max-width: 1100px) {
+  .nav-inner { gap: 20px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: .85rem; }
+}
+@media (min-width: 769px) and (max-width: 920px) {
+  .nav-inner { gap: 10px; }
+  .nav-logo { order: 1; }
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column;
+    padding: 16px; gap: 0; z-index: 999; order: 5; background: var(--white);
+    border-bottom: 1px solid var(--gray-200); box-shadow: var(--sh-lg);
+  }
+  .nav-links.active { display: flex; align-items: stretch; }
+  .nav-links.active a { animation: navDropIn .3s ease both; }
+  .nav-links a { height: auto; padding: 12px 0; border-bottom: 1px solid var(--gray-100); }
+  .nav-links a::after { display: none; }
+  .menu-toggle {
+    display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+    background: none; border: none; cursor: pointer; padding: 0; color: var(--dark); font-size: 1.5rem; order: 2;
+  }
+  .theme-toggle { order: 3; margin-left: auto; }
+  [data-theme="dark"] .nav-links { background: #0F172A; border-bottom-color: #334155; }
+  [data-theme="dark"] .nav-links a { border-bottom-color: #334155; }
+}
 
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */

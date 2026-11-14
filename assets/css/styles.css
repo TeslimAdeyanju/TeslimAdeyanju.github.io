@@ -3180,6 +3180,33 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   .nav-links a[aria-current="page"], .nav-links a.is-active { color: #0284C7; }
 }
 
+/* ── Project page links: divided block row ── */
+.cb-row {
+  display: flex; max-width: 860px; margin: 28px auto 0; background: var(--white);
+  border: 1px solid var(--gray-200); border-radius: var(--r); overflow: hidden;
+}
+.cb-cell {
+  flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 4px; align-items: center; justify-content: center;
+  padding: 16px 12px; text-align: center; text-decoration: none; color: var(--dark); transition: background-color .2s;
+}
+.cb-cell + .cb-cell { border-left: 1px solid var(--gray-200); }
+.cb-cell:hover { background: color-mix(in srgb, var(--blue) 8%, var(--white)); text-decoration: none; }
+.cb-k { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--gray-500); }
+.cb-v { display: inline-flex; align-items: center; gap: 8px; font-size: .98rem; font-weight: 700; }
+.cb-ico { width: 16px; height: 16px; flex: none; }
+.cb-cell:hover .cb-v { color: var(--blue); }
+@media (max-width: 640px) {
+  .cb-row { flex-direction: column; }
+  .cb-cell + .cb-cell { border-left: 0; border-top: 1px solid var(--gray-200); }
+  .cb-cell { min-height: 56px; }
+}
+[data-theme="dark"] .cb-row { background: #1E293B; border-color: #334155; }
+[data-theme="dark"] .cb-cell { color: #F1F5F9; }
+[data-theme="dark"] .cb-cell + .cb-cell { border-color: #334155; }
+[data-theme="dark"] .cb-cell:hover { background: rgba(59,130,246,.14); }
+[data-theme="dark"] .cb-k { color: #94A3B8; }
+[data-theme="dark"] .cb-cell:hover .cb-v { color: #93C5FD; }
+
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */
 @media (max-width: 600px) {

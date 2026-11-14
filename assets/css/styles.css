@@ -3024,18 +3024,19 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .pg-pager { padding-top: 8px; }
 [data-theme="dark"] .pp-pager-desc { color: #94A3B8; }
 
-/* Back to top: appears after scrolling on long pages (added by nav-menu.js, not on the homepage) */
+/* Back to top: round gradient button, appears after scrolling on every page (added by nav-menu.js) */
 .to-top {
-  position: fixed; right: 16px; bottom: 18px; z-index: 900; width: 46px; height: 46px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; font-size: 1.2rem; line-height: 1; cursor: pointer;
-  color: var(--dark); background: var(--white); border: 1px solid var(--gray-200); box-shadow: 0 4px 14px rgba(15,23,42,.12);
-  opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .25s, transform .25s, border-color .2s;
+  position: fixed; right: 18px; bottom: 20px; z-index: 900; width: 50px; height: 50px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; border: 0; padding: 0;
+  color: #fff; background: linear-gradient(135deg, #38BDF8, #818CF8);
+  box-shadow: 0 6px 20px rgba(99,102,241,.35), 0 0 0 4px rgba(129,140,248,.14);
+  opacity: 0; transform: translateY(12px) scale(.9); pointer-events: none;
+  transition: opacity .25s, transform .25s, box-shadow .25s;
 }
 .to-top.is-shown { opacity: 1; transform: none; pointer-events: auto; }
-.to-top:hover { border-color: var(--blue); }
-.to-top:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
-[data-theme="dark"] .to-top { background: #1E293B; border-color: #334155; color: #E2E8F0; }
-@media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
+.to-top:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(99,102,241,.45), 0 0 0 6px rgba(129,140,248,.18); }
+.to-top:focus-visible { outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 5px #6366F1; }
+@media (prefers-reduced-motion: reduce) { .to-top { transition: none; } .to-top:hover { transform: none; } }
 
 /* ── About page: connect cards ───────────────────────────────── */
 /* Five cards: three on the first row, two wider ones filling the second. Each has a tinted icon tile in its own brand colour. */

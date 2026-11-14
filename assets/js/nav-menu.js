@@ -35,10 +35,10 @@
     if (window.innerWidth > 920 && isOpen()) close();
   });
 
-  // Back to top button on every page except the homepage
-  if (!document.getElementById('hero')) {
+  // Back to top button on every page, shown after scrolling down
+  {
     var up = document.createElement('button');
-    up.type = 'button'; up.className = 'to-top'; up.setAttribute('aria-label', 'Back to top'); up.textContent = '\u2191';
+    up.type = 'button'; up.className = 'to-top'; up.setAttribute('aria-label', 'Back to top'); up.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
     document.body.appendChild(up);
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     up.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });

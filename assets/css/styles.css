@@ -21,8 +21,7 @@
   --gray-300:  #CBD5E1;
   --gray-500:  #475569;
   --gray-700:  #1F2937;
-  --serif: 'EB Garamond', Garamond, Georgia, serif;
-  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font: 'EB Garamond', Garamond, Georgia, serif;
   --max: 1140px;
   /* Section headings (homepage .s-title and inner-page .content-block h2) share one size */
   --h2-size: clamp(1.55rem, 2.3vw, 2rem);
@@ -40,7 +39,7 @@ body {
   background: var(--white);
   color: var(--dark);
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 17.5px;
   -webkit-font-smoothing: antialiased;
 }
 a { color: var(--blue); text-decoration: none; }
@@ -105,7 +104,7 @@ a:hover { text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: .28em;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Avenir Next', Avenir, 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1;
@@ -136,7 +135,7 @@ a:hover { text-decoration: none; }
   display: inline-flex;
   align-items: center;
   height: 32px;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Avenir Next', Avenir, 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: .9rem;
   font-weight: 500;
   line-height: 1;
@@ -638,7 +637,7 @@ a:hover { text-decoration: none; }
    (assets/js/network-bg.js) shows behind it. */
 .hero.hero-net {
   /* Avenir Next on Apple devices; Nunito Sans (Google Fonts) is the closest free match elsewhere */
-  --hn-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --hn-font: 'Avenir Next', Avenir, 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --hn-bg: #FFFFFF;
   --hn-text: #0F172A;
   --hn-body: #1F2937;
@@ -3210,13 +3209,6 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 [data-theme="dark"] .cb-cell:hover { background: rgba(59,130,246,.14); }
 [data-theme="dark"] .cb-k { color: #94A3B8; }
 [data-theme="dark"] .cb-cell:hover .cb-v { color: #93C5FD; }
-
-/* ── Typography: Inter for reading text, EB Garamond for headings and key figures ── */
-h1, h2, h3, .s-title, .hn-name, .proj-title, .ap-card-title, .ap-group-hd h2, .xp-role, .pod-title, .pm-title,
-.cr-title, .cn-card strong, .pp-pager-title, .blog-entry h3, .ls-stat-number, .impact-metric, .hs-num, .ab-stat-num {
-  font-family: var(--serif);
-}
-.btn, button, input, textarea, select { font-family: var(--font); }
 
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */

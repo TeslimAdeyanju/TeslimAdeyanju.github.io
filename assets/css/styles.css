@@ -2826,3 +2826,35 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 /* About: single "Read my full story" link, always centred */
 .ab-cta { justify-content: center; text-align: center; }
+
+/* ── About page: phone layout (≤ 600px) ───────────────────────── */
+@media (max-width: 600px) {
+  .about-hero { padding: 44px 0 32px; }
+  .about-section { padding: 36px 0; }
+  .content-block h2 { margin-bottom: 10px; }
+  .content-block p { font-size: .98rem; line-height: 1.65; margin-bottom: 14px; }
+  .intro-text { font-size: 1.02rem !important; line-height: 1.6 !important; }
+
+  /* Proven Impact: 2 per row instead of 9 stacked cards */
+  .impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px; margin-top: 20px; }
+  .impact-card { padding: 14px 10px; }
+  .impact-card:hover { transform: none; }
+  .impact-metric { font-size: 1.2rem; margin-bottom: 4px; }
+  .impact-card .impact-desc { font-size: .78rem; line-height: 1.35; }
+
+  /* What Makes Me Different: small number inline with the title, full-width text */
+  .diff-cards { gap: 22px; margin-top: 24px; }
+  .diff-cards .diff-card { padding-left: 0; }
+  .diff-number { position: static; display: inline-block; font-size: 1rem; color: var(--blue); margin-right: 8px; vertical-align: baseline; }
+  .diff-card h3 { display: inline; font-size: 1.05rem; }
+  .diff-card p { margin-top: 8px; font-size: .95rem; line-height: 1.6; }
+
+  /* Tools & Expertise: one compact card per row, items in two columns */
+  .expertise-grid { grid-template-columns: 1fr !important; gap: 10px; margin-top: 20px; }
+  .expertise-card { padding: 14px 16px; }
+  .expertise-card:hover { transform: none; }
+  .expertise-card h3 { font-size: .98rem; padding-bottom: 8px; margin-bottom: 10px; }
+  .expertise-card ul { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
+  .expertise-card li { font-size: .86rem; margin-bottom: 0; line-height: 1.35; }
+  .impact-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}

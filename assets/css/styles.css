@@ -1517,6 +1517,9 @@ a:hover { text-decoration: underline; }
   grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; gap: 24px;
   text-decoration: none; color: inherit;
 }
+.proj-more, .proj-more:hover, .proj-more:focus, .proj-more:active, .proj-more:visited,
+.proj-more:hover *, .proj-more:focus *, .proj-more:active * { text-decoration: none; }
+.proj-more:focus:not(:focus-visible) { outline: none; }
 .proj-more.scroll-reveal { transition: opacity .7s ease, transform .35s ease, border-color .25s, background .25s, box-shadow .25s; }
 .pm-text { min-width: 0; display: grid; gap: 8px; }
 .pm-kicker { margin: 0; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }

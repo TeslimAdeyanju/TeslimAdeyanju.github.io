@@ -2883,7 +2883,6 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 
 /* ── Portfolio page ───────────────────────────────────────
    portfolio.html: skill filter, grouped card grid. Filter logic is inline in the page. */
-.ap-hero-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 4px; }
 .btn-back.ap-btn-ghost { background: transparent; color: var(--blue); }
 .btn-back.ap-btn-ghost:hover { background: var(--blue); color: #fff; }
 
@@ -2892,12 +2891,16 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   background: rgba(255,255,255,.92); backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--gray-200);
 }
-.ap-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.about-hero.ap-hero { padding: 40px 0 28px; }
+.ap-toc-label { margin: 0 0 8px; text-align: center; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #64748B; }
+.ap-chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; list-style: none; margin: 0; padding: 0; }
+.ap-chips li { margin: 0; }
+
 .ap-chip {
-  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 16px;
-  font: inherit; font-size: .9rem; font-weight: 700; color: var(--gray-500);
+  display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 8px 13px;
+  font: inherit; font-size: .86rem; font-weight: 700; color: var(--gray-500);
   background: var(--white); border: 1px solid var(--gray-200); border-radius: 999px;
-  cursor: pointer; transition: border-color .2s, color .2s, background .2s;
+  cursor: pointer; text-decoration: none; transition: border-color .2s, color .2s, background .2s;
 }
 .ap-chip:hover { border-color: var(--blue); color: var(--blue-d); }
 .ap-chip.is-active { background: var(--blue); border-color: var(--blue); color: #fff; }
@@ -2906,14 +2909,26 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   background: rgba(59,130,246,.12); color: var(--blue-d);
 }
 .ap-chip.is-active .ap-chip-n { background: rgba(255,255,255,.25); color: #fff; }
-.ap-count { margin: 8px 0 0; text-align: center; font-size: .82rem; color: #64748B; }
 
 .ap-main { padding: 36px 0 56px; }
-.ap-group { margin-bottom: 44px; scroll-margin-top: 150px; }
+.ap-group { padding: 44px 0 0; scroll-margin-top: 165px; }
+.ap-group:first-child { padding-top: 0; }
+/* divider between sections: a hairline that fades out at both ends */
+.ap-group + .ap-group { margin-top: 44px; border-top: 0; position: relative; }
+.ap-group + .ap-group::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gray-300) 15%, var(--gray-300) 85%, transparent);
+}
 .ap-group[hidden] { display: none; }
-.ap-group-hd { margin-bottom: 18px; }
-.ap-group-hd h2 { font-size: 1.35rem; font-weight: 700; color: var(--dark); margin: 0 0 4px; }
-.ap-group-hd p { margin: 0; font-size: .95rem; color: var(--gray-500); }
+.ap-group-hd { margin-bottom: 22px; text-align: center; }
+/* group titles use the same sky to indigo gradient as the site name, so they stand out from the cards */
+.ap-group-hd h2 {
+  display: inline-block; font-size: clamp(1.45rem, 2.4vw, 1.9rem); font-weight: 800; letter-spacing: -.01em;
+  margin: 0 0 6px; color: #0369A1;
+  background: linear-gradient(90deg, #0EA5E9, #6366F1); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ap-group-hd p { margin: 0 auto; max-width: 620px; font-size: .95rem; color: var(--gray-500); }
 .ap-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
 .ap-card {
   position: relative; display: flex; flex-direction: column; gap: 12px; padding: 22px;
@@ -2931,8 +2946,6 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   padding: 1px 8px; font-size: .7rem; font-weight: 700; letter-spacing: .02em;
   color: #64748B; border: 1px solid var(--gray-200); border-radius: 999px;
 }
-.ap-note { margin: 8px 0 0; font-size: .85rem; line-height: 1.6; color: var(--gray-500); max-width: 760px; }
-.ap-note a { color: var(--blue-d); font-weight: 600; }
 
 /* Card rows always fill the full width: no empty cells, and an odd last row stretches. */
 @media (min-width: 641px) {
@@ -2966,28 +2979,28 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
     margin: 0 -20px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
   .ap-chips::-webkit-scrollbar { display: none; }
   .ap-chip { flex: 0 0 auto; scroll-snap-align: start; white-space: nowrap; }
-  .ap-count { text-align: left; }
   .ap-main { padding: 26px 0 40px; }
-  .ap-group { margin-bottom: 34px; scroll-margin-top: 130px; }
-  .ap-group-hd h2 { font-size: 1.2rem; }
+  .ap-group { padding-top: 32px; scroll-margin-top: 134px; }
+  .ap-group + .ap-group { margin-top: 32px; }
   .ap-grid { gap: 14px; }
   .ap-card { padding: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .ap-card, .ap-chip, .all-proj-link { transition: none; } .ap-card:hover { transform: none; } }
 
+[data-theme="dark"] .ap-group + .ap-group::before { background: linear-gradient(90deg, transparent, #334155 15%, #334155 85%, transparent); }
 [data-theme="dark"] .ap-filter { background: rgba(15,23,42,.92); border-bottom-color: #334155; }
 [data-theme="dark"] .ap-chip { background: #1E293B; border-color: #334155; color: #94A3B8; }
 [data-theme="dark"] .ap-chip:hover { color: #93C5FD; border-color: #3B82F6; }
 [data-theme="dark"] .ap-chip.is-active { background: var(--blue); border-color: var(--blue); color: #fff; }
 [data-theme="dark"] .ap-chip-n { background: rgba(59,130,246,.2); color: #93C5FD; }
 [data-theme="dark"] .ap-chip.is-active .ap-chip-n { background: rgba(255,255,255,.25); color: #fff; }
-[data-theme="dark"] .ap-count, [data-theme="dark"] .ap-acct { color: #94A3B8; }
+[data-theme="dark"] .ap-acct, [data-theme="dark"] .ap-toc-label { color: #94A3B8; }
 [data-theme="dark"] .ap-acct { border-color: #334155; }
-[data-theme="dark"] .ap-group-hd h2, [data-theme="dark"] .ap-card-title { color: #F1F5F9; }
-[data-theme="dark"] .ap-group-hd p, [data-theme="dark"] .ap-card-desc, [data-theme="dark"] .ap-note { color: #94A3B8; }
+[data-theme="dark"] .ap-group-hd h2 { color: #7DD3FC; background-image: linear-gradient(90deg, #38BDF8, #A5B4FC); }
+[data-theme="dark"] .ap-card-title { color: #F1F5F9; }
+[data-theme="dark"] .ap-group-hd p, [data-theme="dark"] .ap-card-desc { color: #94A3B8; }
 [data-theme="dark"] .ap-card { background: #1E293B; border-color: #334155; }
 [data-theme="dark"] .ap-card:hover { border-color: #3B82F6; }
-[data-theme="dark"] .ap-note a { color: #93C5FD; }
 [data-theme="dark"] .btn-back.ap-btn-ghost { color: #93C5FD; }
 [data-theme="dark"] .btn-back.ap-btn-ghost:hover { background: var(--blue); color: #fff; }
 

@@ -74,42 +74,38 @@
   </header>
 
   <!-- ══ HERO SECTION ══ -->
-  <section class="about-hero">
+  <section class="about-hero ap-hero">
     <div class="container">
       <div class="hero-content hero-content-center fade-in">
         <h1 class="hero-title">Portfolio</h1>
-        <p class="hero-subtitle">The rest of my portfolio from GitHub, grouped by skill. My featured case studies are on the homepage.</p>
-        <div class="ap-hero-links">
-          <a href="index.html#projects" class="btn-back">← Featured case studies</a>
-          <a href="https://github.com/TeslimAdeyanju" target="_blank" rel="noopener" class="gh-pill"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ FILTER ══ -->
-  <div class="ap-filter" id="main">
+  <!-- ══ CONTENTS ══ -->
+  <nav class="ap-filter ap-toc" id="main" aria-label="Portfolio contents">
     <div class="container">
-      <div class="ap-chips" role="group" aria-label="Filter projects by skill"><button type="button" class="ap-chip is-active" data-filter="all" aria-pressed="true">All <span class="ap-chip-n">18</span></button><button type="button" class="ap-chip" data-filter="powerbi" aria-pressed="false">Power BI &amp; Data Visualisation <span class="ap-chip-n">3</span></button><button type="button" class="ap-chip" data-filter="finance" aria-pressed="false">Python, Finance &amp; Automation <span class="ap-chip-n">2</span></button><button type="button" class="ap-chip" data-filter="sql" aria-pressed="false">SQL &amp; Databases <span class="ap-chip-n">1</span></button><button type="button" class="ap-chip" data-filter="ml" aria-pressed="false">Machine Learning <span class="ap-chip-n">7</span></button><button type="button" class="ap-chip" data-filter="ai" aria-pressed="false">AI &amp; LLM Applications <span class="ap-chip-n">5</span></button></div>
-      <p class="ap-count" id="ap-count" role="status" aria-live="polite">Showing all 18 projects</p>
+      <p class="ap-toc-label">Contents</p>
+      <ol class="ap-chips">
+          <li><a class="ap-chip" href="#powerbi">Power BI &amp; Data Visualisation <span class="ap-chip-n">2</span></a></li>
+          <li><a class="ap-chip" href="#finance">Python, Finance &amp; Automation <span class="ap-chip-n">4</span></a></li>
+          <li><a class="ap-chip" href="#sql">SQL &amp; Databases <span class="ap-chip-n">3</span></a></li>
+          <li><a class="ap-chip" href="#ml">Machine Learning <span class="ap-chip-n">4</span></a></li>
+          <li><a class="ap-chip" href="#ai">AI &amp; LLM Applications <span class="ap-chip-n">5</span></a></li>
+      </ol>
     </div>
-  </div>
+  </nav>
 
   <!-- ══ PROJECTS ══ -->
   <section class="ap-main">
     <div class="container">
-      <section class="ap-group" data-group="powerbi" aria-labelledby="ap-powerbi">
+
+      <section class="ap-group" id="powerbi" data-group="powerbi" aria-labelledby="ap-powerbi">
         <div class="ap-group-hd">
           <h2 id="ap-powerbi">Power BI &amp; Data Visualisation</h2>
           <p>Dashboards and data models that turn public and financial data into decision-ready views.</p>
         </div>
-        <div class="ap-grid" data-layout="t">
-          <article class="ap-card">
-            <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/NHS-Waiting-List-Analytics" target="_blank" rel="noopener">NHS Waiting List Analytics<span class="sr-only"> (opens on GitHub)</span></a></h3>
-            <p class="ap-card-desc">RTT pipeline across all NHS England trusts (2019 to 2025) testing whether the 4.4m to 7.7m waiting list growth reflects throughput or suppressed referrals.</p>
-            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">MySQL</span><span class="ptag pt-green">Databricks</span><span class="ptag pt-orange">Power BI</span></div>
-            <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
-          </article>
+        <div class="ap-grid" data-layout="h">
           <article class="ap-card">
             <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/UK-Immigration-Impact-PowerBI" target="_blank" rel="noopener">UK Immigration Impact<span class="sr-only"> (opens on GitHub)</span></a></h3>
             <p class="ap-card-desc">Visa, asylum, settlement and citizenship lifecycle from Home Office 2025 data, cross-referenced with ONS economy data.</p>
@@ -125,10 +121,10 @@
         </div>
       </section>
 
-      <section class="ap-group" data-group="finance" aria-labelledby="ap-finance">
+      <section class="ap-group" id="finance" data-group="finance" aria-labelledby="ap-finance">
         <div class="ap-group-hd">
           <h2 id="ap-finance">Python, Finance &amp; Automation</h2>
-          <p>Python workflows for financial data, performance analysis and automated reporting.</p>
+          <p>Python workflows for financial data, forecasting, performance analysis and automated reporting.</p>
         </div>
         <div class="ap-grid" data-layout="h">
           <article class="ap-card">
@@ -143,30 +139,6 @@
             <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-blue">Pandas</span></div>
             <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
           </article>
-        </div>
-      </section>
-
-      <section class="ap-group" data-group="sql" aria-labelledby="ap-sql">
-        <div class="ap-group-hd">
-          <h2 id="ap-sql">SQL &amp; Databases</h2>
-          <p>Analytical SQL, database design and Python integration.</p>
-        </div>
-        <div class="ap-grid" data-layout="f">
-          <article class="ap-card">
-            <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/MySQL-Fundamentals" target="_blank" rel="noopener">MySQL: Fundamentals to Advanced<span class="sr-only"> (opens on GitHub)</span></a></h3>
-            <p class="ap-card-desc">MySQL showcase covering advanced queries, stored procedures and Python integration for live data frames.</p>
-            <div class="ptags"><span class="ptag pt-green">MySQL</span><span class="ptag pt-blue">Python</span><span class="ptag pt-blue">Jupyter</span></div>
-            <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
-          </article>
-        </div>
-      </section>
-
-      <section class="ap-group" data-group="ml" aria-labelledby="ap-ml">
-        <div class="ap-group-hd">
-          <h2 id="ap-ml">Machine Learning</h2>
-          <p>Prediction, classification and explainability work on business and finance data.</p>
-        </div>
-        <div class="ap-grid" data-layout="t1">
           <article class="ap-card">
             <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/Applied-Machine-Learning-for-Financial-Analysis" target="_blank" rel="noopener">ML in Financial Analysis<span class="sr-only"> (opens on GitHub)</span></a></h3>
             <p class="ap-card-desc">Regression for trend prediction, classification for risk assessment and ensemble models for portfolio optimisation.</p>
@@ -179,6 +151,42 @@
             <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-blue">Scikit-learn</span><span class="ptag pt-blue">Flask</span><span class="ptag pt-blue">Docker</span></div>
             <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
           </article>
+        </div>
+      </section>
+
+      <section class="ap-group" id="sql" data-group="sql" aria-labelledby="ap-sql">
+        <div class="ap-group-hd">
+          <h2 id="ap-sql">SQL &amp; Databases</h2>
+          <p>MySQL data models, analytical SQL queries and Python integration.</p>
+        </div>
+        <div class="ap-grid" data-layout="t">
+          <article class="ap-card">
+            <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/NHS-Waiting-List-Analytics" target="_blank" rel="noopener">NHS Waiting List Analytics<span class="sr-only"> (opens on GitHub)</span></a></h3>
+            <p class="ap-card-desc">RTT pipeline across all NHS England trusts (2019 to 2025) testing whether the 4.4m to 7.7m waiting list growth reflects throughput or suppressed referrals.</p>
+            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">MySQL</span><span class="ptag pt-green">Databricks</span><span class="ptag pt-orange">Power BI</span></div>
+            <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+          </article>
+          <article class="ap-card">
+            <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/MySQL-Fundamentals" target="_blank" rel="noopener">MySQL: Fundamentals to Advanced<span class="sr-only"> (opens on GitHub)</span></a></h3>
+            <p class="ap-card-desc">MySQL showcase covering advanced queries, stored procedures and Python integration for live data frames.</p>
+            <div class="ptags"><span class="ptag pt-green">MySQL</span><span class="ptag pt-blue">Python</span><span class="ptag pt-blue">Jupyter</span></div>
+            <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+          </article>
+          <article class="ap-card">
+            <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/UK-Immigration-YouTube-Sentiment" target="_blank" rel="noopener">UK Immigration: YouTube Sentiment<span class="sr-only"> (opens on GitHub)</span></a></h3>
+            <p class="ap-card-desc">Sentiment analysis of YouTube comments on UK immigration, with an Airflow pipeline for collection.</p>
+            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-purple">NLP</span><span class="ptag pt-blue">Airflow</span></div>
+            <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+          </article>
+        </div>
+      </section>
+
+      <section class="ap-group" id="ml" data-group="ml" aria-labelledby="ap-ml">
+        <div class="ap-group-hd">
+          <h2 id="ap-ml">Machine Learning</h2>
+          <p>Prediction, classification and explainability work on business data.</p>
+        </div>
+        <div class="ap-grid" data-layout="h">
           <article class="ap-card">
             <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/Product-Price-Prediction-and-Analytics" target="_blank" rel="noopener">Product Price Prediction &amp; Analytics<span class="sr-only"> (opens on GitHub)</span></a></h3>
             <p class="ap-card-desc">Feature-based price modelling workflow with a Streamlit prototype; first case study on 53,940 diamonds.</p>
@@ -203,16 +211,10 @@
             <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-blue">Scikit-learn</span><span class="ptag pt-blue">Feature Engineering</span></div>
             <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
           </article>
-          <article class="ap-card">
-            <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/UK-Immigration-YouTube-Sentiment" target="_blank" rel="noopener">UK Immigration: YouTube Sentiment<span class="sr-only"> (opens on GitHub)</span></a></h3>
-            <p class="ap-card-desc">Sentiment analysis of YouTube comments on UK immigration, with an Airflow pipeline for collection.</p>
-            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-purple">NLP</span><span class="ptag pt-blue">Airflow</span></div>
-            <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
-          </article>
         </div>
       </section>
 
-      <section class="ap-group" data-group="ai" aria-labelledby="ap-ai">
+      <section class="ap-group" id="ai" data-group="ai" aria-labelledby="ap-ai">
         <div class="ap-group-hd">
           <h2 id="ap-ai">AI &amp; LLM Applications</h2>
           <p>Retrieval, agents and automation built on large language models.</p>
@@ -251,7 +253,6 @@
         </div>
       </section>
 
-      <p class="ap-note">Some repositories are on my second GitHub account, <a href="https://github.com/UthmanAdeyanju" target="_blank" rel="noopener">github.com/UthmanAdeyanju</a> (Uthman is my other given name). Currently building: NHS Cost of Waiting, which translates NHS waiting times into a modelled welfare cost by specialty and trust.</p>
     </div>
   </section>
 
@@ -270,30 +271,24 @@
   </section>
 
   <script>
-    // Skill filter: shows one group at a time, "All" shows everything. Works without
-    // JavaScript too (every group is visible by default).
+    // Contents bar: highlights the section you are reading. The links themselves are plain anchors.
     (function () {
-      var chips = document.querySelectorAll('.ap-chip');
-      var groups = document.querySelectorAll('.ap-group');
-      var count = document.getElementById('ap-count');
-      function apply(key, push) {
-        var shown = 0;
-        groups.forEach(function (g) {
-          var on = key === 'all' || g.getAttribute('data-group') === key;
-          g.hidden = !on;
-          if (on) shown += g.querySelectorAll('.ap-card').length;
+      var links = {};
+      document.querySelectorAll('.ap-toc a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+      if (!('IntersectionObserver' in window)) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          Object.keys(links).forEach(function (k) { links[k].classList.remove('is-active'); links[k].removeAttribute('aria-current'); });
+          var a = links[e.target.id];
+          if (a) {
+            a.classList.add('is-active'); a.setAttribute('aria-current', 'true');
+            var bar = a.closest('.ap-chips');
+            if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: a.offsetLeft - 20, behavior: 'smooth' });
+          }
         });
-        chips.forEach(function (c) {
-          var on = c.getAttribute('data-filter') === key;
-          c.classList.toggle('is-active', on);
-          c.setAttribute('aria-pressed', on ? 'true' : 'false');
-        });
-        count.textContent = key === 'all' ? 'Showing all ' + shown + ' projects' : 'Showing ' + shown + ' of 18 projects';
-        if (push) { try { history.replaceState(null, '', key === 'all' ? location.pathname : '#' + key); } catch (e) {} }
-      }
-      chips.forEach(function (c) { c.addEventListener('click', function () { apply(c.getAttribute('data-filter'), true); }); });
-      var h = location.hash.slice(1);
-      if (h && document.querySelector('.ap-chip[data-filter="' + h + '"]')) apply(h, false);
+      }, { rootMargin: '-170px 0px -60% 0px', threshold: 0 });
+      document.querySelectorAll('.ap-group').forEach(function (g) { io.observe(g); });
     })();
   </script>
 

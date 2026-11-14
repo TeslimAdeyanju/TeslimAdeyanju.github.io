@@ -3231,27 +3231,6 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .pp-pager-wrap .pp-pager-title { font-size: .95rem; }
 @media (max-width: 640px) { .cb-cell { min-height: 42px; padding: 8px 12px; flex-direction: row; justify-content: space-between; } }
 
-/* ── FDA featured card: code sample and module map ── */
-.fda-showcase { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 16px; margin: 4px 0 2px; }
-.fda-code, .fda-mods { border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 16px; background: color-mix(in srgb, var(--blue) 4%, var(--white)); }
-.fda-code { background: #0F172A; border-color: #1E293B; }
-.fda-code-hd { display: block; margin-bottom: 8px; font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-500); }
-.fda-code .fda-code-hd { color: #94A3B8; }
-.fda-code pre { margin: 0; white-space: pre; overflow-x: auto; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; font-size: .74rem; line-height: 1.6; color: #E2E8F0; }
-.c-k { color: #C4B5FD; } .c-s { color: #86EFAC; }
-.fda-mods ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; }
-.fda-mods li { display: flex; justify-content: space-between; gap: 8px; font-size: .86rem; color: var(--gray-700); }
-.fda-mods li b { font-weight: 600; }
-.fda-mods li span { font-weight: 800; color: var(--blue); }
-.fda-facts { margin: 10px 0 0; font-size: .78rem; color: var(--gray-500); }
-.fda-facts i { font-style: normal; margin: 0 .35em; opacity: .55; }
-[data-theme="dark"] .fda-mods { background: rgba(59,130,246,.08); border-color: #334155; }
-[data-theme="dark"] .fda-code-hd { color: #94A3B8; }
-[data-theme="dark"] .fda-mods li { color: #E2E8F0; }
-[data-theme="dark"] .fda-mods li span { color: #93C5FD; }
-[data-theme="dark"] .fda-facts { color: #94A3B8; }
-@media (max-width: 760px) { .fda-showcase { grid-template-columns: minmax(0, 1fr); } .fda-code pre { font-size: .72rem; } }
-
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */
 @media (max-width: 600px) {

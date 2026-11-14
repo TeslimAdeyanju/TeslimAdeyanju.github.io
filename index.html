@@ -91,7 +91,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261115a" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261115b" />
   <!-- GDPR Cookie Banner -->
   <style>
     .gdpr-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30,30,30,0.95); color: #fff; padding: 20px; text-align: center; z-index: 9999; font-size: 14px; }
@@ -236,31 +236,8 @@
             <h3 class="proj-title"><a href="projects/fda-toolkit.html">FDA Toolkit — Financial Data Preparation Framework</a></h3>
           <p class="proj-impact">67 functions · 8 modules · reusable financial-data workflow</p>
             <p class="proj-desc">Python framework for automating financial data cleaning, validation, transformation, and audit logging. Eliminates manual reconciliation, broken schemas, and audit gaps—so analysts focus on insight, not data repair.</p>
-            <div class="fda-showcase">
-              <div class="fda-code" role="img" aria-label="Example: read, clean and check a finance file in three lines of Python">
-                <span class="fda-code-hd">Use in three lines</span>
-                <pre><code><span class="c-k">import</span> fda_toolkit <span class="c-k">as</span> ftk
-df = ftk.read_csv_safely(<span class="c-s">"data/transactions.csv"</span>)
-df_clean = ftk.quick_clean_finance(df,
-    primary_key=<span class="c-s">"transaction_id"</span>,
-    date_cols=[<span class="c-s">"date"</span>], currency_cols=[<span class="c-s">"amount"</span>])
-ftk.quick_check(df_clean)</code></pre>
-              </div>
-              <div class="fda-mods">
-                <span class="fda-code-hd">67 functions in 8 modules</span>
-                <ul>
-                  <li><b>core</b><span>17</span></li>
-                  <li><b>finance</b><span>11</span></li>
-                  <li><b>reporting</b><span>10</span></li>
-                  <li><b>validation</b><span>9</span></li>
-                  <li><b>features</b><span>7</span></li>
-                  <li><b>utils</b><span>6</span></li>
-                  <li><b>io</b><span>5</span></li>
-                  <li><b>pipelines</b><span>2</span></li>
-                </ul>
-                <p class="fda-facts">Python 3.10+ <i>|</i> MIT licence <i>|</i> Full type hints <i>|</i> Audit trail</p>
-              </div>
-            </div>
+            <p class="proj-desc">Analysts can spend most of their time cleaning, validating and reshaping data before any analysis begins. FDA Toolkit removes that work with 67 ready made functions in 8 modules, including one line pipelines that load, clean and check a finance file in a single step.</p>
+            <p class="proj-desc">It understands finance specific details such as sign conventions, entity names and currency formats, records every operation in an audit trail, and is published on PyPI with full type hints and more than 1,000 downloads a month.</p>
             <div class="ptags">
               <span class="ptag pt-blue">Python</span>
               <span class="ptag pt-green">PyPI</span>
@@ -602,8 +579,8 @@ ftk.quick_check(df_clean)</code></pre>
     </div>
   </footer>
 
-  <script src="assets/js/script.js?v=20261115a"></script>
-  <script src="assets/js/network-bg.js?v=20261115a"></script>
-  <script src="assets/js/nav-menu.js?v=20261115a"></script>
+  <script src="assets/js/script.js?v=20261115b"></script>
+  <script src="assets/js/network-bg.js?v=20261115b"></script>
+  <script src="assets/js/nav-menu.js?v=20261115b"></script>
 </body>
 </html>

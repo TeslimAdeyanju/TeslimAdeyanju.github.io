@@ -3231,6 +3231,11 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .pp-pager-wrap .pp-pager-title { font-size: .95rem; }
 @media (max-width: 640px) { .cb-cell { min-height: 42px; padding: 8px 12px; flex-direction: row; justify-content: space-between; } }
 
+/* Featured card: one line of key facts divided by bars */
+.proj-facts { margin: 0; font-size: .86rem; font-weight: 600; color: #0B1F44; }
+.proj-facts i { font-style: normal; margin: 0 .5em; opacity: .45; font-weight: 400; }
+[data-theme="dark"] .proj-facts { color: #E2E8F0; }
+
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */
 @media (max-width: 600px) {

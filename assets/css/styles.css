@@ -1731,7 +1731,7 @@ a:hover { text-decoration: none; }
 .footer { background: var(--white); padding: 24px 0; border-top: 1px solid var(--gray-200); }
 .footer-inner {
   max-width: var(--max); margin: 0 auto; padding: 0 24px;
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; justify-content: center; align-items: center; text-align: center;
   font-size: .8rem; color: #334155;
 }
 .footer-inner a { color: #475569; transition: color .15s; }

@@ -3409,3 +3409,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .proj-title, .proj-impact, .pm-title { text-wrap: balance; }
   .proj-desc, .proj-more .proj-desc { text-wrap: pretty; }
 }
+
+/* ── About page: story chapters ── */
+.story-block h3 { margin: 34px 0 10px; font-size: 1.2rem; color: var(--blue); }
+.story-block .approach-callout { margin: 30px 0 0; }
+@media (max-width: 640px) { .story-block h3 { margin-top: 28px; font-size: 1.1rem; } }

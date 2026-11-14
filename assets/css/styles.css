@@ -3391,3 +3391,10 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .expertise-card li { font-size: .86rem; margin-bottom: 0; line-height: 1.35; }
   .impact-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
+
+/* ── Project README on phones: more reading width ── */
+@media (max-width: 640px) {
+  .container:has(> .readme-box) { padding: 0 12px; max-width: 100%; }
+  .readme-content { padding: 22px 18px; font-size: .98rem; }
+  .readme-content h2 { font-size: 1.3rem; }
+}

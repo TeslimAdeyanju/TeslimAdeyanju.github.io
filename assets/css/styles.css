@@ -3438,3 +3438,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 /* ── About page: bulleted "What I deliver" list ── */
 .story-block .about-list li { position: relative; padding-left: 22px; }
 .story-block .about-list li::before { content: ""; position: absolute; left: 4px; top: .68em; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
+
+/* ── About page: three strengths ── */
+.diff-cards:has(> .diff-card:nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) { .diff-cards:has(> .diff-card:nth-child(3):last-child) { grid-template-columns: 1fr; } }

@@ -3442,3 +3442,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 /* ── About page: three strengths ── */
 .diff-cards:has(> .diff-card:nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 900px) { .diff-cards:has(> .diff-card:nth-child(3):last-child) { grid-template-columns: 1fr; } }
+
+/* ── About page: links inside the story ── */
+.story-block p a { color: var(--blue); text-decoration: none; }
+.story-block p a strong { color: inherit; }

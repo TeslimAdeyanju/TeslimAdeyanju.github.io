@@ -977,7 +977,7 @@ a:hover { text-decoration: underline; }
 
 /* Tools & Technologies: six category cards, each with its own accent colour
    (--tk); tags sit in an even two-column grid so rows line up across cards. */
-.tk-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.tk-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
 .tk-bi    { --tk: #D97706; }
 .tk-sql   { --tk: #2563EB; }
 .tk-py    { --tk: #7C3AED; }

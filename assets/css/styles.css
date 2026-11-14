@@ -2895,10 +2895,11 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .ap-toc-label { margin: 0 0 8px; text-align: center; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #64748B; }
 .ap-chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; list-style: none; margin: 0; padding: 0; }
 .ap-chips li { margin: 0; }
+@media (min-width: 1000px) { .ap-filter .container { max-width: 1240px; } }
 
 .ap-chip {
-  display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 8px 13px;
-  font: inherit; font-size: .86rem; font-weight: 700; color: var(--gray-500);
+  display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 11px;
+  font: inherit; font-size: .84rem; font-weight: 700; color: var(--gray-500);
   background: var(--white); border: 1px solid var(--gray-200); border-radius: 999px;
   cursor: pointer; text-decoration: none; transition: border-color .2s, color .2s, background .2s;
 }
@@ -2935,14 +2936,14 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--r);
   transition: border-color .2s, box-shadow .2s, transform .2s;
 }
-.ap-card:hover { border-color: var(--blue); box-shadow: var(--sh); transform: translateY(-3px); }
+.ap-card:hover { border-color: var(--blue); transform: translateY(-3px); }
 .ap-card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.3; margin: 0; color: var(--dark); }
 .ap-card-title a { color: inherit; text-decoration: none; }
 .ap-card-title a::after { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: var(--r); }
 .ap-card-title a:focus-visible::after { outline: 3px solid var(--blue); outline-offset: 2px; }
 .ap-card-desc { margin: 0; flex: 1; font-size: .9rem; line-height: 1.6; color: var(--gray-500); }
 .ap-status {
-  align-self: flex-start; padding: 2px 9px; font-size: .72rem; font-weight: 700; letter-spacing: .03em;
+  align-self: flex-start; justify-self: start; padding: 2px 9px; font-size: .72rem; font-weight: 700; letter-spacing: .03em;
   color: #0369A1; background: rgba(14, 165, 233, .1); border-radius: 999px;
 }
 .ap-facts { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
@@ -2957,6 +2958,49 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .ap-acct {
   padding: 1px 8px; font-size: .7rem; font-weight: 700; letter-spacing: .02em;
   color: #64748B; border: 1px solid var(--gray-200); border-radius: 999px;
+}
+
+/* Portfolio: colour by tool family (same palette as the homepage Tools section) and a quiet reveal */
+.ap-card { border-top: 2px solid color-mix(in srgb, var(--tk, #2563EB) 55%, transparent); }
+.ap-card:hover { border-color: var(--tk, var(--blue)); box-shadow: none; }
+.ap-status { color: var(--tk); background: color-mix(in srgb, var(--tk) 11%, transparent); }
+.ap-facts li::before { background: var(--tk); }
+.ap-chip[class*="tk-"]::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tk); flex: none;
+}
+.ap-chip.is-active[class*="tk-"]::before { background: #fff; }
+.ap-group-hd h2 { background-image: linear-gradient(90deg, var(--tk), #6366F1); }
+
+/* reveal (only when script adds .ap-anim and motion is allowed) */
+@media (prefers-reduced-motion: no-preference) {
+  .ap-anim .ap-group-hd, .ap-anim .ap-card { opacity: 0; transform: translateY(14px); }
+  .ap-anim .ap-group-hd.is-in, .ap-anim .ap-card.is-in {
+    opacity: 1; transform: none;
+    transition: opacity .6s ease var(--d, 0ms), transform .6s cubic-bezier(.2,.7,.2,1) var(--d, 0ms), border-color .2s, box-shadow .2s;
+  }
+  .ap-anim .ap-card.is-in:hover { transform: translateY(-3px); transition-delay: 0ms; }
+  .ap-anim .ap-card .ptag, .ap-anim .ap-card .ap-facts li { opacity: 0; transform: translateY(6px); }
+  .ap-anim .ap-card.is-in .ptag, .ap-anim .ap-card.is-in .ap-facts li {
+    opacity: 1; transform: none;
+    transition: opacity .45s ease, transform .45s ease;
+    transition-delay: calc(var(--d, 0ms) + 220ms + var(--k, 0) * 70ms);
+  }
+  .ap-card .ptag:nth-child(1), .ap-card .ap-facts li:nth-child(1) { --k: 0; }
+  .ap-card .ptag:nth-child(2), .ap-card .ap-facts li:nth-child(2) { --k: 1; }
+  .ap-card .ptag:nth-child(3), .ap-card .ap-facts li:nth-child(3) { --k: 2; }
+  .ap-card .ptag:nth-child(4) { --k: 3; }
+}
+
+/* equal rows: status, title, overview, facts, tags and link line up across neighbouring cards */
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 641px) {
+    .ap-grid { row-gap: 0; margin-bottom: -18px; }
+    .ap-grid > .ap-card {
+      display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 12px; margin-bottom: 18px; align-content: start;
+    }
+    .ap-grid > .ap-card > .ap-card-foot { align-self: end; justify-self: start; }
+    .ap-grid > .ap-card > .ptags { align-self: start; }
+  }
 }
 
 /* Card rows always fill the full width: no empty cells, and an odd last row stretches. */
@@ -3008,11 +3052,10 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 [data-theme="dark"] .ap-chip.is-active .ap-chip-n { background: rgba(255,255,255,.25); color: #fff; }
 [data-theme="dark"] .ap-acct, [data-theme="dark"] .ap-toc-label { color: #94A3B8; }
 [data-theme="dark"] .ap-acct { border-color: #334155; }
-[data-theme="dark"] .ap-group-hd h2 { color: #7DD3FC; background-image: linear-gradient(90deg, #38BDF8, #A5B4FC); }
+[data-theme="dark"] .ap-group-hd h2 { color: #7DD3FC; background-image: linear-gradient(90deg, var(--tk, #38BDF8), #A5B4FC); }
 [data-theme="dark"] .ap-card-title { color: #F1F5F9; }
 [data-theme="dark"] .ap-group-hd p, [data-theme="dark"] .ap-card-desc { color: #94A3B8; }
 [data-theme="dark"] .ap-card { background: #1E293B; border-color: #334155; }
-[data-theme="dark"] .ap-status { color: #7DD3FC; background: rgba(56, 189, 248, .14); }
 [data-theme="dark"] .ap-facts li { color: #CBD5E1; }
 [data-theme="dark"] .ap-card:hover { border-color: #3B82F6; }
 [data-theme="dark"] .btn-back.ap-btn-ghost { color: #93C5FD; }

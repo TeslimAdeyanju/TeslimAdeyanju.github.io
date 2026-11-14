@@ -18,7 +18,7 @@ python3 -m http.server 8000
 
 ## Pages
 
-- `index.html`: the main single-page site. Sections are linked by in-page anchors (`#hero`, `#skills`, …). The homepage section order is hero → About (`#about`) → Tools (`#skills`) → Projects → Experience → Certifications (`#certifications`) → Education → Contact (certifications first on purpose: they carry more weight for finance/data roles) (`#connect`); the nav mirrors it.
+- `index.html`: the main single-page site. Sections are linked by in-page anchors (`#hero`, `#skills`, …). The homepage section order is hero → About (`#about`) → Tools (`#skills`) → Projects → Experience → Certifications (`#certifications`) → Education → Contact (certifications first on purpose: they carry more weight for finance/data roles) (`#connect`); the nav mirrors it, except that Education has no menu link: the Certifications link covers both sections and the scrollspy keeps it active while Education is in view.
   - The hero (`.hero.hero-net`, `hn-*` classes) is centred, white in light mode and slate in dark mode. It uses the `--hn-font` stack: `'Avenir Next', Avenir, 'Nunito Sans'`. Avenir Next ships with Apple devices, and Nunito Sans loads from Google Fonts as the fallback elsewhere. It is transparent, so the site-wide network background shows behind it (see below).
   - Tools (`#skills`) is an open 3 × 2 grid of `tl-col` columns (no boxes): hairline, category title in its accent colour (`tk-<category>` sets `--tk`), tools as a two-column dotted list.
   - Projects uses the original `.proj-*` / `.ptag` card markup (featured FDA card, numbered cards). There is no filter and no "View all on GitHub" header button; the user removed it on purpose.
@@ -61,7 +61,7 @@ When a project repo is renamed or moved to another owner, update `data-readme-re
 
 ## Navigation
 
-All 12 site pages share the same menu, in the homepage section order. Non-index pages link to `index.html#…`, with a `../` prefix inside `projects/`, and mark their own entry with `aria-current="page"`.
+All 13 site pages share the same menu, in the homepage section order (Education is intentionally not in the menu; Certifications points to it). Non-index pages link to `index.html#…`, with a `../` prefix inside `projects/`, and mark their own entry with `aria-current="page"`.
 - The logo is the name (`.nav-logo` with `.nl-name`), shown in one uniform sky-to-indigo gradient.
 - Links fade in one after another on load and grow a gradient underline on hover.
 - On `index.html`, the "Nav scrollspy" in `script.js` adds `.is-active` to the link for the section in view.

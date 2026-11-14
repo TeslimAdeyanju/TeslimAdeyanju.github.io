@@ -193,11 +193,15 @@ document.querySelectorAll('.xp-timeline').forEach(xpTimeline => {
 // Highlights the menu link for the section currently in the middle of the screen.
 const spyLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')]
 const spySections = spyLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean)
+// Education has no menu link of its own: its section sits under Certifications, so that link stays active there too.
+const spyAlias = { '#education': '#certifications' }
+const eduSection = document.querySelector('#education')
+if (eduSection) spySections.push(eduSection)
 if (spySections.length && 'IntersectionObserver' in window) {
   const spy = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return
-      const id = '#' + entry.target.id
+      const id = spyAlias['#' + entry.target.id] || '#' + entry.target.id
       spyLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === id))
     })
   }, { rootMargin: '-45% 0px -50% 0px' })

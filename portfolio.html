@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261114k" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261114l" />
   <!-- GDPR Cookie Banner -->
   <style>
     .gdpr-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30,30,30,0.95); color: #fff; padding: 20px; text-align: center; z-index: 9999; font-size: 14px; }
@@ -88,9 +88,10 @@
     <div class="container">
       <p class="ap-toc-label">Contents</p>
       <ol class="ap-chips">
+          <li><a class="ap-chip tk-sql" href="#flagship">Flagship Projects <span class="ap-chip-n">3</span></a></li>
           <li><a class="ap-chip tk-bi" href="#powerbi">Power BI &amp; Data Visualisation <span class="ap-chip-n">2</span></a></li>
-          <li><a class="ap-chip tk-fin" href="#finance">Python, Finance &amp; Automation <span class="ap-chip-n">3</span></a></li>
-          <li><a class="ap-chip tk-sql" href="#sql">SQL &amp; Databases <span class="ap-chip-n">3</span></a></li>
+          <li><a class="ap-chip tk-fin" href="#finance">Python, Finance &amp; Automation <span class="ap-chip-n">2</span></a></li>
+          <li><a class="ap-chip tk-sql" href="#sql">SQL &amp; Databases <span class="ap-chip-n">2</span></a></li>
           <li><a class="ap-chip tk-py" href="#ml">Machine Learning <span class="ap-chip-n">4</span></a></li>
           <li><a class="ap-chip tk-ai" href="#ai">AI &amp; LLM Applications <span class="ap-chip-n">5</span></a></li>
       </ol>
@@ -100,6 +101,42 @@
   <!-- ══ PROJECTS ══ -->
   <section class="ap-main">
     <div class="container">
+
+      <section class="ap-group tk-sql" id="flagship" data-group="flagship" aria-labelledby="ap-flagship">
+        <div class="ap-group-hd">
+          <h2 id="ap-flagship">Flagship Projects</h2>
+          <p>The work that best shows how I combine finance, data engineering and analytics.</p>
+        </div>
+        <div class="ap-grid" data-layout="t">
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="projects/nhs-financial-analytics.html">NHS Financial Analytics</a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span>
+            </div>
+            <p class="ap-card-desc">An end to end Python pipeline that loads NHS England financial data into a MySQL star schema, with analytical views, key performance indicators and Power BI reporting across 206 trusts.</p>
+            <ul class="ap-facts"><li>206 NHS trusts across three financial years</li><li>Python to MySQL extract, transform and load pipeline</li><li>Analytical views and KPI metrics feeding Power BI</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">MySQL</span><span class="ptag pt-purple">ETL</span><span class="ptag pt-orange">Power BI</span></div>
+          </article>
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/Superstore-Sales-Prediction" target="_blank" rel="noopener">Superstore Sales &amp; Profit Prediction<span class="sr-only"> (opens on GitHub)</span></a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span>
+            </div>
+            <p class="ap-card-desc">Explores sales, discounts and profitability by category, segment and region, then trains a logistic regression model to separate profitable orders from loss making ones.</p>
+            <ul class="ap-facts"><li>Five fold cross validation scored with ROC AUC</li><li>Flask prediction endpoint, example client and Dockerfile</li><li>Performance figures still need independent validation</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">Scikit-learn</span><span class="ptag pt-purple">Flask</span><span class="ptag pt-orange">Docker</span></div></span>
+          </article>
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/NHS-Waiting-List-Analytics" target="_blank" rel="noopener">NHS Waiting List Analytics<span class="sr-only"> (opens on GitHub)</span></a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span>
+            </div>
+            <p class="ap-card-desc">Tests whether changes in NHS waiting lists come from treatment capacity or from the number of patients starting treatment pathways, using NHS England Referral to Treatment statistics.</p>
+            <ul class="ap-facts"><li>Waiting list rose from about 4.4 million before COVID to about 7.5 million in 2024 to 2025</li><li>Waits over 52 weeks grew from under 2,000 to over 300,000</li><li>Python, MySQL, Databricks and Power BI used end to end</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">MySQL</span><span class="ptag pt-purple">Databricks</span><span class="ptag pt-orange">Power BI</span></div></span>
+          </article>
+        </div>
+      </section>
 
       <section class="ap-group tk-bi" id="powerbi" data-group="powerbi" aria-labelledby="ap-powerbi">
         <div class="ap-group-hd">
@@ -133,7 +170,7 @@
           <h2 id="ap-finance">Python, Finance &amp; Automation</h2>
           <p>Python workflows for financial data, applied machine learning, model deployment and automated reporting.</p>
         </div>
-        <div class="ap-grid" data-layout="t">
+        <div class="ap-grid" data-layout="h">
           <article class="ap-card">
             <div class="ap-card-hd">
               <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/Financial-Data-Pipeline" target="_blank" rel="noopener">Financial Data Pipeline<span class="sr-only"> (opens on GitHub)</span></a></h3>
@@ -152,15 +189,6 @@
             <ul class="ap-facts"><li>Churn model served by a Flask endpoint that returns a probability</li><li>Dockerfile and saved model included</li><li>Covers model evaluation and random forests</li></ul>
             <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">Scikit-learn</span><span class="ptag pt-purple">Flask</span><span class="ptag pt-orange">Docker</span></div></span>
           </article>
-          <article class="ap-card">
-            <div class="ap-card-hd">
-              <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/Superstore-Sales-Prediction" target="_blank" rel="noopener">Superstore Sales &amp; Profit Prediction<span class="sr-only"> (opens on GitHub)</span></a></h3>
-              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span>
-            </div>
-            <p class="ap-card-desc">Explores sales, discounts and profitability by category, segment and region, then trains a logistic regression model to separate profitable orders from loss making ones.</p>
-            <ul class="ap-facts"><li>Five fold cross validation scored with ROC AUC</li><li>Flask prediction endpoint, example client and Dockerfile</li><li>Performance figures still need independent validation</li></ul>
-            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">Scikit-learn</span><span class="ptag pt-purple">Flask</span><span class="ptag pt-orange">Docker</span></div></span>
-          </article>
         </div>
       </section>
 
@@ -169,16 +197,7 @@
           <h2 id="ap-sql">SQL &amp; Databases</h2>
           <p>MySQL data models, analytical SQL queries and Python integration.</p>
         </div>
-        <div class="ap-grid" data-layout="t">
-          <article class="ap-card">
-            <div class="ap-card-hd">
-              <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/NHS-Waiting-List-Analytics" target="_blank" rel="noopener">NHS Waiting List Analytics<span class="sr-only"> (opens on GitHub)</span></a></h3>
-              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span>
-            </div>
-            <p class="ap-card-desc">Tests whether changes in NHS waiting lists come from treatment capacity or from the number of patients starting treatment pathways, using NHS England Referral to Treatment statistics.</p>
-            <ul class="ap-facts"><li>Waiting list rose from about 4.4 million before COVID to about 7.5 million in 2024 to 2025</li><li>Waits over 52 weeks grew from under 2,000 to over 300,000</li><li>Python, MySQL, Databricks and Power BI used end to end</li></ul>
-            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">MySQL</span><span class="ptag pt-purple">Databricks</span><span class="ptag pt-orange">Power BI</span></div></span>
-          </article>
+        <div class="ap-grid" data-layout="h">
           <article class="ap-card">
             <div class="ap-card-hd">
               <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/MySQL-Fundamentals" target="_blank" rel="noopener">MySQL: Fundamentals to Advanced<span class="sr-only"> (opens on GitHub)</span></a></h3>
@@ -433,7 +452,7 @@
     }
   </script>
 
-  <script src="assets/js/network-bg.js?v=20261114k"></script>
-  <script src="assets/js/nav-menu.js?v=20261114k"></script>
+  <script src="assets/js/network-bg.js?v=20261114l"></script>
+  <script src="assets/js/nav-menu.js?v=20261114l"></script>
 </body>
 </html>

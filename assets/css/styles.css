@@ -1024,6 +1024,27 @@ a:hover { text-decoration: underline; }
   content: ''; position: absolute; left: 0; top: .55em;
   width: 6px; height: 6px; border-radius: 50%; background: var(--tk);
 }
+/* Tools: staggered entrance (hairline draws, title slides, tools cascade) and a gentle hover */
+@media (prefers-reduced-motion: no-preference) {
+  .tl-col { position: relative; border-top-color: transparent; transition: opacity .7s ease, transform .7s ease; transition-delay: var(--d, 0s); }
+  .tl-col::before {
+    content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 2px; background: var(--tk);
+    transform: scaleX(0); transform-origin: left; transition: transform .9s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--d, 0s) + .15s);
+  }
+  .tl-col.in-view::before { transform: scaleX(1); }
+  .tl-col::after { content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: var(--sx-border); z-index: -1; }
+  .tl-col .tl-cat { opacity: 0; transform: translateX(-14px); transition: opacity .6s ease, transform .6s ease; transition-delay: calc(var(--d, 0s) + .3s); }
+  .tl-col.in-view .tl-cat { opacity: 1; transform: none; }
+  .tl-col .tl-list li { opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; transition-delay: calc(var(--d, 0s) + .4s + var(--i, 0) * .07s); }
+  .tl-col.in-view .tl-list li { opacity: 1; transform: none; }
+  .tl-col .tl-list li::before { transform: scale(0); transition: transform .4s cubic-bezier(.3,1.8,.5,1); transition-delay: calc(var(--d, 0s) + .5s + var(--i, 0) * .07s); }
+  .tl-col.in-view .tl-list li::before { transform: scale(1); }
+  .tl-col:nth-child(1) { --d: 0s; } .tl-col:nth-child(2) { --d: .12s; } .tl-col:nth-child(3) { --d: .24s; }
+  .tl-col:nth-child(4) { --d: .08s; } .tl-col:nth-child(5) { --d: .2s; } .tl-col:nth-child(6) { --d: .32s; }
+  .tl-list li:nth-child(1) { --i: 0; } .tl-list li:nth-child(2) { --i: 1; } .tl-list li:nth-child(3) { --i: 2; }
+  .tl-list li:nth-child(4) { --i: 3; } .tl-list li:nth-child(5) { --i: 4; } .tl-list li:nth-child(6) { --i: 5; }
+  .tl-list li:hover { transform: translateX(4px); color: var(--tk); transition-delay: 0s; transition: transform .2s, color .2s; }
+}
 @media (max-width: 1024px) { .tl-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) {
   .tl-grid { grid-template-columns: 1fr; gap: 24px; }

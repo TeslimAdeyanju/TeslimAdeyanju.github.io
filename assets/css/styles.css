@@ -1805,7 +1805,7 @@ a:hover { text-decoration: underline; }
   .pod-steps li + li::before { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .pod-btn { animation: none; } .pod-card { transition: none; } }
-[data-theme="dark"] .pod-card { background: #1E293B; border-color: #334155; border-left-color: #3B82F6; }
+[data-theme="dark"] .pod-card { background: #1E293B; border-color: #334155; }
 [data-theme="dark"] .pod-stat { border-color: #334155; }
 [data-theme="dark"] .pod-title, [data-theme="dark"] .pod-steps { color: #F1F5F9; }
 [data-theme="dark"] .pod-desc, [data-theme="dark"] .pod-stat-label { color: #94A3B8; }

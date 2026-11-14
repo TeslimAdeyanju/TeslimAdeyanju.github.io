@@ -2190,13 +2190,15 @@ a:hover { text-decoration: underline; }
 /* Impact Grid */
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 9 cards → even 3×3 */
+  /* as many equal columns as fit, so 3 or 4 cards always fill one row edge to edge */
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 20px;
-  max-width: 880px;
+  max-width: none;
   margin: 32px auto 0;
 }
 @media (max-width: 900px) and (min-width: 769px) {
   .impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .impact-grid > .impact-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 .impact-card {
@@ -2220,7 +2222,7 @@ a:hover { text-decoration: underline; }
 
 .impact-metric {
   font-family: 'EB Garamond', Garamond, Georgia, serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.2vw, 1.95rem);
   font-weight: 800;
   color: var(--blue);
   margin-bottom: 6px;
@@ -2879,8 +2881,8 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 [data-theme="dark"] a.gh-pill:hover, [data-theme="dark"] .ap-card:hover .gh-pill-sm { color: #fff; border-color: #94A3B8; }
 @media (prefers-reduced-motion: reduce) { .gh-pill { transition: none; } a.gh-pill:hover { transform: none; } }
 
-/* ── All projects page ───────────────────────────────────────
-   all-projects.html: skill filter, grouped card grid. Filter logic is inline in the page. */
+/* ── Portfolio page ───────────────────────────────────────
+   portfolio.html: skill filter, grouped card grid. Filter logic is inline in the page. */
 .ap-hero-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 4px; }
 .btn-back.ap-btn-ghost { background: transparent; color: var(--blue); }
 .btn-back.ap-btn-ghost:hover { background: var(--blue); color: #fff; }
@@ -2912,7 +2914,7 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .ap-group-hd { margin-bottom: 18px; }
 .ap-group-hd h2 { font-size: 1.35rem; font-weight: 700; color: var(--dark); margin: 0 0 4px; }
 .ap-group-hd p { margin: 0; font-size: .95rem; color: var(--gray-500); }
-.ap-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.ap-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
 .ap-card {
   position: relative; display: flex; flex-direction: column; gap: 12px; padding: 22px;
   background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--r);
@@ -2932,7 +2934,31 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .ap-note { margin: 8px 0 0; font-size: .85rem; line-height: 1.6; color: var(--gray-500); max-width: 760px; }
 .ap-note a { color: var(--blue-d); font-weight: 600; }
 
-@media (max-width: 1000px) { .ap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* Card rows always fill the full width: no empty cells, and an odd last row stretches. */
+@media (min-width: 641px) {
+  .ap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .ap-grid > .ap-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (min-width: 1001px) {
+  .ap-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .ap-grid > .ap-card { grid-column: span 2; }
+  .ap-grid[data-layout="h"] > .ap-card { grid-column: span 3; }
+  .ap-grid[data-layout="t2"] > .ap-card:nth-last-child(-n+2) { grid-column: span 3; }
+  .ap-grid[data-layout="f"] > .ap-card,
+  .ap-grid[data-layout="t1"] > .ap-card:last-child { grid-column: 1 / -1; }
+  /* a card that spans the full row reads left to right: text on the left, tools and link on the right */
+  .ap-grid[data-layout="f"] > .ap-card,
+  .ap-grid[data-layout="t1"] > .ap-card:last-child {
+    display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    grid-template-areas: "title tags" "desc foot"; grid-template-rows: auto 1fr; column-gap: 40px; row-gap: 10px;
+  }
+  .ap-grid[data-layout="f"] > .ap-card .ap-card-title, .ap-grid[data-layout="t1"] > .ap-card:last-child .ap-card-title { grid-area: title; }
+  .ap-grid[data-layout="f"] > .ap-card .ap-card-desc, .ap-grid[data-layout="t1"] > .ap-card:last-child .ap-card-desc { grid-area: desc; }
+  .ap-grid[data-layout="f"] > .ap-card .ptags, .ap-grid[data-layout="t1"] > .ap-card:last-child .ptags { grid-area: tags; margin-top: 0; justify-content: flex-end; align-self: start; }
+  .ap-grid[data-layout="f"] > .ap-card .ap-card-foot, .ap-grid[data-layout="t1"] > .ap-card:last-child .ap-card-foot { grid-area: foot; justify-content: flex-end; align-self: end; }
+}
 @media (max-width: 640px) {
   .ap-filter { padding: 10px 0 8px; }
   /* chips scroll sideways on phones instead of wrapping into a tall block */
@@ -2944,7 +2970,7 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
   .ap-main { padding: 26px 0 40px; }
   .ap-group { margin-bottom: 34px; scroll-margin-top: 130px; }
   .ap-group-hd h2 { font-size: 1.2rem; }
-  .ap-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .ap-grid { gap: 14px; }
   .ap-card { padding: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .ap-card, .ap-chip, .all-proj-link { transition: none; } .ap-card:hover { transform: none; } }

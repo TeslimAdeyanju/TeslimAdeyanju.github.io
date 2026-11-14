@@ -18,11 +18,11 @@ python3 -m http.server 8000
 
 ## Pages
 
-- `index.html`: the main single-page site. Sections are linked by in-page anchors (`#hero`, `#skills`, …). The homepage section order is hero → About (`#about`) → Tools (`#skills`) → Projects → Experience → Education → Certifications (`#certifications`) → Contact (`#connect`); the nav mirrors it.
+- `index.html`: the main single-page site. Sections are linked by in-page anchors (`#hero`, `#skills`, …). The homepage section order is hero → About (`#about`) → Tools (`#skills`) → Projects → Experience → Certifications (`#certifications`) → Education → Contact (certifications first on purpose: they carry more weight for finance/data roles) (`#connect`); the nav mirrors it.
   - The hero (`.hero.hero-net`, `hn-*` classes) is centred, white in light mode and slate in dark mode. It uses the `--hn-font` stack: `'Avenir Next', Avenir, 'Nunito Sans'`. Avenir Next ships with Apple devices, and Nunito Sans loads from Google Fonts as the fallback elsewhere. It is transparent, so the site-wide network background shows behind it (see below).
-  - Projects uses the original `.proj-*` / `.ptag` card markup (featured FDA card, numbered cards, "View all 23 projects on GitHub" header button). There is no filter.
+  - Projects uses the original `.proj-*` / `.ptag` card markup (featured FDA card, numbered cards). There is no filter and no "View all on GitHub" header button; the user removed it on purpose.
   - About (`ab-*`), Experience and Education (shared animated `xp-*` timeline) and Certifications (`cr-*`) use the "Homepage sections" CSS block. Its `--sx-*` tokens are redefined for dark mode.
-  - Certifications is deliberately curated: 4 large badge cards in a 2×2 grid (ACA, PL-300, DP-900, SQL Analytics on Databricks) plus a "Currently pursuing" line. Lesser credentials (AAT, the other Databricks accreditations, DataCamp, HackerRank, SuperDataScience) were removed on purpose; don't re-add them. Official badge images go in `assets/img/badges/`. The `.cr-card .cr-badge` selector is needed because the older `.badge-*` rules later in the file would otherwise shrink the badges.
+  - Certifications is deliberately curated: 4 large badge cards in a 2×2 grid (ACA, PL-300, DP-900, SQL Analytics on Databricks) plus an "Additional certifications" text line (DataCamp SQL, HackerRank SQL Advanced, Databricks AI/BI) and a "Currently pursuing" line. Lesser credentials (AAT, the other Databricks accreditations, DataCamp, HackerRank, SuperDataScience) were removed on purpose; don't re-add them. Official badge images go in `assets/img/badges/`. The `.cr-card .cr-badge` selector is needed because the older `.badge-*` rules later in the file would otherwise shrink the badges.
   - Experience and Education share the `xp-*` timeline. `script.js` ("Timeline animation") toggles `.is-drawn` on each `.xp-timeline` and `.is-visible` on each `.xp-item` as they scroll into view; the line draws, entries slide in, dots pop and cards fade up. Reduced-motion users get the final state with no animation. The older `.timeline-*` and `.ed-*` styles are no longer used on the homepage.
 - `about.html`, `blog.html`, `study-notes.html`: standalone top-level pages.
 - `projects/*.html`: one case-study page per featured project. Each `.html` has a sibling `.md`, which is a committed snapshot of that project repo's README. No page references the `.md` files. The live page fetches the README at runtime (see below).
@@ -60,7 +60,7 @@ When a project repo is renamed or moved to another owner, update `data-readme-re
 ## Navigation
 
 All 12 site pages share the same menu, in the homepage section order. Non-index pages link to `index.html#…`, with a `../` prefix inside `projects/`, and mark their own entry with `aria-current="page"`.
-- The logo is the name (`.nav-logo` with `.nl-first` and `.nl-last`); the surname uses the hero's gradient.
+- The logo is the name (`.nav-logo` with `.nl-name`), shown in one uniform sky-to-indigo gradient.
 - Links fade in one after another on load and grow a gradient underline on hover.
 - On `index.html`, the "Nav scrollspy" in `script.js` adds `.is-active` to the link for the section in view.
 - When editing the menu, update every page's `<nav class="nav-links">`.
@@ -76,7 +76,7 @@ All 12 site pages share the same menu, in the homepage section order. Non-index 
 
 All styles are in `assets/css/styles.css`, grouped into sections with `/* ── Section Name ── */` comment banners (Nav, Hero, Responsive, Theme toggle, Dark theme overrides, About page, Live README, etc.). Follow this convention when you add styles.
 - All section headings use one size, `--h2-size`, defined in `:root`. This covers homepage `.s-title` and inner-page `.content-block h2`. Change that token rather than setting per-section sizes.
-- Phone-specific fixes live in the last block of the file, "Mobile refinements (phones ≤ 600px)", so they win over earlier responsive rules.
+- Phone-specific fixes live at the end of the file ("Mobile refinements" and "Mobile usability" blocks), so they win over earlier responsive rules. Keep tap targets ≥ ~40px and small labels ≥ 12px on phones; re-check at 360, 390 and 430px widths for horizontal overflow before shipping.
 
 ## Assets
 

@@ -969,7 +969,10 @@ a:hover { text-decoration: none; }
   color: var(--sx-muted); margin: 16px 0 8px;
 }
 .xp-list { font-size: .9rem; color: var(--sx-body); line-height: 1.8; margin: 0; }
-.xp-li { white-space: nowrap; }
+.xp-li { white-space: nowrap; font-weight: 700; color: #0B1F44; }
+[data-theme="dark"] .xp-li { color: #F1F5F9; }
+.xp-label { color: #0B1F44; }
+[data-theme="dark"] .xp-label { color: #93C5FD; }
 /* Separator sits before each item (not after), so lines never end on a dangling "|" */
 .xp-li + .xp-li::before { content: '|'; color: var(--sx-muted); opacity: .55; margin: 0 .55em 0 .1em; }
 .xp-note {

@@ -1550,11 +1550,12 @@ a:hover { text-decoration: none; }
 .pm-title { margin: 0; font-size: 1.25rem; line-height: 1.3; color: var(--dark); }
 .proj-more .ptags { margin-top: 2px; }
 .pm-btn {
-  flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 26px;
-  font-size: .95rem; font-weight: 700; color: #fff; background: var(--blue); border-radius: 999px;
-  animation: pmPulse 3.2s ease-out infinite; transition: background-color .2s;
+  flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 24px;
+  font-size: .92rem; font-weight: 700; color: var(--blue); background: color-mix(in srgb, var(--blue) 10%, var(--white));
+  border: 1px solid color-mix(in srgb, var(--blue) 35%, transparent); border-radius: 10px;
+  transition: background-color .2s, color .2s, border-color .2s;
 }
-.proj-more:hover .pm-btn { background: #2563EB; animation: none; }
+.proj-more:hover .pm-btn { background: var(--blue); color: #fff; border-color: var(--blue); }
 .proj-more:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 @keyframes pmPulse {
   0%, 70%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
@@ -1563,6 +1564,8 @@ a:hover { text-decoration: none; }
 }
 [data-theme="dark"] .pm-title { color: #F1F5F9; }
 [data-theme="dark"] .pm-kicker { color: #93C5FD; }
+[data-theme="dark"] .pm-btn { color: #93C5FD; background: rgba(59,130,246,.15); border-color: rgba(147,197,253,.35); }
+[data-theme="dark"] .proj-more:hover .pm-btn { color: #fff; background: #3B82F6; }
 @media (max-width: 700px) {
   .proj-more { flex-direction: column; align-items: stretch; gap: 18px; }
   .pm-btn { width: 100%; }

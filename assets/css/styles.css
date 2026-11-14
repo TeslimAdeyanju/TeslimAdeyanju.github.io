@@ -1438,6 +1438,8 @@ a:hover { text-decoration: underline; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
 }
 .proj-num {
   font-size: .72rem;
@@ -2880,6 +2882,13 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .ap-card:hover .gh-pill-sm { color: #24292F; border-color: #24292F; }
 [data-theme="dark"] .gh-pill { background: #1E293B; border-color: #334155; color: #E2E8F0; }
 [data-theme="dark"] a.gh-pill:hover, [data-theme="dark"] .ap-card:hover .gh-pill-sm { color: #fff; border-color: #94A3B8; }
+.proj-top-links { display: flex; flex-wrap: wrap; gap: 8px; position: relative; z-index: 2; }
+.proj-top-links a.gh-pill { font-size: .82rem; }
+.proj-top-links a.gh-pill:hover { box-shadow: none; transform: none; }
+.proj-links a.gh-pill { padding: 5px 14px; border-radius: 999px; font-size: .82rem; color: var(--dark); background: var(--white); }
+.proj-links a.gh-pill:hover { background: var(--white); color: #24292F; border-color: #24292F; box-shadow: none; transform: none; }
+[data-theme="dark"] .proj-links a.gh-pill { color: #E2E8F0; background: #1E293B; border-color: #334155; }
+[data-theme="dark"] .proj-links a.gh-pill:hover { color: #fff; border-color: #94A3B8; background: #1E293B; }
 @media (prefers-reduced-motion: reduce) { .gh-pill { transition: none; } a.gh-pill:hover { transform: none; } }
 
 /* ── Portfolio page ───────────────────────────────────────

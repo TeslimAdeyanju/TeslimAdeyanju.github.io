@@ -3434,3 +3434,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 /* ── About page: centred section heading and subtitle ── */
 .content-block.block-center, .about-section .content-block.block-center p { text-align: center; }
+
+/* ── About page: bulleted "What I deliver" list ── */
+.story-block .about-list li { position: relative; padding-left: 22px; }
+.story-block .about-list li::before { content: ""; position: absolute; left: 4px; top: .68em; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }

@@ -3236,6 +3236,14 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 .proj-facts i { font-style: normal; margin: 0 .5em; opacity: .45; font-weight: 400; }
 [data-theme="dark"] .proj-facts { color: #E2E8F0; }
 
+/* ── Wider project README ── */
+.container:has(> .readme-box) { max-width: min(1440px, 94vw); }
+@media (min-width: 1200px) {
+  .readme-content { padding: 48px 56px; font-size: 1rem; }
+  .readme-content table { width: 100%; }
+}
+.readme-content :not(pre) > code { overflow-wrap: anywhere; }
+
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */
 @media (max-width: 600px) {

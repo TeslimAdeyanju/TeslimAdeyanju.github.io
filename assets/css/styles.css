@@ -1766,11 +1766,11 @@ a:hover { text-decoration: underline; }
 .km-link:hover { text-decoration: underline; }
 
 /* ── Podcast learning library (featured band on Study Notes) ── */
-.pod-band { padding: 24px 0 0; }
+.pod-band { padding: 8px 0 48px; }
 .pod-card {
   position: relative; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px;
   padding: 18px 24px; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--r);
-  border-left: 4px solid var(--blue); transition: transform .25s, border-color .25s, background .25s;
+  transition: transform .25s, border-color .25s, background .25s;
 }
 .pod-card:hover { transform: translateY(-4px); border-color: var(--blue); }
 .pod-stat { text-align: center; padding-right: 24px; border-right: 1px solid var(--gray-200); }

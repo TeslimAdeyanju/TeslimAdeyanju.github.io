@@ -692,10 +692,11 @@ a:hover { text-decoration: underline; }
 }
 .hn-hl { white-space: nowrap; }
 .hn-hl-sep { color: var(--hn-muted); margin: 0 .7em; }
-@media (max-width: 600px) {
-  .hn-headline { display: flex; flex-direction: column; gap: 2px; font-size: .9rem; margin-bottom: 14px; }
+@media (max-width: 960px) {
+  .hn-headline { display: flex; flex-direction: column; gap: 2px; font-size: .95rem; margin-bottom: 14px; }
   .hn-hl-sep { display: none; }
 }
+@media (max-width: 600px) { .hn-headline { font-size: .9rem; } }
 .hn-role {
   font-family: var(--hn-font);
   font-weight: 500;
@@ -1630,7 +1631,7 @@ a:hover { text-decoration: underline; }
 }
 .blog-entry-tags { display: flex; gap: 6px; margin-bottom: 6px; }
 .blog-tag {
-  font-size: .64rem;
+  font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .04em;

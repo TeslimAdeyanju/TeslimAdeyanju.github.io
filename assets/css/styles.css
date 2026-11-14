@@ -975,6 +975,45 @@ a:hover { text-decoration: underline; }
   .xp-li + .xp-li::before { content: none; }
 }
 
+/* Tools & Technologies: category cards with scannable tool tags (.tk-key = primary tools) */
+.tk-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.tk-card {
+  background: var(--sx-card);
+  border: 1px solid var(--sx-border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.tk-card:hover { transform: translateY(-4px); box-shadow: var(--sx-shadow); border-color: var(--sx-accent); }
+.tk-hd { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.tk-icon {
+  width: 34px; height: 34px; flex-shrink: 0;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--sx-accent-soft); color: var(--sx-accent);
+}
+.tk-icon svg { width: 18px; height: 18px; }
+.tk-title { font-size: 1rem; font-weight: 700; color: var(--sx-text); line-height: 1.3; }
+.tk-tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tk-tag {
+  font-family: 'Avenir Next', Avenir, 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: .8rem; font-weight: 500; line-height: 1;
+  padding: 7px 11px; border-radius: 999px;
+  color: var(--sx-text);
+  background: transparent;
+  border: 1px solid var(--sx-border);
+}
+.tk-tag.tk-key { background: var(--sx-accent); border-color: var(--sx-accent); color: #fff; font-weight: 600; }
+[data-theme="dark"] .tk-tag.tk-key { color: #0B1120; }
+.tk-legend { text-align: center; margin-top: 18px; font-size: .82rem; color: var(--sx-muted); }
+.tk-legend .tk-tag { display: inline-block; margin-right: 4px; padding: 4px 9px; font-size: .72rem; }
+@media (max-width: 1024px) { .tk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .tk-grid { grid-template-columns: 1fr; gap: 12px; }
+  .tk-card { padding: 16px; }
+  .tk-card:hover { transform: none; }
+}
+
 /* Certifications: a few large badge cards (reference: nikitakumari2.github.io) */
 .cr-grid {
   list-style: none; padding: 0; margin: 0 auto;
@@ -2718,7 +2757,7 @@ details[open] .all-proj-toggle::before { transform: rotate(90deg); }
   /* About: long paragraphs read better left-aligned on a phone */
   .ab-text { text-align: left; }
   .ab-text p { font-size: .95rem; }
-  .ab-cta { justify-content: flex-start; }
+  .ab-cta { justify-content: center; }
   .ab-stats { margin-top: 28px; }
   .ab-stats li { padding: 18px 10px 14px; }
   .ab-num { font-size: 1.5rem; }
@@ -2785,3 +2824,6 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .ab-cta { gap: 4px 18px; }
   .ab-more { padding: 6px 0; }
 }
+
+/* About: single "Read my full story" link, always centred */
+.ab-cta { justify-content: center; text-align: center; }

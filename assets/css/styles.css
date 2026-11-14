@@ -1755,7 +1755,7 @@ a:hover { text-decoration: underline; }
   padding: 18px 24px;
   background: var(--white);
   border: 1px solid var(--gray-200);
-  border-left: 4px solid var(--blue);
+  border-left: 3px solid var(--blue);
   border-radius: var(--r);
 }
 .km-link {
@@ -1766,41 +1766,41 @@ a:hover { text-decoration: underline; }
 .km-link:hover { text-decoration: underline; }
 
 /* ── Podcast learning library (featured band on Study Notes) ── */
-.pod-band { padding: 36px 0 8px; }
+.pod-band { padding: 24px 0 0; }
 .pod-card {
-  position: relative; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 36px;
-  padding: 32px 36px; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--r);
+  position: relative; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px;
+  padding: 18px 24px; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--r);
   border-left: 4px solid var(--blue); transition: transform .25s, border-color .25s, background .25s;
 }
 .pod-card:hover { transform: translateY(-4px); border-color: var(--blue); }
-.pod-stat { text-align: center; padding-right: 36px; border-right: 1px solid var(--gray-200); }
-.pod-num { display: block; font-family: 'EB Garamond', Garamond, Georgia, serif; font-size: 4rem; font-weight: 800; line-height: 1; color: var(--blue); }
-.pod-stat-label { display: block; max-width: 11rem; margin-top: 8px; font-size: .78rem; line-height: 1.4; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-500); }
-.pod-body { min-width: 0; display: grid; gap: 10px; }
+.pod-stat { text-align: center; padding-right: 24px; border-right: 1px solid var(--gray-200); }
+.pod-num { display: block; font-family: 'EB Garamond', Garamond, Georgia, serif; font-size: 2.4rem; font-weight: 800; line-height: 1; color: var(--blue); }
+.pod-stat-label { display: block; max-width: 9rem; margin-top: 4px; font-size: .7rem; line-height: 1.4; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-500); }
+.pod-body { min-width: 0; display: grid; gap: 6px; }
 .pod-kicker { margin: 0; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
-.pod-title { margin: 0; font-family: 'EB Garamond', Garamond, Georgia, serif; font-size: 1.7rem; line-height: 1.25; color: var(--dark); }
-.pod-desc { margin: 0; max-width: 46rem; font-size: .98rem; line-height: 1.6; color: var(--gray-500); }
+.pod-title { margin: 0; font-family: 'EB Garamond', Garamond, Georgia, serif; font-size: 1.3rem; line-height: 1.25; color: var(--dark); }
+.pod-desc { margin: 0; max-width: 46rem; font-size: .9rem; line-height: 1.5; color: var(--gray-500); }
 .pod-steps { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 4px 0 0; padding: 0; list-style: none; font-size: .88rem; font-weight: 600; color: var(--dark); }
 .pod-steps li { display: inline-flex; align-items: center; gap: 8px; }
 .pod-steps li + li::before { content: ''; width: 22px; height: 1px; background: var(--gray-300); margin-right: 10px; }
 .pod-steps span { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--blue); color: #fff; font-size: .75rem; font-weight: 800; }
 .pod-btn {
-  display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 28px; border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 22px; border-radius: 999px;
   background: var(--blue); color: #fff; font-weight: 700; font-size: .95rem; text-decoration: none; white-space: nowrap;
   animation: pmPulse 3.2s ease-out infinite; transition: background-color .2s;
 }
 .pod-btn:hover { background: #2563EB; animation: none; }
 .pod-btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 @media (max-width: 960px) {
-  .pod-card { grid-template-columns: auto 1fr; padding: 28px; gap: 24px 28px; }
+  .pod-card { grid-template-columns: auto 1fr; padding: 18px 20px; gap: 16px 20px; }
   .pod-btn { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
-  .pod-card { grid-template-columns: 1fr; padding: 24px 20px; gap: 18px; text-align: left; }
-  .pod-stat { display: flex; align-items: center; gap: 14px; text-align: left; padding: 0 0 16px; border-right: 0; border-bottom: 1px solid var(--gray-200); }
-  .pod-num { font-size: 3rem; }
+  .pod-card { grid-template-columns: 1fr; padding: 16px; gap: 12px; text-align: left; }
+  .pod-stat { display: flex; align-items: center; gap: 14px; text-align: left; padding: 0 0 12px; border-right: 0; border-bottom: 1px solid var(--gray-200); }
+  .pod-num { font-size: 2.2rem; }
   .pod-stat-label { margin: 0; max-width: none; }
-  .pod-title { font-size: 1.4rem; }
+  .pod-title { font-size: 1.2rem; }
   .pod-btn { width: 100%; }
   .pod-steps li + li::before { display: none; }
 }

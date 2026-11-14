@@ -128,7 +128,7 @@ timelineItems.forEach(el => { timelineObserver.observe(el) })
 // ── Typed hero tagline loop ──────────────────────────────────────
 const typedEl = document.getElementById('typed-text')
 if (typedEl) {
-  const typedPhrases = ["Hi, I'm Teslim Adeyanju", 'ACA Chartered Accountant | Financial Data Analyst', 'I speak both CFO and GitHub fluently.', 'Power BI · SQL · Python · FP&A']
+  const typedPhrases = ['Financial Data Analyst', 'ACA Chartered Accountant', 'Power BI Developer']
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   if (reduceMotion) {
@@ -163,4 +163,43 @@ if (typedEl) {
     }
     typeLoop()
   }
+}
+
+// ── Timeline animation (index.html #experience and #education) ──
+// The line draws down when the timeline enters view; each entry slides in,
+// its dot pops and its card fades up (CSS in "Experience timeline").
+document.querySelectorAll('.xp-timeline').forEach(xpTimeline => {
+  const xpItems = xpTimeline.querySelectorAll('.xp-item')
+  if (!('IntersectionObserver' in window)) {
+    xpTimeline.classList.add('is-drawn')
+    xpItems.forEach(el => el.classList.add('is-visible'))
+    return
+  }
+  new IntersectionObserver((entries, obs) => {
+    if (entries[0].isIntersecting) { xpTimeline.classList.add('is-drawn'); obs.disconnect() }
+  }, { threshold: 0.05 }).observe(xpTimeline)
+  const xpObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible')
+        xpObserver.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' })
+  xpItems.forEach(el => xpObserver.observe(el))
+})
+
+// ── Nav scrollspy (index.html) ───────────────────────────────────
+// Highlights the menu link for the section currently in the middle of the screen.
+const spyLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')]
+const spySections = spyLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean)
+if (spySections.length && 'IntersectionObserver' in window) {
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return
+      const id = '#' + entry.target.id
+      spyLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === id))
+    })
+  }, { rootMargin: '-45% 0px -50% 0px' })
+  spySections.forEach(sec => spy.observe(sec))
 }

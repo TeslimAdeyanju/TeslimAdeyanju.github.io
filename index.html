@@ -87,7 +87,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <!-- GDPR Cookie Banner -->
   <style>
@@ -107,21 +107,22 @@
     }
   </script>
 </head>
-<body>
+<body class="home">
   <a href="#hero" class="skip-link">Skip to main content</a>
 
   <!-- ══ NAV ══ -->
   <header class="nav" id="site-header">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Home</a>
+      <a href="#hero" class="nav-logo" aria-label="Teslim Adeyanju, home"><span class="nl-first">Teslim</span> <span class="nl-last">Adeyanju</span></a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
       <nav class="nav-links" id="nav-links">
-        <a href="about.html">About</a>
-        <a href="#skills">Capabilities</a>
+        <a href="#about">About</a>
+        <a href="#skills">Tools</a>
+        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
         <a href="study-notes.html">Study Notes</a>
-        <a href="#projects">Portfolio</a>
         <a href="https://adeyanjuteslim.notion.site/261807ec796380898cf1d03946fd8c6a?v=261807ec796381588a6d000cd9a82d8a" target="_blank" rel="noopener">Insights</a>
         <a href="blog.html">Blog</a>
         <a href="#connect">Contact</a>
@@ -131,349 +132,46 @@
   </header>
 
   <!-- ══ HERO ══ -->
-  <section id="hero" class="hero">
-    <div class="hero-container">
-
-      <div class="hero-text">
-        <h1 class="hero-name reveal" style="--d:.1s">Teslim<br>Adeyanju<span class="hero-name-suffix">, ACA</span></h1>
-
-        <p class="hero-typed reveal" style="--d:.2s"><span id="typed-text" aria-hidden="true"></span><span class="typed-cursor" aria-hidden="true">|</span><span class="sr-only">Hi, I'm Teslim Adeyanju. ACA Chartered Accountant | Financial Data Analyst. I speak both CFO and GitHub fluently. Power BI · SQL · Python · FP&amp;A.</span></p>
-
-        <p class="hero-value reveal" style="--d:.3s">Financial Data Analyst for FP&amp;A, Reporting, and Commercial Finance</p>
-        <p class="hero-bio reveal" style="--d:.35s">
-          ACA and Microsoft Certified Power BI Data Analyst (PL-300) helping finance teams turn messy GL, sub-ledger, and operational data into decision-ready reports, driver-based forecasts, and self-service Power BI dashboards — using SQL, Python, and Azure.
-        </p>
-
-        <div class="hero-tools reveal" style="--d:.38s">
-          <span class="tool-badge">PL&#8209;300 Certified</span>
-          <span class="tool-badge">DP&#8209;900 Certified</span>
-          <span class="tool-badge">Chartered Accountant</span>
-          <span class="tool-badge">Power BI</span>
-          <span class="tool-badge">SQL</span>
-          <span class="tool-badge">Python</span>
-          <span class="tool-badge">Microsoft Fabric</span>
-          <span class="tool-badge">Excel</span>
-        </div>
-
-        <div class="hero-actions reveal" style="--d:.4s">
-          <a href="#projects" class="btn btn-primary">View Finance Projects</a>
-          <a href="assets/files/Teslim_Adeyanju_Resume.pdf" target="_blank" rel="noopener" class="btn-cv">View CV</a>
-          <a href="mailto:info@adeyanjuteslim.co.uk" class="btn-ghost">Get In Touch</a>
-          <a href="https://www.linkedin.com/in/adeyanjuteslimuthman" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
-          <a href="https://github.com/TeslimAdeyanju" target="_blank" rel="noopener" class="btn-ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
-        </div>
-
+  <section id="hero" class="hero hero-net">
+    <div class="hn-inner">
+      <h1 class="hn-name reveal" style="--d:.1s">Teslim Adeyanju</h1>
+      <p class="hn-role reveal" style="--d:.2s"><span id="typed-text" aria-hidden="true">Financial Data Analyst</span><span class="typed-cursor" aria-hidden="true">|</span><span class="sr-only">Financial Data Analyst, ACA Chartered Accountant, Power BI Developer</span></p>
+      <p class="hn-tagline reveal" style="--d:.28s">I turn messy finance data into reports, forecasts and dashboards people actually use.</p>
+      <p class="hn-email reveal" style="--d:.34s"><a href="mailto:info@adeyanjuteslim.co.uk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m3 8 7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg><span>info@adeyanjuteslim.co.uk</span></a></p>
+      <ul class="hn-badges reveal" style="--d:.4s">
+        <li class="hn-b-muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657 13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg>United Kingdom</li>
+        <li class="hn-b-green"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.707-9.293a1 1 0 0 0-1.414-1.414L9 10.586 7.707 9.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd"/></svg>Open to Finance &amp; Data Analyst roles</li>
+        <li class="hn-b-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>ACA Chartered Accountant</li>
+        <li class="hn-b-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>Microsoft Certified PL-300</li>
+      </ul>
+      <div class="hn-actions reveal" style="--d:.48s">
+        <a href="#projects" class="hn-btn hn-btn-primary">View Projects</a>
+        <a href="assets/files/Teslim_Adeyanju_Resume.pdf" target="_blank" rel="noopener" class="hn-btn hn-btn-ghost">Download CV</a>
       </div>
-
-      <div class="hero-photo-col reveal" style="--d:.25s">
-        <div class="hero-photo-wrap">
-          <div class="photo-frame">
-            <img src="assets/img/photo.JPG" alt="Teslim Adeyanju" class="photo"
-                 width="240" height="240"
-                 fetchpriority="high" loading="eager"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="photo-fallback">TA</div>
-          </div>
-          <div class="float-card float-card-1">
-            <span class="fc-icon">
-              <svg viewBox="0 0 24 24" role="img" aria-label="Power BI"><path fill="#F2C811" d="M10 12a1 1 0 0 1 1 1v11H4a1 1 0 0 1-1-1V13a1 1 0 0 1 1-1h6Zm-2-.5V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v17h-4.5V13a1.5 1.5 0 0 0-1.5-1.5H8Zm5-6V1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v22a1 1 0 0 1-1 1h-3.5V7A1.5 1.5 0 0 0 15 5.5h-2Z"/></svg>
-            </span>
-            <span class="fc-text">Power BI Expert</span>
-          </div>
-          <div class="float-card float-card-2">
-            <span class="fc-icon">📈</span>
-            <span class="fc-text">Financial Analytics</span>
-          </div>
-        </div>
+      <div class="hn-social reveal" style="--d:.56s">
+        <a href="https://github.com/TeslimAdeyanju" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+        <a href="https://www.linkedin.com/in/adeyanjuteslimuthman" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
       </div>
+    </div>
+  </section>
 
-      <div class="hero-impact reveal" style="--d:.4s">
-        <p class="hero-impact-label">Measurable impact delivered</p>
-        <ul class="hero-impact-list">
-          <li class="impact-item scroll-reveal" style="--ac:#3B82F6">
-            <span class="impact-title">Month-end Close: 7 &rarr; 3 Days (57% Reduction)</span>
-            <span class="impact-desc">Via automated reconciliation and Power BI reporting</span>
-          </li>
-          <li class="impact-item scroll-reveal" style="--ac:#8B5CF6">
-            <span class="impact-title">Forecast Accuracy to &plusmn;8.5%</span>
-            <span class="impact-desc">On a £2.3M budget via rolling 13-week cash flow models and scenario planning</span>
-          </li>
-          <li class="impact-item scroll-reveal" style="--ac:#F59E0B">
-            <span class="impact-title">Reporting Cycle Cut 25%, Data Prep 80%</span>
-            <span class="impact-desc">Through ETL automation and reusable SQL extraction scripts</span>
-          </li>
-          <li class="impact-item scroll-reveal" style="--ac:#10B981">
-            <span class="impact-title">£50K+ Annual Cost Savings</span>
-            <span class="impact-desc">Via margin analysis, cost centre reviews, and process optimisation</span>
-          </li>
-          <li class="impact-item scroll-reveal" style="--ac:#06B6D4">
-            <span class="impact-title">60% Drop in Manual Reporting Requests</span>
-            <span class="impact-desc">By enabling self-service Power BI dashboards for finance stakeholders</span>
-          </li>
+  <!-- ══ ABOUT ══ -->
+  <section id="about" class="section ab-section">
+    <div class="container">
+      <p class="eyebrow">About Me</p>
+      <h2 class="s-title">Finance expertise first; data and automation as the enablers</h2>
+      <div class="ab-wrap">
+        <div class="ab-text scroll-reveal">
+          <p>I'm a Financial Data Analyst and ACA Chartered Accountant with over a decade of experience in financial reporting, FP&amp;A and data analytics. My career began in traditional finance (month-end close, management reporting, budgeting, forecasting and board reporting), where I saw teams spend more time reconciling spreadsheets than analysing performance.</p>
+          <p>That led me into data analytics, not to leave finance, but to modernise it. Today I build Power BI semantic models, SQL data pipelines and Python-enabled financial workflows that make reporting reliable, scalable and auditable. I also built <a href="projects/fda-toolkit.html">fda-toolkit</a>, a Python package on PyPI with 67 financial data analysis functions.</p>
+          <p class="ab-cta"><a href="about.html" class="ab-more">Read my full story <span aria-hidden="true">&rarr;</span></a><a href="mailto:info@adeyanjuteslim.co.uk" class="ab-mail">info@adeyanjuteslim.co.uk</a></p>
+        </div>
+        <ul class="ab-stats scroll-reveal" aria-label="Career highlights">
+          <li><span class="ab-num">57%</span><span class="ab-label">faster month-end close, from 7 days to 3</span></li>
+          <li><span class="ab-num">&plusmn;8.5%</span><span class="ab-label">forecast accuracy on a &pound;2.3M budget</span></li>
+          <li><span class="ab-num">&pound;50K+</span><span class="ab-label">annual cost savings delivered</span></li>
+          <li><span class="ab-num">1,000+</span><span class="ab-label">analysts using fda-toolkit each month</span></li>
         </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══ EXPERIENCE ══ -->
-  <section id="experience" class="section" aria-labelledby="experience-heading">
-    <div class="container">
-      <p class="eyebrow">Career</p>
-      <h2 id="experience-heading" class="s-title">Experience that shaped my finance &amp; data practice</h2>
-
-      <div class="timeline">
-
-        <div class="timeline-item scroll-reveal">
-          <span class="timeline-marker"></span>
-          <div class="timeline-date">2025 — Present</div>
-          <div class="timeline-card">
-            <div class="timeline-card-hd">
-              <h3 class="timeline-role">Freelance Financial Data Analyst</h3>
-              <span class="timeline-badge">Flagship Project</span>
-            </div>
-            <p class="timeline-meta">CoreInsight Financial Advisory Ltd · Hampshire, UK</p>
-            <p class="timeline-desc">Built a self-directed NHS financial analytics pipeline (~2.1M records, 206 trusts) with a normalised MySQL star schema and audit-logged ETL, and published <strong>fda-toolkit</strong>, an open-source Python package now used by 1,000+ analysts monthly.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item scroll-reveal">
-          <span class="timeline-marker"></span>
-          <div class="timeline-date">2024 — Present</div>
-          <div class="timeline-card">
-            <div class="timeline-card-hd">
-              <h3 class="timeline-role">Treasurer — Financial Strategy &amp; Governance</h3>
-              <span class="timeline-badge">Board Level</span>
-            </div>
-            <p class="timeline-meta">UK Registered Charity</p>
-            <p class="timeline-desc">Improved reserve forecasting to flag funding gaps six months ahead, secured £12K in operational-continuity funding, enabled £120K allocation across 8 projects through earlier budget approval, and oversees £1M+ in donor funds with a clean audit record.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item scroll-reveal">
-          <span class="timeline-marker"></span>
-          <div class="timeline-date">2024 — 2025</div>
-          <div class="timeline-card">
-            <div class="timeline-card-hd">
-              <h3 class="timeline-role">Financial Reporting Analyst</h3>
-            </div>
-            <p class="timeline-meta">Remote UK Engagement</p>
-            <p class="timeline-desc">Improved forecast accuracy from ±10% to ±8.5% on a £2.3M budget, cut Power BI load times 35% by removing 120 redundant columns, reduced manual reporting requests 60% via self-service dashboards, and identified £50K in annual savings.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item scroll-reveal">
-          <span class="timeline-marker"></span>
-          <div class="timeline-date">2019 — 2022</div>
-          <div class="timeline-card">
-            <div class="timeline-card-hd">
-              <h3 class="timeline-role">Financial Data Analyst</h3>
-            </div>
-            <p class="timeline-meta">Remote UK Collaboration</p>
-            <p class="timeline-desc">Consolidated Sage and legacy-system data into Power BI semantic models across 36 states, building 55+ dashboards and 80+ DAX measures, and identifying savings across 85 supplier contracts and 1,200+ SKUs.</p>
-          </div>
-        </div>
-
-        <h3 class="timeline-subhead">Earlier Finance Experience</h3>
-
-        <div class="timeline-item timeline-item-compact scroll-reveal">
-          <span class="timeline-marker"></span>
-          <div class="timeline-date">2013 — 2018</div>
-          <div class="timeline-card">
-            <h3 class="timeline-role">Financial Accountant</h3>
-            <p class="timeline-desc">Led month-end close, IFRS-compliant financial statements, and board reporting; ran audit-readiness activities and supported capital expenditure tracking. Delivered 60+ board packs on time with a clean 5-year audit record and consistent early delivery.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item timeline-item-compact scroll-reveal">
-          <span class="timeline-marker"></span>
-          <div class="timeline-date">2010 — 2013</div>
-          <div class="timeline-card">
-            <h3 class="timeline-role">Financial Business Analyst</h3>
-            <p class="timeline-desc">Managed financial controls, reporting, and intercompany reconciliations across 35 branches, six regional zones, and eight business units. Cut month-end close from 7 days to 3 and eliminated recurring reconciliation errors.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ EDUCATION & CERTIFICATIONS ══ -->
-  <section id="education" class="section">
-    <div class="container">
-      <p class="eyebrow">Qualifications</p>
-      <h2 class="s-title">Education &amp; Certifications</h2>
-      <p class="s-sub">Academic excellence paired with current industry certifications across finance, analytics, and cloud platforms.</p>
-
-      <div class="edu-profile scroll-reveal">
-
-        <div class="edu-photo-col">
-          <div class="edu-photo-frame">
-            <img src="assets/img/photo.JPG" alt="Teslim Adeyanju" class="edu-photo" width="220" height="220" loading="lazy" />
-          </div>
-        </div>
-
-        <div class="edu-content-col">
-          <h3 class="edu-headline">MSc Finance and Investment Banking <span class="edu-headline-sub">: Distinction</span></h3>
-          <p class="edu-tagline">University of Hertfordshire, UK &middot; 2022–2024</p>
-          <p class="edu-highlight">Top 5% of cohort &middot; HBS Excellence Award 2024 &middot; Student Representative</p>
-          <p class="edu-desc">Built on the CFA Levels 1 &amp; 2 curriculum, the programme is where the quantitative rigour behind my financial modelling and investment analysis comes from — the same discipline I now apply to Power BI, SQL, and Python-based reporting.</p>
-          <p class="edu-desc">Also holds a <strong>Postgraduate Diploma in Finance</strong>: University of Lagos, Nigeria, 2017–2018.</p>
-
-          <div class="cert-groups">
-            <div class="cert-group">
-              <p class="cert-group-title">Professional Qualifications</p>
-              <ul class="cert-list">
-                <li class="cert-row">
-                  <span class="cert-badge badge-aca" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="#fff" role="img" aria-label="Chartered Accountant">
-                      <path d="M12 3L1 8l11 5 9-4.09V17h2V8L12 3z"/>
-                      <path d="M5 10.85v4.34c0 .35.16.68.44.9C6.98 17.36 9.34 18.65 12 18.65s5.02-1.29 6.56-2.56c.28-.22.44-.55.44-.9v-4.34l-7 3.18-7-3.18z"/>
-                    </svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">ACA Chartered Accountant</span>
-                    <span class="cert-meta">ICAN &middot; IFAC member body &middot; 2019</span>
-                  </span>
-                </li>
-                <li class="cert-row">
-                  <span class="cert-badge badge-aat" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="#fff" role="img" aria-label="Accounting Technician">
-                      <path d="M12 3L1 8l11 5 9-4.09V17h2V8L12 3z"/>
-                      <path d="M5 10.85v4.34c0 .35.16.68.44.9C6.98 17.36 9.34 18.65 12 18.65s5.02-1.29 6.56-2.56c.28-.22.44-.55.44-.9v-4.34l-7 3.18-7-3.18z"/>
-                    </svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">Associate Accounting Technician (AAT)</span>
-                    <span class="cert-meta">2005</span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="cert-group">
-              <p class="cert-group-title">Certifications</p>
-
-              <p class="cert-subgroup-title">Microsoft Certified</p>
-              <ul class="cert-list cert-list-grid">
-                <li class="cert-row">
-                  <span class="cert-badge badge-ms" aria-hidden="true">
-                    <svg viewBox="0 0 23 23" role="img" aria-label="Microsoft">
-                      <rect x="1" y="1" width="10" height="10" fill="#F25022"/>
-                      <rect x="12" y="1" width="10" height="10" fill="#7FBA00"/>
-                      <rect x="1" y="12" width="10" height="10" fill="#00A4EF"/>
-                      <rect x="12" y="12" width="10" height="10" fill="#FFB900"/>
-                    </svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">Power BI Data Analyst Associate (PL&#8209;300)</span>
-                    <span class="cert-meta">Microsoft &middot; 2026</span>
-                  </span>
-                </li>
-                <li class="cert-row">
-                  <span class="cert-badge badge-ms" aria-hidden="true">
-                    <svg viewBox="0 0 23 23" role="img" aria-label="Microsoft">
-                      <rect x="1" y="1" width="10" height="10" fill="#F25022"/>
-                      <rect x="12" y="1" width="10" height="10" fill="#7FBA00"/>
-                      <rect x="1" y="12" width="10" height="10" fill="#00A4EF"/>
-                      <rect x="12" y="12" width="10" height="10" fill="#FFB900"/>
-                    </svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">Azure Data Fundamentals (DP&#8209;900)</span>
-                    <span class="cert-meta">Microsoft &middot; 2026</span>
-                  </span>
-                </li>
-                <li class="cert-row is-inprogress">
-                  <span class="cert-badge badge-ms" aria-hidden="true">
-                    <svg viewBox="0 0 23 23" role="img" aria-label="Microsoft">
-                      <rect x="1" y="1" width="10" height="10" fill="#F25022"/>
-                      <rect x="12" y="1" width="10" height="10" fill="#7FBA00"/>
-                      <rect x="1" y="12" width="10" height="10" fill="#00A4EF"/>
-                      <rect x="12" y="12" width="10" height="10" fill="#FFB900"/>
-                    </svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">Fabric Analytics Engineer Associate (DP&#8209;600)</span>
-                    <span class="cert-meta">Microsoft &middot; In progress</span>
-                  </span>
-                </li>
-              </ul>
-
-              <p class="cert-subgroup-title">Databricks Accreditations</p>
-              <ul class="cert-list cert-list-grid">
-                <li class="cert-row">
-                  <span class="cert-badge badge-databricks" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img" aria-label="Databricks"><path fill="#FF3621" d="M.95 14.184L12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"/></svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">Databricks Fundamentals</span>
-                    <span class="cert-meta">Databricks &middot; 2026</span>
-                  </span>
-                </li>
-                <li class="cert-row">
-                  <span class="cert-badge badge-databricks" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img" aria-label="Databricks"><path fill="#FF3621" d="M.95 14.184L12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"/></svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">Generative AI Fundamentals</span>
-                    <span class="cert-meta">Databricks &middot; 2026</span>
-                  </span>
-                </li>
-                <li class="cert-row">
-                  <span class="cert-badge badge-databricks" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img" aria-label="Databricks"><path fill="#FF3621" d="M.95 14.184L12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"/></svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">SQL Analytics on Databricks</span>
-                    <span class="cert-meta">Databricks &middot; 2026</span>
-                  </span>
-                </li>
-                <li class="cert-row">
-                  <span class="cert-badge badge-databricks" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img" aria-label="Databricks"><path fill="#FF3621" d="M.95 14.184L12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"/></svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">AI/BI for Data Analysts</span>
-                    <span class="cert-meta">Databricks &middot; 2026</span>
-                  </span>
-                </li>
-              </ul>
-
-              <p class="cert-subgroup-title">SQL &amp; Machine Learning</p>
-              <ul class="cert-list cert-list-grid">
-                <li class="cert-row">
-                  <span class="cert-badge badge-datacamp" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img" aria-label="DataCamp"><path fill="#05192D" d="M12.946 18.151v-5.239L21.209 8.2 19.2 7.048l-6.254 3.567V5.36c0-.356-.192-.689-.5-.866L4.922.177a1.434 1.434 0 0 0-1.455.044 1.438 1.438 0 0 0-.676 1.224v14.777A1.44 1.44 0 0 0 4.92 17.49l6.032-3.44v4.683a1 1 0 0 0 .504.867l7.73 4.4 2.01-1.152-8.25-4.697zM10.953 5.938v5.814L4.785 15.27V2.4l6.168 3.539v-.001z"/></svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">Associate Data Analyst in SQL</span>
-                    <span class="cert-meta">DataCamp &middot; 2026</span>
-                  </span>
-                </li>
-                <li class="cert-row">
-                  <span class="cert-badge badge-hackerrank" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img" aria-label="HackerRank"><path fill="#2EC866" d="M0 0v24h24V0zm9.95 8.002h1.805c.061 0 .111.05.111.111v7.767c0 .061-.05.111-.11.111H9.95c-.061 0-.111-.05-.111-.11v-2.87H7.894v2.87c0 .06-.05.11-.11.11H5.976a.11.11 0 01-.11-.11V8.112c0-.06.05-.11.11-.11h1.806c.061 0 .11.05.11.11v2.869H9.84v-2.87c0-.06.05-.11.11-.11zm2.999 0h5.778c.061 0 .111.05.111.11v7.767a.11.11 0 01-.11.112h-5.78a.11.11 0 01-.11-.11V8.111c0-.06.05-.11.11-.11z"/></svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">SQL (Advanced)</span>
-                    <span class="cert-meta">HackerRank &middot; 2026</span>
-                  </span>
-                </li>
-                <li class="cert-row">
-                  <span class="cert-badge badge-python" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img" aria-label="Python"><path fill="#3776AB" d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>
-                  </span>
-                  <span class="cert-text">
-                    <span class="cert-name">Machine Learning</span>
-                    <span class="cert-meta">SuperDataScience &middot; 2024</span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -513,7 +211,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- ══ PROJECTS ══ -->
   <section id="projects" class="section">
@@ -722,6 +419,132 @@
     </div>
   </section>
 
+  <!-- ══ EXPERIENCE ══ -->
+  <section id="experience" class="section section-alt" aria-labelledby="experience-heading">
+    <div class="container">
+      <div class="sx-head">
+        <p class="eyebrow">Career</p>
+        <h2 id="experience-heading" class="s-title">Experience that shaped my finance &amp; data practice</h2>
+      </div>
+      <ol class="xp-timeline">
+        <li class="xp-item">
+          <span class="xp-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-hd"><h3 class="xp-role">Freelance Financial Data Analyst</h3><span class="xp-tag">Flagship project</span></div>
+            <p class="xp-meta">CoreInsight Financial Advisory Ltd &middot; Hampshire, UK &middot; 2025&ndash;Present</p>
+            <p class="xp-desc">Built an NHS financial analytics pipeline (~2.1M records, 206 trusts) on a MySQL star schema, and published <strong>fda-toolkit</strong>, a Python package used by 1,000+ analysts monthly.</p>
+          </article>
+        </li>
+        <li class="xp-item">
+          <span class="xp-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-hd"><h3 class="xp-role">Treasurer, Financial Strategy &amp; Governance</h3><span class="xp-tag">Board level</span></div>
+            <p class="xp-meta">UK registered charity &middot; 2024&ndash;Present</p>
+            <p class="xp-desc">Oversee &pound;1M+ in donor funds with a clean audit record. Reserve forecasting now flags funding gaps six months ahead, and earlier budget approval unlocked &pound;120K across 8 projects.</p>
+          </article>
+        </li>
+        <li class="xp-item">
+          <span class="xp-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-hd"><h3 class="xp-role">Financial Reporting Analyst</h3></div>
+            <p class="xp-meta">Remote, UK &middot; 2024&ndash;2025</p>
+            <p class="xp-desc">Improved forecast accuracy to &plusmn;8.5% on a &pound;2.3M budget, cut Power BI load times 35%, reduced manual reporting requests 60% and identified &pound;50K in annual savings.</p>
+          </article>
+        </li>
+        <li class="xp-item">
+          <span class="xp-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-hd"><h3 class="xp-role">Financial Data Analyst</h3></div>
+            <p class="xp-meta">Remote, UK &middot; 2019&ndash;2022</p>
+            <p class="xp-desc">Consolidated Sage and legacy data into Power BI models across 36 states: 55+ dashboards, 80+ DAX measures, and savings identified across 85 supplier contracts.</p>
+          </article>
+        </li>
+        <li class="xp-item xp-item-earlier">
+          <span class="xp-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-hd"><h3 class="xp-role">Earlier finance career</h3></div>
+            <p class="xp-meta">2010&ndash;2018</p>
+            <ul class="xp-earlier">
+              <li><strong>Financial Accountant</strong> <span class="xp-years">2013&ndash;2018</span><br>Month-end close, IFRS statements and 60+ on-time board packs with a clean 5-year audit record.</li>
+              <li><strong>Financial Business Analyst</strong> <span class="xp-years">2010&ndash;2013</span><br>Controls and reconciliations across 35 branches; cut month-end close from 7 days to 3.</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="sx-head">
+        <p class="eyebrow">Qualifications</p>
+        <h2 class="s-title">Education</h2>
+      </div>
+      <ol class="xp-timeline xp-timeline-edu">
+        <li class="xp-item">
+          <span class="xp-dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3z"/><path d="M5 10.85v4.34c0 .35.16.68.44.9C6.98 17.36 9.34 18.65 12 18.65s5.02-1.29 6.56-2.56c.28-.22.44-.55.44-.9v-4.34l-7 3.18-7-3.18z"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-hd"><h3 class="xp-role">MSc Finance and Investment Banking with Advanced Research</h3><span class="xp-tag xp-tag-grade">Distinction</span></div>
+            <p class="xp-meta">University of Hertfordshire, UK &middot; Sep 2022&ndash;Oct 2024</p>
+            <p class="xp-highlight">Top 5% of cohort &middot; HBS Excellence Award 2024 &middot; Elected Student Representative</p>
+            <p class="xp-desc">Built on the CFA Levels 1 &amp; 2 curriculum. My dissertation applied quantitative financial analysis and data science to real-world financial data, combining Python-based statistical modelling with financial theory to produce actionable investment insights.</p>
+            <p class="xp-label">Key modules</p>
+            <ul class="xp-chips"><li>Financial Data Analysis</li><li>Quantitative Analysis</li><li>Financial Modelling</li><li>Financial Markets &amp; Institutions</li><li>Investment Banking</li><li>Corporate Finance</li><li>Research Methods</li></ul>
+            <p class="xp-note"><strong>Student Representative:</strong> gathered and analysed cohort feedback on teaching quality and course delivery, advocated cohort priorities to faculty and senior administrators, and drove measurable improvements to the learning experience.</p>
+          </article>
+        </li>
+        <li class="xp-item">
+          <span class="xp-dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3z"/><path d="M5 10.85v4.34c0 .35.16.68.44.9C6.98 17.36 9.34 18.65 12 18.65s5.02-1.29 6.56-2.56c.28-.22.44-.55.44-.9v-4.34l-7 3.18-7-3.18z"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-hd"><h3 class="xp-role">Postgraduate Diploma in Finance</h3><span class="xp-tag xp-tag-grade">Distinction</span></div>
+            <p class="xp-meta">University of Lagos, Nigeria &middot; Jul 2017&ndash;Oct 2018</p>
+            <p class="xp-desc">Covered the core finance disciplines and provided the academic foundation for my ACA qualification and professional finance career.</p>
+            <p class="xp-label">Core areas</p>
+            <ul class="xp-chips"><li>Financial Reporting</li><li>Management Accounting</li><li>Corporate Finance</li><li>Investment Analysis</li><li>Financial Statement Analysis</li><li>Quantitative Analytics</li></ul>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══ CERTIFICATIONS ══ -->
+  <section id="certifications" class="section section-alt">
+    <div class="container">
+      <div class="sx-head">
+        <p class="eyebrow">Credentials</p>
+        <h2 class="s-title">Certifications &amp; Credentials</h2>
+        <p class="s-sub">Professional qualification and industry certifications behind my finance and analytics work.</p>
+      </div>
+      <ul class="cr-grid">
+        <li class="cr-card scroll-reveal">
+          <div class="cr-badge cr-badge-img cr-badge-ican"><img src="assets/img/badges/ican.jpg" alt="Institute of Chartered Accountants of Nigeria (ICAN) crest" width="168" height="168" loading="lazy" /></div>
+          <h3 class="cr-name">Associate Chartered Accountant (ACA)</h3>
+          <p class="cr-meta">Institute of Chartered Accountants of Nigeria (ICAN)</p>
+        </li>
+        <li class="cr-card scroll-reveal">
+          <div class="cr-badge cr-badge-img"><img src="assets/img/badges/pl-300.png" alt="Microsoft Certified: Power BI Data Analyst Associate badge" width="168" height="168" loading="lazy" /></div>
+          <h3 class="cr-name">Microsoft Certified: Power BI Data Analyst Associate (PL&#8209;300)</h3>
+          <p class="cr-meta">Microsoft</p>
+          <a href="https://learn.microsoft.com/en-us/users/teslimuthmanadeyanju/credentials/f6d3886dbd6095ea" target="_blank" rel="noopener" class="cr-link">View Credential <span aria-hidden="true">&#8599;</span></a>
+        </li>
+        <li class="cr-card scroll-reveal">
+          <div class="cr-badge cr-badge-img cr-badge-dp900"><img src="assets/img/badges/dp-900.webp" alt="Microsoft Certified: Azure Data Fundamentals badge" width="168" height="168" loading="lazy" /></div>
+          <h3 class="cr-name">Microsoft Certified: Azure Data Fundamentals (DP&#8209;900)</h3>
+          <p class="cr-meta">Microsoft</p>
+          <a href="https://learn.microsoft.com/en-us/users/teslimuthmanadeyanju/credentials/902c323f7335f971" target="_blank" rel="noopener" class="cr-link">View Credential <span aria-hidden="true">&#8599;</span></a>
+        </li>
+              <li class="cr-card scroll-reveal">
+          <div class="cr-badge cr-badge-img"><img src="assets/img/badges/databricks-sql-analytics.png" alt="Databricks SQL Analytics on Databricks badge" width="168" height="168" loading="lazy" /></div>
+          <h3 class="cr-name">SQL Analytics on Databricks</h3>
+          <p class="cr-meta">Databricks Academy</p>
+          <a href="https://credentials.databricks.com/1a6a5eb4-ec82-4c38-95b7-08491e7400d1" target="_blank" rel="noopener" class="cr-link">View Credential <span aria-hidden="true">&#8599;</span></a>
+        </li>
+      </ul>
+      <p class="cr-pursuing"><span class="cr-pursuing-dot" aria-hidden="true"></span>Currently pursuing: <strong>Microsoft Certified: Fabric Analytics Engineer Associate (DP&#8209;600)</strong></p>
+    </div>
+  </section>
+
   <!-- ══ CONNECT ══ -->
   <section id="connect" class="section">
     <div class="container">
@@ -734,25 +557,25 @@
       <div class="social-grid">
         <a href="https://www.linkedin.com/in/adeyanjuteslimuthman" target="_blank" rel="noopener" class="social-card">
           <div class="sc-icon sc-linkedin">in</div>
-          <div class="sc-name">LinkedIn</div>
-          <div class="sc-handle">adeyanjuteslimuthman</div>
+          <div class="sc-text"><div class="sc-name">LinkedIn</div>
+          <div class="sc-handle">adeyanjuteslimuthman</div></div>
         </a>
         <a href="https://github.com/TeslimAdeyanju" target="_blank" rel="noopener" class="social-card">
           <div class="sc-icon sc-github">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
           </div>
-          <div class="sc-name">GitHub</div>
-          <div class="sc-handle">TeslimAdeyanju</div>
+          <div class="sc-text"><div class="sc-name">GitHub</div>
+          <div class="sc-handle">TeslimAdeyanju</div></div>
         </a>
         <a href="assets/files/Teslim_Adeyanju_Resume.pdf" download class="social-card">
           <div class="sc-icon sc-cv-card">CV</div>
-          <div class="sc-name">CV / Résumé</div>
-          <div class="sc-handle">Download PDF</div>
+          <div class="sc-text"><div class="sc-name">CV / Résumé</div>
+          <div class="sc-handle">Download PDF</div></div>
         </a>
         <a href="mailto:info@adeyanjuteslim.co.uk" class="social-card">
           <div class="sc-icon sc-email">@</div>
-          <div class="sc-name">Email</div>
-          <div class="sc-handle">info@adeyanjuteslim.co.uk</div>
+          <div class="sc-text"><div class="sc-name">Email</div>
+          <div class="sc-handle">info@adeyanjuteslim.co.uk</div></div>
         </a>
       </div>
     </div>
@@ -767,5 +590,6 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/network-bg.js"></script>
 </body>
 </html>

@@ -151,6 +151,9 @@
     // titles set via textContent so "&" in names is never parsed as markup
     sec.querySelector('.pp-prev .pp-pager-title').textContent = prev.title
     sec.querySelector('.pp-next .pp-pager-title').textContent = next.title
+    // sits just above the closing contact block
+    var connect = document.getElementById('connect')
+    if (connect) { connect.parentNode.insertBefore(sec, connect); return }
     var sections = document.querySelectorAll('body > section')
     var last = sections[sections.length - 1]
     if (last) last.parentNode.insertBefore(sec, last.nextSibling)

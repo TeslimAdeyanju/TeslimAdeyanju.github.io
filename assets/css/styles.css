@@ -3210,6 +3210,10 @@ a.gh-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,23
 [data-theme="dark"] .cb-k { color: #94A3B8; }
 [data-theme="dark"] .cb-cell:hover .cb-v { color: #93C5FD; }
 
+/* Contact block that closes every page (same as the homepage) */
+.connect-end { border-top: 1px solid var(--gray-200); }
+[data-theme="dark"] .connect-end { border-top-color: #334155; }
+
 /* ── Mobile refinements (phones ≤ 600px) ─────────────────────── */
 /* Kept last so these win over the earlier per-section responsive rules. */
 @media (max-width: 600px) {

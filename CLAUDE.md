@@ -84,6 +84,10 @@ All styles are in `assets/css/styles.css`, grouped into sections with `/* ──
 - All section headings use one size, `--h2-size`, defined in `:root`. This covers homepage `.s-title` and inner-page `.content-block h2`. Change that token rather than setting per-section sizes.
 - Phone-specific fixes live at the end of the file ("Mobile refinements" and "Mobile usability" blocks), so they win over earlier responsive rules. Keep tap targets ≥ ~40px and small labels ≥ 12px on phones; re-check at 360, 390 and 430px widths for horizontal overflow before shipping.
 
+## Page endings
+
+Every page closes with the homepage contact block (`<section id="connect" class="section connect-end">`, the `.social-grid` cards and the `.footer`), copied from `index.html`; on project pages the case study pager (`project-page.js`) is inserted just above it. Keep the copies in step with the homepage (CV link needs a `../` prefix inside `projects/`).
+
 ## Cache busting
 
 Every page links `styles.css` and the shared scripts with a `?v=YYYYMMDDx` suffix. Bump it on all pages whenever those files change, or visitors may see a stale stylesheet.

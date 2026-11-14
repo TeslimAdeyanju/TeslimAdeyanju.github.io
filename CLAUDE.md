@@ -44,7 +44,7 @@ Keep these consistent across all pages. Pages in `projects/` reference assets wi
 
 ## Theming
 
-CSS custom properties in `:root` (`assets/css/styles.css`) define the light theme. Dark overrides live under `[data-theme="dark"] …` selectors throughout the stylesheet. Each page sets `data-theme="dark"` on `<html>` by default. The anti-flash script then applies the stored choice from `localStorage.getItem('theme')`.
+CSS custom properties in `:root` (`assets/css/styles.css`) define the light theme. Dark overrides live under `[data-theme="dark"] …` selectors throughout the stylesheet. Each page sets `data-theme="light"` on `<html>` by default (light/white is the default theme). The anti-flash script then applies the stored choice from `localStorage.getItem('theme')`.
 
 ## Project pages: live README rendering
 

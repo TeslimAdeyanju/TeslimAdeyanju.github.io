@@ -3431,3 +3431,6 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 .story-block .about-list li { margin-bottom: 12px; line-height: 1.7; text-align: justify; text-justify: inter-word; hyphens: none; }
 .story-block .about-list li:last-child { margin-bottom: 0; }
 @media (max-width: 640px) { .story-block .about-list li { font-size: .98rem; line-height: 1.65; } }
+
+/* ── About page: centred section heading and subtitle ── */
+.content-block.block-center, .about-section .content-block.block-center p { text-align: center; }

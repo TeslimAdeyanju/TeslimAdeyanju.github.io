@@ -3461,3 +3461,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .diff-cards.built-cards .diff-card { padding: 20px 18px; }
   .built-cards .diff-card h3 { font-size: 1.08rem; }
 }
+
+/* ── About page: dark chapter headings, tighter heading to text gap ── */
+.story-block h3 { color: var(--dark); margin-bottom: 4px; }
+.story-block h3 + p, .story-block h3 + ul { margin-top: 0; }

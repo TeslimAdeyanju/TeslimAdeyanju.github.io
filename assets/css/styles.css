@@ -3538,3 +3538,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .cr-extra-items a::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; bottom: -12px; }
   .pp-glance-sep { display: none; }
 }
+
+/* ── Hero fills the first phone screen, so About starts below the fold like desktop ── */
+@media (max-width: 700px) {
+  .hero.hero-net { min-height: calc(100vh - 64px); min-height: calc(100svh - 64px); padding: 40px 0; display: flex; flex-direction: column; justify-content: center; }
+}

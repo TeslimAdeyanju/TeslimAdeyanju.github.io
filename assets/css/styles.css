@@ -3447,21 +3447,6 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 .story-block p a { color: var(--blue); text-decoration: none; }
 .story-block p a strong { color: inherit; }
 
-/* ── About page: What I Have Built cards ── */
-.diff-cards.built-cards .diff-card { padding: 24px 24px 22px; background: #fff; border: 1px solid var(--gray-200, #E2E8F0); border-radius: 16px; display: flex; flex-direction: column; align-items: flex-start; }
-.built-tag { display: inline-block; margin-bottom: 12px; padding: 4px 11px; border-radius: 999px; font-size: .74rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--blue); background: rgba(59,130,246,.1); }
-.built-cards .diff-card h3 { display: block; margin-bottom: 10px; font-size: 1.15rem; }
-.built-cards .diff-card p { flex: 1; margin: 0; }
-.built-link { display: inline-block; margin-top: 16px; font-size: .92rem; font-weight: 700; color: var(--blue); text-decoration: none; }
-.built-link:hover { text-decoration: none; opacity: .8; }
-[data-theme="dark"] .diff-cards.built-cards .diff-card { background: #1E293B; border-color: #334155; }
-[data-theme="dark"] .built-tag { color: #93C5FD; background: rgba(147,197,253,.14); }
-[data-theme="dark"] .built-link { color: #93C5FD; }
-@media (max-width: 640px) {
-  .diff-cards.built-cards .diff-card { padding: 20px 18px; }
-  .built-cards .diff-card h3 { font-size: 1.08rem; }
-}
-
 /* ── About page: dark chapter headings, tighter heading to text gap ── */
 .story-block h3 { color: var(--dark); margin-bottom: 4px; }
 .story-block h3 + p, .story-block h3 + ul { margin-top: 0; }

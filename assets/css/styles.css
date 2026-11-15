@@ -3496,3 +3496,16 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .hn-actions { flex-direction: column; align-items: stretch; max-width: 320px; margin-left: auto; margin-right: auto; }
   .hn-btn { flex: none; width: 100%; }
 }
+
+/* ── Hero button: gentle sheen and breathing (no glow) ── */
+.hn-btn-primary { position: relative; overflow: hidden; isolation: isolate; animation: hnBreathe 4.2s ease-in-out 2s infinite; }
+.hn-btn-primary::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; z-index: -1;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: skewX(-20deg); animation: hnSheen 4.2s ease-in-out 2s infinite; pointer-events: none;
+}
+.hn-btn-primary:hover { animation-play-state: paused; }
+@keyframes hnSheen { 0%, 55% { left: -60%; } 100% { left: 130%; } }
+@keyframes hnBreathe { 0%, 55%, 100% { transform: scale(1); } 28% { transform: scale(1.035); } }
+[data-theme="dark"] .hn-btn-primary::after { background: linear-gradient(100deg, transparent, rgba(255,255,255,.5), transparent); }
+@media (prefers-reduced-motion: reduce) { .hn-btn-primary, .hn-btn-primary::after { animation: none; } }

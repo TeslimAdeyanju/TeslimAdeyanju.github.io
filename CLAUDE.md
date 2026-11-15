@@ -65,11 +65,11 @@ When a project repo is renamed or moved to another owner, update `data-readme-re
 
 ## Navigation
 
-All 13 site pages share the same menu, in the homepage section order (8 links. Education is intentionally not in the menu, Certifications points to it; Insights is not in the menu either, it is the last card on the Blog page). Non-index pages link to `index.html#…`, with a `../` prefix inside `projects/`, and mark their own entry with `aria-current="page"`.
-- The logo is the name (`.nav-logo` with `.nl-name`), shown in one uniform sky-to-indigo gradient.
-- Links fade in one after another on load and grow a gradient underline on hover.
-- On `index.html`, the "Nav scrollspy" in `script.js` adds `.is-active` to the link for the section in view.
-- When editing the menu, update every page's `<nav class="nav-links">`.
+All site pages share the same menu: About, Tools, Projects, Experience, Certifications, Blog, Contact. The logo stays the name on the left. Education and Insights are not top level items (Education is in the Certifications dropdown, Study Notes is a tab on the Blog page).
+- About, Projects, Certifications and Blog are dropdowns: a `<div class="nav-item">` holding a `button.nav-top` (chevron, `aria-expanded`) and a full width `.nav-panel` with `.nav-col` columns (heading `.nav-col-hd` with an orange underline, then links). Click opens a panel, click again, outside or Escape closes it. On phones (920px and below) the panels become an accordion in the hamburger menu. The behaviour lives in `assets/js/nav-menu.js`, the styles in the "Nav dropdowns" block of `styles.css`.
+- The panel contents are the same on every page except for link prefixes (`../` inside `projects/` and `blog/`, `#hash` only for the index page's own sections). The current page's link gets `aria-current="page"` and its dropdown button `.is-current`. When a new project or blog post is added, add it to the Projects or Blog panel on every page.
+- On `index.html`, the "Nav scrollspy" in `script.js` adds `.is-active` to the link for the section in view (and to the dropdown button that contains it).
+- The user asked for these dropdowns explicitly. Do not otherwise change the menu unless asked.
 
 ## Site-wide network background
 

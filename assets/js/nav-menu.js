@@ -35,6 +35,32 @@
     if (window.innerWidth > 920 && isOpen()) close();
   });
 
+
+  // Dropdown panels: click a menu item to open its panel, click again, outside or press Escape to close
+  var items = [].slice.call(document.querySelectorAll('.nav-item'));
+  function closePanels(except) {
+    items.forEach(function (it) {
+      if (it === except) return;
+      it.classList.remove('open');
+      var b = it.querySelector('.nav-top'); if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+  items.forEach(function (it) {
+    var b = it.querySelector('.nav-top');
+    if (!b) return;
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var willOpen = !it.classList.contains('open');
+      closePanels(it);
+      it.classList.toggle('open', willOpen);
+      b.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+    it.querySelectorAll('.nav-panel a').forEach(function (a) { a.addEventListener('click', function () { closePanels(); }); });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.nav-item')) closePanels(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePanels(); });
+  window.addEventListener('resize', function () { closePanels(); });
+
   // Back to top button on every page, shown after scrolling down
   {
     var up = document.createElement('button');

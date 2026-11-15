@@ -203,6 +203,7 @@ if (spySections.length && 'IntersectionObserver' in window) {
       if (!entry.isIntersecting) return
       const id = spyAlias['#' + entry.target.id] || '#' + entry.target.id
       spyLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === id))
+      document.querySelectorAll('.nav-item').forEach(it => { const t = it.querySelector('.nav-top'); if (t) t.classList.toggle('is-active', !!it.querySelector('a.is-active')) })
     })
   }, { rootMargin: '-45% 0px -50% 0px' })
   spySections.forEach(sec => spy.observe(sec))

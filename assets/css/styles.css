@@ -3804,3 +3804,63 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .bl-desc { font-size: .9rem; line-height: 1.5; margin-bottom: 10px; }
 }
 [data-theme="dark"] .bl-desc, [data-theme="dark"] .bl-author small { color: #A8B5C7; }
+
+/* ── Nav dropdowns: click a menu item to open its panel ── */
+.nav-links > .nav-item { position: static; animation: navLinkIn .5s ease both; }
+.nav-top {
+  display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0; background: none; border: 0; cursor: pointer;
+  font-family: 'Avenir Next', Avenir, 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: .9rem; font-weight: 500; line-height: 1; color: var(--dark3); white-space: nowrap; transition: color .2s ease;
+}
+.nav-top:hover, .nav-item.open .nav-top { color: var(--dark); }
+.nav-top.is-current, .nav-top.is-active, .nav-item.open .nav-top { color: #0284C7; }
+.nav-chev { flex-shrink: 0; transition: transform .2s ease; }
+.nav-item.open .nav-chev { transform: rotate(180deg); }
+.nav-panel { display: none; position: absolute; left: 0; right: 0; top: 100%; z-index: 99; background: var(--white); border-bottom: 1px solid var(--gray-200); box-shadow: 0 16px 30px rgba(15,23,42,.1); }
+.nav-item.open .nav-panel { display: block; animation: navPanelIn .18s ease both; }
+@keyframes navPanelIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.nav-panel-in { max-width: var(--max); margin: 0 auto; padding: 28px 24px 32px; display: flex; flex-wrap: wrap; gap: 28px 64px; }
+.nav-col { min-width: 210px; max-width: 360px; }
+.nav-col-hd { position: relative; margin: 0 0 14px; padding-bottom: 8px; font-size: 1.02rem; font-weight: 700; color: var(--dark); }
+.nav-col-hd::after { content: ""; position: absolute; left: 0; bottom: 0; width: 28px; height: 3px; border-radius: 2px; background: #F59E0B; }
+.nav-links .nav-panel a { display: block; height: auto; padding: 7px 0; font-size: .95rem; font-weight: 400; line-height: 1.4; color: var(--dark3); white-space: normal; animation: none; }
+.nav-links .nav-panel a::after { display: none; }
+.nav-links .nav-panel a:hover, .nav-links .nav-panel a[aria-current="page"], .nav-links .nav-panel a.is-active { color: #0284C7; text-decoration: none; }
+[data-theme="dark"] .nav-panel { background: #0F172A; border-color: #334155; box-shadow: 0 16px 30px rgba(0,0,0,.45); }
+[data-theme="dark"] .nav-top { color: #94A3B8; }
+[data-theme="dark"] .nav-top:hover, [data-theme="dark"] .nav-item.open .nav-top { color: #F1F5F9; }
+[data-theme="dark"] .nav-top.is-current, [data-theme="dark"] .nav-top.is-active { color: #38BDF8; }
+[data-theme="dark"] .nav-col-hd { color: #F1F5F9; }
+[data-theme="dark"] .nav-links .nav-panel a { color: #CBD5E1; }
+[data-theme="dark"] .nav-links .nav-panel a:hover, [data-theme="dark"] .nav-links .nav-panel a[aria-current="page"], [data-theme="dark"] .nav-links .nav-panel a.is-active { color: #38BDF8; }
+@media (min-width: 921px) and (max-width: 1100px) { .nav-top { font-size: .85rem; gap: 4px; } .nav-links { gap: 14px; } }
+@media (max-width: 920px) {
+  .nav-links > .nav-item { border-bottom: 1px solid var(--gray-100); }
+  .nav-top { width: 100%; justify-content: space-between; height: auto; padding: 12px 0; font-size: 1rem; }
+  .nav-panel { position: static; box-shadow: none; border: 0; background: none; }
+  .nav-item.open .nav-panel { animation: none; }
+  .nav-panel-in { display: block; padding: 0 0 10px 12px; }
+  .nav-col { min-width: 0; max-width: none; }
+  .nav-col-hd { margin: 8px 0 2px; padding: 0; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-500); }
+  .nav-col-hd::after { display: none; }
+  .nav-links .nav-panel a { padding: 10px 0; border-bottom: 0; font-size: .95rem; }
+  [data-theme="dark"] .nav-links > .nav-item { border-bottom-color: #1E293B; }
+  [data-theme="dark"] .nav-col-hd { color: #94A3B8; }
+  [data-theme="dark"] .nav-panel { background: none; box-shadow: none; }
+}
+
+/* ── Previous / next cards at the foot of top level pages: smaller and lower ── */
+.pg-pager { padding-top: 88px; padding-bottom: 12px; }
+.pg-pager .pp-pager { max-width: 620px; gap: 10px; }
+.pg-pager .pp-pager-link { padding: 10px 16px; gap: 2px; }
+.pg-pager .pp-pager-dir { font-size: .68rem; }
+.pg-pager .pp-pager-title { font-size: .95rem; }
+.pg-pager .pp-pager-desc { font-size: .8rem; line-height: 1.4; }
+@keyframes navItemIn { from { opacity: 0; } to { opacity: 1; } }
+.nav-links > .nav-item { animation: navItemIn .5s ease both; }
+.nav-col-hd, .nav-top { font-family: 'Avenir Next', Avenir, 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+@media (prefers-reduced-motion: reduce) { .nav-links > .nav-item { animation: none; } }
+@media (max-width: 920px) {
+  .nav-links.active { grid-template-columns: 1fr; max-height: calc(100vh - 72px); overflow-y: auto; }
+  .nav-links.active > a { min-height: 44px; }
+}

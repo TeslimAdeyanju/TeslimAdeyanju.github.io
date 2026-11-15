@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261116n" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261116o" />
   <!-- GDPR Cookie Banner -->
   <style>
     .gdpr-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30,30,30,0.95); color: #fff; padding: 20px; text-align: center; z-index: 9999; font-size: 14px; }
@@ -66,7 +66,6 @@
         <a href="index.html#projects">Projects</a>
         <a href="index.html#experience">Experience</a>
         <a href="index.html#certifications">Certifications</a>
-        <a href="study-notes.html">Study Notes</a>
         <a href="blog.html" aria-current="page">Blog</a>
         <a href="index.html#connect">Contact</a>
       </nav>
@@ -101,7 +100,7 @@
 
       <div class="bl-intro">
         <p>Welcome to my blog for finance teams, analysts and anyone learning data skills.</p>
-        <p>I share short, practical notes on Power BI, SQL, Python and finance analytics: a query pattern that solved a real problem, a Power BI trick that saved me an hour, a concept explained the way I wish someone had explained it to me. Posts are grouped by subject, and my longer study notes live on the <a href="study-notes.html">Study Notes page</a>.</p>
+        <p>I share short, practical notes on Power BI, SQL, Python and finance analytics: a query pattern that solved a real problem, a Power BI trick that saved me an hour, a concept explained the way I wish someone had explained it to me. Posts are grouped by subject, and my study notes and learning journals are under the Study Notes tab.</p>
       </div>
 
       <div class="bl-grid" id="bl-grid">
@@ -141,44 +140,190 @@
             <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
           </div>
         </a>
-        <a href="study-notes.html" class="bl-card" data-cat="notes" hidden>
-          <div class="bl-author"><img src="assets/img/photo.JPG" alt="" width="40" height="40" loading="lazy" /><span><strong>Teslim Adeyanju</strong><small>Financial Data Analyst</small></span></div>
-          <div class="bl-cover bl-cover-notes"><svg class="bl-art" viewBox="0 0 200 120" aria-hidden="true"><use href="#art-notes"/></svg><div class="bl-tags"><span class="bl-tag">Study notes</span><span class="bl-tag">Learning</span></div></div>
-          <div class="bl-body">
-            <h2 class="bl-title">Study Notes</h2>
-            <p class="bl-desc">Learning journals on GitHub, a Notion library of study notes and a library of 100+ podcast clips, all in one place.</p>
-            <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
-          </div>
-        </a>
-        <a href="https://adeyanjuteslim.notion.site/261807ec796380898cf1d03946fd8c6a?v=261807ec796381588a6d000cd9a82d8a" target="_blank" rel="noopener" class="bl-card" data-cat="notes" hidden>
-          <div class="bl-author"><img src="assets/img/photo.JPG" alt="" width="40" height="40" loading="lazy" /><span><strong>Teslim Adeyanju</strong><small>Financial Data Analyst</small></span></div>
-          <div class="bl-cover bl-cover-notes"><svg class="bl-art" viewBox="0 0 200 120" aria-hidden="true"><use href="#art-notes"/></svg><div class="bl-tags"><span class="bl-tag">Notion</span><span class="bl-tag">Notes</span></div></div>
-          <div class="bl-body">
-            <h2 class="bl-title">Study Notes Library on Notion</h2>
-            <p class="bl-desc">Course notes, worked examples and short guides on MySQL, DAX, Python and Power BI, kept in one place and updated as I learn.</p>
-            <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
-          </div>
-        </a>
       </div>
-      <p class="bl-empty" id="bl-empty" hidden>New posts on this subject are on the way. In the meantime, browse <a href="#" data-filter-link="all">all topics</a> or open my <a href="study-notes.html">Study Notes</a>.</p>
+      <p class="bl-empty" id="bl-empty" hidden>New posts on this subject are on the way. In the meantime, browse <a href="#" data-filter-link="all">all topics</a> or open the <a href="#notes" data-filter-link="notes">Study Notes</a> tab.</p>
     </div>
   </section>
+  <!-- ══ STUDY NOTES TAB ══ -->
+  <div id="bl-notes" class="bl-notes" hidden>
+    <div class="container">
+      <div class="bl-notes-hd">
+        <h2 class="bl-notes-title">Study Notes</h2>
+        <p>Six open learning journals on GitHub, two more on the way, a Notion library of study notes and 100+ podcast clips</p>
+      </div>
+    </div>
+  <!-- ══ STUDY JOURNALS ══ -->
+  <section class="ap-main bl-notes-main">
+    <div class="container">
+
+      <section class="ap-group tk-py" id="languages" aria-labelledby="ap-languages">
+        <div class="ap-group-hd">
+          <h2 id="ap-languages">Languages and Databases</h2>
+          <p>Python, MySQL and R, learned course by course with worked projects.</p>
+        </div>
+        <div class="ap-grid" data-layout="t">
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="https://github.com/UthmanAdeyanju/studybook-python-for-finance-and-data-science" target="_blank" rel="noopener">Python for Finance<span class="sr-only"> (opens on GitHub)</span></a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+            </div>
+            <p class="ap-card-desc">A learning journal that runs from Python basics to pandas and data visualisation, organised by course and topic with worked projects.</p>
+            <ul class="ap-facts"><li>DataCamp Python track, including Netflix and New York schools projects</li><li>Core Python, NumPy, pandas and plotting in separate folders</li><li>Personal projects in object oriented programming and OpenML experiments</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">Python</span><span class="ptag pt-green">Pandas</span><span class="ptag pt-purple">NumPy</span></div>
+          </article>
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="https://github.com/UthmanAdeyanju/studybook-sql-for-finance-and-data-science" target="_blank" rel="noopener">MySQL for Finance<span class="sr-only"> (opens on GitHub)</span></a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+            </div>
+            <p class="ap-card-desc">A MySQL learning journal in five parts, from DataCamp courses and tutorial modules to question banks and time series analysis in SQL.</p>
+            <ul class="ap-facts"><li>DataCamp courses from introductory SQL to window functions</li><li>Tutorial modules for basics, functions and advanced stored programs</li><li>Question and answer sets, plus a time series analysis chapter</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">MySQL</span><span class="ptag pt-green">SQL</span><span class="ptag pt-purple">Analytics</span></div>
+          </article>
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="https://github.com/UthmanAdeyanju/studybook-r-for-finance-and-data-science" target="_blank" rel="noopener">R for Finance<span class="sr-only"> (opens on GitHub)</span></a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+            </div>
+            <p class="ap-card-desc">Three learning tracks in R: R for Data Science, an R programming bootcamp and applied statistics.</p>
+            <ul class="ap-facts"><li>ggplot2, dplyr and tidyr from the tidyverse</li><li>Data types, data structures, flow control and functions</li><li>Applied statistics with R</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">R</span><span class="ptag pt-green">Statistics</span><span class="ptag pt-purple">Visualisation</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ap-group tk-ai" id="ml-ai" aria-labelledby="ap-ml-ai">
+        <div class="ap-group-hd">
+          <h2 id="ap-ml-ai">Machine Learning and AI</h2>
+          <p>Prediction models and language models, built step by step from course material.</p>
+        </div>
+        <div class="ap-grid" data-layout="h">
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="https://github.com/TeslimAdeyanju/ML-Financial-Analysis" target="_blank" rel="noopener">Machine Learning for Finance<span class="sr-only"> (opens on GitHub)</span></a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+            </div>
+            <p class="ap-card-desc">Seven modules following the DataTalks.Club Machine Learning Zoomcamp, from regression and classification to a deployed model.</p>
+            <ul class="ap-facts"><li>Regression, classification and evaluation metrics</li><li>Decision trees, random forests and boosting</li><li>Flask service with a Dockerfile for model deployment</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">Scikit-learn</span><span class="ptag pt-green">Flask</span><span class="ptag pt-purple">Docker</span></div>
+          </article>
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="https://github.com/UthmanAdeyanju/studybook-llm-for-finance-and-data-science" target="_blank" rel="noopener">LLMs for Finance<span class="sr-only"> (opens on GitHub)</span></a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+            </div>
+            <p class="ap-card-desc">Hands on notes from PyTorch fundamentals through building a language model, with course and workshop material and a generative AI module.</p>
+            <ul class="ap-facts"><li>PyTorch tensors, autograd and image segmentation</li><li>freeCodeCamp course and a build a language model project</li><li>Sebastian Raschka workshop and generative AI materials</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">LLM</span><span class="ptag pt-green">PyTorch</span><span class="ptag pt-purple">GenAI</span></div>
+          </article>
+        </div>
+      </section>
+
+      <div class="notes-inline" id="notion-notes" role="region" aria-labelledby="notes-title">
+        <div class="pod-card fade-in-up">
+          <div class="pod-stat">
+            <span class="pod-num">Notion</span>
+            <span class="pod-stat-label">Searchable study notes library</span>
+          </div>
+          <div class="pod-body">
+            <p class="pod-kicker">Study notes library</p>
+            <h2 class="pod-title" id="notes-title">My study notes, organised and open in Notion</h2>
+            <p class="pod-desc">Course notes, worked examples and short guides on MySQL, DAX, Python and Power BI, kept in one place and updated as I learn. Selected notes are turned into posts on the blog.</p>
+            <div class="ptags">
+              <span class="ptag pt-blue">SQL</span>
+              <span class="ptag pt-orange">Power BI</span>
+              <span class="ptag pt-purple">DAX</span>
+              <span class="ptag pt-green">Python</span>
+            </div>
+          </div>
+          <a class="pod-btn" href="https://adeyanjuteslim.notion.site/261807ec796380898cf1d03946fd8c6a?v=261807ec796381588a6d000cd9a82d8a" target="_blank" rel="noopener">Open the study notes<span class="sr-only"> (opens in Notion)</span></a>
+        </div>
+      </div>
+
+      <section class="ap-group tk-fin" id="ongoing" aria-labelledby="ap-ongoing">
+        <div class="ap-group-hd">
+          <h2 id="ap-ongoing">Ongoing and Coming Next</h2>
+          <p>A daily learning log, plus two journals still being planned.</p>
+        </div>
+        <div class="ap-grid" data-layout="t">
+          <article class="ap-card">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title"><a href="https://github.com/UthmanAdeyanju/daily-learning-journey" target="_blank" rel="noopener">Daily Learning Journey<span class="sr-only"> (opens on GitHub)</span></a></h3>
+              <span class="ap-card-foot" aria-hidden="true"><span class="gh-pill gh-pill-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></span></span>
+            </div>
+            <p class="ap-card-desc">An automatically updated log of daily learning activity, kept to build a consistent study habit.</p>
+            <ul class="ap-facts"><li>Each session recorded as a daily log</li><li>Updated automatically, with the latest session summarised</li><li>Covers machine learning and financial modelling topics</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">Learning log</span><span class="ptag pt-green">Automation</span></div>
+          </article>
+          <article class="ap-card ap-soon">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title">Advanced Excel for Finance</h3>
+              <span class="ap-soon-pill">Coming soon</span>
+            </div>
+            <p class="ap-card-desc">Planned journal on advanced Excel for finance reporting.</p>
+            <ul class="ap-facts"><li>Pivot tables and power functions</li><li>Financial modelling</li><li>VBA automation</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">Excel</span><span class="ptag pt-green">VBA</span><span class="ptag pt-purple">Modelling</span></div>
+          </article>
+          <article class="ap-card ap-soon">
+            <div class="ap-card-hd">
+              <h3 class="ap-card-title">Power BI &amp; DAX for Finance</h3>
+              <span class="ap-soon-pill">Coming soon</span>
+            </div>
+            <p class="ap-card-desc">Planned journal on Power BI and DAX for management reporting.</p>
+            <ul class="ap-facts"><li>Financial dashboards and KPI design</li><li>DAX measures</li><li>Power Query transformations</li></ul>
+            <div class="ptags"><span class="ptag pt-blue">Power BI</span><span class="ptag pt-green">DAX</span><span class="ptag pt-purple">Power Query</span></div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ══ PODCAST LEARNING LIBRARY (featured) ══ -->
+  <section class="pod-band" id="podcasts" aria-labelledby="pod-title">
+    <div class="container">
+      <div class="pod-card fade-in-up">
+        <div class="pod-stat">
+          <span class="ls-stat-number pod-num" data-count="100" data-suffix="+">100+</span>
+          <span class="pod-stat-label">Podcast episodes clipped and tagged</span>
+        </div>
+        <div class="pod-body">
+          <p class="pod-kicker">Podcast learning library</p>
+          <h2 class="pod-title" id="pod-title">Podcast clips, tagged and searchable in Notion</h2>
+          <p class="pod-desc">Every episode is clipped, tagged by topic and linked, so what I learn is easy to find and apply.</p>
+          <div class="ptags">
+            <span class="ptag pt-blue">AI</span>
+            <span class="ptag pt-green">Finance</span>
+            <span class="ptag pt-purple">Career strategy</span>
+            <span class="ptag pt-orange">Data science</span>
+          </div>
+        </div>
+        <a class="pod-btn" href="https://adeyanjuteslim.notion.site/1ba807ec7963811c8419d72774689105?v=1ba807ec796381f7bb81000c5eda893e&amp;utm_source=portfolio&amp;utm_medium=link&amp;utm_campaign=learning_system" target="_blank" rel="noopener">Browse the podcast clips<span class="sr-only"> (opens in Notion)</span></a>
+      </div>
+    </div>
+  </section>
+  </div>
   <script>
     (function () {
       var pills = document.querySelectorAll('.bl-pill[data-filter]');
       var cards = document.querySelectorAll('.bl-card');
+      var grid = document.getElementById('bl-grid');
+      var notes = document.getElementById('bl-notes');
       var empty = document.getElementById('bl-empty');
       function show(f) {
         var n = 0;
-        cards.forEach(function (c) { var cat = c.getAttribute('data-cat'); var ok = f === 'all' ? cat !== 'notes' : cat === f; c.hidden = !ok; if (ok) n++; });
+        cards.forEach(function (c) { var ok = f === 'all' || c.getAttribute('data-cat') === f; c.hidden = !ok; if (ok) n++; });
         pills.forEach(function (p) { p.setAttribute('aria-pressed', p.getAttribute('data-filter') === f ? 'true' : 'false'); });
-        empty.hidden = n > 0;
+        var isNotes = f === 'notes';
+        grid.hidden = isNotes; notes.hidden = !isNotes;
+        empty.hidden = isNotes || n > 0;
         history.replaceState(null, '', f === 'all' ? location.pathname : '#' + f);
       }
       pills.forEach(function (p) { p.addEventListener('click', function () { show(p.getAttribute('data-filter')); }); });
-      var link = document.querySelector('[data-filter-link]');
-      if (link) link.addEventListener('click', function (e) { e.preventDefault(); show('all'); });
+      document.querySelectorAll('[data-filter-link]').forEach(function (l) {
+        l.addEventListener('click', function (e) { e.preventDefault(); show(l.getAttribute('data-filter-link')); });
+      });
       var h = location.hash.slice(1);
+      if (h === 'study-notes') h = 'notes';
       if (h && document.querySelector('.bl-pill[data-filter="' + h + '"]')) show(h);
     })();
   </script>
@@ -188,7 +333,7 @@
   <section class="about-section pg-pager">
     <div class="container">
       <nav class="pp-pager" aria-label="Continue exploring">
-        <a class="pp-pager-link pp-prev" href="study-notes.html"><span class="pp-pager-dir">← Previous</span><span class="pp-pager-title">Study Notes</span><span class="pp-pager-desc">Open learning journals on GitHub.</span></a>
+        <a class="pp-pager-link pp-prev" href="portfolio.html"><span class="pp-pager-dir">← Previous</span><span class="pp-pager-title">Portfolio</span><span class="pp-pager-desc">Every other project on GitHub, grouped by skill.</span></a>
         <a class="pp-pager-link pp-next" href="index.html#connect"><span class="pp-pager-dir">Next →</span><span class="pp-pager-title">Get in touch</span><span class="pp-pager-desc">Talk about finance analytics, reporting or data roles.</span></a>
       </nav>
     </div>
@@ -285,7 +430,7 @@
     }
   </script>
 
-  <script src="assets/js/network-bg.js?v=20261116n"></script>
-  <script src="assets/js/nav-menu.js?v=20261116n"></script>
+  <script src="assets/js/network-bg.js?v=20261116o"></script>
+  <script src="assets/js/nav-menu.js?v=20261116o"></script>
 </body>
 </html>

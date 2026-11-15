@@ -3758,3 +3758,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 .bl-cover-notes { background: linear-gradient(135deg, #CCFBF1, #99F6E4); }
 [data-theme="dark"] .bl-cover-notes { background: linear-gradient(135deg, #115E59, #0F766E); }
 .notes-inline { margin: 32px 0 48px; }
+.bl-notes[hidden], .bl-grid[hidden] { display: none; }
+.bl-notes-hd { text-align: center; padding: 6px 0 4px; }
+.bl-notes-title { font-family: 'EB Garamond', Garamond, Georgia, serif; font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 500; color: var(--dark); margin: 0 0 6px; }
+.bl-notes-hd p { color: var(--gray-500); margin: 0 auto; max-width: 640px; line-height: 1.6; }
+[data-theme="dark"] .bl-notes-title { color: #F1F5F9; }
+.bl-notes-main { padding-top: 24px; }

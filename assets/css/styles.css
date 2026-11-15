@@ -3599,3 +3599,6 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (max-width: 700px) {
   .proj-gh, .gh-pill, .gh-pill-sm, .proj-links a.gh-pill { min-height: 40px; padding: 8px 16px; }
 }
+
+/* ── Homepage About: heading sized to the paragraph column ── */
+.ab-section .s-title { font-size: clamp(1.35rem, 1.75vw, 1.6rem); max-width: 72ch; margin-left: auto; margin-right: auto; text-align: center; text-wrap: balance; }

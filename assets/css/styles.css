@@ -3578,3 +3578,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .social-line a + a::before { left: -3px; }
 }
 .social-line a + a::before { left: 0; transform: translate(-50%, -52%); }
+
+/* ── Homepage About: justified paragraphs ── */
+.ab-text p:not(.ab-cta) { text-align: justify; hyphens: none; text-wrap: wrap; word-spacing: -.02em; }
+.ab-text .ab-cta { text-align: left; }
+@media (max-width: 700px) { .ab-text { text-align: justify; } .ab-text .ab-cta { text-align: left; } }

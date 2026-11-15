@@ -3470,3 +3470,13 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .about-section .content-block .about-list li { padding-left: 20px; font-size: .95rem; line-height: 1.65; }
   .about-section .content-block .about-list li::before { left: 2px; width: 6px; height: 6px; top: .72em; }
 }
+
+/* ── About: readable story text on desktop ── */
+@media (min-width: 641px) {
+  .about-section .content-block { max-width: 760px; }
+  .about-section .content-block p,
+  .about-section .content-block .about-list li { font-size: 1.125rem; line-height: 1.75; word-spacing: -.01em; }
+  .about-section .content-block .intro-text { font-size: 1.22rem !important; line-height: 1.7 !important; }
+  .about-section .content-block .approach-callout p { font-size: 1.1rem; }
+  .about-section .content-block.block-center { max-width: 800px; }
+}

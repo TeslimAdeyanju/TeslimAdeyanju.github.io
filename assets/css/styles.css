@@ -3543,3 +3543,11 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (max-width: 700px) {
   .hero.hero-net { min-height: calc(100vh - 64px); min-height: calc(100svh - 64px); padding: 40px 0; display: flex; flex-direction: column; justify-content: center; }
 }
+
+/* ── Project descriptions: justified, filling the card width ── */
+.proj-desc, .proj-more .proj-desc, .ap-card-desc { text-align: justify; text-wrap: wrap; hyphens: none; word-spacing: -.02em; }
+.proj-impact { text-wrap: balance; }
+@media (max-width: 700px) {
+  .proj-desc, .proj-more .proj-desc, .ap-card-desc { font-size: .93rem; line-height: 1.6; text-wrap: wrap; }
+  .proj-featured .proj-impact { font-size: 1rem; }
+}

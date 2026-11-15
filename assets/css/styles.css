@@ -3602,3 +3602,12 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 /* ── Homepage About: heading sized to the paragraph column ── */
 .ab-section .s-title { font-size: clamp(1.35rem, 1.75vw, 1.6rem); max-width: 72ch; margin-left: auto; margin-right: auto; text-align: center; text-wrap: balance; }
+
+/* ── Homepage About: polished header that spans the text column ── */
+.ab-section .eyebrow { margin-bottom: 10px; }
+.ab-section .s-title { font-size: clamp(1.4rem, 1.2rem + .7vw, 1.68rem); font-weight: 500; line-height: 1.25; letter-spacing: -.005em; margin-bottom: 0; }
+.ab-section .s-title::after { content: ""; display: block; width: 56px; height: 3px; margin: 16px auto 0; border-radius: 3px; background: linear-gradient(90deg, #38BDF8, #6366F1); }
+.ab-section .ab-wrap { margin-top: 26px; }
+@media (max-width: 700px) { .ab-section .s-title { font-size: 1.4rem; } .ab-section .s-title::after { width: 44px; margin-top: 12px; } }
+.ab-section .s-title { font-size: 1.55rem; }
+@media (max-width: 700px) { .ab-section .s-title { font-size: 1.32rem; } }

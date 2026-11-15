@@ -3557,3 +3557,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .proj-more .ptags { display: flex; flex-wrap: wrap; gap: 8px; }
   .proj-more .ptags .ptag { flex: 1 1 auto; text-align: center; margin: 0; }
 }
+
+/* ── Contact cards: full handle text on small screens ── */
+.social-card .sc-handle { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .social-grid { grid-template-columns: 1fr; }
+}

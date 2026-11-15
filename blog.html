@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261116j" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261116k" />
   <!-- GDPR Cookie Banner -->
   <style>
     .gdpr-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30,30,30,0.95); color: #fff; padding: 20px; text-align: center; z-index: 9999; font-size: 14px; }
@@ -74,64 +74,95 @@
     </div>
   </header>
 
-  <!-- ══ HERO SECTION ══ -->
-  <section class="about-hero">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="art-power-bi" viewBox="0 0 200 120"><rect x="46" y="62" width="22" height="40" rx="4" fill="#FBBF24"/><rect x="78" y="40" width="22" height="62" rx="4" fill="#F59E0B"/><rect x="110" y="52" width="22" height="50" rx="4" fill="#FCD34D"/><rect x="142" y="22" width="22" height="80" rx="4" fill="#D97706"/><path d="M40 54 L82 34 L118 44 L156 14" fill="none" stroke="#92400E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="156" cy="14" r="5" fill="#92400E"/></symbol>
+      <symbol id="art-sql" viewBox="0 0 200 120"><g fill="#60A5FA" stroke="#1D4ED8" stroke-width="3"><path d="M64 28v20c0 7 16 12 36 12s36-5 36-12V28"/><path d="M64 48v20c0 7 16 12 36 12s36-5 36-12V48"/><path d="M64 68v20c0 7 16 12 36 12s36-5 36-12V68"/></g><ellipse cx="100" cy="28" rx="36" ry="12" fill="#BFDBFE" stroke="#1D4ED8" stroke-width="3"/></symbol>
+      <symbol id="art-python" viewBox="0 0 200 120"><g fill="none" stroke="#047857" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M72 36 L46 60 L72 84"/><path d="M128 36 L154 60 L128 84"/></g><path d="M110 30 L90 92" stroke="#10B981" stroke-width="9" stroke-linecap="round"/></symbol>
+      <symbol id="art-finance" viewBox="0 0 200 120"><path d="M30 96 H170" stroke="#6D28D9" stroke-width="3" stroke-linecap="round"/><path d="M36 84 L70 62 L98 72 L134 38 L166 28" fill="none" stroke="#7C3AED" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="150" cy="70" r="20" fill="#DDD6FE" stroke="#7C3AED" stroke-width="4"/><text x="150" y="78" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#5B21B6">£</text></symbol>
+    </defs>
+  </svg>
+
+  <!-- ══ BLOG INDEX ══ -->
+  <section class="bl-page">
     <div class="container">
-      <div class="hero-content fade-in">
-        <h1 class="hero-title">Blog</h1>
-        <p class="hero-subtitle">Short, practical write-ups on SQL, Power BI, and finance data analytics</p>
+      <nav class="bl-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">›</span><span aria-current="page">Blog</span></nav>
+      <h1 class="bl-h1">Finance &amp; Data Analytics Blog</h1>
+
+      <div class="bl-pills" role="group" aria-label="Filter posts by subject">
+        <button type="button" class="bl-pill" data-filter="all" aria-pressed="true">All topics</button>
+        <button type="button" class="bl-pill" data-filter="power-bi" aria-pressed="false">Power BI &amp; DAX</button>
+        <button type="button" class="bl-pill" data-filter="sql" aria-pressed="false">SQL &amp; Databases</button>
+        <button type="button" class="bl-pill" data-filter="python" aria-pressed="false">Python &amp; Automation</button>
+        <button type="button" class="bl-pill" data-filter="finance" aria-pressed="false">Finance &amp; Accounting</button>
+        <a class="bl-pill bl-pill-ext" href="https://adeyanjuteslim.notion.site/261807ec796380898cf1d03946fd8c6a?v=261807ec796381588a6d000cd9a82d8a" target="_blank" rel="noopener">Study Notes ↗</a>
       </div>
+
+      <div class="bl-intro">
+        <p>Welcome to my blog for finance teams, analysts and anyone learning data skills.</p>
+        <p>I share short, practical notes on Power BI, SQL, Python and finance analytics: a query pattern that solved a real problem, a Power BI trick that saved me an hour, a concept explained the way I wish someone had explained it to me. Posts are grouped by subject, and my longer study notes live in Notion under the Study Notes tab.</p>
+      </div>
+
+      <div class="bl-grid" id="bl-grid">
+        <a href="blog/powerbi-null-dates.html" class="bl-card" data-cat="power-bi">
+          <div class="bl-author"><img src="assets/img/photo.JPG" alt="" width="40" height="40" loading="lazy" /><span><strong>Teslim Adeyanju</strong><small>Financial Data Analyst</small></span></div>
+          <div class="bl-cover bl-cover-power-bi"><svg class="bl-art" viewBox="0 0 200 120" aria-hidden="true"><use href="#art-power-bi"/></svg><div class="bl-tags"><span class="bl-tag">Power BI</span><span class="bl-tag">Power Query</span></div></div>
+          <div class="bl-body">
+            <h2 class="bl-title">Handling Null Values in Power Query Date Conversions</h2>
+            <p class="bl-desc">Why text to date conversions return nulls, and how to fix them with Change Type using Locale, data cleaning and M code.</p>
+            <div class="bl-foot"><time class="bl-date">15 Nov 2026</time><span class="bl-arrow" aria-hidden="true">→</span></div>
+          </div>
+        </a>
+        <a href="https://adeyanjuteslim.co.uk/powerbi-pivoting-multiple-value" target="_blank" rel="noopener" class="bl-card" data-cat="power-bi">
+          <div class="bl-author"><img src="assets/img/photo.JPG" alt="" width="40" height="40" loading="lazy" /><span><strong>Teslim Adeyanju</strong><small>Financial Data Analyst</small></span></div>
+          <div class="bl-cover bl-cover-power-bi"><svg class="bl-art" viewBox="0 0 200 120" aria-hidden="true"><use href="#art-power-bi"/></svg><div class="bl-tags"><span class="bl-tag">Power BI</span><span class="bl-tag">Power Query</span></div></div>
+          <div class="bl-body">
+            <h2 class="bl-title">Pivoting Multiple Value Columns in Power BI</h2>
+            <p class="bl-desc">A practical approach to pivoting more than one value column in Power Query without losing row level detail.</p>
+            <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
+          </div>
+        </a>
+        <a href="https://adeyanjuteslim.co.uk/mysql-exists" target="_blank" rel="noopener" class="bl-card" data-cat="sql">
+          <div class="bl-author"><img src="assets/img/photo.JPG" alt="" width="40" height="40" loading="lazy" /><span><strong>Teslim Adeyanju</strong><small>Financial Data Analyst</small></span></div>
+          <div class="bl-cover bl-cover-sql"><svg class="bl-art" viewBox="0 0 200 120" aria-hidden="true"><use href="#art-sql"/></svg><div class="bl-tags"><span class="bl-tag">SQL</span><span class="bl-tag">MySQL</span></div></div>
+          <div class="bl-body">
+            <h2 class="bl-title">MySQL EXISTS Operator</h2>
+            <p class="bl-desc">What the EXISTS operator does, how it differs from IN, and when to reach for it in analytical queries.</p>
+            <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
+          </div>
+        </a>
+        <a href="https://adeyanjuteslim.co.uk/mysql-union" target="_blank" rel="noopener" class="bl-card" data-cat="sql">
+          <div class="bl-author"><img src="assets/img/photo.JPG" alt="" width="40" height="40" loading="lazy" /><span><strong>Teslim Adeyanju</strong><small>Financial Data Analyst</small></span></div>
+          <div class="bl-cover bl-cover-sql"><svg class="bl-art" viewBox="0 0 200 120" aria-hidden="true"><use href="#art-sql"/></svg><div class="bl-tags"><span class="bl-tag">SQL</span><span class="bl-tag">MySQL</span></div></div>
+          <div class="bl-body">
+            <h2 class="bl-title">MySQL UNION</h2>
+            <p class="bl-desc">Combining result sets with UNION and UNION ALL: the difference, the performance trade off, and when each applies.</p>
+            <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
+          </div>
+        </a>
+      </div>
+      <p class="bl-empty" id="bl-empty" hidden>New posts on this subject are on the way. In the meantime, browse <a href="#" data-filter-link="all">all topics</a> or open my <a href="https://adeyanjuteslim.notion.site/261807ec796380898cf1d03946fd8c6a?v=261807ec796381588a6d000cd9a82d8a" target="_blank" rel="noopener">Study Notes on Notion</a>.</p>
     </div>
   </section>
-
-  <!-- ══ INTRO + BLOG LIST ══ -->
-  <section class="about-section blog-section">
-    <div class="container">
-      <div class="content-block fade-in-up blog-intro">
-        <p>I regularly share short technical notes on LinkedIn — a query pattern that solved a real problem, a Power BI trick that saved me an hour, a concept explained the way I wish someone had explained it to me. This page collects every one of them in a single place, and gets a new entry each time I publish.</p>
-      </div>
-      <div class="blog-list">
-
-        <a href="https://adeyanjuteslim.co.uk/mysql-exists" target="_blank" rel="noopener" class="blog-entry fade-in-up" style="--ac:#3B82F6; --delay: 0.1s">
-          <div class="blog-entry-tags"><span class="blog-tag">SQL</span><span class="blog-tag">MySQL</span></div>
-          <h3 class="blog-entry-title">MySQL EXISTS Operator</h3>
-          <p class="blog-entry-desc">What the EXISTS operator does, how it differs from IN, and when to reach for it in analytical queries.</p>
-          <span class="blog-entry-arrow">Read the full post →</span>
-        </a>
-
-        <a href="https://adeyanjuteslim.co.uk/mysql-union" target="_blank" rel="noopener" class="blog-entry fade-in-up" style="--ac:#3B82F6; --delay: 0.18s">
-          <div class="blog-entry-tags"><span class="blog-tag">SQL</span><span class="blog-tag">MySQL</span></div>
-          <h3 class="blog-entry-title">MySQL UNION</h3>
-          <p class="blog-entry-desc">Combining result sets with UNION and UNION ALL — the difference, the performance trade-off, and when each applies.</p>
-          <span class="blog-entry-arrow">Read the full post →</span>
-        </a>
-
-        <a href="https://adeyanjuteslim.co.uk/powerbi-pivoting-multiple-value" target="_blank" rel="noopener" class="blog-entry fade-in-up" style="--ac:#F59E0B; --delay: 0.26s">
-          <div class="blog-entry-tags"><span class="blog-tag">Power BI</span><span class="blog-tag">Power Query</span></div>
-          <h3 class="blog-entry-title">Pivoting Multiple Value Columns in Power BI</h3>
-          <p class="blog-entry-desc">A practical approach to pivoting more than one value column in Power Query without losing row-level detail.</p>
-          <span class="blog-entry-arrow">Read the full post →</span>
-        </a>
-
-
-        <a href="blog/powerbi-null-dates.html" class="blog-entry fade-in-up" style="--ac:#F59E0B; --delay: 0.34s">
-          <div class="blog-entry-tags"><span class="blog-tag">Power BI</span><span class="blog-tag">Power Query</span></div>
-          <h3 class="blog-entry-title">Handling Null Values in Power Query Date Conversions</h3>
-          <p class="blog-entry-desc">Why text to date conversions return nulls, and how to fix them with Change Type using Locale, data cleaning and M code.</p>
-          <span class="blog-entry-arrow">Read the full post →</span>
-        </a>
-
-
-        <a href="https://adeyanjuteslim.notion.site/261807ec796380898cf1d03946fd8c6a?v=261807ec796381588a6d000cd9a82d8a" target="_blank" rel="noopener" class="blog-entry fade-in-up" style="--ac:#8B5CF6; --delay: 0.42s">
-          <div class="blog-entry-tags"><span class="blog-tag">Notion</span><span class="blog-tag">Insights</span></div>
-          <h3 class="blog-entry-title">Insights library</h3>
-          <p class="blog-entry-desc">More notes and write-ups beyond these posts, kept together in one place on Notion.</p>
-          <span class="blog-entry-arrow">Open Insights on Notion →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
+  <script>
+    (function () {
+      var pills = document.querySelectorAll('.bl-pill[data-filter]');
+      var cards = document.querySelectorAll('.bl-card');
+      var empty = document.getElementById('bl-empty');
+      function show(f) {
+        var n = 0;
+        cards.forEach(function (c) { var ok = f === 'all' || c.getAttribute('data-cat') === f; c.hidden = !ok; if (ok) n++; });
+        pills.forEach(function (p) { p.setAttribute('aria-pressed', p.getAttribute('data-filter') === f ? 'true' : 'false'); });
+        empty.hidden = n > 0;
+        history.replaceState(null, '', f === 'all' ? location.pathname : '#' + f);
+      }
+      pills.forEach(function (p) { p.addEventListener('click', function () { show(p.getAttribute('data-filter')); }); });
+      var link = document.querySelector('[data-filter-link]');
+      if (link) link.addEventListener('click', function (e) { e.preventDefault(); show('all'); });
+      var h = location.hash.slice(1);
+      if (h && document.querySelector('.bl-pill[data-filter="' + h + '"]')) show(h);
+    })();
+  </script>
 
   <!-- ══ CTA SECTION ══ -->
     <!-- ══ NEXT PAGE ══ -->
@@ -235,7 +266,7 @@
     }
   </script>
 
-  <script src="assets/js/network-bg.js?v=20261116j"></script>
-  <script src="assets/js/nav-menu.js?v=20261116j"></script>
+  <script src="assets/js/network-bg.js?v=20261116k"></script>
+  <script src="assets/js/nav-menu.js?v=20261116k"></script>
 </body>
 </html>

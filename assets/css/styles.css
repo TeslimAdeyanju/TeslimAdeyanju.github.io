@@ -3583,3 +3583,19 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 .ab-text p:not(.ab-cta) { text-align: justify; hyphens: none; text-wrap: wrap; word-spacing: -.02em; }
 .ab-text .ab-cta { text-align: left; }
 @media (max-width: 700px) { .ab-text { text-align: justify; } .ab-text .ab-cta { text-align: left; } }
+
+/* ── GitHub pills: one curved style everywhere, matching the hero button ── */
+.proj-gh, .gh-pill, .proj-links a.gh-pill, .proj-top-links a.gh-pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 7px 15px; min-height: 36px;
+  border: 1px solid #CBD5E1; border-radius: 999px; background: #FFFFFF;
+  font-family: 'Avenir Next', Avenir, 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: .86rem; font-weight: 600; line-height: 1.2; color: var(--dark); text-decoration: none;
+}
+.proj-gh svg, .gh-pill svg, .gh-pill-sm svg { width: 17px; height: 17px; flex-shrink: 0; }
+.proj-gh:hover, a.gh-pill:hover, .proj-links a.gh-pill:hover, .ap-card:hover .gh-pill-sm { color: #24292F; border-color: #24292F; background: #FFFFFF; text-decoration: none; }
+[data-theme="dark"] .proj-gh, [data-theme="dark"] .gh-pill, [data-theme="dark"] .proj-links a.gh-pill { background: rgba(15,23,42,.6); border-color: #334155; color: #E2E8F0; }
+[data-theme="dark"] .proj-gh:hover, [data-theme="dark"] a.gh-pill:hover, [data-theme="dark"] .proj-links a.gh-pill:hover, [data-theme="dark"] .ap-card:hover .gh-pill-sm { color: #fff; border-color: #94A3B8; background: rgba(15,23,42,.6); }
+@media (max-width: 700px) {
+  .proj-gh, .gh-pill, .gh-pill-sm, .proj-links a.gh-pill { min-height: 40px; padding: 8px 16px; }
+}

@@ -3519,3 +3519,22 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 [data-theme="dark"] .cr-extra-label, [data-theme="dark"] .cr-extra-items, [data-theme="dark"] .cr-extra-items a,
 [data-theme="dark"] .cr-extra-strong, [data-theme="dark"] .cr-also-org, [data-theme="dark"] .cr-also-sep { color: #F1F5F9; }
 [data-theme="dark"] .cr-extra-items a { border-bottom-color: #94A3B8; }
+
+/* ── Mobile usability: final tap target and label size fixes ── */
+@media (max-width: 700px) {
+  .gh-pill-sm { min-height: 40px; padding: 8px 14px; }
+  .cr-link { display: inline-flex; align-items: center; min-height: 40px; padding: 0; }
+  .cr-extra-items a { display: inline-flex; align-items: center; min-height: 40px; padding: 0; }
+  .pp-glance-link { display: inline-flex; align-items: center; min-height: 40px; }
+  .pp-copy { min-height: 40px; min-width: 56px; }
+  .cb-k { font-size: .75rem; }
+  .pp-pager-wrap .pp-pager-dir, .pp-pager-dir { font-size: .75rem; }
+}
+
+/* ── Mobile follow-up fixes ── */
+.about-section .content-block p:has(code) { text-align: left; }
+@media (max-width: 700px) {
+  .cr-extra-items a { display: inline-block; position: relative; min-height: 0; margin: 6px 0; }
+  .cr-extra-items a::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; bottom: -12px; }
+  .pp-glance-sep { display: none; }
+}

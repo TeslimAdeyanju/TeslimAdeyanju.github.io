@@ -3611,3 +3611,15 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (max-width: 700px) { .ab-section .s-title { font-size: 1.4rem; } .ab-section .s-title::after { width: 44px; margin-top: 12px; } }
 .ab-section .s-title { font-size: 1.55rem; }
 @media (max-width: 700px) { .ab-section .s-title { font-size: 1.32rem; } }
+
+/* ── Blog post pages ── */
+.post-tags { display: flex; justify-content: center; gap: 8px; margin-bottom: 14px; }
+.post-meta { margin-top: 10px; font-size: .9rem; color: var(--gray-500); }
+.post-body { max-width: 780px; margin: 0 auto; }
+.post-body .readme-content { text-align: left; }
+.post-body .readme-content p, .post-body .readme-content li { text-align: left; line-height: 1.75; }
+.post-body .readme-content h2 { margin-top: 36px; }
+.post-body .readme-content h2:first-child { margin-top: 0; }
+.post-back { text-align: center; margin: 28px 0 0; font-weight: 600; }
+.post-back a { color: var(--sx-accent, #2563EB); text-decoration: none; }
+.post-back a:hover { text-decoration: underline; }

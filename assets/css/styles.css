@@ -3755,3 +3755,6 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .bl-pill { min-height: 40px; padding: 0 16px; font-size: .9rem; }
   .bl-intro p { font-size: 1rem; line-height: 1.65; }
 }
+.bl-cover-notes { background: linear-gradient(135deg, #CCFBF1, #99F6E4); }
+[data-theme="dark"] .bl-cover-notes { background: linear-gradient(135deg, #115E59, #0F766E); }
+.notes-inline { margin: 32px 0 48px; }

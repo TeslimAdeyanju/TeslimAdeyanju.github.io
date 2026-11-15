@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261116l" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261116n" />
   <!-- GDPR Cookie Banner -->
   <style>
     .gdpr-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30,30,30,0.95); color: #fff; padding: 20px; text-align: center; z-index: 9999; font-size: 14px; }
@@ -80,6 +80,7 @@
       <symbol id="art-sql" viewBox="0 0 200 120"><g fill="#60A5FA" stroke="#1D4ED8" stroke-width="3"><path d="M64 28v20c0 7 16 12 36 12s36-5 36-12V28"/><path d="M64 48v20c0 7 16 12 36 12s36-5 36-12V48"/><path d="M64 68v20c0 7 16 12 36 12s36-5 36-12V68"/></g><ellipse cx="100" cy="28" rx="36" ry="12" fill="#BFDBFE" stroke="#1D4ED8" stroke-width="3"/></symbol>
       <symbol id="art-python" viewBox="0 0 200 120"><g fill="none" stroke="#047857" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M72 36 L46 60 L72 84"/><path d="M128 36 L154 60 L128 84"/></g><path d="M110 30 L90 92" stroke="#10B981" stroke-width="9" stroke-linecap="round"/></symbol>
       <symbol id="art-finance" viewBox="0 0 200 120"><path d="M30 96 H170" stroke="#6D28D9" stroke-width="3" stroke-linecap="round"/><path d="M36 84 L70 62 L98 72 L134 38 L166 28" fill="none" stroke="#7C3AED" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="150" cy="70" r="20" fill="#DDD6FE" stroke="#7C3AED" stroke-width="4"/><text x="150" y="78" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#5B21B6">£</text></symbol>
+      <symbol id="art-notes" viewBox="0 0 200 120"><rect x="58" y="16" width="84" height="88" rx="8" fill="#FFFFFF" stroke="#0F766E" stroke-width="4"/><path d="M58 34 H142" stroke="#0F766E" stroke-width="4"/><g stroke="#14B8A6" stroke-width="5" stroke-linecap="round"><path d="M74 54 H126"/><path d="M74 68 H126"/><path d="M74 82 H108"/></g><g fill="#0F766E"><circle cx="70" cy="25" r="3"/><circle cx="82" cy="25" r="3"/><circle cx="94" cy="25" r="3"/></g></symbol>
     </defs>
   </svg>
 
@@ -95,6 +96,7 @@
         <button type="button" class="bl-pill" data-filter="sql" aria-pressed="false">SQL &amp; Databases</button>
         <button type="button" class="bl-pill" data-filter="python" aria-pressed="false">Python &amp; Automation</button>
         <button type="button" class="bl-pill" data-filter="finance" aria-pressed="false">Finance &amp; Accounting</button>
+        <button type="button" class="bl-pill" data-filter="notes" aria-pressed="false">Study Notes</button>
       </div>
 
       <div class="bl-intro">
@@ -139,6 +141,24 @@
             <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
           </div>
         </a>
+        <a href="study-notes.html" class="bl-card" data-cat="notes" hidden>
+          <div class="bl-author"><img src="assets/img/photo.JPG" alt="" width="40" height="40" loading="lazy" /><span><strong>Teslim Adeyanju</strong><small>Financial Data Analyst</small></span></div>
+          <div class="bl-cover bl-cover-notes"><svg class="bl-art" viewBox="0 0 200 120" aria-hidden="true"><use href="#art-notes"/></svg><div class="bl-tags"><span class="bl-tag">Study notes</span><span class="bl-tag">Learning</span></div></div>
+          <div class="bl-body">
+            <h2 class="bl-title">Study Notes</h2>
+            <p class="bl-desc">Learning journals on GitHub, a Notion library of study notes and a library of 100+ podcast clips, all in one place.</p>
+            <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
+          </div>
+        </a>
+        <a href="https://adeyanjuteslim.notion.site/261807ec796380898cf1d03946fd8c6a?v=261807ec796381588a6d000cd9a82d8a" target="_blank" rel="noopener" class="bl-card" data-cat="notes" hidden>
+          <div class="bl-author"><img src="assets/img/photo.JPG" alt="" width="40" height="40" loading="lazy" /><span><strong>Teslim Adeyanju</strong><small>Financial Data Analyst</small></span></div>
+          <div class="bl-cover bl-cover-notes"><svg class="bl-art" viewBox="0 0 200 120" aria-hidden="true"><use href="#art-notes"/></svg><div class="bl-tags"><span class="bl-tag">Notion</span><span class="bl-tag">Notes</span></div></div>
+          <div class="bl-body">
+            <h2 class="bl-title">Study Notes Library on Notion</h2>
+            <p class="bl-desc">Course notes, worked examples and short guides on MySQL, DAX, Python and Power BI, kept in one place and updated as I learn.</p>
+            <div class="bl-foot"><span class="bl-date"></span><span class="bl-arrow" aria-hidden="true">→</span></div>
+          </div>
+        </a>
       </div>
       <p class="bl-empty" id="bl-empty" hidden>New posts on this subject are on the way. In the meantime, browse <a href="#" data-filter-link="all">all topics</a> or open my <a href="study-notes.html">Study Notes</a>.</p>
     </div>
@@ -150,7 +170,7 @@
       var empty = document.getElementById('bl-empty');
       function show(f) {
         var n = 0;
-        cards.forEach(function (c) { var ok = f === 'all' || c.getAttribute('data-cat') === f; c.hidden = !ok; if (ok) n++; });
+        cards.forEach(function (c) { var cat = c.getAttribute('data-cat'); var ok = f === 'all' ? cat !== 'notes' : cat === f; c.hidden = !ok; if (ok) n++; });
         pills.forEach(function (p) { p.setAttribute('aria-pressed', p.getAttribute('data-filter') === f ? 'true' : 'false'); });
         empty.hidden = n > 0;
         history.replaceState(null, '', f === 'all' ? location.pathname : '#' + f);
@@ -265,7 +285,7 @@
     }
   </script>
 
-  <script src="assets/js/network-bg.js?v=20261116l"></script>
-  <script src="assets/js/nav-menu.js?v=20261116l"></script>
+  <script src="assets/js/network-bg.js?v=20261116n"></script>
+  <script src="assets/js/nav-menu.js?v=20261116n"></script>
 </body>
 </html>

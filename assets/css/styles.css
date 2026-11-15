@@ -3437,7 +3437,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 /* ── About page: bulleted "What I deliver" list ── */
 .story-block .about-list li { position: relative; padding-left: 22px; }
-.story-block .about-list li::before { content: ""; position: absolute; left: 4px; top: .68em; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
+.story-block .about-list li::before { content: ""; position: absolute; left: 4px; top: .68em; width: 7px; height: 7px; border-radius: 50%; background: var(--dark); }
 
 /* ── About page: three strengths ── */
 .diff-cards:has(> .diff-card:nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -3450,3 +3450,12 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 /* ── About page: dark chapter headings, tighter heading to text gap ── */
 .story-block h3 { color: var(--dark); margin-bottom: 4px; }
 .story-block h3 + p, .story-block h3 + ul { margin-top: 0; }
+
+/* ── About page on phones: black bullets, tidier justified lines ── */
+[data-theme="dark"] .story-block .about-list li::before { background: #E2E8F0; }
+@media (max-width: 640px) {
+  .about-section .content-block p, .story-block .about-list li { font-size: .95rem; line-height: 1.65; word-spacing: -.04em; }
+  .story-block .about-list li { padding-left: 20px; margin-bottom: 14px; }
+  .story-block .about-list li::before { left: 2px; width: 6px; height: 6px; top: .72em; }
+  .story-block .about-list li strong { display: block; margin-bottom: 2px; }
+}

@@ -42,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/styles.css?v=20261116i" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20261116j" />
   <style>
     .gdpr-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30,30,30,0.95); color: #fff; padding: 20px; text-align: center; z-index: 9999; font-size: 14px; }
     .gdpr-banner a { color: #60A5FA; text-decoration: none; margin: 0 5px; }
@@ -89,123 +89,137 @@
         <div class="post-tags"><span class="blog-tag" style="--ac:#F59E0B">Power BI</span><span class="blog-tag" style="--ac:#F59E0B">Power Query</span></div>
         <h1 class="hero-title">Handling Null Values in Power Query Date Conversions</h1>
         <p class="hero-subtitle">Why text to date conversions return nulls, and the step by step fixes that work</p>
-        <p class="post-meta">By Teslim Adeyanju · <span data-read-time>3 min read</span></p>
+        <p class="post-meta">By Teslim Adeyanju · <time datetime="2026-11-15">15 November 2026</time> · <span data-read-time>3 min read</span></p>
       </div>
     </div>
   </section>
 
   <!-- ══ POST ══ -->
   <section class="about-section" id="main">
-    <div class="container">
-      <article class="readme-box post-body">
-        <div class="readme-content">
-<h2>Understanding Why Nulls Appear</h2>
-<p>When Power Query converts text to dates and returns null values, it is typically due to one of these reasons.</p>
-<h3>Unrecognised Date Format</h3>
-<p>Power Query can only convert text to Date when the format matches your system's locale settings. If your system expects <code>MM/DD/YYYY</code> but the data is in <code>DD/MM/YYYY</code> format (or the other way round), the conversion fails and returns null.</p>
-<h3>Invalid or Mixed Values</h3>
-<p>Your data may contain entries that cannot be interpreted as dates:</p>
-<ul>
-<li>Placeholder text like "N/A"</li>
-<li>Invalid dates like "2025-13-01" (month 13 does not exist)</li>
-<li>Empty cells or inconsistent formatting</li>
-</ul>
-<h3>Column From Examples Limitation</h3>
-<p>When Power Query cannot identify a consistent transformation pattern across your data, the "Column From Examples" feature produces nulls. This happens when your source column has inconsistent or invalid formats.</p>
-
-<h2>Step by Step Solutions</h2>
-<h3>Step 1: Inspect Your Source Data</h3>
-<p>Before attempting any conversion, examine your "Order Date" column:</p>
-<ul>
-<li>What format are the dates in? Examples: <code>2025-11-30</code>, <code>30/11/2025</code>, <code>11/30/2025</code></li>
-<li>Do any values include time? Example: <code>2025-11-30 14:35:00</code></li>
-<li>Are there any non-date values mixed in?</li>
-</ul>
-<h3>Step 2: Use Change Type with Locale</h3>
-<p>This is the most reliable method for converting dates in a specific format:</p>
-<ol>
-<li>Right-click the column header</li>
-<li>Select <strong>Change Type</strong>, then <strong>Using Locale</strong></li>
-<li>In the dialog, set <strong>Data Type</strong> to <code>Date</code> and choose the <strong>Locale</strong> that matches your source:
-<ul>
-<li><code>English (United States)</code> for MM/DD/YYYY</li>
-<li><code>English (United Kingdom)</code> for DD/MM/YYYY</li>
-</ul></li>
-<li>Click OK</li>
-</ol>
-<p>This tells Power Query exactly how to interpret the text values.</p>
-<h3>Step 3: Clean Your Data First</h3>
-<p>Before conversion, remove or fix problematic values.</p>
-<p><strong>Remove invalid text:</strong></p>
-<ul>
-<li>Select the column</li>
-<li>Go to <strong>Transform</strong>, then <strong>Replace Values</strong></li>
-<li>Replace "N/A" or other placeholders with <code>null</code>, or remove them</li>
-</ul>
-<p><strong>Remove extra spaces:</strong></p>
-<ul>
-<li>Select the column</li>
-<li>Go to <strong>Transform</strong>, then <strong>Format</strong>, then <strong>Trim</strong></li>
-</ul>
-<h3>Step 4: Handle Date and Time Values</h3>
-<p>If your column contains both date and time (for example <code>2025-11-30 14:35:00</code>):</p>
-<ol>
-<li>First, change the type to <strong>Date/Time</strong></li>
-<li>Then extract just the date: right-click the column, choose <strong>Transform</strong>, then <strong>Date</strong>, then <strong>Date Only</strong></li>
-</ol>
-<h3>Step 5: Advanced M Code Solution</h3>
-<p>For more control, use M code to parse dates explicitly:</p>
-<pre><code>// Convert the Order Date column using an explicit locale
-= Table.TransformColumns(
-    Source,
-    {{"Order Date", each Date.FromText(_, "en-GB"), type date}}
-)</code></pre>
-<p><strong>Notes:</strong></p>
-<ul>
-<li>Replace <code>"en-GB"</code> with the appropriate locale code</li>
-<li><code>"en-GB"</code> handles DD/MM/YYYY format</li>
-<li><code>"en-US"</code> handles MM/DD/YYYY format</li>
-</ul>
-
-<h2>Best Practices</h2>
-<ul>
-<li>Always use <strong>Change Type with Locale</strong> for dates in non-standard formats</li>
-<li>Clean invalid or placeholder values before attempting conversion</li>
-<li>If <strong>Column From Examples</strong> produces nulls, your source format is likely inconsistent</li>
-</ul>
-<h3>Troubleshooting Checklist</h3>
-<ol>
-<li>Check sample values to identify the date format</li>
-<li>Look for non-date values that need cleaning</li>
-<li>Verify your system locale matches your approach</li>
-<li>Use locale specific conversion when needed</li>
-<li>Handle date and time columns by extracting the date after the initial conversion</li>
-</ol>
-
-<h2>Common Date Format Examples</h2>
-<table>
-<thead><tr><th>Format</th><th>Example</th><th>Locale</th></tr></thead>
-<tbody>
-<tr><td>ISO 8601</td><td>2025-11-30</td><td>Universal</td></tr>
-<tr><td>US Format</td><td>11/30/2025</td><td>en-US</td></tr>
-<tr><td>UK Format</td><td>30/11/2025</td><td>en-GB</td></tr>
-<tr><td>European</td><td>30.11.2025</td><td>de-DE</td></tr>
-<tr><td>With Time</td><td>2025-11-30 14:35:00</td><td>Use Date/Time type first</td></tr>
-</tbody>
-</table>
-
-<h2>Quick Reference</h2>
-<p><strong>When you see nulls in date columns:</strong></p>
-<ol>
-<li><strong>Inspect:</strong> what does the source text look like?</li>
-<li><strong>Clean:</strong> remove invalid values and trim spaces</li>
-<li><strong>Convert:</strong> use "Change Type with Locale"</li>
-<li><strong>Verify:</strong> check whether any nulls remain and investigate why</li>
-</ol>
-<p><strong>Remember:</strong> Power Query is strict about date formats. When in doubt, use the locale specific conversion method rather than the generic "Change Type" option.</p>
+    <div class="post-wrap">
+      <article class="post-article">
+        <div class="post-summary">
+        <p>Text to date conversions in Power Query return null when the format does not match your locale, the data contains invalid values, or the column has no consistent pattern. This post shows how to find the cause and fix it with Change Type using Locale, data cleaning and M code.</p>
         </div>
+        <div data-toc></div>
+        <h2>Understanding Why Nulls Appear</h2>
+        <p>When Power Query converts text to dates and returns null values, it is typically due to one of these reasons.</p>
+        <h3>Unrecognised Date Format</h3>
+        <p>Power Query can only convert text to Date when the format matches your system's locale settings. If your system expects <code>MM/DD/YYYY</code> but the data is in <code>DD/MM/YYYY</code> format (or the other way round), the conversion fails and returns null.</p>
+        <h3>Invalid or Mixed Values</h3>
+        <p>Your data may contain entries that cannot be interpreted as dates:</p>
+        <ul>
+        <li>Placeholder text like "N/A"</li>
+        <li>Invalid dates like "2025-13-01" (month 13 does not exist)</li>
+        <li>Empty cells or inconsistent formatting</li>
+        </ul>
+        <h3>Column From Examples Limitation</h3>
+        <p>When Power Query cannot identify a consistent transformation pattern across your data, the "Column From Examples" feature produces nulls. This happens when your source column has inconsistent or invalid formats.</p>
+
+        <h2>Step by Step Solutions</h2>
+        <h3>Step 1: Inspect Your Source Data</h3>
+        <p>Before attempting any conversion, examine your "Order Date" column:</p>
+        <ul>
+        <li>What format are the dates in? Examples: <code>2025-11-30</code>, <code>30/11/2025</code>, <code>11/30/2025</code></li>
+        <li>Do any values include time? Example: <code>2025-11-30 14:35:00</code></li>
+        <li>Are there any non-date values mixed in?</li>
+        </ul>
+        <h3>Step 2: Use Change Type with Locale</h3>
+        <p>This is the most reliable method for converting dates in a specific format:</p>
+        <ol class="steps">
+        <li>Right-click the column header</li>
+        <li>Select <strong>Change Type</strong>, then <strong>Using Locale</strong></li>
+        <li>In the dialog, set <strong>Data Type</strong> to <code>Date</code> and choose the <strong>Locale</strong> that matches your source:
+        <ul>
+        <li><code>English (United States)</code> for MM/DD/YYYY</li>
+        <li><code>English (United Kingdom)</code> for DD/MM/YYYY</li>
+        </ul></li>
+        <li>Click OK</li>
+        </ol>
+        <p>This tells Power Query exactly how to interpret the text values.</p>
+        <h3>Step 3: Clean Your Data First</h3>
+        <p>Before conversion, remove or fix problematic values.</p>
+        <p><strong>Remove invalid text:</strong></p>
+        <ul>
+        <li>Select the column</li>
+        <li>Go to <strong>Transform</strong>, then <strong>Replace Values</strong></li>
+        <li>Replace "N/A" or other placeholders with <code>null</code>, or remove them</li>
+        </ul>
+        <p><strong>Remove extra spaces:</strong></p>
+        <ul>
+        <li>Select the column</li>
+        <li>Go to <strong>Transform</strong>, then <strong>Format</strong>, then <strong>Trim</strong></li>
+        </ul>
+        <h3>Step 4: Handle Date and Time Values</h3>
+        <p>If your column contains both date and time (for example <code>2025-11-30 14:35:00</code>):</p>
+        <ol>
+        <li>First, change the type to <strong>Date/Time</strong></li>
+        <li>Then extract just the date: right-click the column, choose <strong>Transform</strong>, then <strong>Date</strong>, then <strong>Date Only</strong></li>
+        </ol>
+        <h3>Step 5: Advanced M Code Solution</h3>
+        <p>For more control, use M code to parse dates explicitly:</p>
+        <pre><code>// Convert the Order Date column using an explicit locale
+        = Table.TransformColumns(
+            Source,
+            {{"Order Date", each Date.FromText(_, "en-GB"), type date}}
+        )</code></pre>
+        <p><strong>Notes:</strong></p>
+        <ul>
+        <li>Replace <code>"en-GB"</code> with the appropriate locale code</li>
+        <li><code>"en-GB"</code> handles DD/MM/YYYY format</li>
+        <li><code>"en-US"</code> handles MM/DD/YYYY format</li>
+        </ul>
+
+        <h2>Best Practices</h2>
+        <ul>
+        <li>Always use <strong>Change Type with Locale</strong> for dates in non-standard formats</li>
+        <li>Clean invalid or placeholder values before attempting conversion</li>
+        <li>If <strong>Column From Examples</strong> produces nulls, your source format is likely inconsistent</li>
+        </ul>
+        <h3>Troubleshooting Checklist</h3>
+        <ol>
+        <li>Check sample values to identify the date format</li>
+        <li>Look for non-date values that need cleaning</li>
+        <li>Verify your system locale matches your approach</li>
+        <li>Use locale specific conversion when needed</li>
+        <li>Handle date and time columns by extracting the date after the initial conversion</li>
+        </ol>
+
+        <h2>Common Date Format Examples</h2>
+        <table>
+        <thead><tr><th>Format</th><th>Example</th><th>Locale</th></tr></thead>
+        <tbody>
+        <tr><td>ISO 8601</td><td>2025-11-30</td><td>Universal</td></tr>
+        <tr><td>US Format</td><td>11/30/2025</td><td>en-US</td></tr>
+        <tr><td>UK Format</td><td>30/11/2025</td><td>en-GB</td></tr>
+        <tr><td>European</td><td>30.11.2025</td><td>de-DE</td></tr>
+        <tr><td>With Time</td><td>2025-11-30 14:35:00</td><td>Use Date/Time type first</td></tr>
+        </tbody>
+        </table>
+
+        <h2>Quick Reference</h2>
+        <p><strong>When you see nulls in date columns:</strong></p>
+        <ol>
+        <li><strong>Inspect:</strong> what does the source text look like?</li>
+        <li><strong>Clean:</strong> remove invalid values and trim spaces</li>
+        <li><strong>Convert:</strong> use "Change Type with Locale"</li>
+        <li><strong>Verify:</strong> check whether any nulls remain and investigate why</li>
+        </ol>
+        <div class="callout tip"><p><strong>Remember:</strong> Power Query is strict about date formats. When in doubt, use the locale specific conversion method rather than the generic "Change Type" option.</p></div>
       </article>
-      <p class="post-back"><a href="../blog.html">← Back to all posts</a></p>
+
+      <div class="post-share" aria-label="Share this post">
+        <span>Share this post</span>
+        <a class="gh-pill" data-share="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="gh-pill" data-share="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+        <button class="gh-pill" data-share="copy" type="button">Copy link</button>
+      </div>
+
+      <aside class="post-author">
+        <strong>Teslim Adeyanju</strong>
+        <p>Financial Data Analyst and Associate Chartered Accountant, building Power BI, SQL and Python solutions for finance teams. I share short technical notes like this one on LinkedIn.</p>
+        <p><a href="../blog.html">More posts</a> · <a href="../index.html#connect">Get in touch</a></p>
+      </aside>
     </div>
   </section>
 
@@ -278,7 +292,8 @@
     }
   </script>
 
-  <script src="../assets/js/network-bg.js?v=20261116i"></script>
-  <script src="../assets/js/nav-menu.js?v=20261116i"></script>
+  <script src="../assets/js/blog-post.js?v=20261116j"></script>
+  <script src="../assets/js/network-bg.js?v=20261116j"></script>
+  <script src="../assets/js/nav-menu.js?v=20261116j"></script>
 </body>
 </html>

@@ -84,6 +84,12 @@ All styles are in `assets/css/styles.css`, grouped into sections with `/* ──
 - All section headings use one size, `--h2-size`, defined in `:root`. This covers homepage `.s-title` and inner-page `.content-block h2`. Change that token rather than setting per-section sizes.
 - Phone-specific fixes live at the end of the file ("Mobile refinements" and "Mobile usability" blocks), so they win over earlier responsive rules. Keep tap targets ≥ ~40px and small labels ≥ 12px on phones; re-check at 360, 390 and 430px widths for horizontal overflow before shipping.
 
+## Blog posts
+
+Posts live in `blog/<slug>.html` and are written from Notion notes. Always start from `blog/_template.html` (the leading underscore keeps it out of the published site). Fill the `%%PLACEHOLDERS%%` (title, description, slug, date, two tags, subtitle) and replace the example body with the post. The body uses plain tags (`h2`, `h3`, `p`, `ul`, `ol`, `pre>code`, `table`, `figure`) plus optional blocks: `.post-summary`, `.callout.tip|note|warning`, `ol.steps`, `.post-takeaways`. `assets/js/blog-post.js` adds the table of contents (`<div data-toc>`, shown with three or more h2 sections), read time and the LinkedIn, Facebook and copy link buttons. Styles are the "Blog posts: standard article template" block in `styles.css` (article column 860px wide, narrower on phones).
+- Every new post also needs a card in `blog.html` (copy an existing `.blog-entry`, link `blog/<slug>.html` in the same tab, update the `--delay` values) and a `sitemap.xml` entry.
+- Copy Notion text as written, fix to UK spelling, no dashes in prose, spell out abbreviations. Screenshots go in `assets/img/blog/`.
+
 ## Page endings
 
 Every page closes with the homepage contact block (`<section id="connect" class="section connect-end">`, the `.social-grid` cards and the `.footer`), copied from `index.html`; on project pages the case study pager (`project-page.js`) is inserted just above it. Keep the copies in step with the homepage (CV link needs a `../` prefix inside `projects/`).

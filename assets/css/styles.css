@@ -3459,3 +3459,14 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .story-block .about-list li::before { left: 2px; width: 6px; height: 6px; top: .72em; }
   .story-block .about-list li strong { display: block; margin-bottom: 2px; }
 }
+
+/* ── About page: bullets on every list, matching What I deliver ── */
+.about-section .content-block .about-list { margin: 8px 0 0; }
+.about-section .content-block .about-list li { position: relative; padding-left: 22px; margin-bottom: 12px; line-height: 1.7; text-align: justify; hyphens: none; }
+.about-section .content-block .about-list li:last-child { margin-bottom: 0; }
+.about-section .content-block .about-list li::before { content: ""; position: absolute; left: 4px; top: .68em; width: 7px; height: 7px; border-radius: 50%; background: var(--dark); }
+[data-theme="dark"] .about-section .content-block .about-list li::before { background: #E2E8F0; }
+@media (max-width: 640px) {
+  .about-section .content-block .about-list li { padding-left: 20px; font-size: .95rem; line-height: 1.65; }
+  .about-section .content-block .about-list li::before { left: 2px; width: 6px; height: 6px; top: .72em; }
+}

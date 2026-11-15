@@ -3551,3 +3551,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .proj-desc, .proj-more .proj-desc, .ap-card-desc { font-size: .93rem; line-height: 1.6; text-wrap: wrap; }
   .proj-featured .proj-impact { font-size: 1rem; }
 }
+
+/* ── More projects card: tags fill each row evenly on phones ── */
+@media (max-width: 700px) {
+  .proj-more .ptags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .proj-more .ptags .ptag { flex: 1 1 auto; text-align: center; margin: 0; }
+}

@@ -9,6 +9,8 @@
   var PROJECTS = [
     { slug: 'fda-toolkit', title: 'FDA Toolkit' },
     { slug: 'nhs-financial-analytics', title: 'NHS Trust Financial Analytics' },
+    { slug: 'nhs-waiting-list-analytics', title: 'NHS Waiting List Analytics' },
+    { slug: 'superstore-sales-prediction', title: 'Superstore Sales & Profit Prediction' },
     { slug: 'financial-forecasting-variance', title: 'Financial Forecasting & Variance Analysis' },
     { slug: 'stock-market-analysis', title: 'Stock Market Risk Analysis' },
     { slug: 'advanced-sql-analytics', title: 'Advanced SQL Analytics' },

@@ -3778,3 +3778,29 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 [data-theme="dark"] .bl-pill:hover { border-color: #94A3B8; }
 [data-theme="dark"] .bl-pill[aria-pressed="true"] { background: #F1F5F9; border-color: #F1F5F9; color: #0F172A; }
 [data-theme="dark"] .bl-divider { background: linear-gradient(90deg, transparent, #334155, transparent); }
+
+/* ── Blog cards: black and white covers, compact on phones ── */
+.bl-cover, .bl-cover-power-bi, .bl-cover-sql, .bl-cover-python, .bl-cover-finance, .bl-cover-notes { background: linear-gradient(135deg, #F8FAFC, #E2E8F0); }
+.bl-cover::before { background: rgba(255,255,255,.7); }
+.bl-cover::after { background: rgba(15,23,42,.05); }
+.bl-art { filter: grayscale(1) contrast(1.15); }
+.bl-tag { border: 1px solid #CBD5E1; }
+[data-theme="dark"] .bl-cover, [data-theme="dark"] .bl-cover-power-bi, [data-theme="dark"] .bl-cover-sql, [data-theme="dark"] .bl-cover-python, [data-theme="dark"] .bl-cover-finance, [data-theme="dark"] .bl-cover-notes { background: linear-gradient(135deg, #334155, #1E293B); }
+[data-theme="dark"] .bl-cover::before { background: rgba(255,255,255,.08); }
+[data-theme="dark"] .bl-cover::after { background: rgba(0,0,0,.2); }
+[data-theme="dark"] .bl-art { filter: grayscale(1) invert(.92) contrast(1.05); }
+@media (max-width: 700px) {
+  .bl-grid { gap: 14px; }
+  .bl-author { padding: 10px 14px; gap: 10px; }
+  .bl-author img { width: 32px; height: 32px; }
+  .bl-author strong { font-size: .9rem; }
+  .bl-author small { font-size: .78rem; }
+  .bl-cover { aspect-ratio: 21 / 8; }
+  .bl-art { width: 44%; }
+  .bl-tags { right: 8px; bottom: 8px; gap: 4px; }
+  .bl-tag { font-size: .74rem; padding: 2px 7px; }
+  .bl-body { padding: 12px 14px 12px; }
+  .bl-title { font-size: 1.06rem; margin-bottom: 6px; }
+  .bl-desc { font-size: .9rem; line-height: 1.5; margin-bottom: 10px; }
+}
+[data-theme="dark"] .bl-desc, [data-theme="dark"] .bl-author small { color: #A8B5C7; }

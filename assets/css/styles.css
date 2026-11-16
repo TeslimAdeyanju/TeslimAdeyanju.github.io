@@ -3864,3 +3864,5 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .nav-links.active { grid-template-columns: 1fr; max-height: calc(100vh - 72px); overflow-y: auto; }
   .nav-links.active > a { min-height: 44px; }
 }
+/* Menu column headings in sentence case on phones (they were forced to capitals) */
+@media (max-width: 920px) { .nav-col-hd { text-transform: none; letter-spacing: 0; font-size: .82rem; font-weight: 700; } }

@@ -3866,3 +3866,10 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 }
 /* Menu column headings in sentence case on phones (they were forced to capitals) */
 @media (max-width: 920px) { .nav-col-hd { text-transform: none; letter-spacing: 0; font-size: .82rem; font-weight: 700; } }
+
+/* ── Hero scroll cue: one arrow under the buttons, visible straight away ── */
+.hn-scroll { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: 28px auto 0; border-radius: 50%; color: #0284C7; border: 1px solid var(--gray-200); background: var(--white); box-shadow: 0 2px 10px rgba(15,23,42,.08); animation: hnBounce 1.8s ease-in-out infinite; }
+.hn-scroll:hover { text-decoration: none; border-color: #0284C7; }
+@keyframes hnBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+[data-theme="dark"] .hn-scroll { color: #38BDF8; background: #1E293B; border-color: #334155; }
+@media (prefers-reduced-motion: reduce) { .hn-scroll { animation: none; } }
